@@ -25,6 +25,8 @@ from objects.particlesspawner import ConfettiSpawner
 
 
 def init_rooms():
+
+    # init doors
     stairs_up = subplaceable.DoorUp(
         'R1_stairs', Coord(1, (1594, 546)), Surface((335, 220)))
     stairs_down = subplaceable.DoorDown('R1_stairs_down', Coord(
@@ -32,37 +34,43 @@ def init_rooms():
 
     stairs_down.pair_door_up(stairs_up)
     stairs_up.pair_door_down(stairs_down)
-    # R0
+
+    # floor 0
     R0 = Room(0, sprite.BG2)
     R0.placed += [stairs_up]
 
-    # R1
+    # floor 1
     R1 = Room(1, sprite.BG1)
     guichet = subplaceable.DeskPlaceable('guichet', Coord(1, (470, 692)), Surface((0,0)))
-    auto_cachier = subplaceable.AutoCachierPlaceable(
-        'AutoCachierPlaceable', Coord(1, (1500, 700)), Surface((10*6, 10*6)))
     inventory_plcb = subplaceable.InvPlaceable(
         "Inventory", Coord(1, (1536, 186)), Surface((53*6, 31*6)))
-    R1.placed += [guichet, stairs_up,
-                  stairs_down, auto_cachier, inventory_plcb]
-    R1.blacklist += [stairs_up, stairs_down, auto_cachier, inventory_plcb, guichet]
+    R1.placed += [guichet, stairs_up, stairs_down, inventory_plcb]
+    R1.blacklist += [stairs_up, stairs_down, inventory_plcb, guichet]
 
-    # R2
+    # floor 2
     R2 = Room(2, sprite.BG3)
     shop = subplaceable.ShopPlaceable('shop', Coord(
         2, (1000, 100)), Surface((50*6, 90*6)), "shop")
     R2.placed += [stairs_up, stairs_down, shop]
     R2.blacklist += [stairs_up, stairs_down, shop]
 
-    # R3
+    # floor 3
     R3 = Room(3, sprite.BG4)
     R3.placed += [stairs_up, stairs_down]
+    R3.blacklist += [stairs_up, stairs_down]
 
+    # floor 4
     R4 = Room(4, sprite.BG5)
-    R4.placed += [stairs_up, stairs_down]
+    auto_cachier = subplaceable.AutoCachierPlaceable(
+        'AutoCachierPlaceable', Coord(1, (1500, 700)), Surface((10*6, 10*6)))
+    R4.placed += [stairs_up, stairs_down, auto_cachier]
+    R4.blacklist += [stairs_up, stairs_down, auto_cachier]
 
+    # floor 5
     R5 = Room(5, anim=Animation(sprite.SPRITESHEET_ROOFTOP, 0, 14, 8))
-    R5.placed += [stairs_down]
+    music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC)
+    R5.placed += [stairs_down, music_robot]
+    R5.blacklist += [stairs_up, stairs_down, music_robot]
 
     return [R0, R1, R2, R3, R4, R5]
 

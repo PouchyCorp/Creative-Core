@@ -291,7 +291,7 @@ SPRITESHEET_ROBOT_6_PACK = (anim.Spritesheet(load_image('data/robots/robot_6.png
                               "left_dust" :(none_particle.copy(), (26*6,48*6)),
                               "levitation" : (LineParticleSpawner(Coord(0,(0,0)), Vector2(1,0), Vector2(0,-1), (150,150,150,200), 25, dir_randomness=0, density=5, speed=1, radius=(4,4), line_length=96), (8*6, 48*6))})
 
-SPRITESHEET_ROBOT_MUSIQUE_PACK = (anim.Spritesheet(load_image('data/robots/robot_musique.png'),(48*6,32*6)), [8])
+ANIM_ROBOT_MUSIC = anim.Animation(anim.Spritesheet(load_image('data/robots/robot_musique.png'),(48*6,32*6)), 0, 8)
 
 LIST_SPRITESHEET_ROBOT = [SPRITESHEET_ROBOT_1_PACK, SPRITESHEET_ROBOT_2_PACK, SPRITESHEET_ROBOT_3_PACK, SPRITESHEET_ROBOT_4_PACK, SPRITESHEET_ROBOT_5_PACK, SPRITESHEET_ROBOT_6_PACK]
 
@@ -305,4 +305,4 @@ PATTERN_LIST = [load_image("data/pattern_storage/pattern_"+str(num)+".png") for 
 DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in range(1,16)]
 
 # Cutscenes
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (),"floor1" : (), "floor2": (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2"), "floor3" : (), "floor4" : (anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False)), "floor5" : ()}
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (),"floor1" : (), "floor2": (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2"), "floor3" : (), "floor4" : [anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False)], "floor5" : ()}

@@ -227,6 +227,7 @@ DIALBOX = load_image("data/pop_up_dialogue.png")
 ARROW_LEFT = load_image("data/fleche_gauche.png")
 ARROW_RIGHT = load_image("data/fleche_droite.png")
 LOCK = load_image("data/cadena.png")
+BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 39*6)), 0, 14)
 
 # Spritesheets
 SPRITESHEET_INVENTORY = anim.Spritesheet(load_image('data/etagere.png'), (53*6, 31*6))
@@ -294,7 +295,7 @@ SPRITESHEET_ROBOT_MUSIQUE_PACK = (anim.Spritesheet(load_image('data/robots/robot
 
 LIST_SPRITESHEET_ROBOT = [SPRITESHEET_ROBOT_1_PACK, SPRITESHEET_ROBOT_2_PACK, SPRITESHEET_ROBOT_3_PACK, SPRITESHEET_ROBOT_4_PACK, SPRITESHEET_ROBOT_5_PACK, SPRITESHEET_ROBOT_6_PACK]
 
-# Arm and Sprayer
+# Arm and Sprayer for the canva
 ARM = load_image("data/bra_articuler_1.png")
 SPRAYER = load_image("data/buse.png")
 

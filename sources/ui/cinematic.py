@@ -10,6 +10,9 @@ if TYPE_CHECKING:
     from core.logic import Game 
 
 class CinematicPlayer:
+    """Class for playing cinematics.
+    Attributes need to be passed in strict order but can be omitted.
+    However, if an attribute is omitted, the following attributes must be omitted as well. (Important because of the way the cinematics are stored in the game save file)"""
     def __init__(self, anim : Animation = None, dialogue_name = None, introspection_dialogue_name = None):
         self.anim = anim
 
@@ -20,10 +23,11 @@ class CinematicPlayer:
         if self.anim:
             self.cutscene_surf = self.anim.reset_frame()
         else:
-            self.cutscene_surf = pg.Surface((320*6, 180*6), pg.SRCALPHA)
+            self.cutscene_surf = pg.Surface((320*6, 180*6), pg.SRCALPHA) # Create a blank surface if there is no animation so that the dialogue can be drawn on it
         self.is_finished = False
     
     def get_status_event(self, event, game):
+        """Handle status events like quitting or pressing escape."""
         if event.type == pg.KEYDOWN and event.key == pg.K_ESCAPE:
             self.is_finished = True
         elif event.type == pg.QUIT:
@@ -33,7 +37,8 @@ class CinematicPlayer:
         if event.type == pg.MOUSEBUTTONDOWN:
             return self.dialogue.click_interaction()
             
-    def __play_anim(self, game : 'Game'):
+    def __play_anim(self, game : 'Game'): # 'Game' is a forward reference (PEP 18)
+        """Play the animation sequence."""
         # Define the size of the black bands at the top and bottom of the screen
         band_size = (game.win.get_width(), 140)
         black_band = pg.Surface(band_size)

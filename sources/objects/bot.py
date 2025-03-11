@@ -119,7 +119,8 @@ class BotDistributor:
         self.game_timer.create_timer(next_bot_time, self.distribute_to_bot)
 
 class Hivemind:
-    """Supreme entity governing bots' behavior and interactions."""
+    """Supreme entity governing bots' behavior and interactions.
+    All hail the Hivemind!"""
 
     def __init__(self, line_start: int, line_stop: int, TIMER: TimerManager, sound_manager : SoundManager) -> None:
         """
@@ -133,13 +134,13 @@ class Hivemind:
         self.line_start_x = line_start
         self.line_stop_x = line_stop
         self.react_time_min, self.react_time_max = 30, 60
-        self.bot_placeable_pointer: subplaceable.BotPlaceable = None
+        self.bot_placeable_pointer: subplaceable.BotPlaceable = None # pointer to the bot clickable placeable
         self.sound_manager = sound_manager
-        assert self.line_stop_x > self.line_start_x, "stop before start"
+        assert self.line_stop_x > self.line_start_x, "stop before start" 
 
-        step = (self.line_stop_x - self.line_start_x) // len(self.inline_bots)
-        self.x_lookup_table = [(step * i) + self.line_start_x for i in range(len(self.inline_bots))]
-        TIMER.create_timer(randint(self.react_time_min, self.react_time_max), self.create_react_bot, arguments=[TIMER])
+        step = (self.line_stop_x - self.line_start_x) // len(self.inline_bots) 
+        self.x_lookup_table = [(step * i) + self.line_start_x for i in range(len(self.inline_bots))] # lookup table for the x-coordinates of the bots in line
+        TIMER.create_timer(randint(self.react_time_min, self.react_time_max), self.create_react_bot, arguments=[TIMER]) # create a timer to make a bot react at random intervals
 
     def create_react_bot(self, TIMER: TimerManager):
         """
@@ -440,7 +441,7 @@ class Bot:
             # move the bot to the right or to the left depending on the target coordinates
             if self.coord.x < target_buffer.x:
                 self.move_dir = "RIGHT"
-                self.coord.x += 6
+                self.coord.x += 6 
             elif self.coord.x > target_buffer.x:
                 self.move_dir = "LEFT"
                 self.coord.x -= 6
@@ -494,7 +495,3 @@ class Bot:
 
     def __repr__(self):
         return str(self.__dict__)
-
-#tests
-#if __name__ == '__main__':
-#    

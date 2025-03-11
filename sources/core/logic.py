@@ -56,6 +56,7 @@ from objects.canva import Canva
 from ui.button import Button
 from objects.particlesspawner import ParticleSpawner
 from ui.cinematic import CinematicPlayer
+from utils.fonts import TERMINAL_FONT_BIG
 
 class Game:
     def __init__(self, win : pg.Surface, config : dict, inventory, shop, gold, unlock_manager, transparency_win):
@@ -404,7 +405,7 @@ class Game:
 
     def handle_build_mode(self):
         if self.build_mode.can_place(self.current_room):
-            self.current_room.placed.append(self.build_mode.place(self.current_room.num)) # Place the object in the room
+            self.current_room.placed.append(self.build_mode.get_configured_placeable(self.current_room.num)) # Place the object in the room
             self.sound_manager.items.play() 
             self.beauty = self.process_total_beauty() # Update beauty score
             self.gui_state = State.INVENTORY # Return to the inventory
@@ -506,12 +507,21 @@ class Game:
         self.draw_patterns_and_canva()
         self.draw_particles()
         self.draw_foreground()
+        self.draw_info_ui()
         self.draw_gui(mouse_pos)
         if self.config['gameplay']['debug']:
             self.draw_debug_info(mouse_pos)
         self.render_popups()
         if not self.paused:
             self.win.blit(self.transparency_win, (0, 0))
+    
+    def draw_info_ui(self):
+        beauty_default_string = "0000.0"
+        cropped_beauty = float(min(self.beauty, 9999.9))
+        beauty_string = beauty_default_string[:6-len(str(cropped_beauty))] + str(cropped_beauty) # Magic slice to replace the end of default string with actual beauty value
+        current_frame = sprite.BEAUTY_LABEL_ANIMATION.get_frame()
+        current_frame.blit(TERMINAL_FONT_BIG.render(beauty_string, False, (0, 255, 0)), (6*6, 6*6))
+        self.win.blit(current_frame, (self.win.get_width()//2, 0))
 
     def draw_background(self):
         self.win.blit(self.current_room.bg_surf, (0, 0))

@@ -20,6 +20,8 @@ Client                          Serveur de Base de Données
   | -- Le client désérialise les données ---- |
   |                                           |
 ```
+La version basique du client utilisée pour la conception et les testes peut être trouvée sur [test_client.py](tests/test_client.py)
+
 
 ## Fonctionnement de `TimerManager`
 

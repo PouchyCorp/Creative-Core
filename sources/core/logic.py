@@ -25,7 +25,9 @@ Certain states, like confirmation prompts and transitions, override standard int
 
 from enum import Enum, auto
 class State(Enum):
-    INTERACTION = auto()
+    """Enumeration of the different GUI states.  
+    User by the game's FSM to manage the different states of the game."""
+    INTERACTION = auto() # value is irrelevant for an FSM so it is set to auto()
     BUILD = auto()
     DESTRUCTION = auto()
     INVENTORY = auto()
@@ -35,6 +37,7 @@ class State(Enum):
     SHOP = auto()
     PAUSED = auto()
 
+# a LOT of imports
 import pygame as pg
 import objects.placeablesubclass as subplaceable
 from objects.bot import Hivemind, BotDistributor
@@ -76,8 +79,8 @@ class Game:
         self.confirmation_popups : list[ConfirmationPopup] = [] # Stack of confirmation popups
         self.gui_state = State.INTERACTION
         self.hivemind : Hivemind = Hivemind(60, 600, self.timer, self.sound_manager)
-        self.inventory : Inventory = Inventory(self.change_floor, self.reset_guistate, title= "Inventaire", content = inventory)
-        self.shop : Shop = Shop(None, None, title= "Shop", content = shop)
+        self.inventory : Inventory = Inventory(self.change_floor, self.reset_guistate, title= "Inventaire", content = inventory) # Inventory
+        self.shop : Shop = Shop(None, None, title= "Shop", content = shop) 
         self.inventory.sound_manager = self.sound_manager
         self.shop.sound_manager = self.sound_manager
         self.build_mode : BuildMode= BuildMode()
@@ -165,7 +168,7 @@ class Game:
         """ Pauses the game and displays the pause menu"""
         self.gui_state = State.PAUSED
         self.paused = True
-        self.temp_bg = pg.transform.grayscale(self.win)
+        self.temp_bg = pg.transform.grayscale(self.win) # Grayscale the background
         self.quit_button = Button((0,0), self.quit, sprite.whiten(sprite.QUIT_BUTTON), sprite.QUIT_BUTTON)
         self.quit_button.rect.center = self.win.get_rect().center
         

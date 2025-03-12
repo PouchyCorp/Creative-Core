@@ -42,10 +42,10 @@ def init_rooms():
     # floor 1
     R1 = Room(1, sprite.BG1)
     guichet = subplaceable.DeskPlaceable('guichet', Coord(1, (470, 692)), Surface((0,0)))
-    inventory_plcb = subplaceable.InvPlaceable(
+    inventory = subplaceable.InvPlaceable(
         "Inventory", Coord(1, (1536, 186)), Surface((53*6, 31*6)))
-    R1.placed += [guichet, stairs_up, stairs_down, inventory_plcb]
-    R1.blacklist += [stairs_up, stairs_down, inventory_plcb, guichet]
+    R1.placed += [guichet, stairs_up, stairs_down, inventory]
+    R1.blacklist += [stairs_up, stairs_down, inventory, guichet]
 
     # floor 2
     R2 = Room(2, sprite.BG3)

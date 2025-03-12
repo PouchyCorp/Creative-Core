@@ -25,8 +25,11 @@ from typing import Optional
 from utils.timermanager import TimerManager
 from core.unlockmanager import UnlockManager
 from pygame.transform import grayscale 
+from pygame import Surface
 
 class DoorUp(Placeable):
+    """Class for the door up placeable.  
+    Only one instance of this class is shared between all floors."""
     def __init__(self, name, coord, surf, tag = None):
         super().__init__(name, coord, surf, tag)
         self.anim_close = Animation(sprite.SPRITESHEET_BAS, 0, 9, 4, False)     #download closing animation
@@ -55,6 +58,7 @@ class DoorUp(Placeable):
         self.door_down = door_down
 
     def update_sprite(self, is_hovered : bool, color : tuple = (150, 150, 255)):
+        """Update the sprite of the door by playing the animation."""
         if self.anim != self.anim_open and self.anim_close.is_finished():     # Check if the animation is finished
             if is_hovered:
                 self.anim = self.anim_blink
@@ -68,6 +72,9 @@ class DoorUp(Placeable):
             self.temp_surf.blit(self.locked_surf, (3,3) if is_hovered else (0,0)) # Draw the lock on the door (offset if hovered because of the outline)
     
     def interaction(self, timer : TimerManager):
+        """Interaction with the door.  
+        This method is called when the player clicks on the door.
+        It links to the other door and plays the animation."""
         self.anim_open.reset_frame()        #reset all animations when the mouse is on the door to expect the change of floor
         self.anim_close.reset_frame()
         self.anim = self.anim_open
@@ -80,6 +87,8 @@ class DoorUp(Placeable):
         timer.create_timer(1.5, self.door_down.set_attribute, arguments=('anim', self.door_down.anim_close))
 
 class DoorDown(Placeable):
+    """Class for the door down placeable.  
+    Only one instance of this class is shared between all floors."""
     def __init__(self, name, coord, surf, tag = None):
         super().__init__(name, coord, surf, tag)
         self.anim_close = Animation(sprite.SPRITESHEET_BAS_FLIP, 0, 9, 4, False)        #download closing animation
@@ -120,6 +129,9 @@ class DoorDown(Placeable):
             self.temp_surf.blit(self.locked_surf, (3,3) if is_hovered else (0,0)) # Draw the lock on the door (offset if hovered because of the outline)
     
     def interaction(self, timer : TimerManager):
+        """Interaction with the door.  
+        This method is called when the player clicks on the door.  
+        It links to the other door and plays the animation."""
         self.anim_open.reset_frame()        #reset all animations when the mouse is on the door to expect the change of floor
         self.anim_close.reset_frame()
         self.anim = self.anim_open
@@ -133,12 +145,15 @@ class DoorDown(Placeable):
         
 
 class BotPlaceable(Placeable):
+    """Class for the clickable inline bot."""
     pass
 
 class ShopPlaceable(Placeable):
+    """Class for the shop placeable at floor 2."""
     pass
 
 class InvPlaceable(Placeable):
+    """Class for the inventory placeable at floor 1."""
     def __init__(self, name, coord, surf, tag = None):
         super().__init__(name, coord, surf, tag)
         self.blink_anim = Animation(sprite.SPRITESHEET_INVENTORY, 0, 7)
@@ -153,6 +168,7 @@ class InvPlaceable(Placeable):
         return super().update_sprite(is_hovered, color)
 
 class AutoCachierPlaceable(Placeable):
+    """Class for the automatic cash register unlock at floor 4."""
     pass
 
 class SpectatorPlaceable(Placeable):
@@ -160,16 +176,17 @@ class SpectatorPlaceable(Placeable):
         super().__init__(name, coord, surf, tag)
         from ui.userlist import UserList
         from utils.database import Database
-        self.database = Database(config['server']['ip'], config['server']['port'], [])
-        self.user_list = UserList(self.coord.xy, self.database.fetch_all_user_data())
+        self.database = Database(config['server']['ip'], config['server']['port'], []) # Create to the database to fetch for spectator data
+        self.user_list = UserList(self.coord.xy, self.database.fetch_all_user_data()) # Create the user list needed for the spectator
         self.open = False
         
     def interaction(self):
-        self.open = not self.open
+        self.open = not self.open # Toggle the spectator window
         if self.open:
-            self.user_list.init(self.database.fetch_all_user_data())
+            self.user_list.init(self.database.fetch_all_user_data()) # Fetch the data from the database
 
 class DeskPlaceable(Placeable):
+    """Class for the unique desk placeable at floor 1."""
     def __init__(self, name, coord, surf, tag = None):
         super().__init__(name, coord, surf, tag)
         self.anim_bg = Animation(sprite.DESK_BG, 0, 14, speed=3, repeat=False)
@@ -177,9 +194,12 @@ class DeskPlaceable(Placeable):
         self.surf = self.anim_bg.reset_frame()
         self.fg_surf = self.anim_fg.reset_frame()
 
+        self.surf.blit(self.fg_surf, (0,0))
+
         self.active = False
 
     def update_sprite(self, is_hovered, color = ...):
+        """Update the sprite of the desk by playing the animation."""
         if self.anim_bg.is_finished():
             self.active = False
             self.surf = self.anim_bg.reset_frame()
@@ -189,10 +209,14 @@ class DeskPlaceable(Placeable):
             self.surf = self.anim_bg.get_frame()
             self.fg_surf = self.anim_fg.get_frame()
         
+        self.surf.blit(self.fg_surf, (0,0))
+        
         self.temp_surf = self.surf.copy()
         self.temp_rect = self.rect.copy()
     
-    def draw_foreground(self, win):
+    def draw_foreground(self, win : Surface):
+        """Draws the special foreground of the desk.  
+        Needed because this part needs to be drawn on top of the bots."""
         win.blit(self.fg_surf, self.coord.xy)
 
 

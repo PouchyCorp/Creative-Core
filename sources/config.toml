@@ -1,14 +1,15 @@
 #main config file
 [server]
-ip = '127.0.0.1'
+# ip and port of the server you want to connect to, go to serverpack/server_instruction for more info
+ip = '127.0.0.1' 
 port = 5000
 
 [screen]
 size = [1920,1080]
-fullscreen = true
+fullscreen = true # desactivez si vous voulez faire des capture d'ecran / deactivate if you want to screenshot the game
 
 [gameplay]
 fps = 60
-cheats = true
-debug = true
-offline_mode = true
+cheats = true # donne l'acces à de nombreuses fonctionnalités de triche / grants cheating privileges
+debug = true # affiche un bandaux d'information utile pour debugger / shows debug informations
+offline_mode = true # IMPORTANT, si vous ne voulez ou pouvez pas jouer en ligne, activer ce parametre / turn on if you want to play offline

@@ -246,6 +246,7 @@ SPRITESHEET_CUTSCENE_3 = anim.Spritesheet(load_image("data/caissier_anim_30frmae
 # Desks
 DESK_FG = anim.Spritesheet(load_image('data/guichet_1.png'), (57*6,66*6))
 DESK_BG = anim.Spritesheet(load_image('data/guichet_2.png'), (57*6,66*6))
+DESK_ROBOT_BG = anim.Spritesheet(load_image('data/guichet_robot.png'), (57*6,66*6))
 
 # Props
 PROP_STATUE = load_image('data/props_statue.png')

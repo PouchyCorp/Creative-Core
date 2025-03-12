@@ -25,7 +25,6 @@ from objects.particlesspawner import ConfettiSpawner
 
 
 def init_rooms():
-
     # init doors
     stairs_up = subplaceable.DoorUp(
         'R1_stairs', Coord(1, (1594, 546)), Surface((335, 220)))
@@ -72,11 +71,14 @@ def init_rooms():
     R5.placed += [stairs_down, music_robot]
     R5.blacklist += [stairs_up, stairs_down, music_robot]
 
-    return [R0, R1, R2, R3, R4, R5]
+    special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot} #used to access special placeables in the game loop
+
+    return [R0, R1, R2, R3, R4, R5], special_placeables
 
 
-ROOMS: list[Room] = init_rooms()
+ROOMS, SPECIAL_PLACEABLES = init_rooms()
 
+# Assigning rooms to variables for easier access
 R0 = ROOMS[0]
 R1 = ROOMS[1]
 R2 = ROOMS[2]
@@ -84,6 +86,7 @@ R3 = ROOMS[3]
 R4 = ROOMS[4]
 R5 = ROOMS[5]
 
+# IMPORTANT: THIS IS THE DEFAULT SAVE DATA
 DEFAULT_SAVE = {'gold': 10,
                 "beauty": 0,
                 "inventory": [Placeable('cheater beauty', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=1000)],
@@ -96,4 +99,6 @@ DEFAULT_SAVE = {'gold': 10,
 
                 "unlocks": UnlockManager()}
 
+# The confetti rain when starting the game
+# The key is the room number
 PARTICLE_SPAWNERS = {0: [], 1: [ConfettiSpawner(Coord(1, (0, 0)), 500)], 2: [], 3: [], 4: [], 5: []}

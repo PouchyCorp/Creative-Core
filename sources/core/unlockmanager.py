@@ -36,7 +36,7 @@ class UnlockManager:
         self.discovered_features = []
         self.discovered_floors = []
         self.floor_price = {"2": 10, "3": 100, "4": 1000, "5": 10000}
-        self.feature_price = {"Auto Cachier": 5000}
+        self.feature_price = {"Auto Cachier": 5000, "Color" : 1000}
 
     def is_floor_unlocked(self, num: int):
         """Returns True if the floor is unlocked, False otherwise."""
@@ -104,8 +104,7 @@ class UnlockManager:
             self.unlocked_features.append(feature_name)
 
             # Handle specific feature unlock actions
-            if feature_name == "Auto Cachier":
-                game.timer.create_timer(3, game.accept_bot, True)
+            game.unlock_effect(feature_name)
 
             game.popups.append(InfoPopup(f"Vous avez débloqué {feature_name} !"))
             game.sound_manager.achieve.play()

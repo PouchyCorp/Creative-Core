@@ -37,29 +37,35 @@ class State(Enum):
     SHOP = auto()
     PAUSED = auto()
 
-# a LOT of imports
+# system 
 import pygame as pg
-import objects.placeablesubclass as subplaceable
-from objects.bot import Hivemind, BotDistributor
+from math import pi #used for the transition effect
+
+# core game elements
 from core.buildmode import BuildMode, DestructionMode
-from utils.coord import Coord
-from ui.inventory import Inventory, Shop
-from ui.infopopup import InfoPopup
-from  utils.room_config import R1, ROOMS, Room, PARTICLE_SPAWNERS
-from utils.timermanager import TimerManager
-import ui.sprite as sprite
-from objects.dialogue import DialogueManager
-from math import pi
 from core.unlockmanager import UnlockManager
-from objects.placeable import Placeable
-from ui.confirmationpopup import ConfirmationPopup
-from utils.sound import SoundManager
-from objects.patterns import PatternHolder
+from objects.bot import Hivemind, BotDistributor
 from objects.canva import Canva
-from ui.button import Button
+from objects.dialogue import DialogueManager
 from objects.particlesspawner import ParticleSpawner
+from objects.patterns import PatternHolder
+from objects.placeable import Placeable
+import objects.placeablesubclass as subplaceable
+
+# ui elements
+from ui.button import Button
 from ui.cinematic import CinematicPlayer
+from ui.confirmationpopup import ConfirmationPopup
+from ui.infopopup import InfoPopup
+from ui.inventory import Inventory, Shop
+import ui.sprite as sprite
+
+# misc
+from utils.coord import Coord
 from utils.fonts import TERMINAL_FONT_BIG
+from utils.room_config import R1, ROOMS, Room, PARTICLE_SPAWNERS, SPECIAL_PLACEABLES
+from utils.sound import SoundManager
+from utils.timermanager import TimerManager
 
 class Game:
     def __init__(self, win : pg.Surface, config : dict, inventory, shop, gold, unlock_manager, transparency_win):
@@ -98,9 +104,12 @@ class Game:
 
         self.particle_spawners : dict[int,list] = PARTICLE_SPAWNERS
 
+        self.guichet = SPECIAL_PLACEABLES['guichet']
+
         # Initialize unlocks effects.
         if self.unlock_manager.is_feature_unlocked("Auto Cachier"): # If the auto cachier is unlocked
-            self.timer.create_timer(3, self.accept_bot, True) # Accept a bot every 3 seconds (effect of the auto cachier unlock)
+            self.unlock_effect("Auto Cachier") # Apply the unlock effect
+            
         if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
             self.unlock_manager.discovered_floors.append("1")
             CinematicPlayer(*sprite.CUTSCENES["floor1"]) # Launch the first floor tutorial
@@ -108,11 +117,22 @@ class Game:
         self.update_all_locked_status() # Update doors lock state
 
         if not self.config['gameplay']['offline_mode']: # If the player is not in the no_login mode, don't initialize the spectating placeable
-            self.spectating_placeable = subplaceable.SpectatorPlaceable('spectating_placeable', Coord(5,(100,100)), pg.Surface((100,100)), self.config)
-            ROOMS[5].placed.append(self.spectating_placeable)
-            ROOMS[5].blacklist.append(self.spectating_placeable)
-
-        self.cachier_desk = [plbl for plbl in ROOMS[1].placed if type(plbl) == subplaceable.DeskPlaceable][0] # Very ugly indeed
+            self.configure_online_mode()
+    
+    def unlock_effect(self, feature_name):
+        """Handles the unlock effects of the feature"""
+        match feature_name:
+            case "Auto Cachier":
+                self.timer.create_timer(3, self.accept_bot, True) # Accept a bot every 3 seconds (effect of the auto cachier unlock)
+                self.guichet.auto_cachier_unlocked = True # To display the auto cachier effect on the guichet
+            case "Color":
+                pass # TO DO : Add the color unlock effect
+    
+    def configure_online_mode(self):
+        """ Handles the changes necessary to play in online mode"""
+        self.spectating_placeable = subplaceable.SpectatorPlaceable('spectating_placeable', Coord(5,(100,100)), pg.Surface((100,100)), self.config)
+        ROOMS[5].placed.append(self.spectating_placeable)
+        ROOMS[5].blacklist.append(self.spectating_placeable)
 
     def change_floor(self, direction):
         """ Changes the current room to the next one in the given direction 
@@ -192,7 +212,7 @@ class Game:
         accepted_bot_money_amount = self.hivemind.free_last_bot(R1)
         if accepted_bot_money_amount: # Attempt to free the last bot and checks output
             self.money += accepted_bot_money_amount  # Increment currency
-        self.cachier_desk.active = True
+        SPECIAL_PLACEABLES['guichet'].active = True
         
     def launch_transition(self):
         """ Launches the transition effect when changing floors"""
@@ -265,6 +285,10 @@ class Game:
                 self.hivemind.free_last_bot(self.current_room)
             case pg.K_s:
                 self.toggle_shop()
+            case pg.K_i:
+                self.save_canva()
+            case pg.K_g:
+                self.money += 1000
 
     def toggle_inventory(self):
         if self.gui_state is State.INTERACTION:

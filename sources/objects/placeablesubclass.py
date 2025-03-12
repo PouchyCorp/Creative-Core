@@ -189,8 +189,11 @@ class DeskPlaceable(Placeable):
     """Class for the unique desk placeable at floor 1."""
     def __init__(self, name, coord, surf, tag = None):
         super().__init__(name, coord, surf, tag)
+        self.auto_cachier_unlocked = False
+
         self.anim_bg = Animation(sprite.DESK_BG, 0, 14, speed=3, repeat=False)
         self.anim_fg = Animation(sprite.DESK_FG, 0, 14, speed=3, repeat=False)
+        self.special_auto_guichet_bg = Animation(sprite.DESK_ROBOT_BG, 0, 14, speed=3, repeat=False)
         self.surf = self.anim_bg.reset_frame()
         self.fg_surf = self.anim_fg.reset_frame()
 
@@ -200,6 +203,9 @@ class DeskPlaceable(Placeable):
 
     def update_sprite(self, is_hovered, color = ...):
         """Update the sprite of the desk by playing the animation."""
+        if self.auto_cachier_unlocked:
+            self.anim_bg = self.special_auto_guichet_bg
+
         if self.anim_bg.is_finished():
             self.active = False
             self.surf = self.anim_bg.reset_frame()

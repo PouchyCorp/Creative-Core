@@ -25,8 +25,8 @@ La version basique du client utilisée pour la conception et les testes peut êt
 
 ## Fonctionnement de `TimerManager`
 
-La classe `TimerManager` permet de créer et de gérer des minuteries qui exécutent des fonctions après un certain délai. Voici les principales méthodes de cette classe :
-minuteries.
+La classe `TimerManager` permet de créer et de gérer des minuteries qui exécutent des fonctions après un certain délai.  
+Ce composant est critique pour notre projet, il est utilisé plus de 20 fois dans le code !
 
 - **`create_timer`** : Crée une nouvelle minuterie avec une durée spécifiée, une fonction à exécuter, et des arguments optionnels. La minuterie peut être répétée si nécessaire.
 - **`update`** : Met à jour les minuteries en vérifiant si leur durée est écoulée. Si c'est le cas, la fonction associée est exécutée et la minuterie est soit supprimée, soit réinitialisée si elle est répétée.

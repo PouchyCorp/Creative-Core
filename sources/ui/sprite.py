@@ -201,7 +201,7 @@ BG3 = load_image("data/R2.png")
 BG4 = load_image("data/R3.png")
 BG5 = load_image("data/R4.png")
 BG6 = load_image("data/R5.png")
-PRETTY_BG = load_image("data/joli_background.jpg")
+PRETTY_BG = load_image("data/joli_background.png")
 
 # Icons
 ICON_1 = load_image('data/icon_inv_test.png')

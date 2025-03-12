@@ -311,4 +311,9 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # - The cutscene
 # - The name of the 1st dialogue
 # - The name of the introspecive dialogue
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (), "floor1" : (), "floor2": (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2"), "floor3" : (), "floor4" : [anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False)], "floor5" : ()}
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "0", "introspec_0"),
+                                                "floor1" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False),), 
+                                                "floor2" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2", "introspec_2"),
+                                                "floor3" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "3", "introspec_3"),
+                                                "floor4" : (anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False), "4", "introspec_4"),
+                                                "floor5" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "5", "introspec_5")}

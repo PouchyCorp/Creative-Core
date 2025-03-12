@@ -548,7 +548,7 @@ class Game:
         beauty_string = beauty_default_string[:6-len(str(cropped_beauty))] + str(cropped_beauty) # Magic slice to replace the end of default string with actual beauty value
         current_frame = sprite.BEAUTY_LABEL_ANIMATION.get_frame()
         current_frame.blit(TERMINAL_FONT_BIG.render(beauty_string, False, (0, 255, 0)), (6*6, 6*6))
-        self.win.blit(current_frame, (self.win.get_width()//2, 0))
+        self.win.blit(current_frame, (self.win.get_width()-current_frame.get_width(), 0))
 
     def draw_background(self):
         self.win.blit(self.current_room.bg_surf, (0, 0))

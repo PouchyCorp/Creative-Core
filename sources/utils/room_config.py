@@ -50,26 +50,26 @@ def init_rooms():
     R2 = Room(2, sprite.BG3)
     shop = subplaceable.ShopPlaceable('shop', Coord(
         2, (1000, 100)), Surface((50*6, 90*6)), "shop")
-    R2.placed += [stairs_up, stairs_down, shop]
-    R2.blacklist += [stairs_up, stairs_down, shop]
+    R2.placed += [stairs_up, stairs_down, shop, inventory]
+    R2.blacklist += [stairs_up, stairs_down, shop, inventory]
 
     # floor 3
     R3 = Room(3, sprite.BG4)
-    R3.placed += [stairs_up, stairs_down]
-    R3.blacklist += [stairs_up, stairs_down]
+    R3.placed += [stairs_up, stairs_down, inventory]
+    R3.blacklist += [stairs_up, stairs_down, inventory]
 
     # floor 4
     R4 = Room(4, sprite.BG5)
     auto_cachier = subplaceable.AutoCachierPlaceable(
         'AutoCachierPlaceable', Coord(1, (1500, 700)), Surface((10*6, 10*6)))
-    R4.placed += [stairs_up, stairs_down, auto_cachier]
-    R4.blacklist += [stairs_up, stairs_down, auto_cachier]
+    R4.placed += [stairs_up, stairs_down, auto_cachier, inventory]
+    R4.blacklist += [stairs_up, stairs_down, auto_cachier, inventory]
 
     # floor 5
     R5 = Room(5, anim=Animation(sprite.SPRITESHEET_ROOFTOP, 0, 14, 8))
     music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC)
-    R5.placed += [stairs_down, music_robot]
-    R5.blacklist += [stairs_up, stairs_down, music_robot]
+    R5.placed += [stairs_down, music_robot, inventory]
+    R5.blacklist += [stairs_up, stairs_down, music_robot, inventory]
 
     special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot} #used to access special placeables in the game loop
 

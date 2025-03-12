@@ -55,7 +55,6 @@ https://stackoverflow.com/questions/32127524/how-to-install-and-use-make-in-wind
 https://stackoverflow.com/questions/36583502/how-to-force-a-linebreak
 https://stackoverflow.com/questions/293431/python-object-deleting-itself
 https://stackoverflow.com/questions/29050004/modifying-a-copy-of-a-javascript-object-is-causing-the-original-object-to-change
-https://stackoverflow.com/questions
 https://stackoverflow.com/questions/136097/what-is-the-difference-between-staticmethod-and-classmethod-in-python
 https://stackoverflow.com/questions/25389250/how-do-i-design-my-gl-application-for-portability
 https://stackoverflow.com/questions/38279156/why-there-are-still-many-wavefront-obj-files-containing-4-vertices-in-one-face

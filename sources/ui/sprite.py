@@ -144,7 +144,7 @@ def point_rotate(image, origin, pivot, angle):
     """
     Rotate an image around a pivot point.
     This is needed because of the weird way pygame rotates sprites.
-
+    https://stackoverflow.com/questions/15098900/how-to-set-the-pivot-point-center-of-rotation-for-pygame-transform-rotate
     Parameters:
     - image: The image to be rotated.
     - origin: The top-left corner of the image before rotation.
@@ -173,7 +173,8 @@ def point_rotate(image, origin, pivot, angle):
 
 def inverse_kinematics(target, root, length1, length2):
     """Compute the angles needed to reach the target using 2D inverse kinematics 
-        Algorithm inspired by https://www.alanzucconi.com/2018/05/02/ik-2d-1/"""
+        Algorithm inspired by https://www.alanzucconi.com/2018/05/02/ik-2d-1/
+        Slight use of chatGPT to debug the code."""
     dx = target[0] - root[0]
     dy = target[1] - root[1]
     distance = sqrt(dx**2 + dy**2)
@@ -306,4 +307,8 @@ PATTERN_LIST = [load_image("data/pattern_storage/pattern_"+str(num)+".png") for 
 DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in range(1,16)]
 
 # Cutscenes
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (),"floor1" : (), "floor2": (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2"), "floor3" : (), "floor4" : [anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False)], "floor5" : ()}
+# The format for the cutscenes is:
+# - The cutscene
+# - The name of the 1st dialogue
+# - The name of the introspecive dialogue
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (), "floor1" : (), "floor2": (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2"), "floor3" : (), "floor4" : [anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False)], "floor5" : ()}

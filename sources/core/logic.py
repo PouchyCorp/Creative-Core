@@ -112,7 +112,7 @@ class Game:
             
         if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
             self.unlock_manager.discovered_floors.append("1")
-            CinematicPlayer(*sprite.CUTSCENES["floor1"]) # Launch the first floor tutorial
+            CinematicPlayer(*sprite.CUTSCENES["floor1"]).play(self) # Launch the first floor tutorial
             
         self.update_all_locked_status() # Update doors lock state
 

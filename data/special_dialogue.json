@@ -5,7 +5,16 @@
     "color" : ["tuto color"],
     "Auto Cachier" : ["tuto cachier"],
     "spectator" : ["tuto spectator"],
-    "introspec_1" : ["UwU"],
+
+    "introspec_0" : ["Il y a donc ainsi des robots qui ont dédiés leur vie a ce drôle de hooby…",
+    "Quel pouvait être leur but ? A quoi cela pouvait il bien servir ?",
+    "Dans tous les cas je trouve ça bien plus amusant que l’usine",
+    "Je n’y retournerais jamais !!",
+    "Mais j'espère pouvoir faire quelque chose de ce don !",
+    "Ce serait dommage de ne pas l’utiliser…"],
+
+
+
     "introspec_2" : ["AwA"],
     "introspec_3" : ["OwO"],
     "introspec_4" : ["IwI"],

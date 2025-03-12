@@ -3,13 +3,32 @@ import pygame as pg
 from ui.button import Button
 from ui.sprite import whiten, PATTERN_LIST, DRAWER_LIST, DRAWER_HOLDER
 from typing_extensions import Optional
-from ui.infopopup import InfoPopup
+
+# Dictionary of patterns containing the thumbnail, the pattern, and the price
+pattern_dict = { 
+    "circle" : {'thumbnail' : PATTERN_LIST[0], 'pattern' : PATTERN_LIST[0], 'price' : 10}, 
+    "square" : {'thumbnail' : PATTERN_LIST[1], 'pattern' : PATTERN_LIST[1], 'price' : 20},
+    "triangle" : {'thumbnail' : PATTERN_LIST[2], 'pattern' : PATTERN_LIST[2], 'price' : 30},
+    "star" : {'thumbnail' : PATTERN_LIST[3], 'pattern' : PATTERN_LIST[3], 'price' : 40},
+    "heart" : {'thumbnail' : PATTERN_LIST[4], 'pattern' : PATTERN_LIST[4], 'price' : 50},
+    "flower" : {'thumbnail' : PATTERN_LIST[5], 'pattern' : PATTERN_LIST[5], 'price' : 60},
+    "cloud" : {'thumbnail' : PATTERN_LIST[6], 'pattern' : PATTERN_LIST[6], 'price' : 70},
+    "moon" : {'thumbnail' : PATTERN_LIST[7], 'pattern' : PATTERN_LIST[7], 'price' : 80},
+    "sun" : {'thumbnail' : PATTERN_LIST[8], 'pattern' : PATTERN_LIST[8], 'price' : 90},
+    "snowflake" : {'thumbnail' : PATTERN_LIST[9], 'pattern' : PATTERN_LIST[9], 'price' : 100},
+    "lightning" : {'thumbnail' : PATTERN_LIST[10], 'pattern' : PATTERN_LIST[10], 'price' : 110},
+    "fire" : {'thumbnail' : PATTERN_LIST[11], 'pattern' : PATTERN_LIST[11], 'price' : 120},
+    "water" : {'thumbnail' : PATTERN_LIST[12], 'pattern' : PATTERN_LIST[12], 'price' : 130},
+    "earth" : {'thumbnail' : PATTERN_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 140},
+    "air" : {'thumbnail' : PATTERN_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 150},
+}
 
 class Pattern:
-    def __init__(self, coord, thumbnail : pg.Surface, price, beauty, color : tuple = (0,0,0,255)):
+    def __init__(self, name, coord, thumbnail : pg.Surface, true_pattern, price, beauty):
+        self.name = name
         self.thumbnail = thumbnail
+        self.true_pattern = true_pattern
         self.rect = self.thumbnail.get_rect(topleft = coord)
-        self.color = color
         self.price = price
         self.beauty = beauty
     
@@ -17,14 +36,16 @@ class Pattern:
         win.blit(self.thumbnail, self.rect.topleft)
 
     def get_effect(self):
-        return self.thumbnail.copy()
+        return self.true_pattern.copy()
     
     def copy(self):
-        return Pattern(self.rect.topleft, self.thumbnail, self.price, self.beauty, self.color)
+        return Pattern(self.name, self.rect.topleft, self.thumbnail, self.true_pattern ,self.price, self.beauty)
 
 class PatternHolder:
     def __init__(self, coord : Coord, canva):
-        self.patterns : list[Pattern] = [Pattern(coord.xy, thumbnail, i+1, i+1) for i, thumbnail in enumerate(PATTERN_LIST)]
+        self.patterns : list[Pattern] = [Pattern(name, coord.xy, pattern_dict[name]['thumbnail'],
+                                                  pattern_dict[name]['pattern'], pattern_dict[name]['price'],
+                                                    pattern_dict[name]['price']/10) for name in pattern_dict] # List of patterns, the bauty is 10% of the price
         self.coord = coord 
         self.surf = DRAWER_HOLDER.copy()
         self.drawers : list[Button] = self.init_buttons()

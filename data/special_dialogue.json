@@ -11,7 +11,7 @@
     "introspec_4" : ["IwI"],
     "introspec_5" : ["EwE"],
     
-    "1" : ["“Bip…….. ? ",
+    "0" : ["Bip…….. ? ",
     "Boup……. ?",
     "Buuuuiuuuiuiu {initialisation en cours}",
     "Bonjour….",
@@ -30,9 +30,8 @@
     "Allons bon…. Merci de m’avoir permis de revoir ",
     "la lumière une dernière fois… ",
     "je pense que le moment est venu de shutdown mes composants … ",
-    "Mon temps est venu…”"    
-],
-    "0" : ["“Comment ?!? Toi aussi tu fais de la peinture ?",
+    "Mon temps est venu…",    
+    "A moins que... Toi aussi tu fais de la peinture ?",
     "Mais comment est-ce… ",
     "Pourrais tu me montrer une de tes oeuvres ?”",
     "“C’est très intéressant… tu es prometteur…",
@@ -41,7 +40,7 @@
     "je ne suis plus capable de peindre par moi même…",
     "En revanche, j’aimerais que tu prennes le temps de me montrer ",
     "cette lumière,",
-    "Ainsi les oeuvres que tu peints… je pourrais te conseiller”"
+    "Ainsi les oeuvres que tu peints… je pourrais te conseiller"
     ],
 
     "2" : ["“Bonjour monsieur !",

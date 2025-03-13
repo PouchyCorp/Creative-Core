@@ -6,7 +6,8 @@
     "Auto Cachier" : ["tuto cachier"],
     "spectator" : ["tuto spectator"],
 
-    "introspec_0" : ["Il y a donc ainsi des robots qui ont dédiés leur vie a ce drôle de hooby…",
+    "introspec_0" : 
+    ["Il y a donc ainsi des robots qui ont dédiés leur vie a ce drôle de hooby…",
     "Quel pouvait être leur but ? A quoi cela pouvait il bien servir ?",
     "Dans tous les cas je trouve ça bien plus amusant que l’usine",
     "Je n’y retournerais jamais !!",
@@ -15,7 +16,21 @@
 
 
 
-    "introspec_2" : ["AwA"],
+    "introspec_2" : 
+    ["Ce drole de personnage ne me parait pas tres net...",
+    "Je ne sais pas si je devrais lui faire confiance...",
+    "D'un autre côté, son magasin me serait très utile...",
+    "Il me permettrait d'aménager mon musée...",
+    "Mais je ne veux pas qu'il profite de mon art pour cela...",
+    "La peinture ne doit pas ếtre un moyen de faire vendre...",
+    "Cela doit rester une chose qui vient apporter des sensations a son spectateur",
+    "C'est en tout cas ce que j'aimerais faire...",
+    "Pouvoir divertir mes camarades de leurs logues journées de travail",
+    "...",
+    "Faisons confiance à ce robot",
+    "Il sera toujours temps de le quitter plus tard !" ],
+
+    
     "introspec_3" : ["OwO"],
     "introspec_4" : ["IwI"],
     "introspec_5" : ["EwE"],

@@ -3,7 +3,7 @@ from utils.coord import Coord
 from objects.placeable import Placeable
 from objects.patterns import Pattern
 from ui.inputbox import InputBox
-from ui.sprite import FRAME_PAINTING, invert_alpha, PAINT_BUTTON, SAVE_BUTTON, CANVA_UI_NAME, CANVA_UI_PAINT, whiten, ARM, SPRAYER, point_rotate, inverse_kinematics
+from ui.sprite import FRAME_PAINTING, invert_alpha, PAINT_BUTTON, SAVE_BUTTON, CANVA_UI_NAME, CANVA_UI_PAINT, whiten, ARM, SPRAYER, point_rotate, inverse_kinematics, get_locked_surface
 from ui.button import Button
 from ui.confirmationpopup import ConfirmationPopup
 from ui.infopopup import InfoPopup
@@ -11,7 +11,7 @@ from utils.fonts import TERMINAL_FONT_VERYBIG
 from math import sqrt, ceil, pi, sin
 from objects.particlesspawner import CircleParticleSpawner, ParticleSpawner
 
-COLORS = [(0,0,0), (255,255,255), (255,0,0), (0,0,255), (0,255,0)]
+COLORS = [(0,0,0), (255,255,255), (255,0,0), (0,0,255), (0,255,0), (0,255,0), (0,255,0)]
 
 offsetx = -60 # Needed to adjust the position of the control panel, because sadly it was not written with relative coordinates
 offsety = -90
@@ -37,7 +37,7 @@ class Canva:
         self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
         # Initialize color selection buttons
-        self.color_buttons = self.init_color_buttons()
+        self.color_buttons = self.init_color_buttons((1296, 474), False)
         
         # Import the game logic and set the game reference
         from core.logic import Game
@@ -69,18 +69,43 @@ class Canva:
     def change_color(self, color):
         """Change the current color used for painting."""
         self.current_color = color
+    
+    def error_popup(self):
+        """Show an error popup when the player tries to paint without placing any patterns."""
+        self.game.popups.append(InfoPopup("Vous ne pouvez pas peindre sans pochoirs !"))
+        self.game.sound_manager.incorrect.play()
+    
+    def color_blocked_popup(self):
+        """Show a popup when the player tries to select a locked color."""
+        self.game.popups.append(InfoPopup("Vous n'avez pas encore débloqué cette couleur !"))
+        self.game.sound_manager.incorrect.play()
 
-    def init_color_buttons(self):
+    def init_color_buttons(self, coord : tuple, additional_colors_unlocked) -> list[Button]:
         """Initialize the color selection buttons."""
         buttons : list[Button] = []
-        size = (120,120)
-        x = 12
-        y = 384
-        for color in COLORS:
+        size = (84,84)
+        x, y = coord
+
+        if not additional_colors_unlocked:
+            unlocked_colors = COLORS[:3]
+        else:
+            unlocked_colors = COLORS
+
+        for i, color in enumerate(COLORS):
             surf = pg.Surface(size)
             surf.fill(color)
-            buttons.append(Button((x, y), self.change_color, whiten(surf), surf, [color]))
-            y+=size[1]+12
+
+            if color in unlocked_colors:
+                buttons.append(Button((x, y), self.change_color, whiten(surf), surf, [color]))
+            else:
+                locked_surf = get_locked_surface(surf)
+                buttons.append(Button((x, y), self.color_blocked_popup, whiten(locked_surf), locked_surf, []))
+
+            if i == 4:
+                x+=size[0]+12
+                y = coord[1]
+            else:
+                y+=size[1]+12
         return buttons
 
     def get_placeable(self) -> Placeable:

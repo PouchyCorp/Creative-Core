@@ -42,11 +42,8 @@ class DoorUp(Placeable):
         self.door_down : Optional[DoorDown] = None
         self.locked = True
 
-        self.locked_surf = sprite.SPRITESHEET_DOOR_BLINK.get_img((0,0))       #create a locked door surface
-        self.locked_surf = grayscale(self.locked_surf)
-        lock = sprite.LOCK
-        lock_rect = lock.get_rect(center=self.locked_surf.get_rect().center)    #center the lock on the door
-        self.locked_surf.blit(lock, lock_rect)       #blit the lock on the door
+        self.locked_surf = sprite.get_locked_surface(sprite.SPRITESHEET_DOOR_BLINK.get_img((0,0)))       #create a locked door surface
+        
     
     def update_lock_status(self, unlock_manager : UnlockManager, current_room):
         if unlock_manager.is_floor_unlocked(str(current_room.num+1)):
@@ -100,11 +97,7 @@ class DoorDown(Placeable):
         self.door_up : Optional[DoorUp] = None
         self.locked = True
 
-        self.locked_surf = sprite.SPRITESHEET_DOOR_BLINK.get_img((0,0))       #create a locked door surface
-        self.locked_surf = grayscale(self.locked_surf)
-        lock = sprite.LOCK
-        lock_rect = lock.get_rect(center=self.locked_surf.get_rect().center)    #center the lock on the door
-        self.locked_surf.blit(lock, lock_rect)       #blit the lock on the special surface
+        self.locked_surf = sprite.get_locked_surface(sprite.SPRITESHEET_DOOR_BLINK_FLIP.get_img((0,0)))       #create a locked door surface
 
     def update_lock_status(self, unlock_manager : UnlockManager, current_room):
         if unlock_manager.is_floor_unlocked(str(current_room.num-1)):

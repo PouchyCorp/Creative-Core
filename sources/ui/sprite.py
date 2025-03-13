@@ -124,19 +124,30 @@ def get_outline(surf, color):
     outline_surface.fill(color, special_flags=BLEND_RGBA_MULT)
     return outline_surface
 
+def get_locked_surface(surf : Surface):
+    """Returns a grey surface with a lock on it."""
+    locked_surf = surf.copy()       #create a locked door surface
+    locked_surf = transform.grayscale(locked_surf)
+    lock = LOCK
+    lock_rect = lock.get_rect(center=locked_surf.get_rect().center)    #center the lock on the door
+    locked_surf.blit(lock, lock_rect)
+    return locked_surf
+
 
 def fondu(surfs : list[Surface], incr ,speed) -> Surface:
     """Speed is a float between 0 and 1, incr is a float between 0 and pi.
-    The function does a fade in/out effect on a list of surface using the sinus function."""
-    if incr <= pi:
+    A good speed is 0.0125, always start with incr = 0.
+    The function does a fade in/out effect on a list of surface using the sinus function.
+    Home-made algorithm."""
+    if incr <= pi: #fade in
         speed = pi*speed
         for surf in surfs:
-            rect = surf.get_rect()
-            black_surf = Surface((rect.w, rect.h), SRCALPHA)
-            color = (0,0,0,round(255*sin(incr)))
-            black_surf.fill(color)
+            rect = surf.get_rect() #get the rect of the surface
+            black_surf = Surface((rect.w, rect.h), SRCALPHA) #create a black surface with the same size
+            color = (0,0,0,round(255*sin(incr))) #calculate the opacity of the black surface
+            black_surf.fill(color) #fill the black surface with the calculated color
             surf.blit(black_surf, (0,0))
-        incr += speed
+        incr += speed 
     
     return incr
 
@@ -229,6 +240,7 @@ ARROW_LEFT = load_image("data/fleche_gauche.png")
 ARROW_RIGHT = load_image("data/fleche_droite.png")
 LOCK = load_image("data/cadena.png")
 BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 39*6)), 0, 14)
+COLOR_BUTTON_BG = nine_slice_scaling(WINDOW, (200, 50), (12,12,12,12))
 
 # Spritesheets
 SPRITESHEET_INVENTORY = anim.Spritesheet(load_image('data/etagere.png'), (53*6, 31*6))

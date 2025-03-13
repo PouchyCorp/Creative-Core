@@ -32,8 +32,23 @@
 
     
     "introspec_3" : ["OwO"],
-    "introspec_4" : ["IwI"],
+
+    
+    "introspec_4" : [
+    "Ainsi d'autres robots son réceptifs à mon art ??",
+    "Quel bonheur !",
+    "Cela veut dire que mon objectif a été accompli",
+    "Et que mes oeuvres ont touchés des gens et les ont intéréssés",
+    "Je vais évidemment l'autoriser a rester !",
+    "Cela me fera de la compagnie",
+    "Et m'enlevera une sacrée dose de travail",
+    "Car si il ne peut pas peindre, il peut toujours m'aider dans les taches du musées !",
+    "Il pourrait par exemple accueillir les visiteurs !",
+    "Ce serait beaucoup plus pratique !"],
+
+    
     "introspec_5" : ["EwE"],
+
     
     "0" : ["Bip…….. ? ",
     "Boup……. ?",
@@ -73,7 +88,9 @@
     "Le seul magasin ou vous pouvez trouver une panoplie ",
     "aussi élargie de meubles pour un prix aussi bas ! ",
     "La récente popularité de votre… Comment dit on déjà ?",
-    "Ah oui !               Espace d'exposition  !",
+    "Ah oui !" ,
+    "...",
+    "Espace d'exposition  !",
     "nous a amené a venir vous proposer un accord,",
     "qui serait évidemment bénéfique pour nous, euh pour vous !",
     "Celui ci permet d'accéder à la totalité de notre catalogue ",

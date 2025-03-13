@@ -11,6 +11,8 @@ r"""
 This module contains the default configuration for the rooms in the game.
 The initialization of the rooms is done in the init_rooms() function and not directly at the top level of the module to allow for making 
 copies of the rooms without reinitializing them (because shared by the main game and spectator mode).
+
+Author: Pouchy (Paul), Leih (Abel)
 """
 
 from utils.coord import Coord

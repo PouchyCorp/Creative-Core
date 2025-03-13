@@ -1,4 +1,4 @@
-r"""
+"""
   _                            _               
  | |                          | |              
  | |     __ _ _   _ _ __   ___| |__   ___ _ __ 
@@ -17,8 +17,9 @@ Key Features:
 Notes:
 ------
 The main loop is in sources/core/logic.py
-"""
 
+Author: Pouchy (Paul)
+"""
 
 import pygame as pg
 import tomli

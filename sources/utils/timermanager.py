@@ -1,3 +1,21 @@
+"""
+  _   _                     
+ | | (_)                    
+ | |_ _ _ __ ___   ___ _ __ 
+ | __| | '_ ` _ \ / _ \ '__|
+ | |_| | | | | | |  __/ |   
+  \__|_|_| |_| |_|\___|_|                       
+
+Key Features:
+-------------
+- Class to manage timers in the game.
+- Timers can have a duration and a function to call when the timer is up.
+- They can be set to repeat and have a random interval.
+- They need to be updated in the main loop.
+
+Author: Pouchy (Paul)
+"""
+
 from time import time
 from random import uniform
 
@@ -6,7 +24,8 @@ class TimerManager:
         self.timers : list[dict] = []
     
     def create_timer(self,duration : float, func, repeat : bool = False, arguments : tuple = (), repeat_time_interval : tuple = None):
-        """duration in seconds (accepts float)"""
+        """Create a timer with a duration, a function to call when the timer is up, and optional arguments for the function.
+        If repeat is True, the timer will repeat indefinitely."""
         self.timers.append({"creation_time" : time(), "duration" : duration, "func" : func, "repeat" : repeat, "args" : arguments, "repeat_time_interval" : repeat_time_interval})
 
     def update(self):

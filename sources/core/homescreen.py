@@ -1,4 +1,4 @@
-r"""
+"""
   _    _
  | |  | |                                                    
  | |__| | ___  _ __ ___   ___   ___  ___ _ __ ___  ___ _ __  
@@ -6,13 +6,16 @@ r"""
  | |  | | (_) | | | | | |  __/ \__ \ (__| | |  __/  __/ | | |
  |_|  |_|\___/|_| |_| |_|\___| |___/\___|_|  \___|\___|_| |_|
                                                              
-Key features:
+This module provides the home screen with login and registration options.
+
+Key Features:
 -------------
-- Online and offlie version
+- Online and offline versions.
 - Home screen with login and registration options (FSM implementation).
-- Animated background
+- Animated background.
 - Text input boxes for username and password.
 
+Author: Leih (Abel), with background made by Ytyt (Tybalt)
 """
 
 import pygame as pg

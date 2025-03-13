@@ -1,9 +1,27 @@
-import pygame
+r"""
+                            _     
+                           | |    
+  ___  ___  _   _ _ __   __| |___ 
+ / __|/ _ \| | | | '_ \ / _` / __|
+ \__ \ (_) | |_| | | | | (_| \__ \
+ |___/\___/ \__,_|_| |_|\__,_|___/
 
+Key Features:
+-------------
+- Class to manage sounds in the game.
+
+Author: Leih (Abel)
+"""
+
+import pygame 
 class SoundManager:
-    def __init__(self, timermanager):
-        self.timer = timermanager
+    def __init__(self):
+        """
+        Class to manage sounds in the game.  
+        It is a good idea to have a loading screen while loading the sounds.  
+        You should not make multiple instances of this class if you dont want to wait 2sec each time you play a sound ^^"""
 
+        # Load sounds
         self.accrocher = pygame.mixer.Sound('data/sounds/accrocher_tableau.wav') #
         self.accrocher2 = pygame.mixer.Sound('data/sounds/accrocher.mp3') #
         self.achieve = pygame.mixer.Sound('data/sounds/achieve.mp3') #

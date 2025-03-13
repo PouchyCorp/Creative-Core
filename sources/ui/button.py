@@ -7,7 +7,9 @@ r"""
  |____/ \__,_|\__|\__\___/|_| |_|
                                  
 This module is used to create buttons in the game.
-They notably have different effects when clicked and a mouse hover effect.             
+They notably have different effects when clicked and a mouse hover effect.
+
+Author: Leih (Abel), refactored by Pouchy (Paul)
 """
 
 import pygame as pg

@@ -16,6 +16,8 @@ Key Features:
     - InvPlaceable for the inventory placeable at floor 1.
     - AutoCachierPlaceable for the automatic cash register unlock at floor 4.
     - SpectatorPlaceable for the spectator placeable at floor 5.
+
+Author: Pouchy (Paul), with contributions from Tioh (Taddeo)
 """
 
 from placeable import Placeable

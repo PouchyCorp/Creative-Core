@@ -11,7 +11,10 @@ Key features:
 - Database class for handling user registration, login, and data storage.
 - Hashing of user passwords for security.
 - Serialization and deserialization of user data for database storage (with a cool packet system ^^).
-- User data getting and saving."""
+- User data getting and saving.
+
+Author: Ytyt (Tybalt), with help from Pouchy for the custom packet system.
+"""
 
 import socket, pickle
 from hashlib import sha256

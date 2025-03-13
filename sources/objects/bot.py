@@ -39,6 +39,8 @@ Key Features:
 - Full movement logic, including movement to specific coordinates and room transitions.
 - Handles user interaction via mouse clicks, launching dialogues and reactions.
 - Supports animation through sprite sheets for various actions.
+
+Author: Pouchy (Paul) 
 """
 
 

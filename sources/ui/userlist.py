@@ -1,3 +1,22 @@
+"""
+                      _ _     _   
+                     | (_)   | |  
+  _   _ ___  ___ _ __| |_ ___| |_ 
+ | | | / __|/ _ \ '__| | / __| __|
+ | |_| \__ \  __/ |  | | \__ \ |_ 
+  \__,_|___/\___|_|  |_|_|___/\__|
+
+
+This module manages the user list UI component.
+
+Key Features:
+-------------
+- Displays a list of users.
+- Handles user interactions with the list.
+
+Author: Ytyt (Tybalt)
+"""
+
 from pygame import Surface, Rect, MOUSEBUTTONUP
 from ui.sprite import WINDOW, nine_slice_scaling
 from utils.fonts import TERMINAL_FONT

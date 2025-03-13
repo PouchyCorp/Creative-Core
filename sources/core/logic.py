@@ -21,7 +21,9 @@ Each frame (60fps):
                             v
 3. Rendering: Draws objects, UI elements, and overlays according to the active state.
 
-Certain states, like confirmation prompts and transitions, override standard interactions."""
+Certain states, like confirmation prompts and transitions, override standard interactions.
+
+Author: Pouchy (Paul), Ytyt (Tybalt), Leih (Abel), Tioh (Taddeo), but heavily refactored by Pouchy"""
 
 from enum import Enum, auto
 class State(Enum):
@@ -79,7 +81,7 @@ class Game:
         pg.display.flip()
         self.transparency_win = transparency_win
 
-        self.sound_manager = SoundManager(self.timer)
+        self.sound_manager = SoundManager()
         self.clock : pg.time.Clock = pg.time.Clock()
         self.popups : list[InfoPopup] = []
         self.confirmation_popups : list[ConfirmationPopup] = [] # Stack of confirmation popups

@@ -15,6 +15,8 @@ Key Features:
 - Uses confirmation popups to prompt the user before unlocking.
 - Handles the constraints (costs) associated with unlocking floors and features.
 - Triggers sound effects and notifications upon unlocking.
+
+Author: Pouchy (Paul)
 """
 
 from ui.confirmationpopup import ConfirmationPopup

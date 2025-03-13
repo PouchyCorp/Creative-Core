@@ -1,3 +1,31 @@
+"""
+  _                      _                         __      _                 
+ (_)                    | |                       / /     | |                
+  _ _ ____   _____ _ __ | |_ ___  _ __ _   _     / /   ___| |__   ___  _ __  
+ | | '_ \ \ / / _ \ '_ \| __/ _ \| '__| | | |   / /   / __| '_ \ / _ \| '_ \ 
+ | | | | \ V /  __/ | | | || (_) | |  | |_| |  / /    \__ \ | | | (_) | |_) |
+ |_|_| |_|\_/ \___|_| |_|\__\___/|_|   \__, | /_/     |___/_| |_|\___/| .__/ 
+                                        __/ |                         | |    
+                                       |___/                          |_|    
+
+Key Features:
+-------------
+*Inventory*
+- Manages the player's inventory.
+- Allows the player to change floors rapidly with buttons on the right.
+- Items are displayed in a grid with a maximum of 8 items per page, page navigation buttons are provided.
+- Inventory items are given a thumbnail (which is compressed with a funny method) and a label.
+
+*Shop*
+- Inherits from Inventory.
+- Unlocked at floor 2.
+- Allows the player to buy items from the shop.
+- The inheritance allows the shop to use the same rendering methods as the inventory.
+
+Author: Pouchy (Paul), with contributions from Tioh and Ytyt.
+"""
+
+
 from objects.placeable import Placeable
 from utils.coord import Coord
 from pygame import Surface, transform, BLEND_RGB_MIN

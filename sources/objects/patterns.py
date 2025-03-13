@@ -1,3 +1,24 @@
+"""
+              _   _                    _           _     _           
+             | | | |                  | |         | |   | |          
+  _ __   __ _| |_| |_ ___ _ __ _ __   | |__   ___ | | __| | ___ _ __ 
+ | '_ \ / _` | __| __/ _ \ '__| '_ \  | '_ \ / _ \| |/ _` |/ _ \ '__|
+ | |_) | (_| | |_| ||  __/ |  | | | | | | | | (_) | | (_| |  __/ |   
+ | .__/ \__,_|\__|\__\___|_|  |_| |_| |_| |_|\___/|_|\__,_|\___|_|   
+ | |                                                                 
+ |_|                                                                 
+
+Key Features:
+-------------
+- Manages the drawers containing the patterns.
+- Allows the player to select a pattern and move it anywhere !
+- Works along with the Canva object to place the pattern on the canvas.
+- The Pattern class handles the pattern's behavior and drawing.
+
+Author: Ytyt (Tybalt), refactored by Pouchy (Paul)
+"""
+
+
 from utils.coord import Coord
 import pygame as pg
 from ui.button import Button

@@ -1,3 +1,27 @@
+r"""
+                   _   _      _           
+                  | | (_)    | |          
+  _ __   __ _ _ __| |_ _  ___| | ___  ___ 
+ | '_ \ / _` | '__| __| |/ __| |/ _ \/ __|
+ | |_) | (_| | |  | |_| | (__| |  __/\__ \
+ | .__/ \__,_|_|   \__|_|\___|_|\___||___/
+ | |                                      
+ |_|                                      
+
+Key Features:
+-------------
+- Handles the creation of particles and their behavior.
+- Spawns particles in different shapes and patterns.
+- Particles can be used for various effects like explosions, fireworks, etc.
+- Spawners can be heavily customized to create unique effects.
+
+Note:
+------
+The clarity of each particle spawners configuration can be improved.
+
+Author: Tioh (Taddeo), refactored and optimized by Pouchy (Paul)
+"""
+
 from pygame import Vector2, draw
 from utils.coord import Coord
 from typing_extensions import Optional

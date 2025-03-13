@@ -1,3 +1,29 @@
+"""
+   _____                      
+  / ____|                     
+ | |     __ _ _ ____   ____ _ 
+ | |    / _` | '_ \ \ / / _` |
+ | |___| (_| | | | \ V / (_| |
+  \_____\__,_|_| |_|\_/ \__,_|
+
+This module manages the game's art system, including the canvas and painting mechanics.
+
+Key Features:
+-------------
+- Provides UI elements for painting and saving.
+- Arm and sprayer animation using inverse kinematics.
+- Color selection and painting mechanics.
+- Numerous popups for user feedback and information.
+- Particle effects for painting animations.
+
+Notes:
+------
+Definitely needs to be refactored to separate the UI elements from the game logic, however, the current implementation is functional.
+The animation handler should be moved to a separate module.
+
+Author: Ytyt (Tybalt) (with contributions from Paul)
+"""
+
 import pygame as pg
 from utils.coord import Coord
 from objects.placeable import Placeable
@@ -31,6 +57,7 @@ class Canva:
         self.rect = self.surf.get_rect()
         self.rect.x, self.rect.y = self.coord.xy
         
+        # Initialize UI elements
         # Initialize UI elements
         self.name_input = InputBox(1380+offsetx, 372+offsety, 198, 40)
         self.confirm_button = Button((1584+offsetx, 378+offsety), self.attempt_save, whiten(SAVE_BUTTON), SAVE_BUTTON)
@@ -68,21 +95,21 @@ class Canva:
         self.animation_handler = CanvaAnimationHandler(self)
 
     def change_color(self, color):
-        """Change the current color used for painting."""
+        """Change the current color used for painting.""" 
         self.current_color = color
     
     def error_popup(self):
-        """Show an error popup when the player tries to paint without placing any patterns."""
+        """Show an error popup when the player tries to paint without placing any patterns.""" 
         self.game.popups.append(InfoPopup("Vous ne pouvez pas peindre sans pochoirs !"))
         self.game.sound_manager.incorrect.play()
     
     def color_blocked_popup(self):
-        """Show a popup when the player tries to select a locked color."""
+        """Show a popup when the player tries to select a locked color.""" 
         self.game.popups.append(InfoPopup("Vous n'avez pas encore débloqué cette couleur !"))
         self.game.sound_manager.incorrect.play()
 
     def init_color_buttons(self, additional_colors_unlocked) -> list[Button]:
-        """Initialize the color selection buttons."""
+        """Initialize the color selection buttons.""" 
         buttons : list[Button] = []
         size = (84,84)
         x, y = self.color_buttons_pos
@@ -110,7 +137,7 @@ class Canva:
         return buttons
 
     def get_placeable(self) -> Placeable:
-        """Create and return a Placeable object from the current canvas."""
+        """Create and return a Placeable object from the current canvas.""" 
         scaled_surf = pg.transform.scale_by(self.surf.copy(),0.5).convert()
         FRAME_PAINTING.blit(scaled_surf,(12,12))
         placeable = Placeable(self.name, self.coord.copy(), FRAME_PAINTING.copy(), beauty=self.total_beauty, tag="decoration")
@@ -118,7 +145,7 @@ class Canva:
         return placeable
     
     def check_price(self, price):
-        """Check if the player has enough money to paint and deduct the price if possible."""
+        """Check if the player has enough money to paint and deduct the price if possible.""" 
         if self.game.money - price >= 0:
             self.game.money -= price
             return True
@@ -129,23 +156,23 @@ class Canva:
 
     def get_price(self):
         """Calculate and return the total price of all placed patterns.
-        Side effect: Set the total price of the canvas."""
+        Side effect: Set the total price of the canvas.""" 
         self.total_price = 0
         for pattern in self.placed_patterns:
             self.total_price += pattern.price
         return self.total_price
 
     def add_to_beauty(self, patterns : list[Pattern]):
-        """Add the beauty value of the given patterns to the total beauty."""
+        """Add the beauty value of the given patterns to the total beauty.""" 
         for pattern in patterns:
             self.total_beauty += pattern.beauty
     
     def reset(self):
-        """Reset the canvas to its initial state."""
+        """Reset the canvas to its initial state.""" 
         self.__init__(self.coord, self.game)
     
     def get_round_mask(self, surface : pg.Surface, xy : tuple, circle_radius):
-        """Create and return a circular mask for the given surface."""
+        """Create and return a circular mask for the given surface.""" 
         circle_surf = pg.Surface((circle_radius * 2, circle_radius * 2), pg.SRCALPHA)
         pg.draw.circle(circle_surf, (255, 255, 255, 255), (circle_radius, circle_radius), circle_radius)
 
@@ -153,7 +180,7 @@ class Canva:
         return circle_surf
     
     def get_next_surf(self):
-        """Generate and return the next surface to be painted."""
+        """Generate and return the next surface to be painted.""" 
         next_surf = pg.Surface(self.size)
         next_surf = next_surf.convert_alpha()
         next_surf.fill((0,0,0,0))
@@ -166,25 +193,25 @@ class Canva:
         return next_surf
     
     def start_painting(self):
-        """Start the painting process if the player has enough money."""
+        """Start the painting process if the player has enough money.""" 
         if self.check_price(self.get_price()):
             self.animation_handler.start_anim(self.get_next_surf())
             self.add_to_beauty(self.placed_patterns)
     
     def draw_pattern(self, surf, pattern : Pattern):
-        """Imprint the pattern on the given surface."""
+        """Imprint the pattern on the given surface.""" 
         relative_pos = (pattern.rect.x - self.coord.x,
                         pattern.rect.y - self.coord.y)
 
         surf.blit(pattern.get_effect(), relative_pos)
 
     def place_pattern(self, pattern : Pattern):
-        """Place a moveable pattern on the canvas."""
+        """Place a moveable pattern on the canvas.""" 
         self.placed_patterns.append(pattern)
         self.get_price()
 
     def hold_pattern(self, pattern):
-        """Hold a pattern for moving."""
+        """Hold a pattern for moving.""" 
         self.placed_patterns.remove(pattern) # Remove the pattern from the canvas
         self.get_price() # Update the total price
         self.holded_pattern = pattern
@@ -193,12 +220,12 @@ class Canva:
     
     def hold_pattern_from_drawer(self, pattern):
         """Hold a pattern from the drawer for moving.
-        This method is called by the PatternHolder object when a pattern is clicked."""
+        This method is called by the PatternHolder object when a pattern is clicked.""" 
         self.holded_pattern = pattern.copy()
         self.holded_pattern.rect.center = pg.mouse.get_pos()
     
     def drop_pattern(self, pos):
-        """Drop the held pattern at the given position."""
+        """Drop the held pattern at the given position.""" 
         if self.rect.collidepoint(pos):
             # Place the pattern on the canvas if the position is within the canvas bounds
             self.holded_pattern.rect.center = pos
@@ -210,13 +237,13 @@ class Canva:
         self.holded_pattern = None
 
     def attempt_save(self):
-        """Attempt to save the current canvas."""
+        """Attempt to save the current canvas.""" 
         # Set the canvas name from the input box and show a confirmation popup
         self.name = self.name_input.text
         self.game.confirmation_popups.append(ConfirmationPopup(self.game.win, "Sauvegarder la toile ?", self.game.save_canva))
 
     def draw(self, win : pg.Surface):
-        """Draw the canvas and its elements on the given window surface."""
+        """Draw the canvas and its elements on the given window surface.""" 
         # Draw the canvas surface
         win.blit(self.surf, self.coord.xy)
 
@@ -263,7 +290,7 @@ class Canva:
         self.blit_arms(win)
     
     def blit_arms(self, win):
-        """Draw the robotic arms on the given window surface."""
+        """Draw the robotic arms on the given window surface.""" 
         # Rotate and draw the arm
         rotated_surf, rect = point_rotate(self.arm['surf'], self.arm_root, (5,5), -self.arm['angle'])
         relative_arm_vector = pg.Vector2(self.arm['len'], 0)
@@ -286,7 +313,7 @@ class Canva:
         win.blit(SPRAYER, sprayer_rect)
 
     def handle_event(self, event):
-        """Handle user input events."""
+        """Handle user input events.""" 
         mouse_pos = pg.mouse.get_pos()
 
         # Handle events for the name input box, paint button, and confirm button
@@ -318,12 +345,12 @@ class CanvaAnimationHandler:
     A handler class for managing painting animations on a Canva object.
     """
     def __init__(self, canva):
-        """Initialize the AnimationHandler with a reference to the Canva object."""
+        """Initialize the AnimationHandler with a reference to the Canva object.""" 
         self.canva : Canva = canva
 
     def start_anim(self, next_surf):
         """Start the painting animation with the given surface.
-        This is a sort of turtle graphics implementation."""
+        This is a sort of turtle graphics implementation.""" 
         # Define the radius of the circular mask and the step size for the painting animation
         circle_radius = 120
         step = 25
@@ -412,19 +439,19 @@ class CanvaAnimationHandler:
         self.canva.game.timer.create_timer(5, self.canva.game.particle_spawners[0].remove, arguments=[aura_particles])
 
     def create_particles(self, center, circle_radius):
-        """Create and return static and aura particle spawners."""
+        """Create and return static and aura particle spawners.""" 
         static_particles = CircleParticleSpawner(center, circle_radius, pg.Vector2(0, 0), self.canva.current_color, 600, density=10, dir_randomness=0, radius=(10, 20))
         aura_particles = ParticleSpawner(center, pg.Vector2(0, 0), self.canva.current_color, 60, dir_randomness=2)
         return static_particles, aura_particles
 
     def create_path_stack(self, width, optimal_height):
-        """Create and return the path stack for the painting animation."""
+        """Create and return the path stack for the painting animation.""" 
         return [["U", self.canva.size[1]//2], ["L", 100-25], 'toggle', ["L", width+25], ["D", optimal_height], ["R", width], ["D", optimal_height],
                 ["L", width], ["D", optimal_height], ["R", width], ["D", optimal_height],
                 ["L", width], ["D", optimal_height], ["R", width], 'toggle', ["R", 100], ["U", self.canva.size[1]//2-25]]
 
     def update_paint_gun_pos(self, direction, paint_gun_pos, step):
-        """Update the paint gun position based on the current direction and step."""
+        """Update the paint gun position based on the current direction and step.""" 
         match direction:
             case "R":
                 paint_gun_pos[0] += step

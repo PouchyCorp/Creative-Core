@@ -1,3 +1,23 @@
+r"""
+  _                   _     _               
+ (_)                 | |   | |              
+  _ _ __  _ __  _   _| |_  | |__   _____  __
+ | | '_ \| '_ \| | | | __| | '_ \ / _ \ \/ /
+ | | | | | |_) | |_| | |_  | |_) | (_) >  < 
+ |_|_| |_| .__/ \__,_|\__| |_.__/ \___/_/\_\
+         | |                                
+         |_|                                
+
+Key Features:
+-------------
+- Handles text input from the user.
+- Need to be used in a controlled environment to avoid conflicts with other input boxes or key maps.
+- Used in the title screen for the player to input their name and password, or in canvas for the player to input the name of their masterpiece ^^.
+
+Author: Ytyt (Tybalt)
+"""
+
+
 import pygame as pg
 from utils.fonts import TERMINAL_FONT
 
@@ -23,9 +43,7 @@ class InputBox:
             self.color = COLOR_ACTIVE if self.active else COLOR_INACTIVE
             
         if event.type == pg.KEYDOWN and self.active:
-            if event.key == pg.K_RETURN:
-                self.text = ''
-            elif event.key == pg.K_BACKSPACE:
+            if event.key == pg.K_BACKSPACE:
                 self.text = self.text[:-1]
             else:
                 self.text += event.unicode

@@ -1,3 +1,22 @@
+r"""
+                   __ _                      _   _                 
+                  / _(_)                    | | (_)                
+   ___ ___  _ __ | |_ _ _ __ _ __ ___   __ _| |_ _  ___  _ __  ___ 
+  / __/ _ \| '_ \|  _| | '__| '_ ` _ \ / _` | __| |/ _ \| '_ \/ __|
+ | (_| (_) | | | | | | | |  | | | | | | (_| | |_| | (_) | | | \__ \
+  \___\___/|_| |_|_| |_|_|  |_| |_| |_|\__,_|\__|_|\___/|_| |_|___/
+
+Key Features:
+-------------
+- Handles the creation of a confirmation popup.
+- Draws a question and yes / no buttons for user interaction.
+- Each button can be assigned a function to be executed on click, usually to confirm or cancel an action.
+- Just need to be inserted by anything into Game class's confirmation_popups attribute, and it will be handled automatically.
+
+Author: Pouchy (Paul)
+"""
+
+
 import pygame as pg
 from utils.coord import Coord
 from ui.sprite import WINDOW, nine_slice_scaling, YES_BUTTON, NO_BUTTON
@@ -6,7 +25,9 @@ from utils.fonts import TERMINAL_FONT_BIG
 class ConfirmationPopup:
     def __init__(self, screen : pg.Surface, question : str, yes_func, no_func = None, yes_func_args : list = [], no_func_args : list = []):
         """
-        Initialize the confirmation popup.
+        Initialize the confirmation popup.  
+        yes_func and no_func are the functions to be executed when the respective buttons are clicked.  
+        yes_func_args and no_func_args are the arguments to be passed to the functions.
         """
         self.screen = screen
         self.question = question

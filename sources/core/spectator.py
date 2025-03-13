@@ -13,6 +13,8 @@ Key Features:
 - Launches a separate autonomous window to spectate a game save.
 - Handles navigation between unlocked floors but not interaction. 
 - Uses the same game save as the normal game, to enhance usability.
+
+Author: Ytyt (Tybalt)
 """
 
 
@@ -123,4 +125,3 @@ class Spectator:
 
             pg.display.flip()  # Update the display
 
-        

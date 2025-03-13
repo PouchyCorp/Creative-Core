@@ -1,9 +1,31 @@
+r"""
+  _        __                                      
+ (_)      / _|                                     
+  _ _ __ | |_ ___    _ __   ___  _ __  _   _ _ __  
+ | | '_ \|  _/ _ \  | '_ \ / _ \| '_ \| | | | '_ \ 
+ | | | | | || (_) | | |_) | (_) | |_) | |_| | |_) |
+ |_|_| |_|_| \___/  | .__/ \___/| .__/ \__,_| .__/ 
+                    | |         | |         | |    
+                    |_|         |_|         |_|    
+
+Key Features:
+-------------
+- Displays an informational popup on the screen.
+- The popup needs to be added to the game's popups list, and it will be handled automatically !
+- Pretty animations and text formatting made by the UI team (Tioh)
+
+Author: Pouchy (Paul) with contributions from Tioh for the visual effects.
+"""
+
 from pygame import Surface
 from ui.sprite import WINDOW, nine_slice_scaling
 from utils.fonts import TERMINAL_FONT
 
 class InfoPopup:
     def __init__(self, text):
+        """Initializes the popup with the given text.  
+        Put it in the game's popups list to display it."""
+
         self.text : str = text
         
         self.text_surf = TERMINAL_FONT.render(self.text, False, "white")
@@ -16,6 +38,8 @@ class InfoPopup:
         self.lifetime : int = 300
 
     def draw(self, screen : Surface):
+        """Draws the popup on the screen.  
+        Clever use of the lifetime attribute to program the popup's behavior."""
         self.lifetime -= 1
         
         if self.lifetime >= 75:

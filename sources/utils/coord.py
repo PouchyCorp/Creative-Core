@@ -1,3 +1,21 @@
+r"""
+                          _ _             _            
+                         | (_)           | |           
+   ___ ___   ___  _ __ __| |_ _ __   __ _| |_ ___  ___ 
+  / __/ _ \ / _ \| '__/ _` | | '_ \ / _` | __/ _ \/ __|
+ | (_| (_) | (_) | | | (_| | | | | | (_| | ||  __/\__ \
+  \___\___/ \___/|_|  \__,_|_|_| |_|\__,_|\__\___||___/
+
+Key Features:
+-------------
+- Handles the coordinate system for all objects.
+- Rounds down the coords to match with the pixel art 6*6 pixel size.
+- Different methods for specific comparisons between two Coord instances. 
+- Unit tests included !
+
+Author: Pouchy (Paul)
+"""
+
 class Coord:
     def __init__(self, room_num : int, xy : tuple[int] = (0,0)) -> None:
         '''coordinate system for all objects'''

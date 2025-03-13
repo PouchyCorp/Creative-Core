@@ -1,3 +1,29 @@
+"""
+  _           _ _     _       __      _           _                   _   
+ | |         (_) |   | |     / /     | |         | |                 | |  
+ | |__  _   _ _| | __| |    / /    __| | ___  ___| |_ _ __ _   _  ___| |_ 
+ | '_ \| | | | | |/ _` |   / /    / _` |/ _ \/ __| __| '__| | | |/ __| __|
+ | |_) | |_| | | | (_| |  / /    | (_| |  __/\__ \ |_| |  | |_| | (__| |_ 
+ |_.__/ \__,_|_|_|\__,_| /_/      \__,_|\___||___/\__|_|   \__,_|\___|\__|
+                                                               
+Key Features:
+-------------
+*Build mode* 
+- Handles the build mode and destruction mode.
+- Shows holograms of objects to be placed for better UX.
+- Handles constraints like grid snapping and y-axis constraints.
+- Checks if an object can be placed in a room without collision.
+- Pretty overlay made by Tioh.
+
+*Destruction mode*
+- Removes objects from the room when in destruction mode.
+- Returns the object to the inventory.
+- Pretty overlay made by Tioh.
+
+Author: Pouchy (Paul)
+"""
+
+
 from objects.placeable import Placeable
 from core.room import Room
 from utils.coord import Coord

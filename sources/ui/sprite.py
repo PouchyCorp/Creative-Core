@@ -1,4 +1,4 @@
-r"""
+"""
    _____            _ _            
   / ____|          (_) |           
  | (___  _ __  _ __ _| |_ ___  ___ 
@@ -8,14 +8,15 @@ r"""
         | |                        
         |_|                        
 
+This module contains all the sprite assets used in the game.
+
 Key Features:
 -------------
-- Contains all the sprite assets used in the game.
 - Nine-slice algorithm scaling for UI elements.
 - Whiten effect for surfaces, to be used as activated button sprites (to avoid having unnecessary files).
 
+Author: Tioh (Taddeo), with some help from Ytyt for the inverse_kinematics function.
 """
-
 
 from pygame import image, Surface, transform, SRCALPHA, BLEND_RGBA_MAX, display, Rect, BLEND_RGB_ADD, BLEND_RGBA_MULT, Vector2, surfarray
 from math import sin, pi, sqrt, acos, atan2, degrees, cos

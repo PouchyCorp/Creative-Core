@@ -29,6 +29,8 @@ Key Features:
 - Manages multiple dialogues instances (above) loaded from a JSON file.
 - Allows random selection of dialogues for interaction.
 - Enhance the interaction with a robot character.
+
+Author: Leih (Abel)
 """
 
 import random as rand

@@ -1,3 +1,31 @@
+r"""
+             _                                
+            | |                               
+   ___ _   _| |_ ___  ___ ___ _ __   ___  ___ 
+  / __| | | | __/ __|/ __/ _ \ '_ \ / _ \/ __|
+ | (__| |_| | |_\__ \ (_|  __/ | | |  __/\__ \
+  \___|\__,_|\__|___/\___\___|_| |_|\___||___/
+
+Key Features:
+-------------
+- Plays animations for cinematics using a configurable dictionary.
+- Customizes the dialogue, animation, and additional post-cutscene dialogue for each cinematic.
+- Handles transitions with sinus function for smooth fade-out effects.
+- Is used for:
+    introspection dialogues for character development.
+    cutscenes for story progression.
+
+- Triggered by the game logic when a cinematic is required.
+- Uses logic.py Game class methods to simulate the main game loop.
+- Uses the DialogueManager class to handle dialogue interactions.
+
+Cutscene stored in ui/sprite.py with the format:
+    (name : (animation, dialogue_name, introspection_dialogue_name))
+
+author: Leih (Abel)
+"""
+
+
 from objects.dialogue import DialogueManager
 from utils.anim import Animation
 import pygame as pg

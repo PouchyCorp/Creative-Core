@@ -10,6 +10,8 @@ Key Features:
 - Handles rendering of placed objects within the room.
 - Calculates the beauty score of a room based on decorative objects.
 - Supports animated background.
+
+Author: Pouchy (Paul)
 """
 
 from objects.placeable import Placeable

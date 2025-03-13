@@ -14,6 +14,8 @@ Key Features:
 - Supports static surfaces and animations with frame updates.
 - Pixelization and hover-based outline effects.
 - Custom pickling for object persistence.
+
+Author: Pouchy (Paul), with contributions from Tioh (Taddeo) for visual effects.
 """
 
 from pygame import Surface, Rect, transform, image

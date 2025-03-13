@@ -164,6 +164,10 @@ class AutoCachierPlaceable(Placeable):
     """Class for the automatic cash register unlock at floor 4."""
     pass
 
+class ColorUnlockPlaceable(Placeable):
+    """Class for the color unlock placeable at floor 3."""
+    pass
+
 class SpectatorPlaceable(Placeable):
     def __init__(self, name, coord, surf, config, tag = None):
         super().__init__(name, coord, surf, tag)

@@ -107,8 +107,8 @@ class Game:
         self.guichet = SPECIAL_PLACEABLES['guichet']
 
         # Initialize unlocks effects.
-        if self.unlock_manager.is_feature_unlocked("Auto Cachier"): # If the auto cachier is unlocked
-            self.unlock_effect("Auto Cachier") # Apply the unlock effect
+        for unlocked_feature in self.unlock_manager.unlocked_features: # If the auto cachier is unlocked
+            self.unlock_effect(unlocked_feature) # Apply the unlock effect
             
         if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
             self.unlock_manager.discovered_floors.append("1")
@@ -126,7 +126,7 @@ class Game:
                 self.timer.create_timer(3, self.accept_bot, True) # Accept a bot every 3 seconds (effect of the auto cachier unlock)
                 self.guichet.auto_cachier_unlocked = True # To display the auto cachier effect on the guichet
             case "Color":
-                pass # TO DO : Add the color unlock effect
+                self.canva.color_buttons = self.canva.init_color_buttons(True) # Initialize again the color buttons with the color feature unlocked this time
     
     def configure_online_mode(self):
         """ Handles the changes necessary to play in online mode"""
@@ -340,6 +340,8 @@ class Game:
                 self.handle_auto_cachier_interaction()
             case subplaceable.SpectatorPlaceable:
                 self.handle_spectator_interaction(placeable)
+            case subplaceable.ColorUnlockPlaceable:
+                self.handle_color_placeable_interaction()
             case _:
                 self.popups.append(InfoPopup(placeable.name))
 
@@ -364,7 +366,7 @@ class Game:
     def handle_shop_interaction(self):
         if not self.unlock_manager.is_feature_discovered("shop"): # Check if the shop is discovered
             self.unlock_manager.discovered_features.append("shop")
-            self.launch_special_dialogue("shop") # Launch tutorial dialogue
+            self.launch_special_dialogue("shop Discovery") # Launch tutorial dialogue
             return
         
         if self.gui_state is not State.SHOP:
@@ -374,7 +376,7 @@ class Game:
     def handle_inventory_interaction(self):
         if not self.unlock_manager.is_feature_discovered("inventory"):
             self.unlock_manager.discovered_features.append("inventory")
-            self.launch_special_dialogue("inventory")
+            self.launch_special_dialogue("inventory Discovery")
             return
 
         if self.gui_state is not State.INVENTORY:
@@ -382,15 +384,23 @@ class Game:
             self.inventory.init()
 
     def handle_auto_cachier_interaction(self):
-        if not self.unlock_manager.is_feature_unlocked("auto_cachier"):
+        if self.unlock_manager.is_feature_discovered("Auto Cachier"):
             self.unlock_manager.try_to_unlock_feature("Auto Cachier", self)
         else:
-            self.popups.append(InfoPopup("Vous avez déjà débloqué l'Auto Cachier"))
+            self.unlock_manager.discovered_features.append("Auto Cachier")
+            self.launch_special_dialogue("Auto Cachier Discovery")
+    
+    def handle_color_placeable_interaction(self):
+        if self.unlock_manager.is_feature_discovered("Color"):
+            self.unlock_manager.try_to_unlock_feature("Color", self)
+        else:
+            self.unlock_manager.discovered_features.append("Color")
+            self.launch_special_dialogue("Color Discovery")
 
     def handle_spectator_interaction(self, placeable):
         if not self.unlock_manager.is_feature_discovered("spectator"):
             self.unlock_manager.discovered_features.append("spectator")
-            self.launch_special_dialogue("spectator")
+            self.launch_special_dialogue("spectator Discovery")
             return
         
         placeable.interaction()

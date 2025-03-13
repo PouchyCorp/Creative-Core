@@ -1,9 +1,11 @@
 {
-    "destruction" : ["Bienvenue dans le mode destruction !"," Pour supprimer un objet, cliquez simplement dessus lorsque vous êtes en mode destruction."," L'objet reviendra dans votre inventaire."],
-    "inventory" : ["Bienvenue dans l'inventaire !","Ici, vous pouvez voir tous les objets que vous possédez.","Cliquez sur un objet pour le sélectionner et le placer dans votre musée."],
-    "shop" : ["Bienvenue dans le magasin !","Vous pouvez acheter de nouveaux objets pour votre musée ici.","Utilisez les flèches pour naviguer entre les pages et cliquez sur un objet pour l'acheter."],
-    "color" : ["Cet achat vous permet de choisir de nouvelles couleurs pour vos tableaux !","Cliquez moi dessus pour acheter les nouvelles couleurs !"],
-    "Auto Cachier" : ["Vous pouvez embaucher ce robot !","Il vous permet d'accepter automatiquement les bots toutes les 3 secondes. ","Activez-la pour gagner du temps !"],
+    "destruction Discovery" : ["Bienvenue dans le mode destruction !"," Pour supprimer un objet, cliquez simplement dessus lorsque vous êtes en mode destruction."," L'objet reviendra dans votre inventaire."],
+    "inventory Discovery" : ["Bienvenue dans l'inventaire !","Ici, vous pouvez voir tous les objets que vous possédez.","Cliquez sur un objet pour le sélectionner et le placer dans votre musée."],
+    "shop Discovery" : ["Bienvenue dans le magasin !","Vous pouvez acheter de nouveaux objets pour votre musée ici.","Utilisez les flèches pour naviguer entre les pages et cliquez sur un objet pour l'acheter."],
+    "Color Discovery" : ["Cet achat vous permet de choisir de nouvelles couleurs pour vos tableaux !","Cliquez moi dessus pour acheter les nouvelles couleurs !"],
+    "Color Post Unlock" : ["Vous avez acheté de nouvelles couleurs !","Revenez au sous-sol pour experimenter !"],
+    "Auto Cachier Discovery" : ["Bonjour !","Je suis le robot caissier.","Je vais accepter automatiquement les visiteurs ...","à condition que vous m'embauchiez !","Cliquez sur moi pour le faire !"],
+    "Auto Cachier Post Unlock" : ["Je suis ravi de pouvoir vous aider !","Je vais accepter automatiquement les visiteurs","UwU"],
     "spectator" : ["Bienvenue dans le mode spectateur !","Vous pouvez visiter les musées d'autres joueurs en cliquant sur les disponibles.","Profitez de l'exploration !"],
 
     "introspec_0" : 

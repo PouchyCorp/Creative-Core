@@ -55,8 +55,9 @@ def init_rooms():
 
     # floor 3
     R3 = Room(3, sprite.BG4)
-    R3.placed += [stairs_up, stairs_down, inventory]
-    R3.blacklist += [stairs_up, stairs_down, inventory]
+    color_unlock = subplaceable.ColorUnlockPlaceable('ColorUnlockPlaceable', Coord(3, (100, 100)), Surface((10*6, 10*6)))
+    R3.placed += [stairs_up, stairs_down, inventory, color_unlock]
+    R3.blacklist += [stairs_up, stairs_down, inventory, color_unlock]
 
     # floor 4
     R4 = Room(4, sprite.BG5)
@@ -71,7 +72,7 @@ def init_rooms():
     R5.placed += [stairs_down, music_robot, inventory]
     R5.blacklist += [stairs_up, stairs_down, music_robot, inventory]
 
-    special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot} #used to access special placeables in the game loop
+    special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot, 'color_unlock' : color_unlock} #used to access special placeables in the game loop
 
     return [R0, R1, R2, R3, R4, R5], special_placeables
 

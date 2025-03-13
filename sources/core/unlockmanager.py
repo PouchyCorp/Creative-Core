@@ -71,7 +71,7 @@ class UnlockManager:
 
     def try_to_unlock_feature(self, name, game : 'Game'):
         """Tries to unlock the feature if possible and returns the remaining money."""
-        if not self.is_feature_discovered(name):
+        if not self.is_feature_unlocked(name):
             game.confirmation_popups.append(ConfirmationPopup(game.win, f"Débloquer pour {self.feature_price[name]}¥ ?", self.unlock_feature, yes_func_args=[name, game]))
         else:
             game.popups.append(InfoPopup(f"Vous avez déjà débloqué {name} !"))
@@ -114,7 +114,7 @@ class UnlockManager:
             game.update_all_locked_status() # Update the locked status of all proper objects
 
             self.discovered_features.append(feature_name)
-            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name])
+            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name+" Post Unlock"])
         else:
             game.popups.append(InfoPopup(f"Pas assez d'argent pour débloquer {feature_name} :("))
             game.sound_manager.incorrect.play()

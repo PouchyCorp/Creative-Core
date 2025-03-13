@@ -3,7 +3,7 @@ from utils.coord import Coord
 from objects.placeable import Placeable
 from objects.patterns import Pattern
 from ui.inputbox import InputBox
-from ui.sprite import FRAME_PAINTING, invert_alpha, PAINT_BUTTON, SAVE_BUTTON, CANVA_UI_NAME, CANVA_UI_PAINT, whiten, ARM, SPRAYER, point_rotate, inverse_kinematics, get_locked_surface
+from ui.sprite import FRAME_PAINTING, invert_alpha, PAINT_BUTTON, SAVE_BUTTON, CANVA_UI_NAME, CANVA_UI_PAINT, whiten, ARM, SPRAYER, point_rotate, inverse_kinematics, get_locked_surface, COLOR_BUTTON_BG
 from ui.button import Button
 from ui.confirmationpopup import ConfirmationPopup
 from ui.infopopup import InfoPopup
@@ -37,7 +37,8 @@ class Canva:
         self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
         # Initialize color selection buttons
-        self.color_buttons = self.init_color_buttons((1296, 474), False)
+        self.color_buttons_pos = (1296, 474)
+        self.color_buttons = self.init_color_buttons(False) # Initialize the color buttons with the default colors
         
         # Import the game logic and set the game reference
         from core.logic import Game
@@ -80,11 +81,11 @@ class Canva:
         self.game.popups.append(InfoPopup("Vous n'avez pas encore débloqué cette couleur !"))
         self.game.sound_manager.incorrect.play()
 
-    def init_color_buttons(self, coord : tuple, additional_colors_unlocked) -> list[Button]:
+    def init_color_buttons(self, additional_colors_unlocked) -> list[Button]:
         """Initialize the color selection buttons."""
         buttons : list[Button] = []
         size = (84,84)
-        x, y = coord
+        x, y = self.color_buttons_pos
 
         if not additional_colors_unlocked:
             unlocked_colors = COLORS[:3]
@@ -103,7 +104,7 @@ class Canva:
 
             if i == 4:
                 x+=size[0]+12
-                y = coord[1]
+                y = self.color_buttons_pos[1]
             else:
                 y+=size[1]+12
         return buttons
@@ -253,6 +254,8 @@ class Canva:
         self.name_input.draw(win)
         self.confirm_button.draw(win, self.confirm_button.rect.collidepoint(pg.mouse.get_pos()))
         self.paint_button.draw(win, self.paint_button.rect.collidepoint(pg.mouse.get_pos()))
+        
+        win.blit(COLOR_BUTTON_BG, (1296, 426))
         for button in self.color_buttons:
             button.draw(win, button.rect.collidepoint(pg.mouse.get_pos()))
         

@@ -240,7 +240,7 @@ ARROW_LEFT = load_image("data/fleche_gauche.png")
 ARROW_RIGHT = load_image("data/fleche_droite.png")
 LOCK = load_image("data/cadena.png")
 BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 39*6)), 0, 14)
-COLOR_BUTTON_BG = nine_slice_scaling(WINDOW, (200, 50), (12,12,12,12))
+COLOR_BUTTON_BG = nine_slice_scaling(WINDOW, (200, 600), (12,12,12,12))
 
 # Spritesheets
 SPRITESHEET_INVENTORY = anim.Spritesheet(load_image('data/etagere.png'), (53*6, 31*6))

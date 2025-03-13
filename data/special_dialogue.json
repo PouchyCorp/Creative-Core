@@ -1,10 +1,10 @@
 {
-    "destruction" : ["tuto destruction"],
-    "inventory" : ["tuto inventory","1", "2", "3" ,"4", "5", "6", "7", "8", "9"],
-    "shop" : ["tuto shop"],
-    "color" : ["tuto color"],
-    "Auto Cachier" : ["tuto cachier"],
-    "spectator" : ["tuto spectator"],
+    "destruction" : ["Bienvenue dans le mode destruction !"," Pour supprimer un objet, cliquez simplement dessus lorsque vous êtes en mode destruction."," L'objet reviendra dans votre inventaire."],
+    "inventory" : ["Bienvenue dans l'inventaire !"," Ici, vous pouvez voir tous les objets que vous possédez."," Cliquez sur un objet pour le sélectionner et le placer dans votre musée."],
+    "shop" : ["Bienvenue dans le magasin !"," Vous pouvez acheter de nouveaux objets pour votre musée ici."," Utilisez les flèches pour naviguer entre les pages et cliquez sur un objet pour l'acheter."],
+    "color" : ["Cet achat vous permet de choisir de nouvelles couleurs pour vos tableaux !"," Cliquez moi dessus pour acheter les nouvelles couleurs !"],
+    "Auto Cachier" : ["Vous pouvez embaucher ce robot !","Il vous permet d'accepter automatiquement les bots toutes les 3 secondes. ","Activez-la pour gagner du temps !"],
+    "spectator" : ["Bienvenue dans le mode spectateur ! Vous pouvez visiter les musées d'autres joueurs en cliquant sur les fenêtres du musée. Profitez de l'exploration !"],
 
     "introspec_0" : 
     ["Il y a donc ainsi des robots qui ont dédiés leur vie a ce drôle de hooby…",
@@ -50,13 +50,13 @@
     "introspec_5" : ["Incroyable...",
     "J'ai réussi...",
     "J'ai pu partager mon art à d'autres robots",
-    "Et celui ci ],
+    "Et celui ci a été apprécié par d'autres robots..."],
 
     
-    "0" : ["Bip…….. ? ",
-    "Boup……. ?",
+    "0" : ["Bip……? ",
+    "Boup…… ?",
     "Buuuuiuuuiuiu {initialisation en cours}",
-    "Bonjour….",
+    "Bonjour…",
     "Ou peut-être bonsoir je ne sais plus….",
     "Je n’ai plus aucune notion du temps….",
     "Cela fait déjà si longtemps que j’attends, seul, ",

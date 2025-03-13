@@ -114,7 +114,7 @@ class ConfettiSpawner(ParticleSpawner):
 
     def spawn(self):
         if self.particle_amount > 0:
-            for _ in range(5):
+            for _ in range(3):
                 coord = Coord(self.coord.room_num,(randint(0,1920),0))
                 rng_rad = randint(5,15)
                 rng_dir = Vector2(uniform(-0.2, 0.2), 

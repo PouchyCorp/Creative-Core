@@ -99,7 +99,7 @@ class Game:
         self.beauty : float = self.process_total_beauty()
         self.unlock_manager : UnlockManager = unlock_manager
         self.canva : Canva = Canva(Coord(0,(618,24)), self)
-        self.pattern_holder : PatternHolder = PatternHolder(Coord(0, (0, 0)), canva=self.canva)
+        self.pattern_holder : PatternHolder = PatternHolder(Coord(0, (36, self.canva.coord.y+72)), canva=self.canva)
         self.paused = False
 
         self.particle_spawners : dict[int,list] = PARTICLE_SPAWNERS

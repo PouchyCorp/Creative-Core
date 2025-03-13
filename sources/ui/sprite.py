@@ -303,7 +303,8 @@ SPRAYER = load_image("data/buse.png")
 
 # Frame and Patterns
 DRAWER_HOLDER = load_image("data/etagere_canva.png")
-PATTERN_LIST = [load_image("data/pattern_storage/pattern_"+str(num)+".png") for num in range(1,16)]
+THUMBNAIL_LIST = [load_image("data/pattern_storage/pattern_"+str(num)+".png") for num in range(1,16)]
+PATTERN_LIST = [load_image("data/pattern_storage/pattern_"+str(num)+"_frame.png") for num in range(1,16)]
 DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in range(1,16)]
 
 # Cutscenes

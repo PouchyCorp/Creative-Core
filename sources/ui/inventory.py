@@ -187,7 +187,7 @@ class Shop(Inventory):
             self.init()
             game.popups.append(InfoPopup(f"{obj.name} a été ajouté à ton inventaire !"))
             self.sound_manager.items.play()
-            game.particle_spawners[2].append(ConfettiSpawner(Coord(1,(0,0)),500))
+            game.particle_spawners[2].append(ConfettiSpawner(Coord(1,(0,0)),300))
         else:
             game.popups.append(InfoPopup("Tu n'as as assez d'argent pour acheter l'objet :("))
             self.sound_manager.incorrect.play()

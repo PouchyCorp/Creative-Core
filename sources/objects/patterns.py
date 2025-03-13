@@ -1,26 +1,28 @@
 from utils.coord import Coord
 import pygame as pg
 from ui.button import Button
-from ui.sprite import whiten, PATTERN_LIST, DRAWER_LIST, DRAWER_HOLDER
+from ui.sprite import whiten, THUMBNAIL_LIST, DRAWER_LIST, DRAWER_HOLDER, PATTERN_LIST
 from typing_extensions import Optional
 
 # Dictionary of patterns containing the thumbnail, the pattern, and the price
+# The pattern needs to be a transparent image with the pattern in white (the opacity may vary)
+# The thumbnail is the image that will be shown at the place where the pattern is going to be placed
 pattern_dict = { 
-    "circle" : {'thumbnail' : PATTERN_LIST[0], 'pattern' : PATTERN_LIST[0], 'price' : 10}, 
-    "square" : {'thumbnail' : PATTERN_LIST[1], 'pattern' : PATTERN_LIST[1], 'price' : 20},
-    "triangle" : {'thumbnail' : PATTERN_LIST[2], 'pattern' : PATTERN_LIST[2], 'price' : 30},
-    "star" : {'thumbnail' : PATTERN_LIST[3], 'pattern' : PATTERN_LIST[3], 'price' : 40},
-    "heart" : {'thumbnail' : PATTERN_LIST[4], 'pattern' : PATTERN_LIST[4], 'price' : 50},
-    "flower" : {'thumbnail' : PATTERN_LIST[5], 'pattern' : PATTERN_LIST[5], 'price' : 60},
-    "cloud" : {'thumbnail' : PATTERN_LIST[6], 'pattern' : PATTERN_LIST[6], 'price' : 70},
-    "moon" : {'thumbnail' : PATTERN_LIST[7], 'pattern' : PATTERN_LIST[7], 'price' : 80},
-    "sun" : {'thumbnail' : PATTERN_LIST[8], 'pattern' : PATTERN_LIST[8], 'price' : 90},
-    "snowflake" : {'thumbnail' : PATTERN_LIST[9], 'pattern' : PATTERN_LIST[9], 'price' : 100},
-    "lightning" : {'thumbnail' : PATTERN_LIST[10], 'pattern' : PATTERN_LIST[10], 'price' : 110},
-    "fire" : {'thumbnail' : PATTERN_LIST[11], 'pattern' : PATTERN_LIST[11], 'price' : 120},
-    "water" : {'thumbnail' : PATTERN_LIST[12], 'pattern' : PATTERN_LIST[12], 'price' : 130},
-    "earth" : {'thumbnail' : PATTERN_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 140},
-    "air" : {'thumbnail' : PATTERN_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 150},
+    "circle" : {'thumbnail' : THUMBNAIL_LIST[0], 'pattern' : PATTERN_LIST[0], 'price' : 10}, 
+    "square" : {'thumbnail' : THUMBNAIL_LIST[1], 'pattern' : PATTERN_LIST[1], 'price' : 20},
+    "triangle" : {'thumbnail' : THUMBNAIL_LIST[2], 'pattern' : PATTERN_LIST[2], 'price' : 30},
+    "star" : {'thumbnail' : THUMBNAIL_LIST[3], 'pattern' : PATTERN_LIST[3], 'price' : 40},
+    "heart" : {'thumbnail' : THUMBNAIL_LIST[4], 'pattern' : PATTERN_LIST[4], 'price' : 50},
+    "flower" : {'thumbnail' : THUMBNAIL_LIST[5], 'pattern' : PATTERN_LIST[5], 'price' : 60},
+    "cloud" : {'thumbnail' : THUMBNAIL_LIST[6], 'pattern' : PATTERN_LIST[6], 'price' : 70},
+    "moon" : {'thumbnail' : THUMBNAIL_LIST[7], 'pattern' : PATTERN_LIST[7], 'price' : 80},
+    "sun" : {'thumbnail' : THUMBNAIL_LIST[8], 'pattern' : PATTERN_LIST[8], 'price' : 90},
+    "snowflake" : {'thumbnail' : THUMBNAIL_LIST[9], 'pattern' : PATTERN_LIST[9], 'price' : 100},
+    "lightning" : {'thumbnail' : THUMBNAIL_LIST[10], 'pattern' : PATTERN_LIST[10], 'price' : 110},
+    "fire" : {'thumbnail' : THUMBNAIL_LIST[11], 'pattern' : PATTERN_LIST[11], 'price' : 120},
+    "water" : {'thumbnail' : THUMBNAIL_LIST[12], 'pattern' : PATTERN_LIST[12], 'price' : 130},
+    "earth" : {'thumbnail' : THUMBNAIL_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 140},
+    "air" : {'thumbnail' : THUMBNAIL_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 150},
 }
 
 class Pattern:
@@ -61,7 +63,7 @@ class PatternHolder:
         drawer_coords = [(10*6,8*6), (36*6,8*6), (10*6,34*6), (43*6,34*6), (10*6,62*6), (35*6,62*6), (61*6,62*6), (10*6,85*6), (35*6,85*6), (61*6,85*6), (35*6,129*6), (10*6,108*6), (10*6,121*6), (35*6,108*6), (61*6,108*6)] # Respect the order of the sprites, please
 
         for i in range(15):
-            button = Button(drawer_coords[i], self.hold_pattern, whiten(drawer_sprites[i]), drawer_sprites[i], [i]) # Create a button for each drawer
+            button = Button((drawer_coords[i][0]+self.coord.x, drawer_coords[i][1]+self.coord.y), self.hold_pattern, whiten(drawer_sprites[i]), drawer_sprites[i], [i]) # Create a button for each drawer
             buttons.append(button)
 
         return buttons
@@ -77,6 +79,6 @@ class PatternHolder:
             button.handle_event(event)
     
     def draw(self, win : pg.Surface):
-        for button in self.drawers:
-            button.draw(self.surf, button.rect.collidepoint(pg.mouse.get_pos()))
         win.blit(self.surf, self.coord.xy)
+        for button in self.drawers:
+            button.draw(win, button.rect.collidepoint(pg.mouse.get_pos()))

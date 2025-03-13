@@ -87,7 +87,7 @@ class UnlockManager:
             game.popups.append(InfoPopup(f"Vous avez débloqué l'étage {num} !"))
             game.sound_manager.achieve.play()
             # Make it rain confetti
-            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1,(0,0)),500))
+            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1,(0,0)),300))
             game.update_all_locked_status()
         else:
             game.popups.append(
@@ -110,7 +110,7 @@ class UnlockManager:
             game.sound_manager.achieve.play()
             
             # Make it rain confetti
-            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1, (0, 0)), 500))
+            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1, (0, 0)), 300))
             game.update_all_locked_status() # Update the locked status of all proper objects
 
             self.discovered_features.append(feature_name)

@@ -7,11 +7,14 @@ from ui.sprite import FRAME_PAINTING, invert_alpha, PAINT_BUTTON, SAVE_BUTTON, C
 from ui.button import Button
 from ui.confirmationpopup import ConfirmationPopup
 from ui.infopopup import InfoPopup
-from utils.fonts import TERMINAL_FONT, TERMINAL_FONT_VERYBIG
+from utils.fonts import TERMINAL_FONT_VERYBIG
 from math import sqrt, ceil, pi, sin
 from objects.particlesspawner import CircleParticleSpawner, ParticleSpawner
 
 COLORS = [(0,0,0), (255,255,255), (255,0,0), (0,0,255), (0,255,0)]
+
+offsetx = -60 # Needed to adjust the position of the control panel, because sadly it was not written with relative coordinates
+offsety = -90
 
 class Canva:
     def __init__(self, coord : Coord, game): 
@@ -29,9 +32,9 @@ class Canva:
         self.rect.x, self.rect.y = self.coord.xy
         
         # Initialize UI elements
-        self.name_input = InputBox(1380, 372, 198, 40)
-        self.confirm_button = Button((1584, 378), self.attempt_save, whiten(SAVE_BUTTON), SAVE_BUTTON)
-        self.paint_button = Button((1464, 228), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
+        self.name_input = InputBox(1380+offsetx, 372+offsety, 198, 40)
+        self.confirm_button = Button((1584+offsetx, 378+offsety), self.attempt_save, whiten(SAVE_BUTTON), SAVE_BUTTON)
+        self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
         # Initialize color selection buttons
         self.color_buttons = self.init_color_buttons()
@@ -156,14 +159,15 @@ class Canva:
 
     def hold_pattern(self, pattern):
         """Hold a pattern for moving."""
-        self.placed_patterns.remove(pattern)
-        self.get_price()
+        self.placed_patterns.remove(pattern) # Remove the pattern from the canvas
+        self.get_price() # Update the total price
         self.holded_pattern = pattern
         self.holded_pattern.rect.center = pg.mouse.get_pos()
         self.game.sound_manager.items.play()
     
     def hold_pattern_from_drawer(self, pattern):
-        """Hold a pattern from the drawer for moving."""
+        """Hold a pattern from the drawer for moving.
+        This method is called by the PatternHolder object when a pattern is clicked."""
         self.holded_pattern = pattern.copy()
         self.holded_pattern.rect.center = pg.mouse.get_pos()
     
@@ -205,19 +209,19 @@ class Canva:
         
         color_gauge = pg.Surface((80, 120))
         color_gauge.fill(self.current_color)
-        win.blit(color_gauge, (1386,164+sin(self.color_gauge_incr)*5))
+        win.blit(color_gauge, (1386+offsetx,164+offsety+sin(self.color_gauge_incr)*5))
 
         # Draw UI
-        win.blit(CANVA_UI_PAINT, (1356, 114))
-        win.blit(CANVA_UI_NAME, (1356, 314))
+        win.blit(CANVA_UI_PAINT, (1356+offsetx, 114+offsety))
+        win.blit(CANVA_UI_NAME, (1356+offsetx, 314+offsety))
 
          # Draw the price and total beauty text
         price_label = TERMINAL_FONT_VERYBIG.render(str(self.total_price)+"¥", False, (255, 212, 163))
-        price_rect = price_label.get_rect(bottomleft=(1584, 210))
+        price_rect = price_label.get_rect(bottomleft=(1584+offsetx, 210+offsety))
         win.blit(price_label, price_rect)
 
         beauty_label = TERMINAL_FONT_VERYBIG.render(str(self.total_beauty), False, (255, 212, 163))
-        beauty_rect = beauty_label.get_rect(bottomleft=(1554, 486))
+        beauty_rect = beauty_label.get_rect(bottomleft=(1554+offsetx, 486+offsety))
         win.blit(beauty_label, beauty_rect)
 
         # Draw the input box and buttons
@@ -290,13 +294,14 @@ class CanvaAnimationHandler:
         self.canva : Canva = canva
 
     def start_anim(self, next_surf):
-        """Start the painting animation with the given surface."""
+        """Start the painting animation with the given surface.
+        This is a sort of turtle graphics implementation."""
         # Define the radius of the circular mask and the step size for the painting animation
         circle_radius = 120
         step = 25
 
         # Calculate optimal corner and height for the circular mask
-        optimal_corner = ceil((circle_radius - (circle_radius * sqrt(2) / 2)))
+        optimal_corner = ceil((circle_radius - (circle_radius * sqrt(2) / 2))) #ceil is used to round up to the nearest integer
         optimal_height = ceil(circle_radius * sqrt(2))
         width = (self.canva.size[0] - (circle_radius + optimal_corner))
 
@@ -307,7 +312,7 @@ class CanvaAnimationHandler:
         center = Coord(0, (self.canva.coord.x + paint_gun_pos[0] + circle_radius, self.canva.coord.y + paint_gun_pos[1] + circle_radius))
         static_particles, aura_particles = self.create_particles(center, circle_radius)
 
-        # Add the particle spawners to the game's particle spawner list
+        # Add the particle spawners to the particle spawner list
         self.canva.game.particle_spawners[0] += [static_particles, aura_particles]
 
         # Create the path stack for the painting animation
@@ -380,7 +385,7 @@ class CanvaAnimationHandler:
 
     def create_particles(self, center, circle_radius):
         """Create and return static and aura particle spawners."""
-        static_particles = CircleParticleSpawner(center, circle_radius, pg.Vector2(0, 0), self.canva.current_color, 600, density=20, dir_randomness=0, radius=(10, 20))
+        static_particles = CircleParticleSpawner(center, circle_radius, pg.Vector2(0, 0), self.canva.current_color, 600, density=10, dir_randomness=0, radius=(10, 20))
         aura_particles = ParticleSpawner(center, pg.Vector2(0, 0), self.canva.current_color, 60, dir_randomness=2)
         return static_particles, aura_particles
 

@@ -101,4 +101,4 @@ DEFAULT_SAVE = {'gold': 10,
 
 # The confetti rain when starting the game
 # The key is the room number
-PARTICLE_SPAWNERS = {0: [], 1: [ConfettiSpawner(Coord(1, (0, 0)), 500)], 2: [], 3: [], 4: [], 5: []}
+PARTICLE_SPAWNERS = {0: [], 1: [ConfettiSpawner(Coord(1, (0, 0)), 300)], 2: [], 3: [], 4: [], 5: []}

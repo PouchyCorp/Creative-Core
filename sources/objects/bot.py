@@ -40,7 +40,7 @@ Key Features:
 - Handles user interaction via mouse clicks, launching dialogues and reactions.
 - Supports animation through sprite sheets for various actions.
 
-Author: Pouchy (Paul) 
+Author: Pouchy (Paul), with help from Tioh, Ytyt, and Leih.
 """
 
 
@@ -370,7 +370,7 @@ class Bot:
                 self.state = BotStates.IDLE # if the bot is inline, it should be idle
             else:
                 self.state = BotStates.WATCH # if the bot has reached its destination, it should watch it
-                TIMER.create_timer(2.75, self.set_attribute, False, arguments=('state', BotStates.IDLE)) # the bot will return idle, the bot will search for a new destination
+                TIMER.create_timer(2.75, self.set_attribute, False, arguments=('state', BotStates.IDLE)) # the bot will return idle, and will search for a new destination
                 TIMER.create_timer(2.75, self.anim_watch.reset_frame, False)
 
         self.move_to_target_coord() # move the bot to its destination if it hasn't reached it yet

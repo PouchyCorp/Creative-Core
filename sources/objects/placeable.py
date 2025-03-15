@@ -30,7 +30,12 @@ from utils.anim import Animation
 from ui.sprite import get_outline
 
 class Placeable:
-    def __init__(self, name: str, coord: Coord, surf: Surface, tag: str | None = None, anim: Animation | None = None, y_constraint: int | None = None, temporary: bool = False, price : int = 0, beauty : float = 0) -> None:
+    def __init__(self, name: str, coord: Coord, surf: Surface, tag: str | None = None, anim: Animation | None = None, y_constraint: int | None = None, price : int = 0, beauty : float = 0, flags : list = []) -> None:
+        """Initializes a Placeable object with a name, coordinates, surface, and optional tag, animation, and y_constraint.
+        Flags are :
+        - "no_outline" : the object won't have an outline when hovered
+        - "temporary" : the object will be removed after a certain time"""
+
         self.name = name
         self.id = randint(0, 10000000)  # Generates a random ID for the Placeable instance
         self.coord = coord
@@ -53,12 +58,13 @@ class Placeable:
 
         # Snap to x-axis if a y_constraint is provided
         self.y_constraint = y_constraint
-        self.placed = False  # Indicates if the Placeable object has been placed
-
-        self.temporary = temporary  # Indicates whether the Placeable object is temporary
+        self.placed = False  # Indicates if the Placeable object has been placed in a room
 
         self.price = price
         self.beauty = beauty
+
+        for flag in flags:
+            setattr(self, flag, True)
 
     def get_blit_args(self):
         """Returns the surface and rectangle for blitting."""
@@ -96,8 +102,9 @@ class Placeable:
         if self.anim:
             self.surf = self.anim.get_frame()  # Update the surface if an animation is used
 
-        if is_hovered:
+        if is_hovered and not hasattr(self, "no_outline"):
             # Create an outline if the sprite is hovered over
+            # Position of the sprite is offsetted to account for the 3-pixel border of the outline
             self.temp_surf = get_outline(self.surf, color)
             self.temp_surf.blit(self.surf, (3, 3))  # Blit the original surface onto the outline
             self.temp_rect = self.rect.copy()
@@ -115,12 +122,14 @@ class Placeable:
             raise AttributeError(f"'{type(self).__name__}' object has no attribute '{attribute_name}'")
     
     def __getstate__(self):
+        """Custom pickling method to save the object's state."""
         state = self.__dict__.copy()
         state["surf"] = (image.tostring(self.surf, "RGBA"), self.surf.get_size())
         state['temp_surf'] = state['surf']
         return state
     
     def __setstate__(self, state : dict):
+        """Custom unpickling method to restore the object's state."""
         self.__dict__ = state
         self.surf = image.frombuffer(self.surf[0], self.surf[1], "RGBA")
         self.temp_surf = self.surf.copy()

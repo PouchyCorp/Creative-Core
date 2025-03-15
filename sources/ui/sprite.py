@@ -1,4 +1,4 @@
-"""
+r"""
    _____            _ _            
   / ____|          (_) |           
  | (___  _ __  _ __ _| |_ ___  ___ 
@@ -241,7 +241,8 @@ ARROW_LEFT = load_image("data/fleche_gauche.png")
 ARROW_RIGHT = load_image("data/fleche_droite.png")
 LOCK = load_image("data/cadena.png")
 BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 39*6)), 0, 14)
-COLOR_BUTTON_BG = nine_slice_scaling(WINDOW, (200, 600), (12,12,12,12))
+COLOR_BUTTON_BG = load_image("data/couleurs_uii.png")
+DESTRUCTION_BUTTON = load_image("data/destruciotn_button.png")
 
 # Spritesheets
 SPRITESHEET_INVENTORY = anim.Spritesheet(load_image('data/etagere.png'), (53*6, 31*6))
@@ -254,8 +255,12 @@ SPRITESHEET_DOOR_BLINK_FLIP = anim.Spritesheet(transform.flip(load_image("data/p
 SPRITESHEET_CHIP = anim.Spritesheet(load_image('data/chip.png'), (48*6, 48*6))
 SPRITESHEET_ROOFTOP = anim.Spritesheet(load_image('data/rooftop.png'), (320*6,180*6))
 EXCLAMATION_SPRITESHEET = anim.Spritesheet(load_image("data/exclamation_2x9.png"),(2*6,9*6))
+
+# Cutscenes
+SPRITESHEET_CUTSCENE_1 = anim.Spritesheet(load_image("data/anim_deb_57_frames.png"), (320*6, 180*6))
 SPRITESHEET_CUTSCENE_2 = anim.Spritesheet(load_image("data/anim.png"), (320*6, 180*6))
-SPRITESHEET_CUTSCENE_3 = anim.Spritesheet(load_image("data/caissier_anim_30frmaes.png"), (320*6, 180*6))
+SPRITESHEET_CUTSCENE_4 = anim.Spritesheet(load_image("data/caissier_anim_30frmaes.png"), (320*6, 180*6))
+SPRITESHEET_CUTSCENE_5 = anim.Spritesheet(load_image("data/anim_haut_65frames.png"), (320*6, 180*6))
 
 # Desks
 DESK_FG = anim.Spritesheet(load_image('data/guichet_1.png'), (57*6,66*6))
@@ -325,9 +330,9 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # - The cutscene
 # - The name of the 1st dialogue
 # - The name of the introspecive dialogue
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "0", "introspec_0"),
-                                                "floor1" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False),), 
-                                                "floor2" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "2", "introspec_2"),
-                                                "floor3" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "3", "introspec_3"),
-                                                "floor4" : (anim.Animation(SPRITESHEET_CUTSCENE_3, 0, 30, 15, False), "4", "introspec_4"),
-                                                "floor5" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 41, 10, False), "5", "introspec_5")}
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (anim.Animation(SPRITESHEET_CUTSCENE_1, 0, 57, 10, False), "0", "introspec_0"),
+                                                "floor1" : (anim.Animation(SPRITESHEET_CUTSCENE_1, 0, 57, 10, False),), 
+                                                "floor2" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 37, 10, False), "2", "introspec_2"),
+                                                "floor3" : (anim.Animation(SPRITESHEET_CUTSCENE_4, 0, 30, 10, False), "3", "introspec_3"),
+                                                "floor4" : (anim.Animation(SPRITESHEET_CUTSCENE_4, 0, 30, 15, False), "4", "introspec_4"),
+                                                "floor5" : (anim.Animation(SPRITESHEET_CUTSCENE_5, 0, 65, 10, False), "5", "introspec_5")}

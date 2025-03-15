@@ -1,4 +1,4 @@
-"""
+r"""
   _                            _               
  | |                          | |              
  | |     __ _ _   _ _ __   ___| |__   ___ _ __ 
@@ -18,7 +18,7 @@ Notes:
 ------
 The main loop is in sources/core/logic.py
 
-Author: Pouchy (Paul)
+Author: Pouchy (Paul), Ytyt (Tybalt) for the database branching part
 """
 
 import pygame as pg

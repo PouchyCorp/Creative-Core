@@ -19,7 +19,9 @@ from utils.anim import Animation
 
 class Room:
     def __init__(self, num, bg_surf = None, anim = None) -> None:
-        assert bg_surf or anim, "you should define at least one of the following : bg_surf, anim"
+        """Initializes a Room object with a number, background surface, and optional animation for the backgroudn.
+        Blacklist is a list of permanent objects that cannot be edited (they still need to be in self.placed to render the object)."""
+        assert bg_surf or anim, "You should define at least one of : bg_surf, anim."
 
         self.size_px = (320,180)
         self.num = num
@@ -34,26 +36,27 @@ class Room:
         self.blacklist : list[Placeable] = []
 
     def in_blacklist(self, plcbl : Placeable) -> bool:
+        """Check if a Placeable object is in the blacklist."""
         return (plcbl in self.blacklist)
     
     def name_exists_in_placed(self, name : str) -> bool:
+        """Check if a Placeable object with a specific name exists in the placed list."""
         for obj in self.placed:
             if obj.name == name:
                 return True
         return False
     
     def draw_placed(self, win):
-        #map(self.check_coords, self.placed)
+        """Draw all placed objects in the room."""
         win.blits([placeable.get_blit_args() for placeable in self.placed])
-        for placeable in self.placed:
-            if placeable.temporary:
-                self.placed.remove(placeable)
     
     def draw_placed_foreground(self, win):
+        """Draw special foreground part of some objects (like the register) in the room."""
         for placeable in self.placed:
             placeable.draw_foreground(win)
     
     def get_beauty_in_room(self):
+        """Calculate the total beauty score of the room based on decorative objects."""
         total = 0
         for placeable in self.placed:
             if placeable.tag == "decoration":
@@ -61,5 +64,7 @@ class Room:
         return total
     
     def update_sprite(self):
+        """Update the background sprite of the room.
+        Needs to be called every frame."""
         if self.anim:
             self.bg_surf = self.anim.get_frame()

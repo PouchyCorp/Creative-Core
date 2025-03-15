@@ -91,7 +91,7 @@ class CinematicPlayer:
             pg.display.flip()
         
         # Convert the final frame to grayscale
-        self.cutscene_surf = pg.transform.grayscale(self.cutscene_surf)
+        self.cutscene_final_surf = pg.transform.grayscale(self.cutscene_surf)
     
     def __play_dialogue(self, game : 'Game'):
         """Play the dialogue sequence."""
@@ -110,10 +110,11 @@ class CinematicPlayer:
             self.dialogue.update()
             # Draw the background and the current state of the dialogue
             game.draw_background()
-            game.win.blit(self.cutscene_surf, (0,0))
+            game.win.blit(self.cutscene_final_surf, (0,0))
             self.dialogue.draw(game.win)
-            # Update the display
             pg.display.flip()
+        
+
     
     def __play_introspection_dialogue(self, game : 'Game'):
         """Play the introspection dialogue."""
@@ -131,7 +132,6 @@ class CinematicPlayer:
             # Draw the background and the current state of the introspection dialogue
             game.draw(Coord(0, (0, 0)))
             self.dialogue.draw(game.win)
-            # Update the display
             pg.display.flip()
 
     def __play_transition(self, game : 'Game'):
@@ -152,7 +152,7 @@ class CinematicPlayer:
             if incr < pi / 2:
                 # First half of the transition: draw the current cutscene and dialogue
                 game.draw_background()
-                game.win.blit(self.cutscene_surf, (0, 0))
+                game.win.blit(self.cutscene_final_surf, (0, 0))
                 self.dialogue.draw(game.win)
             else:
                 # Second half of the transition: draw the introspection dialogue
@@ -162,10 +162,16 @@ class CinematicPlayer:
             # sin(incr) varies from 0 to 1 as incr goes from 0 to pi/2, and from 1 to 0 as incr goes from pi/2 to pi
             mask.set_alpha(sin(incr) * 255)
             game.win.blit(mask, (0, 0))
-
             pg.display.flip()
 
     def play(self, game : 'Game'):
+        """Plays the cutscene sequence.
+        The sequence is played in this order:
+        - Animation (with black bands at the top and bottom of the screen)
+        - Main dialogue (with last frame of the animation in the background)
+        - Transition (fade in-out effect)
+        - Introspection dialogue (with the normal game background)
+        """
         # Play the animation sequence
         if self.anim:
             self.__play_anim(game)

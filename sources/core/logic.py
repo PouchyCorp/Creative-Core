@@ -555,16 +555,18 @@ class Game:
             self.win.blit(self.transparency_win, (0, 0))
     
     def draw_info_ui(self):
-        beauty_default_string = "0000.0"
-        cropped_beauty = float(min(self.beauty, 9999.9))
+        beauty_default_string = "0000.0" # Default string to display the beauty score
+        cropped_beauty = float(min(self.beauty, 9999.9)) # Crop the beauty score to 4 digits
         beauty_string = beauty_default_string[:6-len(str(cropped_beauty))] + str(cropped_beauty) # Magic slice to replace the end of default string with actual beauty value
-        current_frame = sprite.BEAUTY_LABEL_ANIMATION.get_frame()
-        current_frame.blit(TERMINAL_FONT_BIG.render(beauty_string, False, (0, 255, 0)), (6*6, 6*6))
+        current_frame = sprite.BEAUTY_LABEL_ANIMATION.get_frame() # Get the current frame of the beauty label animation
+
+        # Blit everything together
+        current_frame.blit(TERMINAL_FONT_BIG.render(beauty_string, False, (0, 255, 0)), (6*6, 6*6)) 
         self.win.blit(current_frame, (self.win.get_width()-current_frame.get_width(), 0))
 
     def draw_background(self):
         self.win.blit(self.current_room.bg_surf, (0, 0))
-        self.transparency_win.fill((0, 0, 0, 0))
+        self.transparency_win.fill((0, 0, 0, 0)) # Reset the transparency window
 
     def draw_current_room(self):
         self.current_room.draw_placed(self.win)

@@ -12,7 +12,7 @@ Key Features:
 - Animation class for managing animations with spritesheets.
 - Tests for pickling and unpickling Spritesheet instances are in tests/pickling_tests.py.
 
-Author: Tioh (Taddeo)
+Author: Tioh (Taddeo), with contributions from Pouchy (Paul) for the pickling compatibility.
 """
 
 from pygame import Surface, SRCALPHA, image

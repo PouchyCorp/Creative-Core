@@ -45,7 +45,6 @@ def init_rooms():
     guichet = subplaceable.DeskPlaceable('guichet', Coord(1, (470, 692)), Surface((0,0)))
     inventory = subplaceable.InvPlaceable(
         "Inventory", Coord(1, (1536, 186)), Surface((53*6, 31*6)))
-    #test = Placeable('test', Coord(1, (0, 0)), sprite.SPRITESHEET_CUTSCENE_1.surf, flags=["no_outline"])
     R1.placed += [guichet, stairs_up, stairs_down, inventory]
     R1.blacklist += [stairs_up, stairs_down, inventory, guichet]
 
@@ -72,8 +71,8 @@ def init_rooms():
     # floor 5
     R5 = Room(5, anim=Animation(sprite.SPRITESHEET_ROOFTOP, 0, 14, 8))
     music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC)
-    R5.placed += [stairs_down, music_robot, inventory]
-    R5.blacklist += [stairs_up, stairs_down, music_robot, inventory]
+    R5.placed += [stairs_down, music_robot]
+    R5.blacklist += [stairs_up, stairs_down, music_robot]
 
     special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot, 'color_unlock' : color_unlock} #used to access special placeables in the game loop
 

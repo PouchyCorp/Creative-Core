@@ -22,13 +22,14 @@ Key Features:
 Cutscene stored in ui/sprite.py with the format:
     (name : (animation, dialogue_name, introspection_dialogue_name))
 
-author: Leih (Abel)
+author: Leih (Abel), Pouchy (Paul), Tioh (Taddeo)
 """
 
 
 from objects.dialogue import DialogueManager
 from utils.anim import Animation
 import pygame as pg
+from ui.sprite import load_spritesheet_image
 from typing_extensions import TYPE_CHECKING
 from math import pi, sin
 from utils.coord import Coord
@@ -41,17 +42,14 @@ class CinematicPlayer:
     """Class for playing cinematics.
     Attributes need to be passed in strict order but can be omitted.
     However, if an attribute is omitted, the following attributes must be omitted as well. (Important because of the way the cinematics are stored in the game save file)"""
-    def __init__(self, anim : Animation = None, dialogue_name = None, introspection_dialogue_name = None):
-        self.anim = anim
+    def __init__(self, anim_path, dialogue_name = None, introspection_dialogue_name = None):
+        self.anim_lst, self.anim_len = load_spritesheet_image(anim_path)
 
         self.dialogue = DialogueManager()
         self.dialogue_name = dialogue_name
         self.introspection_dialogue = introspection_dialogue_name
 
-        if self.anim:
-            self.cutscene_surf = self.anim.reset_frame()
-        else:
-            self.cutscene_surf = pg.Surface((320*6, 180*6), pg.SRCALPHA) # Create a blank surface if there is no animation so that the dialogue can be drawn on it
+        self.cutscene_surf = self.anim_lst[0]
         self.is_finished = False
     
     def get_status_event(self, event, game):
@@ -71,16 +69,16 @@ class CinematicPlayer:
         band_size = (game.win.get_width(), 140)
         black_band = pg.Surface(band_size)
         clock = pg.time.Clock()
-        
-        # Loop until the animation is finished or the cinematic is marked as finished
-        while not self.anim.is_finished() and not self.is_finished:
+        anim_incr = 0        # Loop until the animation is finished or the cinematic is marked as finished
+        while anim_incr//10 < self.anim_len and not self.is_finished:
             clock.tick(60)  # Cap the frame rate at 60 FPS
             for event in pg.event.get():
                 # Handle status events like quitting or pressing escape
                 self.get_status_event(event, game)
 
             # Get the current frame of the animation
-            self.cutscene_surf = self.anim.get_frame()
+            self.cutscene_surf = self.anim_lst[anim_incr//10]
+            anim_incr += 1
             # Draw black bands at the top and bottom of the screen
             self.cutscene_surf.blit(black_band, (0, 0))
             self.cutscene_surf.blit(black_band, (0, 1080 - band_size[1]))
@@ -173,8 +171,7 @@ class CinematicPlayer:
         - Introspection dialogue (with the normal game background)
         """
         # Play the animation sequence
-        if self.anim:
-            self.__play_anim(game)
+        self.__play_anim(game)
 
         # If there is a dialogue name, play the dialogue sequence
         if self.dialogue_name:

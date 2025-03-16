@@ -47,22 +47,26 @@ def load_image(path : str):
     sized_sprite = transform.scale_by(sprite, 6)
     return sized_sprite.convert_alpha()
 
-def convert_spritesheet_image(surface, frame_size : tuple[int, int], row = 0):
+def load_spritesheet_image(path) -> tuple[list[Surface], int]:
     """ resize and optimize spritesheets.
     Row is the row of the spritesheet to load.  
     Images need to be spritesheets with a size of 320x180 per frame.  
     This is sadly needed because of a limit in the pygame.transform.scale function, so the sprite need to be loaded and resized frame by frame."""
 
-    sprite = image.load(surface)
+    sprite = image.load(path).convert_alpha()
     size = sprite.get_size()
 
+    lenght = size[0]//320
+
     sprites = []
-    for i in range(size[0]//frame_size[0]): #iterate over the number of frames in the spritesheet
-        subsprite = sprite.subsurface(Rect(i*frame_size[0], row*frame_size[1], 320, 180)) #take the frame at the i-th position 
+    for i in range(lenght): #iterate over the number of frames in the spritesheet
+        subsprite = sprite.subsurface(Rect(i*320, 0, 320, 180)) #take the frame at the i-th position 
         sized_subsprite = transform.scale_by(subsprite, 6) #resize the frame
         sprites.append(sized_subsprite.convert_alpha()) #add the frame to the list of frames
+
+    print(lenght)
     
-    return sprites
+    return sprites, lenght
 
 def whiten(surface : Surface):
     """Whiten a surface to simulate a button press effect."""
@@ -273,12 +277,6 @@ SPRITESHEET_CHIP = anim.Spritesheet(load_image('data/chip.png'), (48*6, 48*6))
 SPRITESHEET_ROOFTOP = anim.Spritesheet(load_image('data/rooftop.png'), (320*6,180*6))
 EXCLAMATION_SPRITESHEET = anim.Spritesheet(load_image("data/exclamation_2x9.png"),(2*6,9*6))
 
-# Cutscenes
-SPRITESHEET_CUTSCENE_1 = anim.Spritesheet(load_image("data/anim_deb_57_frames.png"), (320*6, 180*6))
-SPRITESHEET_CUTSCENE_2 = anim.Spritesheet(load_image("data/anim.png"), (320*6, 180*6))
-SPRITESHEET_CUTSCENE_4 = anim.Spritesheet(load_image("data/caissier_anim_30frmaes.png"), (320*6, 180*6))
-SPRITESHEET_CUTSCENE_5 = anim.Spritesheet(load_image("data/anim_haut_65frames.png"), (320*6, 180*6))
-
 # Desks
 DESK_FG = anim.Spritesheet(load_image('data/guichet_1.png'), (57*6,66*6))
 DESK_BG = anim.Spritesheet(load_image('data/guichet_2.png'), (57*6,66*6))
@@ -347,9 +345,9 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # - The cutscene
 # - The name of the 1st dialogue
 # - The name of the introspecive dialogue
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : (anim.Animation(SPRITESHEET_CUTSCENE_1, 0, 57, 10, False), "0", "introspec_0"),
-                                                "floor1" : (anim.Animation(SPRITESHEET_CUTSCENE_1, 0, 57, 10, False),), 
-                                                "floor2" : (anim.Animation(SPRITESHEET_CUTSCENE_2, 0, 37, 10, False), "2", "introspec_2"),
-                                                "floor3" : (anim.Animation(SPRITESHEET_CUTSCENE_4, 0, 30, 10, False), "3", "introspec_3"),
-                                                "floor4" : (anim.Animation(SPRITESHEET_CUTSCENE_4, 0, 30, 15, False), "4", "introspec_4"),
-                                                "floor5" : (anim.Animation(SPRITESHEET_CUTSCENE_5, 0, 65, 10, False), "5", "introspec_5")}
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : ("data/anim_deb_57_frames.png", "0", "introspec_0"),
+                                                "floor1" : ["data/anim_deb_57_frames.png"],
+                                                "floor2" : ("data/anim_deb_57_frames.png", "2", "introspec_2"),
+                                                "floor3" : ("data/anim_deb_57_frames.png", "3", "introspec_3"),
+                                                "floor4" : ("data/anim_deb_57_frames.png", "4", "introspec_4"),
+                                                "floor5" : ("data/anim_deb_57_frames.png", "5", "introspec_5")}

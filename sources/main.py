@@ -48,11 +48,11 @@ def create_display():
 
 def load_assets(win):
     """
-    Loads the game assets.
+    Loads the game assets and displays a loading screen while doing so.
     """
 
     pg.mixer.init()
-    
+
      # Loading backgound while the sounds and sprites load.
     win.blit(pg.image.load('data/loading_bg.png'),(0,0))
     pg.display.flip()

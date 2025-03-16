@@ -77,19 +77,18 @@ class OnlineHomescreen:
 #               MAIN LOOP
 #-------------------------------------------------
 
-    def main_loop(self) -> tuple[str, dict]:
+    def main_loop(self, win) -> tuple[str, dict]:
 
         pg.init()
         fps = 60  # Frame rate
         CLOCK = pg.time.Clock()
-        WIN = pg.display.set_mode((0,0),pg.FULLSCREEN)
-        WIN.fill('black')
-        win_rect = WIN.get_rect()
+        win.fill('black')
+        win_rect = win.get_rect()
         pg.display.set_icon(pg.image.load('data/big_icon.png'))
 
         from utils.fonts import font_path
         font = pg.font.Font(font_path, 100)
-        WIN.blit(font.render(f"Connection à {self.database.server_ip} / {self.database.server_port} ...", True, 'white'), (100, WIN.get_rect().centery))
+        win.blit(font.render(f"Connection à {self.database.server_ip} / {self.database.server_port} ...", True, 'white'), (100, win.get_rect().centery))
         pg.display.flip()
 
         self.background = sprite.PRETTY_BG
@@ -121,7 +120,7 @@ class OnlineHomescreen:
             CLOCK.tick(fps)  # Maintain frame rate
             mouse_pos = pg.mouse.get_pos()  # Create a coordinate object for the mouse position
             events = pg.event.get()  # Get all events from the event queue
-            WIN.fill('blue')
+            win.fill('blue')
 
             for event in events:
                 if event.type == pg.QUIT:  # Check for quit event
@@ -154,12 +153,12 @@ class OnlineHomescreen:
                     userlist.handle_event(event)
             
             #draw
-            self.draw(WIN, mouse_pos)
+            self.draw(win, mouse_pos)
             
-            userlist.draw(WIN)
+            userlist.draw(win)
 
             
-            self.render_popups(WIN)
+            self.render_popups(win)
             
             pg.display.flip()  # Update the display
 
@@ -223,14 +222,13 @@ class OfflineHomescreen:
         from sys import exit
         exit()
 
-    def main_loop(self):
+    def main_loop(self, win):
 
         pg.init()
         fps = 60  # Frame rate
         CLOCK = pg.time.Clock()
-        WIN = pg.display.set_mode((0,0),pg.FULLSCREEN)
-        WIN.fill('black')
-        win_rect = WIN.get_rect()
+        win.fill('black')
+        win_rect = win.get_rect()
         pg.display.set_icon(pg.image.load('data/big_icon.png'))
 
         import ui.sprite as sprite
@@ -247,7 +245,7 @@ class OfflineHomescreen:
         while not self.ready_status:
             CLOCK.tick(fps)  # Maintain frame rate
             events = pg.event.get()  # Get all events from the event queue
-            WIN.fill('blue')
+            win.fill('blue')
             mouse_pos = pg.mouse.get_pos()
 
             for event in events:
@@ -261,13 +259,13 @@ class OfflineHomescreen:
                     play_button.handle_event(event)
             
             #draw
-            WIN.blit(background, (0,0), (bg_offset, 0, *WIN.get_size()))
+            win.blit(background, (0,0), (bg_offset, 0, *win.get_size()))
             bg_offset += 2
 
-            quit_button.draw(WIN, quit_button.rect.collidepoint(mouse_pos))
-            play_button.draw(WIN, play_button.rect.collidepoint(mouse_pos))
+            quit_button.draw(win, quit_button.rect.collidepoint(mouse_pos))
+            play_button.draw(win, play_button.rect.collidepoint(mouse_pos))
 
-            if bg_offset > background.get_width()-WIN.get_width():
+            if bg_offset > background.get_width()-win.get_width():
                 bg_offset = 0
             
             pg.display.flip()

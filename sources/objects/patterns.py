@@ -30,21 +30,32 @@ from typing_extensions import Optional
 # The thumbnail is the image that will be shown at the place where the pattern is going to be placed
 pattern_dict = { 
     "circle" : {'thumbnail' : THUMBNAIL_LIST[0], 'pattern' : PATTERN_LIST[0], 'price' : 10}, 
-    "square" : {'thumbnail' : THUMBNAIL_LIST[1], 'pattern' : PATTERN_LIST[1], 'price' : 20},
-    "triangle" : {'thumbnail' : THUMBNAIL_LIST[2], 'pattern' : PATTERN_LIST[2], 'price' : 30},
-    "star" : {'thumbnail' : THUMBNAIL_LIST[3], 'pattern' : PATTERN_LIST[3], 'price' : 40},
-    "heart" : {'thumbnail' : THUMBNAIL_LIST[4], 'pattern' : PATTERN_LIST[4], 'price' : 50},
-    "flower" : {'thumbnail' : THUMBNAIL_LIST[5], 'pattern' : PATTERN_LIST[5], 'price' : 60},
-    "cloud" : {'thumbnail' : THUMBNAIL_LIST[6], 'pattern' : PATTERN_LIST[6], 'price' : 70},
-    "moon" : {'thumbnail' : THUMBNAIL_LIST[7], 'pattern' : PATTERN_LIST[7], 'price' : 80},
-    "sun" : {'thumbnail' : THUMBNAIL_LIST[8], 'pattern' : PATTERN_LIST[8], 'price' : 90},
-    "snowflake" : {'thumbnail' : THUMBNAIL_LIST[9], 'pattern' : PATTERN_LIST[9], 'price' : 100},
-    "lightning" : {'thumbnail' : THUMBNAIL_LIST[10], 'pattern' : PATTERN_LIST[10], 'price' : 110},
-    "fire" : {'thumbnail' : THUMBNAIL_LIST[11], 'pattern' : PATTERN_LIST[11], 'price' : 120},
-    "water" : {'thumbnail' : THUMBNAIL_LIST[12], 'pattern' : PATTERN_LIST[12], 'price' : 130},
-    "earth" : {'thumbnail' : THUMBNAIL_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 140},
-    "air" : {'thumbnail' : THUMBNAIL_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 150},
+    "square" : {'thumbnail' : THUMBNAIL_LIST[1], 'pattern' : PATTERN_LIST[1], 'price' : 15},  
+    "triangle" : {'thumbnail' : THUMBNAIL_LIST[2], 'pattern' : PATTERN_LIST[2], 'price' : 25}, #end stage 1 
+    "star" : {'thumbnail' : THUMBNAIL_LIST[3], 'pattern' : PATTERN_LIST[3], 'price' : 35},  
+    "heart" : {'thumbnail' : THUMBNAIL_LIST[4], 'pattern' : PATTERN_LIST[4], 'price' : 40},  
+    "flower" : {'thumbnail' : THUMBNAIL_LIST[5], 'pattern' : PATTERN_LIST[5], 'price' : 60}, #end stage 2
+    "cloud" : {'thumbnail' : THUMBNAIL_LIST[6], 'pattern' : PATTERN_LIST[6], 'price' : 100}, 
+    "moon" : {'thumbnail' : THUMBNAIL_LIST[7], 'pattern' : PATTERN_LIST[7], 'price' : 200},
+    "sun" : {'thumbnail' : THUMBNAIL_LIST[8], 'pattern' : PATTERN_LIST[8], 'price' : 350},
+    "snowflake" : {'thumbnail' : THUMBNAIL_LIST[9], 'pattern' : PATTERN_LIST[9], 'price' : 500},#end stage 3
+    "lightning" : {'thumbnail' : THUMBNAIL_LIST[10], 'pattern' : PATTERN_LIST[10], 'price' : 600}, 
+    "fire" : {'thumbnail' : THUMBNAIL_LIST[11], 'pattern' : PATTERN_LIST[11], 'price' : 700},
+    "water" : {'thumbnail' : THUMBNAIL_LIST[12], 'pattern' : PATTERN_LIST[12], 'price' : 800},
+    "earth" : {'thumbnail' : THUMBNAIL_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 900},
+    "air" : {'thumbnail' : THUMBNAIL_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 1500},#end stage 4
 }
+"""self.gold_per_beauty = {1 : 0.5,
+                            2.5: 2, #end stage 1
+                            5 : 4, 
+                            10: 7, #end stage 2
+                            20 : 10, 
+                            35 : 15, #end stage 3
+                            55 : 25,
+                            75 : 40, 
+                            100: 55, #end stage 4
+                            140 : 60 #Bonus
+                            } # gold per second based on beauty"""
 
 class Pattern:
     def __init__(self, name, coord, thumbnail : pg.Surface, true_pattern, price, beauty):

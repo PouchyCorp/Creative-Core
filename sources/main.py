@@ -10,7 +10,9 @@ This module loads config, initializes Pygame and starts the game.
 
 Key Features:
 -------------
+- Loading screen when loading the assets.
 - Loads configuration from a TOML file.
+- Has multiple game modes (online and offline).
 - Loads saved game data from a database.
 - Saves game data to a database.
 
@@ -39,14 +41,26 @@ def create_display():
     
     transparency_win = win.convert_alpha()
     transparency_win.fill((0, 0, 0, 0))
+
+    load_assets(win)
+
     return win, transparency_win
 
-def setup_window():
+def load_assets(win):
     """
-    Sets the window icon and title.
+    Loads the game assets.
     """
-    pg.display.set_icon(pg.image.load('data/big_icon.png'))
-    pg.display.set_caption('Creative Core')
+
+    pg.mixer.init()
+    
+     # Loading backgound while the sounds and sprites load.
+    win.blit(pg.image.load('data/loading_bg.png'),(0,0))
+    pg.display.flip()
+
+    import ui.sprite
+    import utils.sound
+
+    utils.sound.SoundManager()
 
 def place_inventory_items(game_save_dict, rooms):
     """
@@ -56,15 +70,15 @@ def place_inventory_items(game_save_dict, rooms):
         if placeable.placed:
             rooms[placeable.coord.room_num].placed.append(placeable)
 
-def start_game(game_save_dict):
+def start_game(game_save_dict, win, transparency_win):
     """
     Initializes and starts the game loop with the provided save data.
     """
     pg.init()
-    pg.mixer.init()
 
-    win, transparency_win = create_display()
-    setup_window()
+    pg.display.set_icon(pg.image.load('data/big_icon.png'))
+    pg.display.set_caption('Creative Core')
+
     from core.logic import Game
     from utils.room_config import ROOMS
     
@@ -80,22 +94,25 @@ def main():
     """
     Oversees the game flow, handling login if necessary.
     """
-    if not config['gameplay']['offline_mode']:
+    win, transparency_win = create_display()
+    load_assets(win)
+
+    if not config['gameplay']['offline_mode']: # If online mode is enabled
         from core.homescreen import OnlineHomescreen
-        homescreen = OnlineHomescreen(config['server']['ip'], config['server']['port'])
-        username, user_game_data = homescreen.main_loop()
+        homescreen = OnlineHomescreen(config['server']['ip'], config['server']['port']) 
+        username, user_game_data = homescreen.main_loop(win) # Display online homescreen and get user's save data when they log in
         
         print('Launching game...')
-        data_to_save = start_game(user_game_data)
+        data_to_save = start_game(user_game_data, win, transparency_win) # Start game with user's save data
         
         print('Saving game...')
-        homescreen.database.save_user_data(username, data_to_save)
+        homescreen.database.save_user_data(username, data_to_save) # Save game data to database on the right user
 
-    else:
+    else: # If offline mode is enabled
         from utils.room_config import DEFAULT_SAVE
         from core.homescreen import OfflineHomescreen
-        OfflineHomescreen().main_loop()
-        start_game(DEFAULT_SAVE)
+        OfflineHomescreen().main_loop(win) # Display offline homescreen
+        start_game(DEFAULT_SAVE, win, transparency_win) # Start game with default save data
 
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": 
+    main() # Run the game

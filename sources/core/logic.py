@@ -76,11 +76,8 @@ class Game:
         self.win : pg.Surface = win
         self.timer : TimerManager = TimerManager()
 
-        # Loading backgound while the sounds and sprites load.
-        self.win.blit(pg.image.load('data/loading_bg.png'),(0,0))
-        pg.display.flip()
+        
         self.transparency_win = transparency_win
-
         self.sound_manager = SoundManager()
         self.clock : pg.time.Clock = pg.time.Clock()
         self.popups : list[InfoPopup] = []

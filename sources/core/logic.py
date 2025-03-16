@@ -288,6 +288,8 @@ class Game:
                 self.save_canva()
             case pg.K_g:
                 self.money += 1000
+            case pg.K_b:
+                self.beauty += 1
 
     def toggle_inventory(self):
         if self.gui_state is State.INTERACTION:

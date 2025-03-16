@@ -15,8 +15,6 @@ Key Features:
 - Uses confirmation popups to prompt the user before unlocking.
 - Handles the constraints (costs) associated with unlocking floors and features.
 - Triggers sound effects and notifications upon unlocking.
-
-Author: Pouchy (Paul)
 """
 
 from ui.confirmationpopup import ConfirmationPopup
@@ -37,7 +35,7 @@ class UnlockManager:
         self.unlocked_features = []
         self.discovered_features = []
         self.discovered_floors = []
-        self.floor_price = {"2": 10, "3": 100, "4": 1000, "5": 10000}
+        self.floor_price = {"2": 200, "3": 1000, "4": 5000, "5": 10000}
         self.feature_price = {"Auto Cachier": 5000, "Color" : 1000}
 
     def is_floor_unlocked(self, num: int):
@@ -73,7 +71,7 @@ class UnlockManager:
 
     def try_to_unlock_feature(self, name, game : 'Game'):
         """Tries to unlock the feature if possible and returns the remaining money."""
-        if not self.is_feature_unlocked(name):
+        if not self.is_feature_discovered(name):
             game.confirmation_popups.append(ConfirmationPopup(game.win, f"Débloquer pour {self.feature_price[name]}¥ ?", self.unlock_feature, yes_func_args=[name, game]))
         else:
             game.popups.append(InfoPopup(f"Vous avez déjà débloqué {name} !"))
@@ -89,7 +87,7 @@ class UnlockManager:
             game.popups.append(InfoPopup(f"Vous avez débloqué l'étage {num} !"))
             game.sound_manager.achieve.play()
             # Make it rain confetti
-            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1,(0,0)),300))
+            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1,(0,0)),500))
             game.update_all_locked_status()
         else:
             game.popups.append(
@@ -112,11 +110,11 @@ class UnlockManager:
             game.sound_manager.achieve.play()
             
             # Make it rain confetti
-            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1, (0, 0)), 300))
+            game.particle_spawners[game.current_room.num].append(ConfettiSpawner(Coord(1, (0, 0)), 500))
             game.update_all_locked_status() # Update the locked status of all proper objects
 
             self.discovered_features.append(feature_name)
-            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name+" Post Unlock"])
+            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name])
         else:
             game.popups.append(InfoPopup(f"Pas assez d'argent pour débloquer {feature_name} :("))
             game.sound_manager.incorrect.play()

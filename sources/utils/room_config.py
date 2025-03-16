@@ -45,8 +45,8 @@ def init_rooms():
     guichet = subplaceable.DeskPlaceable('guichet', Coord(1, (470, 692)), Surface((0,0)))
     inventory = subplaceable.InvPlaceable(
         "Inventory", Coord(1, (1536, 186)), Surface((53*6, 31*6)))
-    test = Placeable('test', Coord(1, (0, 0)),Surface((0,0)) ,anim=Animation(sprite.SPRITESHEET_CUTSCENE_1, 0, 57, 5, True), flags=["no_outline"])
-    R1.placed += [guichet, stairs_up, stairs_down, inventory, test]
+    #test = Placeable('test', Coord(1, (0, 0)), sprite.SPRITESHEET_CUTSCENE_1.surf, flags=["no_outline"])
+    R1.placed += [guichet, stairs_up, stairs_down, inventory]
     R1.blacklist += [stairs_up, stairs_down, inventory, guichet]
 
     # floor 2

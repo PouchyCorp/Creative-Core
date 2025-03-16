@@ -553,7 +553,7 @@ class Game:
         self.render_popups()
         if not self.paused:
             self.win.blit(self.transparency_win, (0, 0))
-    
+            
     def draw_info_ui(self):
         beauty_default_string = "0000.0" # Default string to display the beauty score
         cropped_beauty = float(min(self.beauty, 9999.9)) # Crop the beauty score to 4 digits

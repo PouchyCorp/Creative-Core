@@ -47,6 +47,23 @@ def load_image(path : str):
     sized_sprite = transform.scale_by(sprite, 6)
     return sized_sprite.convert_alpha()
 
+def convert_spritesheet_image(surface, frame_size : tuple[int, int], row = 0):
+    """ resize and optimize spritesheets.
+    Row is the row of the spritesheet to load.  
+    Images need to be spritesheets with a size of 320x180 per frame.  
+    This is sadly needed because of a limit in the pygame.transform.scale function, so the sprite need to be loaded and resized frame by frame."""
+
+    sprite = image.load(surface)
+    size = sprite.get_size()
+
+    sprites = []
+    for i in range(size[0]//frame_size[0]): #iterate over the number of frames in the spritesheet
+        subsprite = sprite.subsurface(Rect(i*frame_size[0], row*frame_size[1], 320, 180)) #take the frame at the i-th position 
+        sized_subsprite = transform.scale_by(subsprite, 6) #resize the frame
+        sprites.append(sized_subsprite.convert_alpha()) #add the frame to the list of frames
+    
+    return sprites
+
 def whiten(surface : Surface):
     """Whiten a surface to simulate a button press effect."""
     dest_surf = surface.copy()

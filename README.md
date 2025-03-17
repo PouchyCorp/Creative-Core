@@ -56,6 +56,8 @@ Follow the steps below to set up "Creative Core" on your system.
    ```shell
    setup_and_run.bat
 
+You can also manually download the zip folder from github and run the batch files.
+
 ### To launch the game server, go to [server instruction](/serverpack/server_instructions.md)
 
 ## Credits

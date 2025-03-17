@@ -66,7 +66,7 @@ class CinematicPlayer:
     def __play_anim(self, game : 'Game'): # 'Game' is a forward reference (PEP 18)
         """Play the animation sequence."""
         # Define the size of the black bands at the top and bottom of the screen
-        band_size = (game.win.get_width(), 140)
+        band_size = (game.win.get_width(), 120)
         black_band = pg.Surface(band_size)
         clock = pg.time.Clock()
         anim_incr = 0        # Loop until the animation is finished or the cinematic is marked as finished

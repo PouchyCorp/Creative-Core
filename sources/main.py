@@ -49,6 +49,7 @@ def create_display():
 def load_assets(win):
     """
     Loads the game assets and displays a loading screen while doing so.
+    This is done to prevent the game from freezing while loading.
     """
 
     pg.mixer.init()

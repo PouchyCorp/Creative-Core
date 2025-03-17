@@ -48,7 +48,7 @@ def load_image(path : str):
     return sized_sprite.convert_alpha()
 
 def load_spritesheet_image(path) -> tuple[list[Surface], int]:
-    """ resize and optimize spritesheets.
+    """ resize and optimize cutscene spritesheets.
     Row is the row of the spritesheet to load.  
     Images need to be spritesheets with a size of 320x180 per frame.  
     This is sadly needed because of a limit in the pygame.transform.scale function, so the sprite need to be loaded and resized frame by frame."""
@@ -63,10 +63,8 @@ def load_spritesheet_image(path) -> tuple[list[Surface], int]:
         subsprite = sprite.subsurface(Rect(i*320, 0, 320, 180)) #take the frame at the i-th position 
         sized_subsprite = transform.scale_by(subsprite, 6) #resize the frame
         sprites.append(sized_subsprite.convert_alpha()) #add the frame to the list of frames
-
-    print(lenght)
     
-    return sprites, lenght
+    return sprites, lenght # the lenght is often used by the calling function to know how many frames are in the spritesheet
 
 def whiten(surface : Surface):
     """Whiten a surface to simulate a button press effect."""

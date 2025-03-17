@@ -71,7 +71,7 @@ class UnlockManager:
 
     def try_to_unlock_feature(self, name, game : 'Game'):
         """Tries to unlock the feature if possible and returns the remaining money."""
-        if not self.is_feature_discovered(name):
+        if not self.is_feature_unlocked(name):
             game.confirmation_popups.append(ConfirmationPopup(game.win, f"Débloquer pour {self.feature_price[name]}¥ ?", self.unlock_feature, yes_func_args=[name, game]))
         else:
             game.popups.append(InfoPopup(f"Vous avez déjà débloqué {name} !"))

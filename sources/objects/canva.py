@@ -1,4 +1,4 @@
-"""
+r"""
    _____                      
   / ____|                     
  | |     __ _ _ ____   ____ _ 
@@ -37,7 +37,7 @@ from utils.fonts import TERMINAL_FONT_VERYBIG
 from math import sqrt, ceil, pi, sin
 from objects.particlesspawner import CircleParticleSpawner, ParticleSpawner
 
-COLORS = [(0,0,0), (255,255,255), (255,0,0), (0,0,255), (0,255,0), (0,255,0), (0,255,0)]
+COLORS = [(11,23,33), (105,117,130), (213,226,240),(141,171,131) , (217,137,76), (232, 216, 153), (168,40,40), (117, 97, 156), (44,53,69), (42,30,66)]
 
 offsetx = -60 # Needed to adjust the position of the control panel, because sadly it was not written with relative coordinates
 offsety = -90
@@ -64,7 +64,7 @@ class Canva:
         self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
         # Initialize color selection buttons
-        self.color_buttons_pos = (1296, 474)
+        self.color_buttons_pos = (1350, 522)
         self.color_buttons = self.init_color_buttons(False) # Initialize the color buttons with the default colors
         
         # Import the game logic and set the game reference
@@ -215,14 +215,14 @@ class Canva:
         self.placed_patterns.remove(pattern) # Remove the pattern from the canvas
         self.get_price() # Update the total price
         self.holded_pattern = pattern
-        self.holded_pattern.rect.center = pg.mouse.get_pos()
+        self.holded_pattern.rect.center = Coord(0, pg.mouse.get_pos()).get_pixel_perfect()
         self.game.sound_manager.items.play()
     
     def hold_pattern_from_drawer(self, pattern):
         """Hold a pattern from the drawer for moving.
         This method is called by the PatternHolder object when a pattern is clicked.""" 
         self.holded_pattern = pattern.copy()
-        self.holded_pattern.rect.center = pg.mouse.get_pos()
+        self.holded_pattern.rect.center = Coord(0, pg.mouse.get_pos()).get_pixel_perfect()
     
     def drop_pattern(self, pos):
         """Drop the held pattern at the given position.""" 
@@ -336,7 +336,7 @@ class Canva:
                 self.drop_pattern(mouse_pos)
 
             if event.type == pg.MOUSEMOTION:
-                self.holded_pattern.rect.center = mouse_pos
+                self.holded_pattern.rect.center = Coord(0, mouse_pos).get_pixel_perfect()
 
         return False
     

@@ -64,7 +64,7 @@ class Canva:
         self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
         # Initialize color selection buttons
-        self.color_buttons_pos = (1350, 522)
+        self.color_buttons_pos = (1350, 528)
         self.color_buttons = self.init_color_buttons(False) # Initialize the color buttons with the default colors
         
         # Import the game logic and set the game reference

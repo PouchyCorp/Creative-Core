@@ -10,6 +10,8 @@ Key Features:
 -------------
 - Class to manage sounds in the game.
 
+Every sounds are free access and have been taken in pixabay.com
+
 Author: Leih (Abel)
 """
 

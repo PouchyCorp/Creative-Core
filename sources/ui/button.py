@@ -28,6 +28,7 @@ class Button:
         self.param = param if param else []
 
     def handle_event(self, event):
+        """Manage the events"""
         if event.type == pg.MOUSEBUTTONDOWN:
             # If the user clicked on the input_box rect.
             if self.rect.collidepoint(event.pos):

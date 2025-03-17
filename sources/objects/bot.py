@@ -251,12 +251,13 @@ class Hivemind:
         sorted_bots = self.sorted_bot_by_y(list_of_bots)
 
         #updates the placeable to follow the last bot's animation
-        if self.bot_placeable_pointer and type(self.inline_bots[-1]) is Bot:
+        if self.bot_placeable_pointer and type(self.inline_bots[-1]) is Bot and current_room_num == 1:
             self.bot_placeable_pointer.surf = self.inline_bots[-1].surf
+            self.inline_bots[-1].draw_exclamation_over_bot(win)
 
         #draw bots in background first
         for bot in sorted_bots:
-            if bot.coord.room_num == current_room_num:
+            if bot.coord.room_num == current_room_num: # update only the bots in the current room for performance
                 bot.particle_logic()
                 bot.draw(win, mouse_pos, transparency_win)
     
@@ -492,7 +493,8 @@ class Bot:
         Needs to be called after hivemind.update_bot_ai."""
         self.draw_outline_if_reacting(win, mouse_pos)
         self.draw_bot(win)
-        self.draw_exclamation_if_reacting(win)
+        if self.is_reacting:
+            self.draw_exclamation_over_bot(win)
         self.draw_particles(transparency_win)
 
     def draw_outline_if_reacting(self, win: Surface, mouse_pos: Coord):
@@ -505,11 +507,10 @@ class Bot:
     def draw_bot(self, win: Surface):
         win.blit(self.surf, self.coord.xy)
 
-    def draw_exclamation_if_reacting(self, win: Surface):
+    def draw_exclamation_over_bot(self, win: Surface):
         """Draws an exclamation mark above the bot if it is reacting."""
-        if self.is_reacting:
-            coord_over_head_of_bot = (self.coord.x + (self.surf.get_width() // 2) - 6, self.coord.y - 10 * 6)
-            win.blit(self.exclamation_anim.get_frame(), coord_over_head_of_bot)
+        coord_over_head_of_bot = (self.coord.x + (self.surf.get_width() // 2) - 6, self.coord.y - 10 * 6)
+        win.blit(self.exclamation_anim.get_frame(), coord_over_head_of_bot)
 
     def draw_particles(self, transparency_win: Surface):
         """Draws the particles eventually associated with the bot."""

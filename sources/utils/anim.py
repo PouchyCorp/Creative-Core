@@ -26,24 +26,30 @@ class Spritesheet:
 
     def get_img(self, coord : tuple[int]) -> Surface:
         """Returns the image at the given coordinates in the spritesheet."""
-        surf = Surface((self.img_size[0], self.img_size[1]), flags=SRCALPHA)
         coord_x_px = coord[0]*self.img_size[0] #take the last x-coord to calculate the next position
         coord_y_py = coord[1]*self.img_size[1] #take the last y-coord to calculate the next position
-        surf.blit(self.surf, (0,0), (coord_x_px, coord_y_py, self.img_size[0], self.img_size[1]))
-        return surf
+        try:
+            # this is the normal efficient way to get the image
+            return self.surf.subsurface((coord_x_px, coord_y_py, self.img_size[0], self.img_size[1])).copy() # return the image at the right position
+        
+        except ValueError: # if the image is out of the spritesheet, sometime happens when the animation is finished
+            # this is the less efficient way to get the image, but it's the only way to avoid the ValueError for some images
+            surf = Surface((self.img_size[0], self.img_size[1]), flags=SRCALPHA) # create a new surface with the right size
+            surf.blit(self.surf, (0,0), (coord_x_px, coord_y_py, self.img_size[0], self.img_size[1])) # blit the image at the right position
+            return surf
     
     def __getstate__(self):
         """Returns the state of the object for safely pickling.
         Needed because the Surface object cannot be pickled, so we convert it to a bytestring."""
         state = self.__dict__.copy()
-        state["surf"] = (image.tostring(self.surf, "RGBA"), self.surf.get_size())
+        state["surf"] = (image.tostring(self.surf, "RGBA"), self.surf.get_size()) # convert the surface to a bytestring
         return state
     
     def __setstate__(self, state : dict):
         """Sets the state of the object after safely unpickling.
         Needed because the Surface object cannot be pickled, so we convert it back from a bytestring."""
-        self.__dict__ = state
-        self.surf = image.frombuffer(self.surf[0], self.surf[1], "RGBA") 
+        self.__dict__ = state 
+        self.surf = image.frombuffer(self.surf[0], self.surf[1], "RGBA")  # convert the bytestring back to a surface
 
 
 class Animation:

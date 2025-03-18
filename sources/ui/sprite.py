@@ -254,7 +254,8 @@ DIALBOX = load_image("data/pop_up_dialogue.png")
 ARROW_LEFT = load_image("data/fleche_gauche.png")
 ARROW_RIGHT = load_image("data/fleche_droite.png")
 LOCK = load_image("data/cadena.png")
-BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 39*6)), 0, 14)
+BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteur_beaute.png"), (30*6, 30*6)), 0, 14)
+MONEY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/argent_ui_30x32_20frames_.png"), (32*6, 30*6)), 0, 20)
 COLOR_BUTTON_BG = load_image("data/couleurs_uii.png")
 DESTRUCTION_BUTTON = load_image("data/destruciotn_button.png")
 
@@ -275,6 +276,7 @@ DESK_BG = anim.Spritesheet(load_image('data/guichet_2.png'), (57*6,66*6))
 DESK_ROBOT_BG = anim.Spritesheet(load_image('data/guichet_robot.png'), (57*6,66*6))
 
 # Props
+SHOP = load_image("data/shop_placeable.png")
 PROP_STATUE = load_image('data/props_statue.png')
 SPRITE_PLANT_1 = load_image("data/plant_2_39x38.png")
 SPRITE_PLANT_2 = load_image("data/plant_3_28x48.png")

@@ -114,7 +114,7 @@ class UnlockManager:
             game.update_all_locked_status() # Update the locked status of all proper objects
 
             self.discovered_features.append(feature_name)
-            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name+" Post Unlock"])
+            game.timer.create_timer(1, game.launch_special_dialogue, arguments=[feature_name+" Post Unlock"]) # Launch the special dialogue according to the feature unlocked
         else:
             game.popups.append(InfoPopup(f"Pas assez d'argent pour débloquer {feature_name} :("))
-            game.sound_manager.incorrect.play()
+            game.sound_manager.incorrect.play() # Play very loud and annoying sound

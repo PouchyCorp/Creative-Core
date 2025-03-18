@@ -7,6 +7,9 @@ https://en.wikipedia.org/wiki/9-slice_scaling #Pour un algorithme de redimension
 Pour régler les NOMBREUX bugs et problèmes diverse : stackoverflow !
 Nous avons utilisés stackoverflow malgré que le site soit en anglais pour son abondance de contenu par rapport au forums francophones.
 
+Pour trouver tous les sons libres de droits, nous avons utilisés https://pixabay.com
+
+
 https://stackoverflow.com/questions/551038/private-implementation-class-in-python
 https://stackoverflow.com/questions/7749914/add-method-to-loaded-class-module-in-python
 https://stackoverflow.com/questions/601776/what-do-the-blend-modes-in-pygame-mean
@@ -150,4 +153,3 @@ https://stackoverflow.com/questions/6392739/what-does-the-at-symbol-do-in-python
 https://stackoverflow.com/questions/8814802/python-errno-10054-an-existing-connection-was-forcibly-closed-by-the-remote-h
 https://stackoverflow.com/questions/44337101/typeerror-bool-object-is-not-subscriptable-python-3
 
-Pour trouver tous les sons libres de droits, nous avons utilisés https://pixabay.com

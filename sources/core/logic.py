@@ -300,8 +300,10 @@ class Game:
             self.reset_guistate()
 
     def toggle_destruction_mode(self):
-        if self.gui_state is State.INTERACTION:
+        if self.gui_state is State.INTERACTION or self.gui_state is State.INVENTORY:
             self.gui_state = State.DESTRUCTION
+            self.destruction_quit_button = Button((0,0), self.reset_guistate, sprite.whiten(sprite.QUIT_BUTTON), sprite.QUIT_BUTTON)
+            self.destruction_quit_button.rect.bottomleft = self.win.get_rect().bottomleft
         else:
             self.reset_guistate()
 
@@ -429,6 +431,7 @@ class Game:
 
             case State.DESTRUCTION:
                 self.handle_destruction_mode(mouse_pos)
+                self.destruction_quit_button.handle_event(event)
 
             case State.INTERACTION:
                 self.handle_interaction_mode(mouse_pos)
@@ -441,6 +444,7 @@ class Game:
 
             case State.PAUSED:
                 self.quit_button.handle_event(event)
+            
 
     def handle_build_mode(self):
         if self.build_mode.can_place(self.current_room):
@@ -452,6 +456,8 @@ class Game:
 
     def handle_inventory_mode(self, event: pg.event.Event, mouse_pos: Coord):
         self.inventory.handle_floor_navigation_buttons(event)
+        if self.inventory.handle_destruction_button(event):
+            self.toggle_destruction_mode()
         self.inventory.handle_navigation(event)
         clicked_placeable = self.inventory.handle_click(mouse_pos)
         if clicked_placeable and self.current_room.num != 0:
@@ -610,6 +616,7 @@ class Game:
             
             case State.DESTRUCTION:
                 self.win.blit(sprite.DESTRUCTION_MODE_BORDER, (0, 0))
+                self.destruction_quit_button.draw(self.win, self.destruction_quit_button.rect.collidepoint(mouse_pos.xy))
 
             case State.DIALOG:
                 self.win.blit(self.temp_bg, (0, 0))

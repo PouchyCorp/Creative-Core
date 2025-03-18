@@ -29,7 +29,7 @@ Author: Pouchy (Paul), with contributions from Tioh and Ytyt.
 from objects.placeable import Placeable
 from utils.coord import Coord
 from pygame import Surface, transform, BLEND_RGB_MIN
-from ui.sprite import WINDOW, nine_slice_scaling, ARROW_LEFT, ARROW_RIGHT, whiten, QUIT_BUTTON
+from ui.sprite import WINDOW, nine_slice_scaling, ARROW_LEFT, ARROW_RIGHT, whiten, QUIT_BUTTON, DESTRUCTION_BUTTON
 from ui.confirmationpopup import ConfirmationPopup
 from ui.infopopup import InfoPopup
 from ui.button import Button
@@ -72,6 +72,10 @@ class Inventory:
         self.quit_button = Button((786,930), quit_func, 
                             whiten(QUIT_BUTTON), 
                             QUIT_BUTTON)
+        
+        self.destruction_button = Button((1332, 930), int,
+                            whiten(DESTRUCTION_BUTTON),
+                            DESTRUCTION_BUTTON)
         
         # Labels
         self.label_surf = self.font.render("Inventory", False, (255, 212, 163))
@@ -191,15 +195,19 @@ class Inventory:
         self.up_button.draw(win, self.up_button.rect.collidepoint(mouse_pos.xy))
         self.down_button.draw(win, self.down_button.rect.collidepoint(mouse_pos.xy))
         self.quit_button.draw(win, self.quit_button.rect.collidepoint(mouse_pos.xy))
+        self.destruction_button.draw(win, self.destruction_button.rect.collidepoint(mouse_pos.xy))
         floor_surf = TERMINAL_FONT_BIG.render("Changer d'étage", False, (255, 212, 163))
         win.blit(floor_surf, (1758-floor_surf.get_width()//2, 438))
-
-
 
     def handle_floor_navigation_buttons(self, event):
         self.up_button.handle_event(event)
         self.down_button.handle_event(event)
         self.quit_button.handle_event(event)
+    
+    def handle_destruction_button(self, event):
+        if self.destruction_button.handle_event(event):
+            return True
+        return False
 
     def __repr__(self):
         """Returns a string representation of the inventory."""

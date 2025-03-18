@@ -85,7 +85,23 @@ class PatternHolder:
         buttons = []
         drawer_sprites = DRAWER_LIST # List of sprites for the drawers
         # Respective coordinates for each drawer
-        drawer_coords = [(10*6,8*6), (36*6,8*6), (10*6,34*6), (43*6,34*6), (10*6,62*6), (35*6,62*6), (61*6,62*6), (10*6,85*6), (35*6,85*6), (61*6,85*6), (35*6,129*6), (10*6,108*6), (10*6,121*6), (35*6,108*6), (61*6,108*6)] # Respect the order of the sprites, please
+        drawer_coords = [(10*6,8*6), #1
+        (36*6,8*6), #2
+        (10*6,34*6), #3
+        (43*6,34*6), #4
+        (10*6,62*6), #5
+        (35*6,62*6), #6
+        (61*6,62*6), #7
+        (10*6,85*6), #8
+        (35*6,85*6), #9
+        (61*6,85*6), #10
+        (10*6,108*6), #11
+        (10*6,121*6), #12
+        (35*6,108*6), #13
+        (35*6,129*6), #14
+        (61*6,108*6) #15
+        
+        ] # Respect the order of the sprites, please
 
         for i in range(15):
             button = Button((drawer_coords[i][0]+self.coord.x, drawer_coords[i][1]+self.coord.y), self.hold_pattern, whiten(drawer_sprites[i]), drawer_sprites[i], [i]) # Create a button for each drawer

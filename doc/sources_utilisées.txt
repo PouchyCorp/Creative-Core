@@ -149,4 +149,5 @@ https://stackoverflow.com/questions/3014578/storing-images-in-mysql
 https://stackoverflow.com/questions/6392739/what-does-the-at-symbol-do-in-python
 https://stackoverflow.com/questions/8814802/python-errno-10054-an-existing-connection-was-forcibly-closed-by-the-remote-h
 https://stackoverflow.com/questions/44337101/typeerror-bool-object-is-not-subscriptable-python-3
-https://pixabay.com
+
+Pour trouver tous les sons libres de droits, nous avons utilisés https://pixabay.com

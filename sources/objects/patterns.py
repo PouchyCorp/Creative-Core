@@ -45,19 +45,10 @@ pattern_dict = {
     "earth" : {'thumbnail' : THUMBNAIL_LIST[13], 'pattern' : PATTERN_LIST[13], 'price' : 900},
     "air" : {'thumbnail' : THUMBNAIL_LIST[14], 'pattern' : PATTERN_LIST[14], 'price' : 1500},#end stage 4
 }
-"""self.gold_per_beauty = {1 : 0.5,
-                            2.5: 2, #end stage 1
-                            5 : 4, 
-                            10: 7, #end stage 2
-                            20 : 10, 
-                            35 : 15, #end stage 3
-                            55 : 25,
-                            75 : 40, 
-                            100: 55, #end stage 4
-                            140 : 60 #Bonus
-                            } # gold per second based on beauty"""
+
 
 class Pattern:
+    """Class to manage every patterns """
     def __init__(self, name, coord, thumbnail : pg.Surface, true_pattern, price, beauty):
         self.name = name
         self.thumbnail = thumbnail
@@ -76,6 +67,7 @@ class Pattern:
         return Pattern(self.name, self.rect.topleft, self.thumbnail, self.true_pattern ,self.price, self.beauty)
 
 class PatternHolder:
+    """Permit to place, blite and draw every patterns"""
     def __init__(self, coord : Coord, canva):
         self.patterns : list[Pattern] = [Pattern(name, coord.xy, pattern_dict[name]['thumbnail'],
                                                   pattern_dict[name]['pattern'], pattern_dict[name]['price'],
@@ -89,6 +81,7 @@ class PatternHolder:
         self.canva : Canva = canva
 
     def init_buttons(self):
+        """Put away all the patterns in drawers, and give the good patterns when we click on it"""
         buttons = []
         drawer_sprites = DRAWER_LIST # List of sprites for the drawers
         # Respective coordinates for each drawer
@@ -96,7 +89,7 @@ class PatternHolder:
 
         for i in range(15):
             button = Button((drawer_coords[i][0]+self.coord.x, drawer_coords[i][1]+self.coord.y), self.hold_pattern, whiten(drawer_sprites[i]), drawer_sprites[i], [i]) # Create a button for each drawer
-            buttons.append(button)
+            buttons.append(button) #Ajoute les patterns aux drawers
 
         return buttons
 
@@ -107,10 +100,12 @@ class PatternHolder:
         self.canva.hold_pattern_from_drawer(self.patterns[pattern_id])
 
     def handle_event(self, event : pg.event.Event):
+        """Check Events"""
         for button in self.drawers:
             button.handle_event(event)
     
     def draw(self, win : pg.Surface):
+        """Blit the patterns at the middle of our cursors to slide them on the canva"""
         win.blit(self.surf, self.coord.xy)
         for button in self.drawers:
             button.draw(win, button.rect.collidepoint(pg.mouse.get_pos()))

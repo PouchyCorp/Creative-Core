@@ -27,6 +27,8 @@ from ui.button import Button
 from ui.infopopup import InfoPopup
 
 class Spectator:
+    """Class to manage all the spectator mode :
+    It create the museum with no functionality except moving inter floors"""
     def __init__(self, game_save_dict):
         self.username, self.game_save_dict = game_save_dict
         print("spectating : ", self.username)
@@ -51,15 +53,16 @@ class Spectator:
         pg.display.set_caption('Creative Core')
 
         self.popups : list[InfoPopup] = []
-
+        #to floor up
         self.up_button = Button((10,10), self.go_floor_up, 
                         whiten(pg.transform.rotate(ARROW_RIGHT, 90)), 
                         pg.transform.rotate(ARROW_RIGHT, 90))
+        #to floor down
         self.down_button = Button((10,100), self.go_floor_down, 
                             whiten(pg.transform.rotate(ARROW_LEFT, 90)), 
                             pg.transform.rotate(ARROW_LEFT, 90))
-        
-        self.quit_button = Button((0, self.WIN.get_rect().bottom-QUIT_BUTTON.get_height()), self.quit, 
+        #Allow to quit
+        self.quit_button = Button((0, self.WIN.get_rect().bottom-QUIT_BUTTON.get_height()), self.quit,   
                             whiten(QUIT_BUTTON), 
                             QUIT_BUTTON)
 
@@ -69,6 +72,7 @@ class Spectator:
                 self.rooms[placeable.coord.room_num].placed.append(placeable)
     
     def quit(self):
+        """Quit the game"""
         self.run=False
         print("quitting spectating : ", self.username)
 

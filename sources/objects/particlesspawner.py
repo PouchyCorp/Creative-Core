@@ -113,6 +113,7 @@ class ParticleSpawner:
         return Particle(self.coord.copy(), rng_rad, rng_dir, rng_col , self.gravity, self.particle_lifetime)
     
     def update_all(self):
+        """test"""
         for particle in self.particles:
             particle.update()
 

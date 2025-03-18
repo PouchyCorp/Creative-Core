@@ -8,7 +8,6 @@
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
-- [Features](#features)
 - [Credits](#credits)
 
 ## About the Project

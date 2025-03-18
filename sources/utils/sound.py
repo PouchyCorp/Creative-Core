@@ -10,6 +10,8 @@ Key Features:
 -------------
 - Class to manage sounds in the game.
 
+Every sounds are free access and have been taken in pixabay.com
+
 Author: Leih (Abel)
 """
 
@@ -54,11 +56,12 @@ class SoundManager:
         self.walk = pygame.mixer.Sound('data/sounds/walk.wav')
         self.wind = pygame.mixer.Sound('data/sounds/wind.mp3')
 
+        #A list for every sounds which refers to noise blank sounds. At random moments, the loop is choosing one and play him
         self.noise_blank=[self.wind,
                           self.rain,
                           self.floorcracking
         ]
-
+        #Random sounds for bots while moving
         self.robot=[self.robot, 
                     self.robot1,
                     self.robot2,  

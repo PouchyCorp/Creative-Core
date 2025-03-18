@@ -25,8 +25,8 @@ from core.unlockmanager import UnlockManager
 from utils.anim import Animation
 from objects.particlesspawner import ConfettiSpawner
 
-
 def init_rooms():
+    """Init every rooms, whit the numbers of every round, wallpapers, placeables, stairs, inventory..."""
     # init doors
     stairs_up = subplaceable.DoorUp(
         'R1_stairs', Coord(1, (1594, 546)), Surface((335, 220)))
@@ -70,7 +70,7 @@ def init_rooms():
 
     # floor 5
     R5 = Room(5, anim=Animation(sprite.SPRITESHEET_ROOFTOP, 0, 14, 8))
-    music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC)
+    music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC) #Place the musician bot
     R5.placed += [stairs_down, music_robot]
     R5.blacklist += [stairs_up, stairs_down, music_robot]
 
@@ -90,11 +90,12 @@ R4 = ROOMS[4]
 R5 = ROOMS[5]
 
 # IMPORTANT: THIS IS THE DEFAULT SAVE DATA
+# Setup every settings for the beginning of the game 
 DEFAULT_SAVE = {'gold': 10,
                 "beauty": 0,
                 "inventory": [Placeable('cheater beauty', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=1000)],
 
-
+                #Place all the items from the shop with ther price and their number of beauty
                 "shop": [Placeable('bust', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=10),
                          Placeable('plante 1', Coord(2, (100, 100)), sprite.SPRITE_PLANT_1,
                                    "decoration",  y_constraint=0, price=50, beauty=100),

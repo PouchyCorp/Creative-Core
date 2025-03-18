@@ -111,7 +111,7 @@ class Game:
             
         if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
             self.unlock_manager.discovered_floors.append("1")
-            CinematicPlayer(*sprite.CUTSCENES["floor1"]).play(self) # Launch the first floor tutorial
+            CinematicPlayer(sprite.CUTSCENES["floor1"]).play(self) # Launch the first floor tutorial
             
         self.update_all_locked_status() # Update doors lock state
 
@@ -126,6 +126,7 @@ class Game:
                 self.guichet.auto_cachier_unlocked = True # To display the auto cachier effect on the guichet
             case "Color":
                 self.canva.color_buttons = self.canva.init_color_buttons(True) # Initialize again the color buttons with the color feature unlocked this time
+                self.canva.color_buttons_unlocked = True
     
     def configure_online_mode(self):
         """ Handles the changes necessary to play in online mode"""
@@ -147,7 +148,7 @@ class Game:
             if not self.unlock_manager.is_floor_discovered(self.current_room.num):
                 self.unlock_manager.discovered_floors.append(str(self.current_room.num))
                 self.reset_guistate()
-                CinematicPlayer(*sprite.CUTSCENES[f"floor{self.current_room.num}"]).play(self)
+                CinematicPlayer(sprite.CUTSCENES[f"floor{self.current_room.num}"]).play(self)
             
                
         else:

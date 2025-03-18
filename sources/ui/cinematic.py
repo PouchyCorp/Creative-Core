@@ -39,17 +39,35 @@ if TYPE_CHECKING:
     from core.logic import Game 
 
 class CinematicPlayer:
-    """Class for playing cinematics.
-    Attributes need to be passed in strict order but can be omitted.
-    However, if an attribute is omitted, the following attributes must be omitted as well. (Important because of the way the cinematics are stored in the game save file)"""
-    def __init__(self, anim_path, dialogue_name = None, introspection_dialogue_name = None):
-        self.anim_lst, self.anim_len = load_spritesheet_image(anim_path)
+    """Class for playing cinematics."""
+    def __init__(self, config_dict : dict[str, tuple[str, str, str]]):
 
+        if "anim" in config_dict:
+            self.anim_lst, self.anim_len = load_spritesheet_image(config_dict["anim"])
+            self.cutscene_surf = self.anim_lst[0]
+        else:
+            self.anim_lst = None
+
+            # setups the final surface like in __play_anim for the cutscene if there is no animation
+            self.cutscene_final_surf = pg.Surface((1920, 1080), pg.SRCALPHA)
+            band_size = (1920, 120)
+            black_band = pg.Surface(band_size)
+            self.cutscene_final_surf.blit(black_band, (0, 0))
+            self.cutscene_final_surf.blit(black_band, (0, 1080 - band_size[1]))
+            self.cutscene_final_surf = pg.transform.grayscale(self.cutscene_final_surf)
+            
+
+        if "dialogue" in config_dict:
+            self.dialogue_name = config_dict["dialogue"]
+        else:
+            self.dialogue_name = None
+        
+        if "introspection_dialogue" in config_dict:
+            self.introspection_dialogue = config_dict["introspection_dialogue"]
+        else:
+            self.introspection_dialogue = None
+            
         self.dialogue = DialogueManager()
-        self.dialogue_name = dialogue_name
-        self.introspection_dialogue = introspection_dialogue_name
-
-        self.cutscene_surf = self.anim_lst[0]
         self.is_finished = False
     
     def get_status_event(self, event, game):
@@ -153,7 +171,7 @@ class CinematicPlayer:
                 game.win.blit(self.cutscene_final_surf, (0, 0))
                 self.dialogue.draw(game.win)
             else:
-                # Second half of the transition: draw the introspection dialogue
+                # Second half of the transition: draw the normal game background
                 game.draw(Coord(0, (0, 0)))
 
             # Use the sine function to create a smooth fade out effect
@@ -171,7 +189,8 @@ class CinematicPlayer:
         - Introspection dialogue (with the normal game background)
         """
         # Play the animation sequence
-        self.__play_anim(game)
+        if self.anim_lst:
+            self.__play_anim(game)
 
         # If there is a dialogue name, play the dialogue sequence
         if self.dialogue_name:

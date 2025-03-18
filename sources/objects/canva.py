@@ -43,7 +43,7 @@ offsetx = -60 # Needed to adjust the position of the control panel, because sadl
 offsety = -90
 
 class Canva:
-    def __init__(self, coord : Coord, game): 
+    def __init__(self, coord : Coord, game, color_buttons_unlocked=False): 
         """Initialize the Canva object with its properties and UI elements."""
         self.coord = coord
 
@@ -63,9 +63,11 @@ class Canva:
         self.confirm_button = Button((1584+offsetx, 378+offsety), self.attempt_save, whiten(SAVE_BUTTON), SAVE_BUTTON)
         self.paint_button = Button((1464+offsetx, 228+offsety), self.start_painting, whiten(PAINT_BUTTON), PAINT_BUTTON)
 
+        self.color_buttons_unlocked = color_buttons_unlocked
+
         # Initialize color selection buttons
         self.color_buttons_pos = (1350, 528)
-        self.color_buttons = self.init_color_buttons(False) # Initialize the color buttons with the default colors
+        self.color_buttons = self.init_color_buttons(self.color_buttons_unlocked) # Initialize the color buttons with the default colors
         
         # Import the game logic and set the game reference
         from core.logic import Game
@@ -169,7 +171,7 @@ class Canva:
     
     def reset(self):
         """Reset the canvas to its initial state.""" 
-        self.__init__(self.coord, self.game)
+        self.__init__(self.coord, self.game, self.color_buttons_unlocked)
     
     def get_round_mask(self, surface : pg.Surface, xy : tuple, circle_radius):
         """Create and return a circular mask for the given surface.""" 
@@ -333,7 +335,7 @@ class Canva:
         # Handle the held pattern's movement and dropping
         if self.holded_pattern:
             if event.type == pg.MOUSEBUTTONUP:
-                self.drop_pattern(mouse_pos)
+                self.drop_pattern(Coord(0, mouse_pos).get_pixel_perfect())
 
             if event.type == pg.MOUSEMOTION:
                 self.holded_pattern.rect.center = Coord(0, mouse_pos).get_pixel_perfect()

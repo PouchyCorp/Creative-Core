@@ -234,10 +234,6 @@ BG5 = load_image("data/R4.png")
 BG6 = load_image("data/R5.png")
 PRETTY_BG = load_image("data/joli_background.png")
 
-# Icons
-ICON_1 = load_image('data/icon_inv_test.png')
-CHIP = load_image('data/chip.png')
-
 # UI Elements
 CANVA_UI_PAINT = load_image('data/ui_canva_1.png')
 CANVA_UI_NAME = load_image('data/ui_canva2.png')
@@ -252,7 +248,6 @@ PLAY_BUTTON = load_image('data/jouer.png')
 CLOSE_BUTTON = load_image("data/close.png")
 REGISTER_BUTTON = load_image("data/register.png")
 CONFIRM_BUTTON = load_image("data/confirm.png")
-CHIP_BUTTON = load_image("data/chip_button.png")
 BUILD_MODE_BORDER = load_image("data/bordure_construction.png")
 DESTRUCTION_MODE_BORDER = load_image("data/destruction_bordure.png")
 DIALBOX = load_image("data/pop_up_dialogue.png")
@@ -271,7 +266,6 @@ SPRITESHEET_DOOR_BLINK = anim.Spritesheet(load_image("data/prt_anim_blink.png"),
 SPRITESHEET_HAUT_FLIP = anim.Spritesheet(transform.flip(load_image("data/prt_haut.png"),False, True), (42*6, 29*6))
 SPRITESHEET_BAS_FLIP = anim.Spritesheet(transform.flip(load_image("data/prt_bas.png"),False, True), (42*6, 29*6))
 SPRITESHEET_DOOR_BLINK_FLIP = anim.Spritesheet(transform.flip(load_image("data/prt_anim_blink.png"),False, True), (42*6, 29*6))
-SPRITESHEET_CHIP = anim.Spritesheet(load_image('data/chip.png'), (48*6, 48*6))
 SPRITESHEET_ROOFTOP = anim.Spritesheet(load_image('data/rooftop.png'), (320*6,180*6))
 EXCLAMATION_SPRITESHEET = anim.Spritesheet(load_image("data/exclamation_2x9.png"),(2*6,9*6))
 
@@ -341,11 +335,12 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # Cutscenes
 # The format for the cutscenes is:
 # - The cutscene
-# - The name of the 1st dialogue
+# - The name of the main dialogue
 # - The name of the introspecive dialogue
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : ("data/anim_deb_57_frames.png", "0", "introspec_0"),
-                                                "floor1" : ["data/anim_deb_57_frames.png"],
-                                                "floor2" : ("data/anim_deb_57_frames.png", "2", "introspec_2"),
-                                                "floor3" : ("data/anim_deb_57_frames.png", "3", "introspec_3"),
-                                                "floor4" : ("data/anim_deb_57_frames.png", "4", "introspec_4"),
-                                                "floor5" : ("data/anim_deb_57_frames.png", "5", "introspec_5")}
+# Cutscenes are called by the unlock manager when a floor is discovered for the first time
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : {"dialogue" : "0", "introspec" : "introspec_0"},
+                                                "floor1" : {'anim' : "data/anim_deb_57_frames.png", 'introspec' : "introspec_1"},
+                                                "floor2" : {"anim" : "data/anim.png", "dialogue" : "2", "introspec" : "introspec_2"},
+                                                "floor3" : {"dialogue" : "3", "introspec" : "introspec_3"},
+                                                "floor4" : {"anim" : "data/caissier_anim_30frmaes.png", "dialogue" : "4", "introspec" : "introspec_4"},
+                                                "floor5" : {"anim" : "data/anim_haut_65frames.png", "dialogue" : "5", "introspec" : "introspec_5"}}

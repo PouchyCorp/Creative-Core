@@ -11,5 +11,5 @@ fullscreen = true # desactivez si vous voulez faire des capture d'ecran / deacti
 [gameplay]
 fps = 60
 cheats = true # donne l'acces à de nombreuses fonctionnalités de triche / grants cheating privileges
-debug = true # affiche un bandaux d'information utile pour debugger / shows debug informations
+debug = false # affiche un bandaux d'information utile pour debugger / shows debug informations
 offline_mode = true # IMPORTANT, si vous ne voulez ou pouvez pas jouer en ligne, activer ce parametre / turn on if you want to play offline

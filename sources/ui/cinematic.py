@@ -58,7 +58,7 @@ class CinematicPlayer:
             
 
         if "dialogue" in config_dict:
-            self.dialogue_name = config_dict["dialogue"]
+            self.dialogue_name, self.npc_icon, self.npc_name = config_dict["dialogue"]
         else:
             self.dialogue_name = None
         
@@ -123,7 +123,7 @@ class CinematicPlayer:
                 finised_reading = self.get_dialogue_event(event)
             
             # Update the dialogue state
-            self.dialogue.update()
+            self.dialogue.update(self.npc_name)
             # Draw the background and the current state of the dialogue
             game.draw_background()
             game.win.blit(self.cutscene_final_surf, (0,0))
@@ -144,7 +144,7 @@ class CinematicPlayer:
                 self.get_dialogue_event(event)
             
             # Update the dialogue state
-            self.dialogue.update()
+            self.dialogue.update("self")
             # Draw the background and the current state of the introspection dialogue
             game.draw(Coord(0, (0, 0)))
             self.dialogue.draw(game.win)
@@ -195,6 +195,7 @@ class CinematicPlayer:
         # If there is a dialogue name, play the dialogue sequence
         if self.dialogue_name:
             self.dialogue.special_dialogue(self.dialogue_name)
+            self.dialogue.npc_icon = self.npc_icon
             self.__play_dialogue(game)
 
         # Play the transition sequence

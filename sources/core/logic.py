@@ -168,7 +168,7 @@ class Game:
         self.paused = True
         self.temp_bg = pg.transform.grayscale(self.win) # Grayscale the background
         self.dialogue_manager.random_dialogue()  # Trigger a random dialogue
-        self.dialogue_manager.bot_anim = bot_anim.copy()  # Copy the bot's surface for display
+        self.dialogue_manager.npc_icon = bot_anim.copy()  # Copy the bot's surface for display
     
     def launch_special_dialogue(self, dialogue_name):
         """ Function to initiate dialogue easily passed to other functions
@@ -179,10 +179,10 @@ class Game:
         if dialogue_name=='0':
             self.popups.append(InfoPopup("ATTENDEZ !! "))
             self.timer.create_timer(1, self.dialogue_manager.special_dialogue, arguments=[dialogue_name])  # Trigger a random dialogue with a delay
-            self.dialogue_manager.bot_anim = None # TO DO : Add a special animation for this dialogue
+            self.dialogue_manager.npc_icon = None # TO DO : Add a special animation for this dialogue
         else:
             self.dialogue_manager.special_dialogue(dialogue_name)  # Trigger a random dialogue.
-            self.dialogue_manager.bot_anim = None # TO DO : Add a special animation for this dialogue
+            self.dialogue_manager.npc_icon = None # TO DO : Add a special animation for this dialogue
 
     def pause(self):
         """ Pauses the game and displays the pause menu"""

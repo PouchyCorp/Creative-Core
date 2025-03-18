@@ -115,7 +115,7 @@ class DialogueManager:
         self.dialogues: list[Dialogue] = self.__init()  # List of dialogues
         self.special_dialogues = self.__special_init()  # Dictionary of special dialogues
         self.selected_dialogue: Dialogue = Dialogue(["You shouldn't see this message"])  # Default dialogue
-        self.bot_anim: Animation = None  # Idle animation of the robot clicked
+        self.npc_icon: Animation | pg.Surface = None  # Idle animation of the robot clicked
         self.background = sprite.DIALBOX  # Background sprite for dialogue box
 
     def __init(self) -> list[Dialogue]:
@@ -171,12 +171,11 @@ class DialogueManager:
             self.selected_dialogue.skip_to_next_part()  # Skip to the next part of the dialogue
             return False
 
-    def update(self):
+    def update(self, npc_name = 'anon'):
         """
         Update the current dialogue.
-        """
-        bot_name = "anon"  # Default bot name
-        self.selected_dialogue.update(bot_name)  # Update the dialogue with the bot name
+        """  # Default bot name
+        self.selected_dialogue.update(npc_name)  # Update the dialogue with the bot name
 
     def draw(self, screen: pg.Surface):
         """
@@ -187,8 +186,11 @@ class DialogueManager:
             line_height = 812 + 27 * i  # Calculate the line height
             screen.blit(surf, (650, line_height))  # Draw each line of the dialogue
 
-        if self.bot_anim:
-            scaled_bot_surface = pg.transform.scale2x(self.bot_anim.get_frame())  # Scale the bot animation
+        if self.npc_icon:
+            if type(self.npc_icon) == Animation:
+                scaled_bot_surface = pg.transform.scale2x(self.npc_icon.get_frame())  # Scale the bot animation
+            else:
+                scaled_bot_surface = pg.transform.scale2x(self.npc_icon)
             scaled_bot_rect = scaled_bot_surface.get_rect(bottomright=(504, 1050))  # Get the rect for the bot animation
             screen.blit(scaled_bot_surface, scaled_bot_rect)  # Draw the bot animation
 

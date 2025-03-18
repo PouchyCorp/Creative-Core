@@ -324,6 +324,13 @@ ANIM_ROBOT_MUSIC = anim.Animation(anim.Spritesheet(load_image('data/robots/robot
 
 LIST_SPRITESHEET_ROBOT = [SPRITESHEET_ROBOT_1_PACK, SPRITESHEET_ROBOT_2_PACK, SPRITESHEET_ROBOT_3_PACK, SPRITESHEET_ROBOT_4_PACK, SPRITESHEET_ROBOT_5_PACK, SPRITESHEET_ROBOT_6_PACK]
 
+# NPC Sprites
+SHOPKEEPER = load_image("data/shop_pnj.png")
+CROWD = load_image("data/foule_pnj.png")
+CACHIER_NPC = load_image("data/guichet_pnj.png")
+COLOR_NPC = load_image("data/distrid_46x78.png")
+TUTORIAL_NPC = load_image("data/deb_pnj.png")
+
 # Arm and Sprayer for the canva
 ARM = load_image("data/bra_articuler_1.png")
 SPRAYER = load_image("data/buse.png")
@@ -340,9 +347,9 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # - The name of the main dialogue
 # - The name of the introspecive dialogue
 # Cutscenes are called by the unlock manager when a floor is discovered for the first time
-CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : {"dialogue" : "0", "introspec" : "introspec_0"},
+CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : {"dialogue" : ("0", TUTORIAL_NPC, "tutor"), "introspec" : "introspec_0"},
                                                 "floor1" : {'anim' : "data/anim_deb_57_frames.png", 'introspec' : "introspec_1"},
-                                                "floor2" : {"anim" : "data/anim.png", "dialogue" : "2", "introspec" : "introspec_2"},
-                                                "floor3" : {"dialogue" : "3", "introspec" : "introspec_3"},
-                                                "floor4" : {"anim" : "data/caissier_anim_30frmaes.png", "dialogue" : "4", "introspec" : "introspec_4"},
-                                                "floor5" : {"anim" : "data/anim_haut_65frames.png", "dialogue" : "5", "introspec" : "introspec_5"}}
+                                                "floor2" : {"anim" : "data/anim.png", "dialogue" : ("2",SHOPKEEPER,'cashy'), "introspec" : "introspec_2"},
+                                                "floor3" : {"dialogue" : ("3", COLOR_NPC, "colr"), "introspec" : "introspec_3"},
+                                                "floor4" : {"anim" : "data/caissier_anim_30frmaes.png", "dialogue" : ("4", CACHIER_NPC, 'rob'), "introspec" : "introspec_4"},
+                                                "floor5" : {"anim" : "data/anim_haut_65frames.png", "dialogue" : ("5", CROWD, 'crowd'), "introspec" : "introspec_5"}}

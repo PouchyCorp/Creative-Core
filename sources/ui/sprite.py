@@ -328,6 +328,7 @@ ANIM_ROBOT_MUSIC = anim.Animation(anim.Spritesheet(load_image('data/robots/robot
 LIST_SPRITESHEET_ROBOT = [SPRITESHEET_ROBOT_1_PACK, SPRITESHEET_ROBOT_2_PACK, SPRITESHEET_ROBOT_3_PACK, SPRITESHEET_ROBOT_4_PACK, SPRITESHEET_ROBOT_5_PACK, SPRITESHEET_ROBOT_6_PACK]
 
 # NPC Sprites
+MAIN_CHARACTER = load_image("data/pnj_principal.png")
 SHOPKEEPER = load_image("data/shop_pnj.png")
 CROWD = load_image("data/foule_pnj.png")
 CACHIER_NPC = load_image("data/guichet_pnj.png")

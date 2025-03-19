@@ -82,7 +82,7 @@ class Canva:
         self.holded_pattern : Pattern = None
 
         self.total_price = 0
-        self.totalbeauty = 0
+        self.total_beauty = 0
 
         # Initialize robotic arm properties
         self.arm_root = (522, 469)

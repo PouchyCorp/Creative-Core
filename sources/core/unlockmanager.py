@@ -37,8 +37,8 @@ class UnlockManager:
         self.unlocked_features = []
         self.discovered_features = []
         self.discovered_floors = []
-        self.floor_price = {"2": 200, "3": 1000, "4": 5000, "5": 10000}
-        self.feature_price = {"Auto Cachier": 5000, "Color" : 1000}
+        self.floor_price = {"2": 2000, "3": 10000, "4": 50000, "5": 100000}
+        self.feature_price = {"Auto Cachier": 50000, "Color" : 10000}
 
     def is_floor_unlocked(self, num: int):
         """Returns True if the floor is unlocked, False otherwise."""

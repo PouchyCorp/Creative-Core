@@ -73,22 +73,22 @@ class BotDistributor:
         self.robot_tiers = [10, 20, 50, 100, 500, 1000]
         self.robot_tiers.sort() # sort the robot tiers in ascending order if they are not already
 
-        self.gold_per_beauty = {1 : 0.5,
-                                2.5: 2, #end stage 1
-                                5 : 4, 
-                                10: 7, #end stage 2
-                                20 : 10, 
-                                35 : 15, #end stage 3
-                                55 : 25,
-                                75 : 40, 
-                                100: 55, #end stage 4
-                                140 : 60 #Bonus
+        self.gold_per_beauty = {1 : 5,
+                                2.5: 20, #end stage 1
+                                5 : 40, 
+                                10: 70, #end stage 2
+                                20 : 100, 
+                                35 : 150, #end stage 3
+                                55 : 250,
+                                75 : 400, 
+                                100: 550, #end stage 4
+                                140 : 600 #Bonus
                                 } # gold per second based on beauty
 
         self.frequency_per_beauty = {0 : 0, # no bot at the start
-                                     0.1 : 0.1, 
+                                     1 : 0.1, 
                                      2.5: 0.25, #end stage 1
-                                     5:0.5, 
+                                     5: 0.5, 
                                      10: 0.75, #end stage 2
                                      20 : 1, 
                                      35 : 1.5, #end stage 3

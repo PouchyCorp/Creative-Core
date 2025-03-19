@@ -260,7 +260,7 @@ BEAUTY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/conteu
 MONEY_LABEL_ANIMATION = anim.Animation(anim.Spritesheet(load_image("data/argent_ui_30x32_20frames_.png"), (32*6, 30*6)), 0, 20)
 COLOR_BUTTON_BG = load_image("data/couleurs_uii.png")
 DESTRUCTION_BUTTON = load_image("data/destruciotn_button.png")
-TELESCOPE = load.image("data/telescope.png")
+TELESCOPE = load_image("data/telescope.png")
 
 # Spritesheets
 SPRITESHEET_INVENTORY = anim.Spritesheet(load_image('data/etagere.png'), (53*6, 31*6))

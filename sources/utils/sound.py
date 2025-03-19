@@ -18,13 +18,18 @@ Author: Leih (Abel)
 """
 
 import pygame 
+import random
+from utils.timermanager import TimerManager 
+
 class SoundManager:
-    def __init__(self, volume):
+    def __init__(self, volume, timer):
         """
         Class to manage sounds in the game.  
         It is a good idea to have a loading screen while loading the sounds.  
         You should not make multiple instances of this class if you dont want to wait 2sec each time you play a sound ^^"""
+        self.timer : TimerManager = timer
 
+        # Set the volume from the config file
         self.volume = volume/100 # because the volume is a percentage
 
         # Load sounds
@@ -69,7 +74,7 @@ class SoundManager:
         ]
 
         for sound in self.noise_blank:
-            sound.set_volume(0.5*self.volume)
+            sound.set_volume(0.2*self.volume)
         #Random sounds for bots while moving
         self.robot=[self.robot, 
                     self.robot1,
@@ -85,10 +90,14 @@ class SoundManager:
 
         for sound in self.robot:
             sound.set_volume(0.5*self.volume)
+
+        self.play_random_ambiant_sound()
         
     def play_random_ambiant_sound(self):
         """
         Play a random sound in the list of noise blank sounds
         """
-        import random
-        random.choice(self.noise_blank).play()
+        chosen_sound = random.choice(self.noise_blank)
+        chosen_sound.play()
+        self.timer.create_timer(chosen_sound.get_length()+random.randint(0,10), self.play_random_ambiant_sound)
+        

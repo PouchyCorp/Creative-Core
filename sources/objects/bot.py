@@ -86,15 +86,15 @@ class BotDistributor:
         }
 
         self.frequency_per_beauty = {0 : 0, # no bot at the start
-                                     0.1 : 5, 
-                                     2.5: 4.5, #end stage 1
-                                     5: 4, 
-                                     10: 3.5, #end stage 2
-                                     20 : 3, 
-                                     35 : 2.5, #end stage 3
-                                     55 : 2, 
-                                     75 : 1.5, 
-                                     100: 1.5, #end stage 4
+                                     0.1 : 7, 
+                                     2.5: 5.5, #end stage 1
+                                     5: 5, 
+                                     10: 4.5, #end stage 2
+                                     20 : 4, 
+                                     35 : 3.5, #end stage 3
+                                     55 : 3, 
+                                     75 : 2.5, 
+                                     100: 2.5, #end stage 4
                                      140 : 2} # frequency of bot addition based on beauty
         
         self.gold_per_beauty = {key: value/4 for key, value in self.gold_per_beauty.items()} # divide the gold amount by 4 because adding gold every 0.25 seconds

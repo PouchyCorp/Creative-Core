@@ -663,7 +663,7 @@ class Game:
 
     def draw_debug_info(self, mouse_pos : Coord):
         self.win.blit(InfoPopup(
-            f'gui state : {self.gui_state} / fps : {round(self.clock.get_fps())} / mouse : {mouse_pos.get_pixel_perfect()} / $ : {self.money} / th_gold : {self.bot_distributor.theorical_gold} / beauty : {self.beauty}').text_surf, (0, 0))
+            f'gui state : {self.gui_state} / fps : {round(self.clock.get_fps())} / mouse : {mouse_pos.get_pixel_perfect()} / $ : {self.money} / th_gold : {self.bot_distributor.theorical_gold} / beauty : {self.beauty} / bot_count {len(self.hivemind.liberated_bots)}').text_surf, (0, 0))
 
 
 #     __  ______    _____   __   __    ____  ____  ____ 

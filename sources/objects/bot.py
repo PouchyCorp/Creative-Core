@@ -73,29 +73,29 @@ class BotDistributor:
         self.robot_tiers = [10, 20, 50, 100, 500, 1000]
         self.robot_tiers.sort() # sort the robot tiers in ascending order if they are not already
 
-        self.gold_per_beauty = {1 : 5,
-                                2.5: 20, #end stage 1
-                                5 : 40, 
-                                10: 70, #end stage 2
-                                20 : 100, 
-                                35 : 150, #end stage 3
-                                55 : 250,
-                                75 : 400, 
-                                100: 550, #end stage 4
-                                140 : 600 #Bonus
-                                } # gold per second based on beauty
+        self.gold_per_beauty = {0 : 2,
+                        2.5: 4, #end stage 1
+                        5 : 8, 
+                        10: 14, #end stage 2
+                        20 : 20, 
+                        35 : 30, #end stage 3
+                        55 : 50,
+                        75 : 80, 
+                        100: 110, #end stage 4
+                        140 : 120 #Bonus
+        }
 
         self.frequency_per_beauty = {0 : 0, # no bot at the start
-                                     1 : 0.1, 
-                                     2.5: 0.25, #end stage 1
-                                     5: 0.5, 
-                                     10: 0.75, #end stage 2
-                                     20 : 1, 
-                                     35 : 1.5, #end stage 3
-                                     55 : 2.5, 
-                                     75 : 4, 
-                                     100: 5, #end stage 4
-                                     140 : 7} # frequency of bot addition based on beauty
+                                     0.1 : 5, 
+                                     2.5: 4.5, #end stage 1
+                                     5: 4, 
+                                     10: 3.5, #end stage 2
+                                     20 : 3, 
+                                     35 : 2.5, #end stage 3
+                                     55 : 2, 
+                                     75 : 1.5, 
+                                     100: 1.5, #end stage 4
+                                     140 : 2} # frequency of bot addition based on beauty
         
         self.gold_per_beauty = {key: value/4 for key, value in self.gold_per_beauty.items()} # divide the gold amount by 4 because adding gold every 0.25 seconds
         self.game_timer = game_timer
@@ -123,16 +123,18 @@ class BotDistributor:
         """
         Distribute theoretical gold to create bots of various tiers.
         Handles tier prioritization and ensures proper timing.
+
+        This algorithm is very close to the one we studied in NSI, where we had to give change with the least amount of coins.
         """
         for tier in reversed(self.robot_tiers):
             amount_mod: int = int(self.theorical_gold / tier)
 
-            if 3 >= amount_mod >= 1:
-                for j in range(amount_mod):
-                    self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier])
+            if 3 >= amount_mod >= 1: # if the amount of bots to create is between 1 and 3
+                for j in range(amount_mod): # create the bots
+                    self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier]) # delay the creation of the bots by 0.5 seconds
                     self.theorical_gold -= tier
 
-            elif amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1:
+            elif amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1: # if the amount of bots to create is greater than 3 and the current tier is the last one
                 for j in range(amount_mod):
                     self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier])
                     self.theorical_gold -= tier

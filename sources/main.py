@@ -63,7 +63,7 @@ def load_assets(win):
     import ui.sprite
     import utils.sound
 
-    utils.sound.SoundManager(0)
+    utils.sound.SoundManager(0, int)
 
 def place_inventory_items(game_save_dict, rooms):
     """

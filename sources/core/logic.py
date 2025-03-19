@@ -78,7 +78,8 @@ class Game:
 
         
         self.transparency_win = transparency_win
-        self.sound_manager = SoundManager(config['sound']['volume'])
+        self.sound_manager = SoundManager(config['sound']['volume'], self.timer)
+        self.sound_manager.play_random_ambiant_sound()
         self.clock : pg.time.Clock = pg.time.Clock()
         self.popups : list[InfoPopup] = []
         self.confirmation_popups : list[ConfirmationPopup] = [] # Stack of confirmation popups

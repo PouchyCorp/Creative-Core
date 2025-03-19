@@ -90,14 +90,11 @@ class SoundManager:
 
         for sound in self.robot:
             sound.set_volume(0.5*self.volume)
-
-        self.play_random_ambiant_sound()
         
     def play_random_ambiant_sound(self):
         """
         Play a random sound in the list of noise blank sounds
         """
         chosen_sound = random.choice(self.noise_blank)
-        chosen_sound.play()
+        chosen_sound.play(fade_ms=1000)
         self.timer.create_timer(chosen_sound.get_length()+random.randint(0,10), self.play_random_ambiant_sound)
-        

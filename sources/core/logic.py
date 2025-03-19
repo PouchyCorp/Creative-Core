@@ -359,7 +359,8 @@ class Game:
                 if not hasattr(placeable, 'no_interaction'):
                     self.popups.append(InfoPopup(placeable.name))
 
-                    
+                       
+                       
 
     def handle_door_down_interaction(self, placeable):
         if self.unlock_manager.is_floor_unlocked(self.current_room.num-1): # Check if the next floor is unlocked

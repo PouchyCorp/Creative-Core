@@ -35,6 +35,7 @@ from ui.sprite import load_spritesheet_image
 from typing_extensions import TYPE_CHECKING
 from math import pi, sin
 from utils.coord import Coord
+from utils.sound import SoundManager
 
 # Very ugly, but it's the only way to avoid circular imports
 if TYPE_CHECKING:

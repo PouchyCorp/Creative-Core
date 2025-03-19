@@ -27,23 +27,22 @@ class SoundManager:
 
         # Load sounds
         self.accrocher = pygame.mixer.Sound('data/sounds/accrocher_tableau.wav') #
-        self.accrocher2 = pygame.mixer.Sound('data/sounds/accrocher.mp3') #
         self.achieve = pygame.mixer.Sound('data/sounds/achieve.mp3') #
-        self.blank_sound = pygame.mixer.Sound('data/sounds/blank_sound.mp3')
-        self.bott = pygame.mixer.Sound('data/sounds/bot or mites.mp3')
+        self.shop = pygame.mixer.Sound('data/sounds/shop.wav') #
         self.down = pygame.mixer.Sound('data/sounds/Doordown.wav') #
         self.up = pygame.mixer.Sound('data/sounds/elevator.wav') #
-        self.floorcracking = pygame.mixer.Sound('data/sounds/floorcracking.mp3')
-        self.incorrect = pygame.mixer.Sound('data/sounds/incorrect.mp3') #
+        self.incorrect = pygame.mixer.Sound('data/sounds/incorrect.wav') #
         self.items = pygame.mixer.Sound('data/sounds/items.mp3') #
-        self.mite = pygame.mixer.Sound('data/sounds/mite.mp3')
-        self.mites = pygame.mixer.Sound('data/sounds/mites.mp3')
-        self.mites2 = pygame.mixer.Sound('data/sounds/mites2.mp3')
-        self.mites3 = pygame.mixer.Sound('data/sounds/mites3.mp3')
-        self.mites4 = pygame.mixer.Sound('data/sounds/mites4.mp3')
-        self.mites5 = pygame.mixer.Sound('data/sounds/mites5.mp3')
+        self.mite = pygame.mixer.Sound('data/sounds/mite.wav') #
+
+#Il faudrait mettre le blank sound en fond dans une boucle infini pour qu'il se joue en boucle, et que de maniere random, un des trois autres sons soit joué
+        self.floorcracking = pygame.mixer.Sound('data/sounds/floorcracking.mp3')
+        self.blank_sound = pygame.mixer.Sound('data/sounds/blank_sound.mp3')
         self.noise = pygame.mixer.Sound('data/sounds/noise.mp3')
         self.rain = pygame.mixer.Sound('data/sounds/rain.mp3')
+        self.wind = pygame.mixer.Sound('data/sounds/wind.mp3')
+
+#Et il faudrait qu'a chaque robot qui soit libéré, il joue une son de mouvement quand il se déplace
         self.robot_moving = pygame.mixer.Sound('data/sounds/robot_moving.mp3')
         self.robot = pygame.mixer.Sound('data/sounds/robot.mp3')
         self.robot1 = pygame.mixer.Sound('data/sounds/robot1.wav')
@@ -54,9 +53,8 @@ class SoundManager:
         self.robot6 = pygame.mixer.Sound('data/sounds/robot6.wav')
         self.robot7 = pygame.mixer.Sound('data/sounds/robot7.mp3')
         self.robots = pygame.mixer.Sound('data/sounds/robots.mp3')
-        self.shop = pygame.mixer.Sound('data/sounds/shop.wav') #
         self.walk = pygame.mixer.Sound('data/sounds/walk.wav')
-        self.wind = pygame.mixer.Sound('data/sounds/wind.mp3')
+        
 
         #A list for every sounds which refers to noise blank sounds. At random moments, the loop is choosing one and play him
         self.noise_blank=[self.wind,
@@ -72,4 +70,6 @@ class SoundManager:
                     self.robot5, 
                     self.robot6, 
                     self.robot7, 
-                    self.robots]
+                    self.robots,
+                    self.robot_moving,
+                    self.walk]

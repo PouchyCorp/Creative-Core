@@ -79,7 +79,7 @@ class OnlineHomescreen:
 #               MAIN LOOP
 #-------------------------------------------------
 
-    def main_loop(self, win) -> tuple[str, dict]:
+    def main_loop(self, win : pg.Surface) -> tuple[str, dict]:
 
         pg.init()
         fps = 60  # Frame rate
@@ -90,7 +90,7 @@ class OnlineHomescreen:
 
         from utils.fonts import font_path
         font = pg.font.Font(font_path, 100)
-        win.blit(font.render(f"Connection à {self.database.server_ip} / {self.database.server_port} ...", True, 'white'), (100, win.get_rect().centery))
+        win.blit(font.render(f"Connection à {self.database.server_ip} / {self.database.server_port} ...", False, 'white'), (100, win.get_rect().centery))
         pg.display.flip()
 
         self.background = sprite.PRETTY_BG
@@ -167,7 +167,7 @@ class OnlineHomescreen:
 
         #if root terminated and ready to launch, returns game data
         if self.launch_status['ready']:
-            return self.launch_status['username'], self.database.fetch_user_data(self.launch_status['username'])
+            return self.launch_status['username'], self.database.fetch_user_data(self.launch_status['username']), win.copy()
     
     def render_popups(self, win):  
         # Iterate over existing popups to render and manage their lifetime
@@ -224,7 +224,7 @@ class OfflineHomescreen:
         from sys import exit
         exit()
 
-    def main_loop(self, win):
+    def main_loop(self, win : pg.Surface):
 
         pg.init()
         fps = 60  # Frame rate
@@ -271,3 +271,5 @@ class OfflineHomescreen:
                 bg_offset = 0
             
             pg.display.flip()
+        
+        return win.copy()

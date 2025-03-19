@@ -73,7 +73,7 @@ def place_inventory_items(game_save_dict, rooms):
         if placeable.placed:
             rooms[placeable.coord.room_num].placed.append(placeable)
 
-def start_game(game_save_dict, win, transparency_win):
+def start_game(game_save_dict, win, transparency_win, last_frame_of_homescreen):
     """
     Initializes and starts the game loop with the provided save data.
     """
@@ -89,7 +89,7 @@ def start_game(game_save_dict, win, transparency_win):
     
     # Initialize the game with saved data
     game = Game(win, config, game_save_dict['inventory'], game_save_dict['shop'],
-                game_save_dict['gold'], game_save_dict['unlocks'], transparency_win)
+                game_save_dict['gold'], game_save_dict['unlocks'], transparency_win, last_frame_of_homescreen)
     
     return game.main_loop()
 
@@ -103,10 +103,10 @@ def main():
     if not config['gameplay']['offline_mode']: # If online mode is enabled
         from core.homescreen import OnlineHomescreen
         homescreen = OnlineHomescreen(config['server']['ip'], config['server']['port']) 
-        username, user_game_data = homescreen.main_loop(win) # Display online homescreen and get user's save data when they log in
+        username, user_game_data, last_frame_of_homescreen = homescreen.main_loop(win) # Display online homescreen and get user's save data when they log in
         
         print('Launching game...')
-        data_to_save = start_game(user_game_data, win, transparency_win) # Start game with user's save data
+        data_to_save = start_game(user_game_data, win, transparency_win, last_frame_of_homescreen) # Start game with user's save data
         
         print('Saving game...')
         homescreen.database.save_user_data(username, data_to_save) # Save game data to database on the right user
@@ -114,8 +114,8 @@ def main():
     else: # If offline mode is enabled
         from utils.room_config import DEFAULT_SAVE
         from core.homescreen import OfflineHomescreen
-        OfflineHomescreen().main_loop(win) # Display offline homescreen
-        start_game(DEFAULT_SAVE, win, transparency_win) # Start game with default save data
+        last_frame_of_homescreen = OfflineHomescreen().main_loop(win) # Display offline homescreen
+        start_game(DEFAULT_SAVE, win, transparency_win, last_frame_of_homescreen) # Start game with default save data
 
 if __name__ == "__main__": 
     main() # Run the game

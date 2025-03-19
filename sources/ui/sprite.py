@@ -356,3 +356,7 @@ CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : {"dialogue" : ("0", T
                                                 "floor3" : {"dialogue" : ("3", COLOR_NPC, "colr"), "introspec" : "introspec_3"},
                                                 "floor4" : {"anim" : "data/caissier_anim_30frmaes.png", "dialogue" : ("4", CACHIER_NPC, 'rob'), "introspec" : "introspec_4"},
                                                 "floor5" : {"anim" : "data/anim_haut_65frames.png", "dialogue" : ("5", CROWD, 'crowd'), "introspec" : "introspec_5"}}
+
+
+
+INTRO_CUTSCENE : list[Surface] = [load_image(f'data/anim_intro/frame{i}.png') for i in range(1,6)]

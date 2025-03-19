@@ -29,13 +29,12 @@ author of this module: Leih (Abel), Pouchy (Paul), Tioh (Taddeo)
 
 
 from objects.dialogue import DialogueManager
-from utils.anim import Animation
 import pygame as pg
 from ui.sprite import load_spritesheet_image
 from typing_extensions import TYPE_CHECKING
 from math import pi, sin
 from utils.coord import Coord
-from utils.sound import SoundManager
+from utils.fonts import TERMINAL_FONT_VERYBIG
 
 # Very ugly, but it's the only way to avoid circular imports
 if TYPE_CHECKING:
@@ -211,4 +210,68 @@ class CinematicPlayer:
 
         # Mark the cinematic as finished
         self.is_finished = True
+
+    
+
+class IntroCutscene:
+    """Simple class for playing the intro IntroCutscene."""
+    def __init__(self, frames : list[pg.Surface]):
+        self.frames = frames
+
+    def transition(self, game : 'Game', current_frame : pg.Surface, next_frame : pg.Surface, time : float = 2):
+        """Simple fade-in-out transition between one frame to another, can be easily used at other places.  
+        Reimplementation of the __play_transition method above"""
+        clock = pg.time.Clock()
+        mask = pg.Surface((game.win.get_width(), game.win.get_height()))
+        mask.fill((0, 0, 0))
+        incr = 0
+        step_count = time * 60  # Number of steps for the transition
+
+        while incr < pi:
+            clock.tick(60)
+            incr += pi / step_count  # Increment the angle for the sine function
+
+            if incr < pi / 2:
+                # First half of the transition: draw the current cutscene and dialogue
+                game.win.blit(current_frame, (0,0))
+            else:
+                # Second half of the transition: draw the normal game background
+                game.win.blit(next_frame, (0,0))
+
+            # Use the sine function to create a smooth fade out effect
+            # sin(incr) varies from 0 to 1 as incr goes from 0 to pi/2, and from 1 to 0 as incr goes from pi/2 to pi
+            mask.set_alpha(sin(incr) * 255)
+            game.win.blit(mask, (0, 0))
+            pg.display.flip()
+        
+        return next_frame
+    
+    def play(self, game : 'Game', initial_background : pg.Surface):
+        """Plays the intro cutscene."""
+        frame_ind = 0
+        current_frame = self.frames[frame_ind]
+        skip_label = TERMINAL_FONT_VERYBIG.render("Cliquez pour passer", False, (255, 212, 163))
+        
+        clock = pg.time.Clock()
+
+        self.transition(game, initial_background, current_frame, 3)
+         
+        while frame_ind < len(self.frames):
+            clock.tick(60)
+            for event in pg.event.get():
+                if event.type == pg.KEYDOWN or event.type == pg.MOUSEBUTTONDOWN:
+                    frame_ind += 1
+                    if frame_ind >= len(self.frames):
+                        break
+
+                    current_frame = self.transition(game, current_frame, self.frames[frame_ind], 1.5)
+            
+            game.win.blit(current_frame, (0,0))
+            game.win.blit(skip_label, (0,0))
+            # Draw the background and the current state of the introspection dialogue
+            pg.display.flip()
+        
+        self.transition(game, current_frame, pg.Surface((1920, 1080)), 3)
+
+            
     

@@ -56,7 +56,7 @@ import objects.placeablesubclass as subplaceable
 
 # ui elements
 from ui.button import Button
-from ui.cinematic import CinematicPlayer
+from ui.cinematic import CinematicPlayer, IntroCutscene
 from ui.confirmationpopup import ConfirmationPopup
 from ui.infopopup import InfoPopup
 from ui.inventory import Inventory, Shop
@@ -70,7 +70,7 @@ from utils.sound import SoundManager
 from utils.timermanager import TimerManager
 
 class Game:
-    def __init__(self, win : pg.Surface, config : dict, inventory, shop, gold, unlock_manager, transparency_win):
+    def __init__(self, win : pg.Surface, config : dict, inventory, shop, gold, unlock_manager, transparency_win, last_frame_of_homescreen : pg.Surface):
         """Initializes the game with the provided configuration and save data."""
         self.config = config
         self.win : pg.Surface = win
@@ -111,6 +111,7 @@ class Game:
             self.unlock_effect(unlocked_feature) # Apply the unlock effect
             
         if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
+            IntroCutscene(sprite.INTRO_CUTSCENE).play(self, last_frame_of_homescreen)
             self.unlock_manager.discovered_floors.append("1")
             CinematicPlayer(sprite.CUTSCENES["floor1"]).play(self) # Launch the first floor tutorial
             

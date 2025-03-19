@@ -91,7 +91,7 @@ class Canva:
         self.arm['angle'], self.forearm['angle'] = inverse_kinematics(self.default_target, self.arm_root, self.arm['len'], self.forearm['len'])
 
         # Set the current color for painting
-        self.current_color = (255,0,0)
+        self.current_color = (11,23,33)
 
         self.color_gauge_incr = -pi
 

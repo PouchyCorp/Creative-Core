@@ -30,7 +30,7 @@ author of this module: Leih (Abel), Pouchy (Paul), Tioh (Taddeo)
 
 from objects.dialogue import DialogueManager
 import pygame as pg
-from ui.sprite import load_spritesheet_image
+from ui.sprite import load_spritesheet_image, MAIN_CHARACTER
 from typing_extensions import TYPE_CHECKING
 from math import pi, sin
 from utils.coord import Coord
@@ -206,6 +206,7 @@ class CinematicPlayer:
         # If there is an introspection dialogue, play the introspection dialogue sequence
         if self.introspection_dialogue:
             self.dialogue.special_dialogue(self.introspection_dialogue)
+            self.dialogue.npc_icon = MAIN_CHARACTER
             self.__play_introspection_dialogue(game)
 
         # Mark the cinematic as finished

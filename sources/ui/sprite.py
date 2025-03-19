@@ -348,7 +348,7 @@ DRAWER_LIST = [load_image("data/drawers/bouton_"+str(num)+".png") for num in ran
 # - The name of the introspecive dialogue
 # Cutscenes are called by the unlock manager when a floor is discovered for the first time
 CUTSCENES : dict[str, (anim.Animation, str)] = {"floor0" : {"dialogue" : ("0", TUTORIAL_NPC, "tutor"), "introspec" : "introspec_0"},
-                                                "floor1" : {'anim' : "data/anim_deb_57_frames.png", 'introspec' : "introspec_1"},
+                                                "floor1" : {'anim' : "data/anim_deb_57_frames.png", "dialogue" : ("1", TUTORIAL_NPC, "tutor"),'introspec' : "introspec_1"},
                                                 "floor2" : {"anim" : "data/anim.png", "dialogue" : ("2",SHOPKEEPER,'cashy'), "introspec" : "introspec_2"},
                                                 "floor3" : {"dialogue" : ("3", COLOR_NPC, "colr"), "introspec" : "introspec_3"},
                                                 "floor4" : {"anim" : "data/caissier_anim_30frmaes.png", "dialogue" : ("4", CACHIER_NPC, 'rob'), "introspec" : "introspec_4"},

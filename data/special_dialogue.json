@@ -13,9 +13,25 @@
     "Dans tous les cas je trouve ça bien plus amusant que l’usine",
     "Je n’y retournerais jamais !!",
     "Mais j'espère pouvoir faire quelque chose de ce don !",
-    "Ce serait dommage de ne pas l’utiliser…"],
+    "Ce serait dommage de ne pas l’utiliser…",
+    "La puce me souffle de créer un tableau…",
+    "Elle me donne des intructions :",
+    "- Je dois piocher un pochoir pas trop cher",
+    "- Le placer sur la toile",
+    "- Choisir une couleur",
+    "- Et appuyer sur le bouton 'PAINT' !",
+    "- Des que j'ai fini, je peux nommer mon tableau ...",
+    "et appuyer sur le bouton vert pour le placer dans mon inventaire !",
+    "Je vais essayer de suivre ces instructions…"],
 
-
+    "introspec_1" : 
+    ["Je ne sais pas si je devrais lui faire confiance…",
+    "Mais je n’ai pas vraiment le choix.",
+    "Je dois bien avouer que je suis un peu perdu…",
+    "Je viens de me reveiller dans une decharge…",
+    "Ce lieu est le seul abri que j’ai trouvé",
+    "Explorons un peu cet endoit…",
+    "Et après je devrais décendre au sous-sol"],
 
     "introspec_2" : 
     ["Ce drole de personnage ne me parait pas tres net...",

@@ -62,8 +62,8 @@ class CinematicPlayer:
         else:
             self.dialogue_name = None
         
-        if "introspection_dialogue" in config_dict:
-            self.introspection_dialogue = config_dict["introspection_dialogue"]
+        if "introspec" in config_dict:
+            self.introspection_dialogue = config_dict["introspec"]
         else:
             self.introspection_dialogue = None
             

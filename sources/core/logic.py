@@ -323,6 +323,7 @@ class Game:
 
     def save_canva(self):
         self.inventory.inv.append(self.canva.get_placeable())
+        self.popups.append(InfoPopup("Vous avez sauvegardé votre toile dans l'inventaire !"))
 
     def toggle_shop(self):
         if self.gui_state is State.INTERACTION:

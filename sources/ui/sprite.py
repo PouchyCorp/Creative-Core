@@ -283,6 +283,13 @@ SHOP = load_image("data/shop_placeable.png")
 PROP_STATUE = load_image('data/props_statue.png')
 SPRITE_PLANT_1 = load_image("data/plant_2_39x38.png")
 SPRITE_PLANT_2 = load_image("data/plant_3_28x48.png")
+SPRITE_POSTER = load_image("data/poster.png")
+SPRITE_SPHERE = load_image("data/familiar_sphere.png")
+SPRITE_DUCK = load_image("data/duck.png")
+SPRITE_CUBE = load_image("data/strange_cube.png")
+SPRITE_STRAWBERRIES = load_image("data/strawberries.png")
+SPRITE_ROB = load_image("data/walle.png")
+SPRITE_PAINTING = load_image("data/munch.png")
 FRAME_PAINTING = load_image("data/cadre.png")
 
 # Robots

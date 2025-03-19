@@ -82,7 +82,7 @@ class Canva:
         self.holded_pattern : Pattern = None
 
         self.total_price = 0
-        self.total_beauty = 0
+        self.totalbeauty = 0
 
         # Initialize robotic arm properties
         self.arm_root = (522, 469)
@@ -171,6 +171,7 @@ class Canva:
         """Add the beauty value of the given patterns to the total beauty.""" 
         for pattern in patterns:
             self.total_beauty += pattern.beauty
+            self.total_beauty = round(self.total_beauty, 2)
     
     def reset(self):
         """Reset the canvas to its initial state.""" 

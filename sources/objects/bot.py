@@ -199,6 +199,8 @@ class Hivemind:
             self.inline_bots[0] = Bot(Coord(1, (self.line_start_x, random_height)),
                                       gold_amount, spritesheet_args[0], spritesheet_args[1], spritesheet_args[2],
                                       randint(1, 3))
+            
+        
 
     
     def free_last_bot(self, current_room):
@@ -217,6 +219,12 @@ class Hivemind:
 
             #plays sound
             self.sound_manager.achieve.play()
+
+
+            if len(self.liberated_bots) > 50: # to avoid lag, remove the first bot in the list if there are more than 50 bots
+                # this was tested by someone with a bad YEPS computer, he said it was lagging after 50 bots 
+                self.liberated_bots.pop(0)
+
             return last_bot_money_amount
         
         return False

@@ -89,11 +89,12 @@ class SoundManager:
                     self.walk]
 
         for sound in self.robot:
-            sound.set_volume(0.5*self.volume)
+            sound.set_volume(0.2*self.volume)
         
     def play_random_ambiant_sound(self):
         """
         Play a random sound in the list of noise blank sounds
+        This is a recursive function, it will play a sound, then wait for the sound to finish, then play another sound a random time after the end of the first sound
         """
         chosen_sound = random.choice(self.noise_blank)
         chosen_sound.play(fade_ms=1000)

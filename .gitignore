@@ -5,3 +5,4 @@ creative_core_venv
 serverpack/server_venv
 .DS_Store
 .db
+serverpack/user_data.db

@@ -142,7 +142,7 @@ class Canva:
         """Create and return a Placeable object from the current canvas.""" 
         scaled_surf = pg.transform.scale_by(self.surf.copy(),0.5).convert()
         FRAME_PAINTING.blit(scaled_surf,(12,12))
-        placeable = Placeable(self.name, self.coord.copy(), FRAME_PAINTING.copy(), beauty=self.total_beauty, tag="decoration")
+        placeable = Placeable(self.name, self.coord.copy(), FRAME_PAINTING.copy(), beauty=self.total_beauty, tag="decoration", flags=["no_outline"])
         self.reset()
         return placeable
     

@@ -83,7 +83,8 @@ class BotDistributor:
                                 140 : 60 #Bonus
                                 } # gold per second based on beauty
 
-        self.frequency_per_beauty = {1 : 0.1, 
+        self.frequency_per_beauty = {0 : 0, # no bot at the start
+                                     0.1 : 0.1, 
                                      2.5: 0.25, #end stage 1
                                      5:0.5, 
                                      10: 0.75, #end stage 2

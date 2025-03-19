@@ -19,7 +19,7 @@ from utils.coord import Coord
 from objects.placeable import Placeable
 from core.room import Room
 import ui.sprite as sprite
-from pygame import Surface
+from pygame import Surface, SRCALPHA
 import objects.placeablesubclass as subplaceable
 from core.unlockmanager import UnlockManager
 from utils.anim import Animation
@@ -43,10 +43,11 @@ def init_rooms():
     # floor 1
     R1 = Room(1, sprite.BG1)
     guichet = subplaceable.DeskPlaceable('guichet', Coord(1, (470, 692)), Surface((0,0)))
+    collider = Placeable('collider', Coord(1, (0, 0)), Surface((798, 1080), flags=SRCALPHA), "collider", flags=['no_outline', 'no_interaction'])
     inventory = subplaceable.InvPlaceable(
         "Inventory", Coord(1, (1548, 336)), Surface((53*6, 31*6)))
-    R1.placed += [guichet, stairs_up, stairs_down, inventory]
-    R1.blacklist += [stairs_up, stairs_down, inventory, guichet]
+    R1.placed += [guichet, stairs_up, stairs_down, inventory, collider]
+    R1.blacklist += [stairs_up, stairs_down, inventory, guichet, collider]
 
     # floor 2
     R2 = Room(2, sprite.BG3)

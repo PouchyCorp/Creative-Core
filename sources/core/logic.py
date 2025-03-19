@@ -356,7 +356,8 @@ class Game:
             case subplaceable.ColorUnlockPlaceable:
                 self.handle_color_placeable_interaction()
             case _:
-                self.popups.append(InfoPopup(placeable.name))
+                if not hasattr(placeable, 'no_interaction'):
+                    self.popups.append(InfoPopup(placeable.name))
 
     def handle_door_down_interaction(self, placeable):
         if self.unlock_manager.is_floor_unlocked(self.current_room.num-1): # Check if the next floor is unlocked
@@ -462,6 +463,8 @@ class Game:
             self.beauty = self.process_total_beauty() # Update beauty score
             self.gui_state = State.INVENTORY # Return to the inventory
             self.inventory.init()
+        else:
+            self.popups.append(InfoPopup("Vous ne pouvez pas placer cet objet ici !"))
 
     def handle_inventory_mode(self, event: pg.event.Event, mouse_pos: Coord):
         self.inventory.handle_floor_navigation_buttons(event)

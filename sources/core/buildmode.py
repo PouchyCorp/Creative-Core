@@ -88,7 +88,7 @@ class BuildMode():
     def can_place(self, room : Room) -> bool:
         """check if the placeable can be placed without colliding with other objects"""
         room_rects = [placeable.rect for placeable in room.placed]
-        if self.ghost_rect.collidelistall(room_rects):
+        if self.ghost_rect.collidelistall(room_rects) or room.num in [0, 5]:
             return False
         else:
             return True

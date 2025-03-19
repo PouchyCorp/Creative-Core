@@ -34,7 +34,8 @@ class Placeable:
         """Initializes a Placeable object with a name, coordinates, surface, and optional tag, animation, and y_constraint.
         Flags are :
         - "no_outline" : the object won't have an outline when hovered
-        - "temporary" : the object will be removed after a certain time"""
+        - "temporary" : the object will be removed after a certain time
+        - "no_interaction" : the object won't have any interaction when clicked"""
 
         self.name = name
         self.id = randint(0, 10000000)  # Generates a random ID for the Placeable instance

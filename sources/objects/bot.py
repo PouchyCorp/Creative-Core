@@ -123,16 +123,18 @@ class BotDistributor:
         """
         Distribute theoretical gold to create bots of various tiers.
         Handles tier prioritization and ensures proper timing.
+
+        This algorithm is very close to the one we studied in NSI, where we had to give change with the least amount of coins.
         """
         for tier in reversed(self.robot_tiers):
             amount_mod: int = int(self.theorical_gold / tier)
 
-            if 3 >= amount_mod >= 1:
-                for j in range(amount_mod):
-                    self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier])
+            if 3 >= amount_mod >= 1: # if the amount of bots to create is between 1 and 3
+                for j in range(amount_mod): # create the bots
+                    self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier]) # delay the creation of the bots by 0.5 seconds
                     self.theorical_gold -= tier
 
-            elif amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1:
+            elif amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1: # if the amount of bots to create is greater than 3 and the current tier is the last one
                 for j in range(amount_mod):
                     self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier])
                     self.theorical_gold -= tier

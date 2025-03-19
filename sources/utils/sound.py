@@ -18,12 +18,19 @@ Author: Leih (Abel)
 """
 
 import pygame 
+import random
+from utils.timermanager import TimerManager 
+
 class SoundManager:
-    def __init__(self):
+    def __init__(self, volume, timer):
         """
         Class to manage sounds in the game.  
         It is a good idea to have a loading screen while loading the sounds.  
         You should not make multiple instances of this class if you dont want to wait 2sec each time you play a sound ^^"""
+        self.timer : TimerManager = timer
+
+        # Set the volume from the config file
+        self.volume = volume/100 # because the volume is a percentage
 
         # Load sounds
         self.accrocher = pygame.mixer.Sound('data/sounds/accrocher_tableau.wav') #
@@ -34,6 +41,10 @@ class SoundManager:
         self.incorrect = pygame.mixer.Sound('data/sounds/incorrect.wav') #
         self.items = pygame.mixer.Sound('data/sounds/items.mp3') #
         self.mite = pygame.mixer.Sound('data/sounds/mite.wav') #
+
+        classic_sounds = [self.accrocher, self.achieve, self.shop, self.down, self.up, self.incorrect, self.items, self.mite]
+        for sound in classic_sounds:
+            sound.set_volume(0.5*self.volume)
 
 #Il faudrait mettre le blank sound en fond dans une boucle infini pour qu'il se joue en boucle, et que de maniere random, un des trois autres sons soit joué
         self.floorcracking = pygame.mixer.Sound('data/sounds/floorcracking.mp3')
@@ -61,6 +72,9 @@ class SoundManager:
                           self.rain,
                           self.floorcracking
         ]
+
+        for sound in self.noise_blank:
+            sound.set_volume(0.2*self.volume)
         #Random sounds for bots while moving
         self.robot=[self.robot, 
                     self.robot1,
@@ -73,3 +87,17 @@ class SoundManager:
                     self.robots,
                     self.robot_moving,
                     self.walk]
+
+        for sound in self.robot:
+            sound.set_volume(0.5*self.volume)
+
+        self.play_random_ambiant_sound()
+        
+    def play_random_ambiant_sound(self):
+        """
+        Play a random sound in the list of noise blank sounds
+        """
+        chosen_sound = random.choice(self.noise_blank)
+        chosen_sound.play()
+        self.timer.create_timer(chosen_sound.get_length()+random.randint(0,10), self.play_random_ambiant_sound)
+        

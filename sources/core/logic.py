@@ -78,7 +78,7 @@ class Game:
 
         
         self.transparency_win = transparency_win
-        self.sound_manager = SoundManager()
+        self.sound_manager = SoundManager(config['sound']['volume'])
         self.clock : pg.time.Clock = pg.time.Clock()
         self.popups : list[InfoPopup] = []
         self.confirmation_popups : list[ConfirmationPopup] = [] # Stack of confirmation popups
@@ -360,7 +360,7 @@ class Game:
                     self.popups.append(InfoPopup(placeable.name))
 
                        
-                       
+
 
     def handle_door_down_interaction(self, placeable):
         if self.unlock_manager.is_floor_unlocked(self.current_room.num-1): # Check if the next floor is unlocked
@@ -663,7 +663,7 @@ class Game:
 
     def draw_debug_info(self, mouse_pos : Coord):
         self.win.blit(InfoPopup(
-            f'gui state : {self.gui_state} / fps : {round(self.clock.get_fps())} / mouse : {mouse_pos.get_pixel_perfect()} / $ : {self.money} / th_gold : {self.bot_distributor.theorical_gold} / beauty : {self.beauty}').text_surf, (0, 0))
+            f'gui state : {self.gui_state} / fps : {round(self.clock.get_fps())} / mouse : {mouse_pos.get_pixel_perfect()} / $ : {self.money} / th_gold : {self.bot_distributor.theorical_gold} / beauty : {self.beauty} / bot_count {len(self.hivemind.liberated_bots)}').text_surf, (0, 0))
 
 
 #     __  ______    _____   __   __    ____  ____  ____ 

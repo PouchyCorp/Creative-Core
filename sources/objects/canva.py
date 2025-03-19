@@ -38,6 +38,7 @@ from ui.infopopup import InfoPopup
 from utils.fonts import TERMINAL_FONT_VERYBIG
 from math import sqrt, ceil, pi, sin
 from objects.particlesspawner import CircleParticleSpawner, ParticleSpawner
+from utils.sound import SoundManager
 
 COLORS = [(11,23,33), (105,117,130), (213,226,240),(141,171,131) , (217,137,76), (232, 216, 153), (168,40,40), (117, 97, 156), (44,53,69), (42,30,66)]
 
@@ -199,8 +200,10 @@ class Canva:
     def start_painting(self):
         """Start the painting process if the player has enough money.""" 
         if self.check_price(self.get_price()):
+            self.game.sound_manager.mite.play()
             self.animation_handler.start_anim(self.get_next_surf())
             self.add_to_beauty(self.placed_patterns)
+            
     
     def draw_pattern(self, surf, pattern : Pattern):
         """Imprint the pattern on the given surface.""" 

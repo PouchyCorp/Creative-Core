@@ -1,3 +1,6 @@
+#Projet : Creative Core
+#Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
+
 import pygame as pg
 import sys
 import os

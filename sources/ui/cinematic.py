@@ -1,4 +1,6 @@
 r"""
+Projet : Creative Core
+Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
              _                                
             | |                               
    ___ _   _| |_ ___  ___ ___ _ __   ___  ___ 
@@ -22,7 +24,7 @@ Key Features:
 Cutscene stored in ui/sprite.py with the format:
     (name : (animation, dialogue_name, introspection_dialogue_name))
 
-author: Leih (Abel), Pouchy (Paul), Tioh (Taddeo)
+author of this module: Leih (Abel), Pouchy (Paul), Tioh (Taddeo)
 """
 
 

@@ -1,4 +1,6 @@
 r"""
+Projet : Creative Core
+Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
    _____            _                            _             _       _        _                    
   / ____|          | |                          | |           | |     | |      | |                   
  | |     ___   ___ | |  _ __ ___ _ __ ___   ___ | |_ ___    __| | __ _| |_ __ _| |__   __ _ ___  ___ 
@@ -11,7 +13,11 @@ Basic SQLite query server that listens for incoming connections from clients and
 Note:
 ----
 I should implement error handling if I have the courage to do so.
-This server is vulnerable to SQL injection attacks, the queries are executed 'as is'.
+This server is vulnerable to SQL injection attacks, the queries are executed 'as is', so don't connect it to the internet.
+
+For more information on how the server / client communication works, see the /docs/detail_implementation.mb
+
+Author : Ytyt (Tybalt)
 """
 
 import socket

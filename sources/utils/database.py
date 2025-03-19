@@ -1,4 +1,6 @@
 r""" 
+Projet : Creative Core
+Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
   _____        _        _                                    
  |  __ \      | |      | |                                   
  | |  | | __ _| |_ __ _| |__   __ _ ___  ___                 

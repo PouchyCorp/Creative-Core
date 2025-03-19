@@ -56,4 +56,4 @@ Le fichier anim.py illustre bien le concept de l'encapsulation où la classe Ani
 
 Cela nous a permi de rendre le code plus facile à naviguer et nous a donné beaucoup d'experience à travailler avec des Objets.
 
-# Pour plus d'information sur le déroulé de la boucle principale, regardez la [timeline](/doc/timeline.md)
+# Pour plus d'information sur le déroulé de la boucle principale, regardez la [timeline](/docs/timeline.md)

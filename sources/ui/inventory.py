@@ -1,4 +1,6 @@
-"""
+r"""
+Projet : Creative Core
+Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
   _                      _                         __      _                 
  (_)                    | |                       / /     | |                
   _ _ ____   _____ _ __ | |_ ___  _ __ _   _     / /   ___| |__   ___  _ __  
@@ -35,7 +37,7 @@ from ui.infopopup import InfoPopup
 from ui.button import Button
 from objects.particlesspawner import ConfettiSpawner
 from math import ceil
-from utils.fonts import TERMINAL_FONT, TERMINAL_FONT_BIG
+from utils.fonts import TERMINAL_FONT, TERMINAL_FONT_BIG, TERMINAL_FONT_VERYBIG
 
 BORDER_AROUND_WINDOW = 24
 OBJECT_SIZE = 180
@@ -76,9 +78,6 @@ class Inventory:
         self.destruction_button = Button((1332, 930), int,
                             whiten(DESTRUCTION_BUTTON),
                             DESTRUCTION_BUTTON)
-        
-        # Labels
-        self.label_surf = self.font.render("Inventory", False, (255, 212, 163))
         
         
     def init(self):
@@ -137,9 +136,9 @@ class Inventory:
 
     def _draw_labels(self, win: Surface):
         """Draws the different labels on the inventory window."""
-        title_surf = self.font.render(self.title, False, (255, 212, 163))
-        page_surf = self.font.render(f"Page {self._page + 1}/{ceil(len(self.inv)/ITEMS_PER_PAGE)}", False, (255, 212, 163))
-        win.blit(title_surf, (BORDER_AROUND_WINDOW+30, 42))
+        title_surf = TERMINAL_FONT_VERYBIG.render(self.title, False, (255, 212, 163))
+        page_surf = self.font.render(f"Page {self._page + 1}/{ceil(len(self.inv)/ITEMS_PER_PAGE)}", False, (255, 212, 163)) # Big blob of magic numbers to render the page number
+        win.blit(title_surf, (self.window_sprite.get_width()//2-title_surf.get_width()//2, 12))
         win.blit(page_surf, (168, 1002))
 
     def _mouse_highlight(self, win: Surface, mouse_pos: Coord):

@@ -1,3 +1,5 @@
+#Projet : Creative Core
+#Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
 import pickle
 from pygame import Surface
 import os
@@ -6,7 +8,7 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../sour
 from utils.anim import Spritesheet
 from utils.anim import Animation
 from objects.placeable import Placeable
-from utils.coord import Coord
+from utils.coord import Coord # idk why the python language server is complaining about this import, it works fine
 print('pickle test')
 
 """All tests should print the same dictionaries, if they don't, there is an error in the pickling process  

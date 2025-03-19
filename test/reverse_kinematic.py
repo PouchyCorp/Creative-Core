@@ -1,3 +1,6 @@
+#Projet : Creative Core
+#Equipe : Paul Baumard, Abel Bossard, Tybalt Debruyne, Taddeo Boisseuil-Marcil
+
 import math
 import pygame as pg
 
@@ -5,8 +8,6 @@ root = (300,300)
 target = (400,400)
 length1 = 400
 length2 = 200
-
-
 
 rect_surf1 = pg.Surface((length1, 10), pg.SRCALPHA)
 pg.draw.rect(rect_surf1, "red", (0,0,length1, 10))

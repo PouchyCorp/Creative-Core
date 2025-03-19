@@ -266,14 +266,13 @@ class Game:
         match key:
             case pg.K_SPACE:
                 self.toggle_inventory()
-            case pg.K_BACKSPACE:
-                self.toggle_destruction_mode()
             case pg.K_ESCAPE:
                 self.handle_escape_key()
 
     def handle_cheat_keys(self, key):
-        """Grant the player the ability to access cheats
-        Cheats are available in the config file"""
+        """Grant the player the ability to access cheats.  
+        Cheats are available in the config file.  
+        Match case are very useful for this kind of feature :)"""
         match key:
             case pg.K_UP:
                 self.change_floor(1)
@@ -281,6 +280,8 @@ class Game:
                 self.change_floor(-1)
             case pg.K_b:
                 self.hivemind.add_bot()
+            case pg.K_BACKSPACE:
+                self.toggle_destruction_mode()
             case pg.K_n:
                 self.hivemind.free_last_bot(self.current_room)
             case pg.K_s:
@@ -293,6 +294,8 @@ class Game:
                 self.beauty += 1
 
     def toggle_inventory(self):
+        """ Toggles the inventory GUI state
+        If the inventory is already open, it will close it and return to the interaction state"""
         if self.gui_state is State.INTERACTION:
             self.gui_state = State.INVENTORY
             self.inventory.init()
@@ -300,6 +303,9 @@ class Game:
             self.reset_guistate()
 
     def toggle_destruction_mode(self):
+        """ Toggles the destruction mode GUI state
+        If the destruction mode is already open, it will close it and return to the interaction state
+        Destruction mode have a custom quit button to return to the interaction state"""
         if self.gui_state is State.INTERACTION or self.gui_state is State.INVENTORY:
             self.gui_state = State.DESTRUCTION
             self.destruction_quit_button = Button((0,0), self.reset_guistate, sprite.whiten(sprite.QUIT_BUTTON), sprite.QUIT_BUTTON)
@@ -308,6 +314,8 @@ class Game:
             self.reset_guistate()
 
     def handle_escape_key(self):
+        """Handles the escape key event based on the current GUI state
+        If the game is in interaction state, it will pause the game"""
         if self.gui_state not in [State.TRANSITION, State.CONFIRMATION, State.INTERACTION]:
             self.reset_guistate()
         elif self.gui_state is State.INTERACTION:

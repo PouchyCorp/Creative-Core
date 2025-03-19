@@ -63,7 +63,7 @@ class BuildMode():
 
         # x constraint
         if self.selected_placeable.y_constraint:
-            self.ghost_rect.y = self.selected_placeable.y_constraint # snap to y constraint
+            self.ghost_rect.bottom = self.selected_placeable.y_constraint # snap to y constraint
 
         
         # blue hologram surface and rect

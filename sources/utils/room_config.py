@@ -51,20 +51,20 @@ def init_rooms():
     # floor 2
     R2 = Room(2, sprite.BG3)
     shop = subplaceable.ShopPlaceable('shop', Coord(
-        2, (150, 486)), sprite.SHOP, "shop")
+        2, (48, 468)), sprite.SHOP, "shop")
     R2.placed += [stairs_up, stairs_down, shop, inventory]
     R2.blacklist += [stairs_up, stairs_down, shop, inventory]
 
     # floor 3
     R3 = Room(3, sprite.BG4)
-    color_unlock = subplaceable.ColorUnlockPlaceable('ColorUnlockPlaceable', Coord(3, (100, 100)), Surface((10*6, 10*6)))
+    color_unlock = subplaceable.ColorUnlockPlaceable('ColorUnlockPlaceable', Coord(3, (48, 468+24)), sprite.COLOR_NPC)
     R3.placed += [stairs_up, stairs_down, inventory, color_unlock]
     R3.blacklist += [stairs_up, stairs_down, inventory, color_unlock]
 
     # floor 4
     R4 = Room(4, sprite.BG5)
     auto_cachier = subplaceable.AutoCachierPlaceable(
-        'AutoCachierPlaceable', Coord(1, (1500, 700)), Surface((10*6, 10*6)))
+        'AutoCachierPlaceable', Coord(1, (1398, 574)), sprite.CACHIER_NPC)
     R4.placed += [stairs_up, stairs_down, auto_cachier, inventory]
     R4.blacklist += [stairs_up, stairs_down, auto_cachier, inventory]
 
@@ -76,7 +76,7 @@ def init_rooms():
 
     special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot, 'color_unlock' : color_unlock} #used to access special placeables in the game loop
 
-    return [R0, R1, R2, R3, R4, R5], special_placeables
+    return [R0, R1, R2, R3, R4, R5], special_placeables 
 
 
 ROOMS, SPECIAL_PLACEABLES = init_rooms()
@@ -96,10 +96,10 @@ DEFAULT_SAVE = {'gold': 10,
                 "inventory": [Placeable('cheater beauty', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=1000)],
 
                 #Place all the items from the shop with ther price and their number of beauty
-                "shop": [Placeable('bust', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=10),
-                         Placeable('plante 1', Coord(2, (100, 100)), sprite.SPRITE_PLANT_1,
-                                   "decoration",  y_constraint=0, price=50, beauty=100),
-                         Placeable('plante 2', Coord(2, (100, 100)), sprite.SPRITE_PLANT_2, "decoration",  y_constraint=0, price=50, beauty=1000)],
+                "shop": [Placeable('buste', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=900, price=50, beauty=10),
+                         Placeable('plante', Coord(2, (100, 100)), sprite.SPRITE_PLANT_1,
+                                   "decoration", y_constraint=900, price=50, beauty=100),
+                         Placeable('arbuste', Coord(2, (100, 100)), sprite.SPRITE_PLANT_2, "decoration", y_constraint=900, price=50, beauty=1000)],
 
                 "unlocks": UnlockManager()}
 

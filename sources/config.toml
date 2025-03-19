@@ -8,6 +8,9 @@ port = 5000
 size = [1920,1080]
 fullscreen = true # desactivez si vous voulez faire des capture d'ecran / deactivate if you want to screenshot the game
 
+[sound]
+volume = 50 # pourcentage (0 pour desactiver le son)
+
 [gameplay]
 fps = 60
 cheats = true # donne l'acces à de nombreuses fonctionnalités de triche / grants cheating privileges

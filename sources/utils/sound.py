@@ -100,3 +100,12 @@ class SoundManager:
         chosen_sound.play(fade_ms=1000)
         self.timer.create_timer(chosen_sound.get_length()-1, chosen_sound.fadeout, arguments=(1000,))
         self.timer.create_timer(chosen_sound.get_length()+random.randint(0,10), self.play_random_ambiant_sound)
+    
+    def play_random_robot_sound(self):
+        """
+        Play a random sound in the list of robot sounds
+        This is called randomly when a robot is freed
+        """
+        chosen_sound = random.choice(self.robot)
+        chosen_sound.play(fade_ms=500)
+        self.timer.create_timer(chosen_sound.get_length()-0.5, chosen_sound.fadeout, arguments=(1000,))

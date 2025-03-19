@@ -73,7 +73,8 @@ class BotDistributor:
         self.robot_tiers = [10, 20, 50, 100, 500, 1000]
         self.robot_tiers.sort() # sort the robot tiers in ascending order if they are not already
 
-        self.gold_per_beauty = {0 : 2,
+        self.gold_per_beauty = {0 : 0, # no gold at the start
+                        0.1 : 2, # if at least one decoration is placed 
                         2.5: 4, #end stage 1
                         5 : 8, 
                         10: 14, #end stage 2
@@ -116,8 +117,12 @@ class BotDistributor:
             for beauty in self.gold_per_beauty.keys():
                 if self.game.beauty >= beauty:
                     gold_amount = self.gold_per_beauty[beauty] # max gold amount for the current beauty
+            
+            bonus_gold = 0
+            if self.game.beauty >= list(self.gold_per_beauty.keys())[-1]: # if the beauty is greater than the last key in the gold per beauty dictionary
+                bonus_gold = self.game.beauty - list(self.gold_per_beauty.values())[-1] # add the bonus gold amount because the dictionary doesn't have a key for the current beauty
 
-            self.theorical_gold += gold_amount
+            self.theorical_gold += gold_amount + bonus_gold # add the gold amount to the theoretical gold
 
     def distribute_to_bot(self):
         """
@@ -129,22 +134,20 @@ class BotDistributor:
         for tier in reversed(self.robot_tiers):
             amount_mod: int = int(self.theorical_gold / tier)
 
-            if 3 >= amount_mod >= 1: # if the amount of bots to create is between 1 and 3
+            if 3 >= amount_mod >= 1 or (amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1): # if the amount of bots to create is between 1 and 3
                 for j in range(amount_mod): # create the bots
                     self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier]) # delay the creation of the bots by 0.5 seconds
                     self.theorical_gold -= tier
-
-            elif amount_mod >= 1 and self.robot_tiers.index(tier) == len(self.robot_tiers) - 1: # if the amount of bots to create is greater than 3 and the current tier is the last one
-                for j in range(amount_mod):
-                    self.game_timer.create_timer(j * 0.5, self.hivemind.add_bot, False, [tier])
-                    self.theorical_gold -= tier
-                return
         
         next_bot_time = 1
         for beauty, time in self.frequency_per_beauty.items():
             if self.game.beauty >= beauty:
                 next_bot_time = time
         self.game_timer.create_timer(next_bot_time, self.distribute_to_bot)
+
+
+        if not randint(0, 1) and self.game.current_room.num != 0 and self.game.beauty != 0: # 25% chance to play a random robot sound
+            self.game.sound_manager.play_random_robot_sound()
 
 class Hivemind:
     """Supreme entity governing bots' behavior and interactions.

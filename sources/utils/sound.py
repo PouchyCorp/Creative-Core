@@ -27,14 +27,13 @@ class SoundManager:
 
         # Load sounds
         self.accrocher = pygame.mixer.Sound('data/sounds/accrocher_tableau.wav') #
-        self.accrocher2 = pygame.mixer.Sound('data/sounds/accrocher.mp3') #
         self.achieve = pygame.mixer.Sound('data/sounds/achieve.mp3') #
         self.blank_sound = pygame.mixer.Sound('data/sounds/blank_sound.mp3')
         self.bott = pygame.mixer.Sound('data/sounds/bot or mites.mp3')
         self.down = pygame.mixer.Sound('data/sounds/Doordown.wav') #
         self.up = pygame.mixer.Sound('data/sounds/elevator.wav') #
         self.floorcracking = pygame.mixer.Sound('data/sounds/floorcracking.mp3')
-        self.incorrect = pygame.mixer.Sound('data/sounds/incorrect.mp3') #
+        self.incorrect = pygame.mixer.Sound('data/sounds/incorrect.wav') #
         self.items = pygame.mixer.Sound('data/sounds/items.mp3') #
         self.mite = pygame.mixer.Sound('data/sounds/mite.mp3')
         self.mites = pygame.mixer.Sound('data/sounds/mites.mp3')

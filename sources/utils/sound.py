@@ -97,4 +97,5 @@ class SoundManager:
         """
         chosen_sound = random.choice(self.noise_blank)
         chosen_sound.play(fade_ms=1000)
+        self.timer.create_timer(chosen_sound.get_length()-1, chosen_sound.fadeout, arguments=(1000,))
         self.timer.create_timer(chosen_sound.get_length()+random.randint(0,10), self.play_random_ambiant_sound)

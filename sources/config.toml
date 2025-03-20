@@ -13,6 +13,7 @@ volume = 50 # pourcentage (0 pour desactiver le son)
 
 [gameplay]
 fps = 60
+no_story = true # désactive tout les elements d'histoire, utile pour aller plus vite
 cheats = true # donne l'acces à de nombreuses fonctionnalités de triche / grants cheating privileges
 debug = true # affiche un bandaux d'information utile pour debugger / shows debug informations
 offline_mode = true # IMPORTANT, si vous ne voulez ou pouvez pas jouer en ligne, activer ce parametre / turn on if you want to play offline

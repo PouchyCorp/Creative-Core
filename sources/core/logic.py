@@ -65,7 +65,7 @@ import ui.sprite as sprite
 # misc
 from utils.coord import Coord
 from utils.fonts import TERMINAL_FONT_BIG
-from utils.room_config import R1, ROOMS, Room, PARTICLE_SPAWNERS, SPECIAL_PLACEABLES
+from utils.room_config import R1, R4, ROOMS, Room, PARTICLE_SPAWNERS, SPECIAL_PLACEABLES
 from utils.sound import SoundManager
 from utils.timermanager import TimerManager
 
@@ -126,6 +126,7 @@ class Game:
             case "Auto Cachier":
                 self.timer.create_timer(3, self.accept_bot, True) # Accept a bot every 3 seconds (effect of the auto cachier unlock)
                 self.guichet.auto_cachier_unlocked = True # To display the auto cachier effect on the guichet
+                R4.placed.remove(SPECIAL_PLACEABLES['auto_cachier']) # Remove the auto cachier from the room
             case "Color":
                 self.canva.color_buttons = self.canva.init_color_buttons(True) # Initialize again the color buttons with the color feature unlocked this time
                 self.canva.color_buttons_unlocked = True

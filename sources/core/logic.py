@@ -443,6 +443,7 @@ class Game:
 
             case State.SHOP:
                 self.shop.handle_click(mouse_pos, self)
+                self.shop.handle_navigation(event)
 
             case State.DESTRUCTION:
                 self.handle_destruction_mode(mouse_pos)
@@ -462,7 +463,7 @@ class Game:
             
 
     def handle_build_mode(self):
-        if self.build_mode.can_place(self.current_room):
+        if self.build_mode.can_place(self.current_room): # Check if the object can be placed in the room when clicked
             self.current_room.placed.append(self.build_mode.get_configured_placeable(self.current_room.num)) # Place the object in the room
             self.sound_manager.items.play() 
             self.beauty = self.process_total_beauty() # Update beauty score

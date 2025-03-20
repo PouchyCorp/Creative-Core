@@ -255,24 +255,24 @@ class IntroCutscene:
         
         clock = pg.time.Clock()
 
-        self.transition(game, initial_background, current_frame, 3)
+        self.transition(game, initial_background, current_frame, 3) # transition from the home screen to the first frame
          
         while frame_ind < len(self.frames):
             clock.tick(60)
             for event in pg.event.get():
                 if event.type == pg.KEYDOWN or event.type == pg.MOUSEBUTTONDOWN:
                     frame_ind += 1
-                    if frame_ind >= len(self.frames):
+                    if frame_ind >= len(self.frames): # if we reached the end of the frames
                         break
 
-                    current_frame = self.transition(game, current_frame, self.frames[frame_ind], 1.5)
+                    current_frame = self.transition(game, current_frame, self.frames[frame_ind], 1.5) # transition between the frames
             
             game.win.blit(current_frame, (0,0))
             game.win.blit(skip_label, (0,0))
             # Draw the background and the current state of the introspection dialogue
             pg.display.flip()
         
-        self.transition(game, current_frame, pg.Surface((1920, 1080)), 3)
+        self.transition(game, current_frame, pg.Surface((1920, 1080)), 3) # transition to the game background
 
             
     

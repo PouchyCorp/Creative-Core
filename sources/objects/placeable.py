@@ -20,7 +20,7 @@ Key Features:
 Author: Pouchy (Paul), with contributions from Tioh (Taddeo) for visual effects.
 """
 
-from pygame import Surface, Rect, transform, image
+from pygame import Surface, Rect, transform, image, BLEND_RGBA_MIN
 import sys
 import os
 from random import randint
@@ -37,7 +37,8 @@ class Placeable:
         Flags are :
         - "no_outline" : the object won't have an outline when hovered
         - "temporary" : the object will be removed after a certain time
-        - "no_interaction" : the object won't have any interaction when clicked"""
+        - "no_interaction" : the object won't have any interaction when clicked
+        - "static" : the outline will be calculated only once, very important for performance of big sprites"""
 
         self.name = name
         self.id = randint(0, 10000000)  # Generates a random ID for the Placeable instance
@@ -68,6 +69,10 @@ class Placeable:
 
         for flag in flags:
             setattr(self, flag, True)
+
+        if "static" in flags:
+            self.precalculated_outline = get_outline(self.surf, (255,255,255)) # white outline, that will be used for the whole time
+            # white because a filter will be applied to the outline to change its color
 
     def get_blit_args(self):
         """Returns the surface and rectangle for blitting."""
@@ -107,8 +112,14 @@ class Placeable:
 
         if is_hovered and not hasattr(self, "no_outline"):
             # Create an outline if the sprite is hovered over
+            if hasattr(self, "static"): # If the object is static, use the precalculated outline
+                outline = self.precalculated_outline
+                outline.fill(color, special_flags=BLEND_RGBA_MIN) # Change the color of the white outline
+            else:
+                outline = get_outline(self.surf, color)
+            
             # Position of the sprite is offsetted to account for the 3-pixel border of the outline
-            self.temp_surf = get_outline(self.surf, color)
+            self.temp_surf = outline # Use the outline (solid color) as the temporary surface
             self.temp_surf.blit(self.surf, (3, 3))  # Blit the original surface onto the outline
             self.temp_rect = self.rect.copy()
             self.temp_rect.x -= 3  # Adjust position for outline
@@ -122,7 +133,7 @@ class Placeable:
         if hasattr(self, attribute_name):  # Check if the attribute exists
             setattr(self, attribute_name, value)  # Dynamically set the attribute
         else:
-            raise AttributeError(f"'{type(self).__name__}' object has no attribute '{attribute_name}'")
+            raise AttributeError(f"'{type(self).__name__}' object has no attribute '{attribute_name}'") # My first good error handling !
     
     def __getstate__(self):
         """Custom pickling method to save the object's state."""

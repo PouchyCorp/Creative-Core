@@ -35,7 +35,7 @@ from typing import Optional
 class BuildMode():
     """class for handling the build mode"""
     def __init__(self) -> None:
-        """if i have the courage to do so, i will refactor this class"""
+        """if i have the courage to do so, i will refactor this class, it was done early in the project and is a little obsolete compared to the rest of the code"""
         self.selected_placeable : Optional[Placeable] = None
         self.ghost_rect = None
     
@@ -43,14 +43,14 @@ class BuildMode():
         """shows the hologram of the hologram of all objects in the room, to be seen when placing a new object"""
         room_rects = [placeable.rect for placeable in room.placed]
         rect_surfs = []
-        for rect in room_rects:
+        for rect in room_rects: # blue hologram surface and rect
             hologram_rect_surf : Surface = Surface((rect.width, rect.height))
-            hologram_rect_surf.set_alpha(50)        
+            hologram_rect_surf.set_alpha(50) # transparency
             hologram_rect_surf.fill((0,0,200,50))
             rect_surfs.append(hologram_rect_surf)
         
         assert len(room_rects) == len(rect_surfs)
-        win.blits((rect_surfs[i], room_rects[i]) for i in range(len(room_rects)))
+        win.blits((rect_surfs[i], room_rects[i]) for i in range(len(room_rects))) # blit all holograms using win.blits for performance (thanks Tioh)
 
         
 
@@ -59,7 +59,7 @@ class BuildMode():
         pixel_perfect_mouse_pos = list(mouse_pos.get_pixel_perfect())
 
         if not self.ghost_rect:
-            self.ghost_rect = self.selected_placeable.rect.copy()
+            self.ghost_rect = self.selected_placeable.rect.copy() # create a ghost rect if it doesn't exist
         
         self.ghost_rect.topleft = pixel_perfect_mouse_pos
 
@@ -80,10 +80,12 @@ class BuildMode():
         win.blits([(hologram_rect_surf, self.ghost_rect.topleft), (hologram, self.ghost_rect.topleft)])
 
     def get_width(self) -> int:
+        """returns the width of the selected placeable"""
         if self.selected_placeable:
             return self.selected_placeable.rect.width
         
     def get_height(self) -> int:
+        """returns the height of the selected placeable"""
         if self.selected_placeable:
             return self.selected_placeable.rect.height
         

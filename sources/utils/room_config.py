@@ -97,7 +97,7 @@ R5 = ROOMS[5]
 # Setup every settings for the beginning of the game 
 DEFAULT_SAVE = {'gold': 10,
                 "beauty": 0,
-                "inventory": [Placeable('cheater beauty', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=0, price=50, beauty=1000)],
+                "inventory": [],
 
                 #Place all the items from the shop with ther price and their number of beauty
                 "shop": [Placeable('buste', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=900, price=50, beauty=10),

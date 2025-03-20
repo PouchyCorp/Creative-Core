@@ -103,7 +103,14 @@ DEFAULT_SAVE = {'gold': 10,
                 "shop": [Placeable('buste', Coord(2, (100, 100)), sprite.PROP_STATUE, "decoration", y_constraint=900, price=50, beauty=10),
                          Placeable('plante', Coord(2, (100, 100)), sprite.SPRITE_PLANT_1,
                                    "decoration", y_constraint=900, price=50, beauty=100),
-                         Placeable('arbuste', Coord(2, (100, 100)), sprite.SPRITE_PLANT_2, "decoration", y_constraint=900, price=50, beauty=1000)],
+                         Placeable('arbuste', Coord(2, (100, 100)), sprite.SPRITE_PLANT_2, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('affiche', Coord(2, (100, 100)), sprite.SPRITE_POSTER, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('lustre', Coord(2, (100, 100)), sprite.SPRITE_SPHERE, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('bocal', Coord(2, (100, 100)), sprite.SPRITE_DUCK, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('cube', Coord(2, (100, 100)), sprite.SPRITE_CUBE, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('fraises', Coord(2, (100, 100)), sprite.SPRITE_STRAWBERRIES, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('botte', Coord(2, (100, 100)), sprite.SPRITE_ROB, "decoration", y_constraint=900, price=50, beauty=1000),
+                         Placeable('peinture', Coord(2, (100, 100)), sprite.SPRITE_PAINTING, "decoration", y_constraint=900, price=50, beauty=1000)],
 
                 "unlocks": UnlockManager()}
 

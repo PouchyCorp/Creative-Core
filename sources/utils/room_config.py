@@ -41,6 +41,7 @@ def init_rooms():
     # floor 0
     R0 = Room(0, sprite.BG2)
     R0.placed += [stairs_up]
+    R0.blacklist += [stairs_up]
 
     # floor 1
     R1 = Room(1, sprite.BG1)
@@ -75,7 +76,7 @@ def init_rooms():
     R5 = Room(5, anim=Animation(sprite.SPRITESHEET_ROOFTOP, 0, 14, 8))
     music_robot = Placeable('Johnny Hallyday 2.0', Coord(5,(240,780)), None, anim=sprite.ANIM_ROBOT_MUSIC) #Place the musician bot
     R5.placed += [stairs_down, music_robot]
-    R5.blacklist += [stairs_up, stairs_down, music_robot]
+    R5.blacklist += [stairs_down, music_robot]
 
     special_placeables = {'staires_up' : stairs_up, 'staires_down' : stairs_down, 'guichet' : guichet, 'inventory' : inventory, 'shop' : shop, 'auto_cachier' : auto_cachier, 'music_robot' : music_robot, 'color_unlock' : color_unlock} #used to access special placeables in the game loop
 

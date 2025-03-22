@@ -4,10 +4,10 @@ Réparer les patterns
 Metre les contraintes sur les props
 Finir la vidéo
 Finir le dossier
-Dégager le robot de la haut quand on l'a embauché
+Dégager le robot de la haut quand on l'a embauché ✓
 Réparer les fleches du shop ✓
-Carré noir deuxieme étage
+Carré noir deuxieme étage 
 Edit la beauté des props
 Changer les couleurs de la fin -> les mettre plus clair
-faire ueux autres bg
+faire ueux autres bg 
 bouton quitter le shop

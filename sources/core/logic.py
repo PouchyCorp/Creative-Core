@@ -110,7 +110,7 @@ class Game:
         for unlocked_feature in self.unlock_manager.unlocked_features: # If the auto cachier is unlocked
             self.unlock_effect(unlocked_feature) # Apply the unlock effect
             
-        if not self.unlock_manager.is_floor_discovered("1"): # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
+        if not self.unlock_manager.is_floor_discovered("1") and not config['gameplay']['no_story']: # If the first floor is not discovered (equivalent to the 1st time the player enters the game)
             IntroCutscene(sprite.INTRO_CUTSCENE).play(self, last_frame_of_homescreen)
             self.unlock_manager.discovered_floors.append("1")
             CinematicPlayer(sprite.CUTSCENES["floor1"]).play(self) # Launch the first floor tutorial
@@ -151,7 +151,8 @@ class Game:
             if not self.unlock_manager.is_floor_discovered(self.current_room.num):
                 self.unlock_manager.discovered_floors.append(str(self.current_room.num))
                 self.reset_guistate()
-                CinematicPlayer(sprite.CUTSCENES[f"floor{self.current_room.num}"]).play(self)
+                if not self.config['gameplay']['no_story']:
+                    CinematicPlayer(sprite.CUTSCENES[f"floor{self.current_room.num}"]).play(self)
             
                
         else:
@@ -590,10 +591,10 @@ class Game:
 
         # Blit everything together
         beauty_background.blit(TERMINAL_FONT_BIG.render(beauty_string, False, (0, 255, 0)), (6*6, 6*6))
-        money_background.blit(TERMINAL_FONT_BIG.render(str(cropped_money), False, (255, 255, 0)), (6*5, 6*6)) 
+        money_background.blit(TERMINAL_FONT_BIG.render(str(cropped_money), False, (255, 255, 0)), (6*5, 8*6)) 
 
         self.win.blit(beauty_background, (self.win.get_width()-beauty_background.get_width(), 0))
-        self.win.blit(money_background, (self.win.get_width()-money_background.get_width(), beauty_background.get_height()+6))
+        self.win.blit(money_background, (self.win.get_width()-money_background.get_width()-beauty_background.get_width()-6, 0))
 
     def draw_background(self):
         self.win.blit(self.current_room.bg_surf, (0, 0))

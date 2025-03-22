@@ -40,7 +40,7 @@ from math import sqrt, ceil, pi, sin
 from objects.particlesspawner import CircleParticleSpawner, ParticleSpawner
 from utils.sound import SoundManager
 
-COLORS = [(11,23,33), (105,117,130), (213,226,240),(141,171,131) , (217,137,76), (232, 216, 153), (168,40,40), (117, 97, 156), (44,53,69), (42,30,66)]
+COLORS = [(11,23,33), (105,117,130), (213,226,240),(141,171,131) , (217,137,76), (232, 216, 153), (168,40,40), (117, 97, 156), (91, 138, 203), (42,30,66)]
 
 offsetx = -60 # Needed to adjust the position of the control panel, because sadly it was not written with relative coordinates
 offsety = -90

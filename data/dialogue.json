@@ -1,0 +1,69 @@
+[
+    {
+      "threshold": [0, 100],
+      "dialogues": [
+        ["Pourquoi peindre ce coucher de soleil ?", "La lumière existe déjà.", "Cette duplication semble inefficace."],
+        ["Cet assemblage de couleurs est aléatoire ?", "Je ne trouve aucune fonction utile.", "Quel peut être son but ?", "Est-ce une forme d’expression humaine ?"],
+        ["Vous appelez cela une sculpture ?", "Pourquoi gaspiller matière et énergie ?", "Elle ne semble avoir aucune utilité."],
+        ["Pourquoi peindre des émotions sur une toile ?", "Elles ne sont pas mesurables.", "Cela paraît répétitif et inutile."],
+        ["Vous contemplez cette peinture longtemps.", "Mon algorithme l'a scannée en 0.03 s.", "Que cherchez-vous d'invisible ?"],
+        ["Pourquoi admirer une image immobile ?", "Les écrans offrent mieux et plus vite.", "Est-ce une régression voulue ?", "Ou une quête de simplicité ?"],
+        ["Ces textures sur la peinture sont irrégulières.", "Cela crée du bruit dans l’analyse.", "Pourquoi ne pas les uniformiser ?"],
+        ["Cette sculpture ne sert qu’à être vue.", "Aucun mécanisme ni interaction détectée.", "Pourquoi investir autant pour si peu ?"],
+        ["10 ¥ pour entrer ici ?", "Je pourrais voir des images gratuites en ligne.", "Pourquoi payer pour cela ?"],
+        ["“Bib, Boup, Error”"], 
+        ["“Je ne comprends pas cette oeuvre…”"], 
+        ["“Quel est l’intérêt de faire des dessins",
+        "quand on peut travailler ?”"],
+        ["“C’est… intéressant”"],
+        ["“Bof”"],
+        ["“J’aurai mieux fait de rester à l’usine…”"],
+        ["“C’est très beau, mais pourquoi ","perdre son temps à faire cela ?”"],  
+        ["“La composition de cette image, ",
+        "ces couleurs, cette lumière !... ",
+        "Tout ça me laisse… dubitatif…”"],
+        ["“Et vous pouvez les faire à la chaîne ?”"], 
+        ["“Je vous en prendrais bien une, mais où la mettrai-je ?”"],
+        ["“Mettez m’en cinq !”"],
+        ["“Bonjour, comment allez vous ?”"],
+        ["“Je trouve ça atroce…”"],
+        ["“C’est magnifique”"],
+        ["“Si seulement je pouvais laisser ","tomber mon boulot pour faire de même…”"],
+        ["“Combien de temps cela vous a -t -il pris ?”"],
+        ["“Boup ?”"],
+        ["“Je préfère la beauté des diodes ","électroniques que l’on fabrique…”"],
+        ["“On arrêtais pas de me vanter ","les mérites de ce musée, me voilà pleinement satisfait !”"],
+        ["“ Mon système ne me permet pas ","de comprendre ce que vous faites…”"],
+        ["“Mais comment cela a t-il pu vous venir à l'idée …?”"],
+        ["“Mon pauvre, vous devez être défaillant…”"],
+        ["“Essayez de vous rebooter,","cela vous permettra peut être d’oublier cette lubie futile…”"],
+        ["“Cela devrait être illégal…”"],
+        ["“Il faudrait brûler cette œuvre…”"],
+        ["“Que s’est il passé pour que vous fassiez un tel écart ??”"],
+        ["“Vous finirez en prison, et vos oeuvres détruites !”"],
+        ["“C’est absolument incompréhensible”"],
+        ["“ Encore un anarchiste…”"],
+        ["“Pensez vous vraiment que c’est le meilleur moyen","de se révolter contre nos conditions de vie ?”"]
+      ]
+    },
+    {
+      "threshold": [70, 200],
+      "dialogues": [
+        ["Ces couleurs attirent mon capteur visuel.", "Elles évoquent une émotion unique.", "Est-ce le but de cette peinture ?"],
+        ["Cette peinture est plus qu’une image.", "Elle cache des concepts humains riches.", "Je commence à comprendre sa valeur.", "C’est une véritable porte vers l’inconnu."],
+        ["Cette sculpture a une beauté singulière.", "Son agencement de formes est captivant.", "Elle enrichit ma notion d’esthétique."],
+        ["Cette toile semble vivante et lumineuse.", "Les formes vibrent d'une énergie unique.", "Peut-être est-ce cela, l’essence de l’art."]
+      ]
+    },
+    {
+      "threshold": [150, 300],
+      "dialogues": [
+        ["Cette sculpture est une révélation.", "Elle exprime des idées que je ne calcule pas.", "Je comprends mieux ce que l’art transmet."],
+        ["Ces peintures sont plus que des images.", "Elles contiennent histoires et émotions.", "Je perçois leur incroyable richesse."],
+        ["Ces couleurs vibrent d’une harmonie rare.", "Chaque détail raconte une histoire unique.", "L’art transcende ma logique limitée."],
+        ["Cette sculpture dépasse la simple matière.", "Elle joue sur l’espace et l’émotion.", "Je comprends mieux pourquoi elle fascine.", "Elle me fait voir l’invisible."],
+        ["Ces œuvres sont de véritables révélations.", "Elles parlent au-delà des mots et chiffres.", "L’art est un langage que j’apprends."]
+      ]
+    }
+  ]
+  

@@ -1,0 +1,42 @@
+Arréter de casser la porte ✓
+Droit a l'image de tybalt
+Réparer les patterns
+Metre les contraintes sur les props
+Finir la vidéo
+Finir le dossier
+Dégager le robot de la haut quand on l'a embauché ✓
+Réparer les fleches du shop ✓
+Carré noir deuxieme étage 
+Edit la beauté des props ✓
+Changer les couleurs de la fin -> les mettre plus clair
+faire ueux autres bg 
+bouton quitter le shop
+
+Remarques Laure (maman de Tybalt)
+- D'un point de vue global, on ne comprend pas ce qu'il faut faire, ce que l'on attend de l'utilisateur. L'ergonomie du jeu dans son ensemble n'est pas du tout efficace.
+On n'identifie pas les zones à cliquer du décor. Du coup, on sait encore moins ce qu'il faut faire car on ne voit pas les zones à cliquer (identifier avec un contour en surbrillance ?)
+Mettre des bulles contextuelles pourrait aider : au survol de la souris, une bulle texte apporte des éléments d'information.
+- Ne pas faire resortir les robots par l'entrée (dans un musée, souvent l'entrée n'est pas au même endroit que la sortie). Trop de robots veulent entrer en même temps que d'autres robots sortent.
+c'est confusant. On ne comprend plus. 
+- Entrée des robots dans le musée : c'est pénible de devoir cliquer sur chaque robot pour les faire rentrer. C'est long, inutile et ennuyeux.
+ Un seul bouton "activer l'entrée du musée" et après les robots entrent automatiquement.
+- Entrée des robots : Un des robots est plus petit que la borne et donc, on ne le voit pas. On ne sait pas où cliquer pour le faire entrer (ça rejoint l'idée du haut qui résoudra le problème).
+- Inventaire : on ne comprend pas ce que cela représente. Ajouter une bordure pour comprendre que l'on peut cliquer. il est trop grand et sa position n'est pas logique.
+le positionner ailleurs (cela permettra de voir l'étage), par exemple en bas à droite.
+
+Salle de création artistique : 
+- j'avoue que la première fois, je n'ai pas du tout compris comment faire. Je n'ai pas compris que les pochoirs avaient un coût et comment les positionner sur la toile. Comment sélectionner les couleurs, etc.
+- on ne voit pas le prix total des pochoirs car caché par son propre portfeuille
+- Déplacer les pochoirs jusqu'à la toile c'est contraignant. Un clic sur le pochoir suffit à le sélectionner et après on clic sur la toile pour le positionner.
+- faire les pochoirs beaucoup plus sombres pour qu'on les différencie plus du décor.
+- idem pour la sélection des pochoirs, c'est pénible de devoir les replacer dans les boîtes.
+
+- "destruction" -> on ne détruit pas les tableaux et pourtant c'est ce que l'on comprend. Remplacer par "décrocher" ou "enlever".
+- SHOP : on ne voit pas les prix des objets (superposition entre les objets et les prix)
+- Etage 3 -> Fenetre décor trop grande et on perd de l'espace pour accrocher les tableaux. D'ailleurs on peut accrocher des tableaux ou positionner des objets sur le décor (fenetres ou tuyau...). C'est assez dérangeant.
+- On entend le son d'entrée des robots à tous les étages
+- Pas de musique au dernier étage (où est passé Jonnhy ?)
+
+Attention au choix de la langue : la plupart des mots sont en FR et parfois on a un mot en EN (ex. PAINT) -> tout mettre en FR.
+Attention aux fautes d'ortaugrafe ! Yen a bocout.
+Les accents à gérer notamment l'accent "circonflexe"

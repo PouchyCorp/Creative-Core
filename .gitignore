@@ -1,0 +1,10 @@
+__pycache__
+sources/__pycache__
+creative_core_venv
+.pyc
+serverpack/server_venv
+.DS_Store
+.db
+serverpack/user_data.db
+*.db
+sources/config.toml

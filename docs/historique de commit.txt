@@ -1,0 +1,3387 @@
+commit: d34a344e8bee06dcac7af64d28954dc020c3a46d | 2025-03-26 | a pu le uwu
+0	2	sources/utils/sound.py
+
+commit: 926b74ac1ea7dace29a2ea028558cb1a3dac61cd | 2025-03-26 | elevé les caracteres non-supportés
+17	17	data/special_dialogue.json
+
+commit: 7daca8f23b8036a18869da80a5833aec2b72b8b7 | 2025-03-26 | fautes d'orthographes dans les dialogues
+31	37	data/special_dialogue.json
+9	2	sources/config.toml
+17	1	sources/objects/placeablesubclass.py
+
+commit: 11f59492a372c0f0205462b4fdb07cd8dfde8b18 | 2025-03-26 | grosse opti
+3	2	sources/core/logic.py
+8	11	sources/main.py
+
+commit: c98edc7575b417eee432ea89d90bf39a475579b4 | 2025-03-26 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: a5869b7c03d4632ca396b2a0b1811455b77eab4d | 2025-03-26 | pleins de babioles
+1	0	.gitignore
+1	1	data/special_dialogue.json
+1	1	sources/config.toml
+2	2	sources/core/logic.py
+1	1	sources/core/spectator.py
+17	16	sources/main.py
+1	1	sources/ui/inventory.py
+1	1	sources/ui/userlist.py
+
+commit: 492e1193c91aca4ebeeb687233186b44b118937d | 2025-03-26 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 55835d7496fba4f21cea8c031293617833ec28cc | 2025-03-26 | Intro
+-	-	data/sounds/musique jeu.wav
+-	-	data/sounds/musiqueintro.wav
+
+commit: cca6d92d2b832dd465055b8bac2c508f8d832add | 2025-03-26 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 5b0ac490104ab36fd3f49fbd8f436806761e6116 | 2025-03-26 | aahahha
+-	-	data/.DS_Store
+
+commit: 290baebd21e0dc7398a7646b9f17c023bbb2bb53 | 2025-03-26 | image woaw
+-	-	"TEMPORAIRE/Droit_a_l'image \342\231\245/Droit \303\240 l'image Tybalt.pdf"
+
+commit: ad3fbf2f3993adab0801949406593102c71b9eb0 | 2025-03-26 | musique
+-	-	data/sounds/Musiquejeu.wav
+-	-	data/sounds/musique jeu.wav
+1	1	sources/config.toml
+
+commit: d763bd8aacd2b0f541365234900775a1fbc7e06c | 2025-03-26 | fix opacity patterns
+-	-	data/pattern_storage/pattern_11_frame.png
+-	-	data/pattern_storage/pattern_14_frame.png
+7	4	sources/ui/sprite.py
+1	1	sources/utils/room_config.py
+
+commit: 154f1a112465d95e15bceabd66dfb5b8cba51ccd | 2025-03-26 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 3932f704782c58709d3e1907d78ebe015b538a40 | 2025-03-26 | ça marche tjr poas
+-	-	data/pattern_storage/pattern_14_frame.png
+2	2	sources/main.py
+3	3	sources/objects/bot.py
+10	7	sources/objects/canva.py
+7	3	sources/ui/sprite.py
+1	1	sources/utils/sound.py
+
+commit: d7cb85667a35f9e416f5b0740d3c3de61d91279d | 2025-03-26 | title
+-	-	data/titre_234x82.png
+1	1	sources/ui/sprite.py
+
+commit: 47f560e18985e6672413a0bf8e3939829dabeedd | 2025-03-24 | r
+-	-	data/rooftop.png
+
+commit: 0896a01e8bdc3cd2db37f5ce51f83cf9082b5971 | 2025-03-24 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 72f576969eb968fdd9e71e74c004a71005783c41 | 2025-03-24 | rrr
+-	-	data/backgrounds/R1.png
+
+commit: f6a142a8c69476e4973da6d48779e796e1ead5ee | 2025-03-24 | petit label en plus
+8	0	sources/objects/bot.py
+2	2	sources/ui/cinematic.py
+2	2	sources/ui/confirmationpopup.py
+5	5	sources/ui/inventory.py
+3	1	sources/utils/fonts.py
+1	1	sources/utils/room_config.py
+
+commit: a63d07ee38bf1aba1e2dc0a869df36a8745865b0 | 2025-03-24 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: e85f95a6d2e9e2c0d5252a4432d067a371b44430 | 2025-03-24 | Create timeline.md
+147	0	docs/timeline.md
+
+commit: 0509a4cfcb1c7ce613bd7ba88bb2b8d53968c840 | 2025-03-24 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 89bf02caeaa0f3773e8eec50671ad317593c2414 | 2025-03-24 | pattern fix
+-	-	data/.DS_Store
+-	-	data/pattern_storage/pattern_12_frame.png
+
+commit: 1c30b893c7f972c62f5e71f73750124e2da01bd6 | 2025-03-24 | Delete IMPORTANT.txt
+0	1	docs/IMPORTANT.txt
+
+commit: 86e59fb4746afed3f1f288dc8a4d83375df78b90 | 2025-03-24 | documentation et organisation
+-	-	"Droit_a_l'image \342\231\245/Droit a l'image Abel.pdf" => "TEMPORAIRE/Droit_a_l'image \342\231\245/Droit a l'image Abel.pdf"
+-	-	"Droit_a_l'image \342\231\245/Droit a l'image Taddeo .pdf" => "TEMPORAIRE/Droit_a_l'image \342\231\245/Droit a l'image Taddeo .pdf"
+-	-	"Droit_a_l'image \342\231\245/droit a l'image Paul.pdf" => "TEMPORAIRE/Droit_a_l'image \342\231\245/droit a l'image Paul.pdf"
+0	0	"Resum\303\251.txt" => "TEMPORAIRE/Resum\303\251.txt"
+0	0	To do list.txt => TEMPORAIRE/To do list.txt
+2	0	docs/architecture.md
+1	0	docs/details_implementation.md
+2	0	test/test_nine_slice_scaling.py
+
+commit: 41888efd448d2e53033af0c3004c0f26f1722c9b | 2025-03-24 | babioles pour le dossier
+8	0	README.md
+-	-	{docs => exemples}/tutoriel.mp4
+
+commit: ba35d976111dcdf59e6672f2d33225226e92f938 | 2025-03-24 | :)
+-	-	data/backgrounds/R4.png
+
+commit: 19cf6cee11deca3cdd95e5c3a85d9ed745a9ced4 | 2025-03-24 | prix
+2	2	sources/utils/room_config.py
+
+commit: 60d75ff03b8e303afced32a61a8744c828aacdd3 | 2025-03-24 | 2 nouveaux props
+-	-	data/.DS_Store
+-	-	data/props/shelf_1.png
+-	-	data/props/shelf_2.png
+2	0	sources/ui/sprite.py
+3	1	sources/utils/room_config.py
+
+commit: 579001eecd32c3be0deda4dc9e0516e72568328c | 2025-03-24 | boutons
+-	-	data/{destruction_bordure.png => bordure_destruction.png}
+-	-	data/{ => buttons}/bouton_canva_ui_name.png
+-	-	data/{ => buttons}/bouton_canva_ui_paint.png
+-	-	data/{ => buttons}/close.png
+-	-	data/{ => buttons}/confirm.png
+-	-	data/{ => buttons}/destruciotn_button.png
+-	-	data/{ => buttons}/fleche_droite.png
+-	-	data/{ => buttons}/fleche_gauche.png
+-	-	data/{ => buttons}/jouer.png
+-	-	data/{ => buttons}/login.png
+-	-	data/{ => buttons}/non.png
+-	-	data/{ => buttons}/oui.png
+-	-	data/{ => buttons}/quit.png
+-	-	data/{ => buttons}/register.png
+-	-	data/{ => buttons}/retour.png
+-	-	data/icon_inv_test.png
+14	14	sources/ui/sprite.py
+
+commit: 54e04ba9922a266bc7d7203a2bf692ba44126792 | 2025-03-23 | tweak
+3	3	sources/utils/room_config.py
+
+commit: 9388c8b8f303b510eb1af665c5523fd12be6111d | 2025-03-23 | contraintes bis
+11	11	sources/utils/room_config.py
+
+commit: 2586a6413a3c0c2492bdd945fbd5091f03e828a7 | 2025-03-23 | contraintes
+8	8	sources/utils/room_config.py
+
+commit: b3a5dd72b1d35e173ea381bec3717ed3166ad97e | 2025-03-23 | encore un nouveau
+-	-	data/props/think.png
+2	1	sources/ui/sprite.py
+2	1	sources/utils/room_config.py
+
+commit: 198e1955a01d7e075576c5c8f19e3a98e735a285 | 2025-03-23 | props + couleur
+-	-	data/props/cell.png
+1	1	sources/objects/canva.py
+1	0	sources/ui/sprite.py
+2	1	sources/utils/room_config.py
+
+commit: 76d0a2ebd8e370c978f834e38c69915339f1d865 | 2025-03-23 | beauté
+1	1	sources/utils/room_config.py
+
+commit: c9ad1fff672e788eada62447d6c01676dffce3e8 | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 873d24cfdc65421cd4208aeb35cf715c8c61aa0f | 2025-03-23 | bouton pour quitter l'inv
+-	-	"docs/Dossier Troph\303\251e NSI.odt"
+2	1	sources/core/logic.py
+4	3	sources/ui/inventory.py
+
+commit: e54b0e0b022feb4c3b32eb3fbba225cf7430042b | 2025-03-23 | backgrounds
+-	-	data/{bg_test_paint.png => backgrounds/R0.png}
+-	-	data/{bg_test_approfondis.png => backgrounds/R1.png}
+-	-	data/{ => backgrounds}/R2.png
+-	-	data/{ => backgrounds}/R3.png
+-	-	data/{ => backgrounds}/R4.png
+-	-	data/{ => backgrounds}/R5.png
+-	-	data/{ => backgrounds}/joli_background.png
+7	7	sources/ui/sprite.py
+
+commit: 0f5b86113f8a7e30c53030df14d3a932dbfafec8 | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 7bf78eb233612c8e46cb9a1b6269bf2129ea07c9 | 2025-03-23 | props !!
+-	-	data/.DS_Store
+-	-	data/{ => props}/duck.png
+-	-	data/{ => props}/familiar_sphere.png
+-	-	data/props/gold_ingot.png
+-	-	data/{ => props}/karma_flower.png
+-	-	data/{ => props}/munch.png
+-	-	data/{plant_2_39x38.png => props/plant_1.png}
+-	-	data/{plant_3_28x48.png => props/plant_2.png}
+-	-	data/{ => props}/poster.png
+-	-	data/{meuble_haut.png => props/red_flower.png}
+-	-	data/{props_statue.png => props/statue.png}
+-	-	data/{ => props}/strange_cube.png
+-	-	data/{ => props}/strawberries.png
+-	-	data/{vase_10x24.png => props/vase_1.png}
+-	-	data/{vase_12x22.png => props/vase_2.png}
+-	-	data/{vase_21x32.png => props/vase_3.png}
+-	-	data/{ => props}/walle.png
+18	11	sources/ui/sprite.py
+7	2	sources/utils/room_config.py
+
+commit: 51c67f8d77600b0f35c699f74e3ba6a586344101 | 2025-03-23 | Create tutoriel.mp4
+-	-	docs/tutoriel.mp4
+
+commit: d488d05c7ce6315f821aea2867e9befbc14f8c73 | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 5cc8115681115b7bd8fd7efaf4da4e5c263f2b0d | 2025-03-23 | Update homescreen.py
+5	13	sources/core/homescreen.py
+
+commit: c6a37cce1e3712c1e33afa20927709c5d89698c9 | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 9833e3418ffd8570381ba8c6fde7dbbd9d17468f | 2025-03-23 | hop lalilou
+-	-	data/destruction_bordure.png
+
+commit: 8d3c8d2f1685ccb429e5ca9c39882efd40f6596c | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: ddeb3c182ad115da9a2092ad1de079da53fff3a6 | 2025-03-23 | décrocher
+-	-	data/destruciotn_button.png
+
+commit: 3a3c1f56bbadbbad68129fc2d948f0564cfb35f2 | 2025-03-23 | p13
+-	-	data/.DS_Store
+-	-	data/pattern_storage/pattern_13.png
+-	-	data/pattern_storage/pattern_13_frame.png
+
+commit: eb5300feb1f121c9c268be4fb4197a2e0261e3d6 | 2025-03-23 | Update inventory.py
+6	3	sources/ui/inventory.py
+
+commit: 471f29791cc4fd1b446491f181daad6773ca3f61 | 2025-03-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: ade78efeb9738849c4e1d82b96050dc7874f3c0b | 2025-03-23 | fix divers et variés
+5	1	sources/core/logic.py
+2	1	sources/objects/bot.py
+
+commit: 1ac29074ed0fac530830bd9e47db975a11a8dcc4 | 2025-03-23 | props
+1	1	To do list.txt
+
+commit: 909d90e2d867f97baab88dc913c4a268ce863b3d | 2025-03-23 | retours
+29	0	To do list.txt
+
+commit: 3d72e3ca47e7742034b327a9166724889bf8cbca | 2025-03-23 | df
+5	5	sources/objects/patterns.py
+
+commit: bc68b88a302f09af9242811f0231a03267695f60 | 2025-03-23 | toujours des patterns
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_12_frame.png
+-	-	data/pattern_storage/pattern_15.png
+-	-	data/pattern_storage/pattern_15_frame.png
+-	-	data/pattern_storage/pattern_7.png
+-	-	data/pattern_storage/pattern_7_frame.png
+
+commit: a417f80385775ccd15ee972469516d8eb69d85dd | 2025-03-23 | patterns
+-	-	data/pattern_storage/pattern_10.png
+-	-	data/pattern_storage/pattern_10_frame.png
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_12_frame.png
+-	-	data/pattern_storage/pattern_6.png
+-	-	data/pattern_storage/pattern_6_frame.png
+-	-	data/pattern_storage/pattern_9.png
+-	-	data/pattern_storage/pattern_9_frame.png
+
+commit: 8116ede566f29070cbe8c1b4fae561e390376d04 | 2025-03-23 | my bad , != .
+4	4	sources/utils/room_config.py
+
+commit: bdb1fa540747d82aadab296a8f08db956ff2c1c4 | 2025-03-23 | va falloir faire les contrainte de votre côté par ce que sur mac c'est pas la même...
+1	0	sources/ui/sprite.py
+11	11	sources/utils/room_config.py
+
+commit: 4ba45b196f4e9a2d01cdeffb48bc0bd55de00130 | 2025-03-23 | tout plein de bidules
+-	-	data/.DS_Store
+-	-	data/R2.png
+-	-	data/R3.png
+-	-	data/R4.png
+-	-	data/bg_test_approfondis.png
+-	-	data/karma_flower.png
+
+commit: 17e5555e251190b0b3bcdee8e747dea57e3973de | 2025-03-22 | transparence
+-	-	data/pattern_storage/pattern_11_frame.png
+-	-	data/pattern_storage/pattern_14_frame.png
+
+commit: 7fafd378114262577561380c460ac6cb23eaba0f | 2025-03-22 | Update pattern_14.png
+-	-	data/pattern_storage/pattern_14.png
+
+commit: 10c8cde0c7b017c21eeb889b128a8689fec26090 | 2025-03-22 | Update pattern_11.png
+-	-	data/pattern_storage/pattern_11.png
+
+commit: 3826f46bbbf74624c25fa28c27ae5bd0fe1d4f20 | 2025-03-22 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 939ea9e92f6988aeebd8db934bbae495bd74c2bd | 2025-03-22 | pattern changes
+-	-	data/pattern_storage/pattern_1.png
+-	-	data/pattern_storage/pattern_11.png
+-	-	data/pattern_storage/pattern_11_frame.png
+-	-	data/pattern_storage/pattern_14.png
+-	-	data/pattern_storage/pattern_14_frame.png
+-	-	data/pattern_storage/pattern_2.png
+-	-	data/pattern_storage/pattern_3.png
+-	-	data/pattern_storage/pattern_4_frame.png
+-	-	data/pattern_storage/pattern_5_frame.png
+-	-	data/pattern_storage/pattern_6.png
+-	-	data/pattern_storage/pattern_7.png
+-	-	data/pattern_storage/pattern_7_frame.png
+-	-	data/pattern_storage/pattern_8.png
+-	-	data/pattern_storage/pattern_9.png
+1	1	sources/objects/canva.py
+
+commit: 30d1b840c885cc187f4bb56c9c0eb407e8b2b275 | 2025-03-20 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 6c38c4d461da3a0dc0707abee84e53923aa21f4c | 2025-03-20 | no story config
+3	3	To do list => To do list.txt
+1	0	sources/config.toml
+5	4	sources/core/logic.py
+2	1	sources/core/unlockmanager.py
+1	1	sources/ui/sprite.py
+
+commit: b8845db0ed2b876fb47cf81215b47167ee730211 | 2025-03-20 | reparation tadd
+1	1	sources/ui/sprite.py
+
+commit: 0eae1b5dfb6cee08d7e17338b046dcbccd234e07 | 2025-03-20 | bim!
+-	-	data/argent_ui_30x28_25frames.png
+-	-	data/argent_ui_30x32_20frames_.png
+-	-	data/pnj_principal.png
+
+commit: 92a821477a4b4f2c36a51411c73dd76fa9bd7381 | 2025-03-20 | bugfix
+2	2	To do list
+2	1	sources/core/logic.py
+
+commit: 7d286be6669d57797e00d693a673a23d13e319a9 | 2025-03-20 | opti outline tableaux
+7	5	sources/core/buildmode.py
+2	1	sources/core/logic.py
+1	1	sources/objects/canva.py
+15	4	sources/objects/placeable.py
+4	4	sources/ui/cinematic.py
+1	1	sources/utils/room_config.py
+
+commit: 84d1c38bf5e9c7acc497857861d43798234c4eaa | 2025-03-20 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: db994277b78f3619fbbd5cca3f80718c358335a1 | 2025-03-20 | bugfix
+2	1	sources/utils/room_config.py
+
+commit: b305198c01e6ad5a883fbe0b7da5b97c4b4d865d | 2025-03-20 | Update To do list
+3	0	To do list
+
+commit: cfe7b1665bf989f00e25e633a228e7259b9b836e | 2025-03-20 | Update To do list
+2	1	To do list
+
+commit: d537df2d64d8fbef2c3789b21e0369cb71fa0d02 | 2025-03-20 | Update To do list
+2	0	To do list
+
+commit: 58df3fb2d54c9433e7352da96d0235ac0d557743 | 2025-03-20 | To do list
+7	0	To do list
+
+commit: 1d48fd52aa8dca98e1e7092bd5147cd88b47679a | 2025-03-20 | dossier
+-	-	"docs/Dossier Troph\303\251e NSI.odt"
+
+commit: a69361bd0b0370a514ce76253f50ca28019a9b0a | 2025-03-19 | props
+-	-	data/duck.png
+-	-	data/familiar_sphere.png
+-	-	data/munch.png
+-	-	data/poster.png
+-	-	data/strange_cube.png
+-	-	data/strawberries.png
+-	-	data/walle.png
+7	0	sources/ui/sprite.py
+8	1	sources/utils/room_config.py
+
+commit: 390dd6042f308b433f145fd3de1cc0eac849f76d | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 2e2a13428b2570799807ca610cfe270e432ddb86 | 2025-03-19 | pattern
+-	-	data/.DS_Store
+-	-	data/pattern_storage/pattern_4.png
+-	-	data/pattern_storage/pattern_5.png
+
+commit: 06ea6215284a0cef7989bdec85a4316f167b1653 | 2025-03-19 | perso principale icone
+2	1	sources/ui/cinematic.py
+1	0	sources/ui/sprite.py
+
+commit: 05ec73af37a99f399e06c683c5688a4efec486e4 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: ce421ce00d50d3d64391a00d8ac910208e55751a | 2025-03-19 | c trop trop stylé
+-	-	data/anim_intro/{anim (3).png => frame1.png}
+-	-	data/anim_intro/{anim (4).png => frame2.png}
+-	-	data/anim_intro/{anim (5).png => frame3.png}
+-	-	data/anim_intro/{anim (1).png => frame4.png}
+-	-	data/anim_intro/{anim (2).png => frame5.png}
+7	5	sources/core/homescreen.py
+3	2	sources/core/logic.py
+6	6	sources/main.py
+65	2	sources/ui/cinematic.py
+5	1	sources/ui/sprite.py
+
+commit: 1122b8bd28059d448ff34519a7888d32073b0d03 | 2025-03-19 | pnj pp
+-	-	data/pnj_principal.png
+
+commit: 97616e8e7f18e48ba54a45a9f02e02867ce8c925 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 049c1bf2dfec4703496712cef725ef7e46d07076 | 2025-03-19 | animation INTRO !!!! 🎇
+-	-	data/anim_intro/anim (1).png
+-	-	data/anim_intro/anim (2).png
+-	-	data/anim_intro/anim (3).png
+-	-	data/anim_intro/anim (4).png
+-	-	data/anim_intro/anim (5).png
+
+commit: 00f67fd4461a4ef77b38b1d8b53039f3f68c4d93 | 2025-03-19 | droit à l'image
+-	-	"Droit_a_l'image \342\231\245/droit a l'image PAUL BAUMARD.pdf" => "Droit_a_l'image \342\231\245/droit a l'image Paul.pdf"
+
+commit: 8c188de077cdec2f59ec59f501adc7703af5957c | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 69cf8c3bcf99fc511751f5db636e19c43dbbb59f | 2025-03-19 | Create droit a l'image PAUL BAUMARD.pdf
+-	-	"Droit_a_l'image \342\231\245/droit a l'image PAUL BAUMARD.pdf"
+
+commit: 37aa8d70de40cd77c15e086d99425ecbb792292a | 2025-03-19 | Signature Taddeo UwU
+-	-	"Droit_a_l'image \342\231\245/Droit a l'image BOSSARD Abel.pdf" => "Droit_a_l'image \342\231\245/Droit a l'image Abel.pdf"
+-	-	"Droit_a_l'image \342\231\245/Droit a l'image Taddeo .pdf"
+
+commit: 1a6dbb247bbaf4d2f49d550c6e62eb40d8b15e9c | 2025-03-19 | son robot
+12	9	sources/objects/bot.py
+10	1	sources/utils/sound.py
+
+commit: 37be0f9e4560c505a35f510c576eb2f4bb13e9df | 2025-03-19 | jsp pk abel a changé ça
+0	8	doc/Resume.txt
+
+commit: 2b7fbd4f6c3115950e5099b54414cd69aebae534 | 2025-03-19 | Ma signature UwU
+-	-	"Droit_a_l'image \342\231\245/Droit a l'image BOSSARD Abel.pdf"
+3	4	data/special_dialogue.json
+8	0	doc/Resume.txt
+1	1	sources/config.toml
+1	0	sources/ui/cinematic.py
+
+commit: 29d404417e0a1e8b16fbde5148b90fe4114d9580 | 2025-03-19 | polish
+8	0	sources/objects/bot.py
+2	1	sources/utils/sound.py
+
+commit: 732570c6f53371a12131eda48d0bf1f214d434d4 | 2025-03-19 | Update sound.py
+1	0	sources/utils/sound.py
+
+commit: d26d92e94a6c8cd3f399dfe7bd05ba02d50a8ad3 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 5c11a51f910ce4217aa7eb5d6719b4f0255c90eb | 2025-03-19 | bugfix and sound
+2	1	sources/core/logic.py
+1	1	sources/main.py
+2	5	sources/utils/sound.py
+
+commit: 4ba7ec3c7137eddef642fd011cab6010d487f0a9 | 2025-03-19 | load image
+1	1	sources/ui/sprite.py
+
+commit: 58e34e61fab08b91aa84ccbd459e02af317a59d8 | 2025-03-19 | Nouveau nombre de robots
+9	9	sources/objects/bot.py
+
+commit: a2b7970fd63494b31a741720abbb8e6a2698cb48 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 97d68dc2d6d595d18bd0aaf6555786c8b922b847 | 2025-03-19 | tee
+-	-	serverpack/user_data.db
+1	1	sources/config.toml
+1	0	sources/ui/sprite.py
+
+commit: 9c77d46e06abdd5171aea6a3dfeb76467c26756e | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: ca7247048a4aa75b56364d9bc1cf53bb5607d5ab | 2025-03-19 | Equilibrage final je touche plus a cette merde
+2	2	sources/core/unlockmanager.py
+21	21	sources/objects/bot.py
+15	15	sources/objects/patterns.py
+
+commit: 89bf211b572fd5a1db4eff583e8cc2a57d5fa3a7 | 2025-03-19 | change server name
+0	0	{serverpack => server}/database_server.py
+0	0	{serverpack => server}/launch_server.bat
+0	0	{serverpack => server}/launch_server.sh
+0	0	{serverpack => server}/server_instructions.md
+-	-	{serverpack => server}/user_data.db
+
+commit: 778940d526724f432fb57773f8f316ebb010b229 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: fcca090e5c15398bd85542bb0d63133d40a84eae | 2025-03-19 | volume stuff
+1	1	sources/core/logic.py
+6	4	sources/objects/bot.py
+13	4	sources/utils/sound.py
+
+commit: 724c7e51e30c147cd8e6d627cf9ae82ee8444aa0 | 2025-03-19 | telescope
+-	-	data/telescope.png
+
+commit: 136e3b36cfce275c754f9aeaafb7885edd8acf6c | 2025-03-19 | volume control
+3	0	sources/config.toml
+2	2	sources/core/logic.py
+1	1	sources/main.py
+21	2	sources/utils/sound.py
+
+commit: 15e41d0dc06c3e06c52ed99acec1e548862088b8 | 2025-03-19 | Correctif
+0	1	data/dialogue.json
+2	2	sources/core/unlockmanager.py
+12	12	sources/objects/bot.py
+1	1	sources/objects/canva.py
+1	1	sources/utils/room_config.py
+
+commit: 78e86d87726e3b43c6e077053e5dd14a6e869c3b | 2025-03-19 | Ancien pattern ahah trop drole imagine je me suis trompé
+15	16	sources/objects/patterns.py
+
+commit: 20033256befc754cb555c53ba9cdd8ca444fe4aa | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: a8f4cffb434a1568a67708df4c74bfb362ba8d82 | 2025-03-19 | UwU
+1	1	data/special_dialogue.json
+1	1	sources/utils/room_config.py
+
+commit: 54b5f3b5cd754b0a32d3e685f9ad0f398d275fc6 | 2025-03-19 | bugfix
+2	1	sources/objects/canva.py
+
+commit: a48fd9e2fc4b8d60c42c4a84ebddf4c36e35f3c0 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 4564214d70b3a235bc6cc6591fafb5250581d068 | 2025-03-19 | bugfix
+0	2	gitlog.sh
+1	1	sources/objects/canva.py
+
+commit: d35d71f5a3654ca49db423840ad834fa8388cafd | 2025-03-19 | nouveau prix
+15	15	sources/objects/patterns.py
+
+commit: 097abca85938b7e3d0b6ab8e7aea52da5ae37acc | 2025-03-19 | Ainsi son sons on
+-	-	data/sounds/bot or mites.mp3
+-	-	data/sounds/mite.mp3
+-	-	data/sounds/mite.wav
+-	-	data/sounds/mites.mp3
+-	-	data/sounds/mites2.mp3
+-	-	data/sounds/mites3.mp3
+-	-	data/sounds/mites4.mp3
+-	-	data/sounds/mites5.mp3
+3	0	sources/objects/canva.py
+13	12	sources/utils/sound.py
+
+commit: 06da4be88469535789fc5b55837f07a604b7b3d7 | 2025-03-19 | Correctif son
+1	2	sources/utils/sound.py
+
+commit: 3caef77a17a77ac29c4e8132b318abca32574856 | 2025-03-19 | Nouveaux sons c'est joli tout ca
+-	-	data/sounds/Doordown.wav
+-	-	data/sounds/accrocher.mp3
+-	-	data/sounds/accrocher_tableau.wav
+-	-	data/sounds/elevator.wav
+-	-	data/sounds/incorrect.mp3
+-	-	data/sounds/incorrect.wav
+
+commit: b082c4c3000cf93ecbde6e1c2fbf82a39f6213fc | 2025-03-19 | historique de commit
+0	0	docs/Resume.txt => "Resum\303\251.txt"
+2870	0	docs/historique_de_commit.txt
+
+commit: f4ac2c538ce319721073277877830052cad5c6ca | 2025-03-19 | FINITION VRAIMENT FINALE
+2	1	sources/core/logic.py
+
+commit: e6e5f70c97a465795f27aca06d44bcbfb3a40895 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: c63506d3507057b6dcf4f8a8b125b07d3a4fa8ef | 2025-03-19 | finitions FINALES
+2	0	sources/core/logic.py
+
+commit: 79bc0bdd036f0903f7f8b5e2d68e2d8bcfcacb23 | 2025-03-19 | Create licence.txt
+674	0	licence.txt
+
+commit: 5db8f4bd0cc3652c686e0e1878f35b19f9d9f548 | 2025-03-19 | Merge pull request #5 from PouchyCorp/dependabot/pip/python-packages-3f612f7d42
+commit: 9ffcf3c000b414c1894fa94bc23cd3d8529e2e27 | 2025-03-19 | Delete LICENSE
+0	21	LICENSE
+
+commit: 7a2f40d2bec6aa4c979cc64a6e3badc996115988 | 2025-03-19 | formattage pour le reglement du concours
+-	-	{doc => docs}/Equilibrage.xlsx
+0	0	{doc => docs}/IMPORTANT.txt
+0	0	{doc => docs}/Resume.txt
+1	1	{doc => docs}/architecture.md
+-	-	{doc => docs}/carte_mentale.png
+0	0	{doc => docs}/details_implementation.md
+0	0	"doc/sources_utilis\303\251es.txt" => "docs/sources_utilis\303\251es.txt"
+7	1	serverpack/database_server.py
+3	1	sources/core/buildmode.py
+2	0	sources/core/homescreen.py
+3	1	sources/core/room.py
+2	0	sources/core/spectator.py
+2	0	sources/core/unlockmanager.py
+2	0	sources/main.py
+2	0	sources/objects/bot.py
+2	0	sources/objects/canva.py
+2	0	sources/objects/dialogue.py
+2	0	sources/objects/particlesspawner.py
+3	1	sources/objects/patterns.py
+2	0	sources/objects/placeable.py
+2	0	sources/objects/placeablesubclass.py
+2	0	sources/ui/button.py
+3	1	sources/ui/cinematic.py
+2	0	sources/ui/confirmationpopup.py
+2	0	sources/ui/infopopup.py
+2	0	sources/ui/inputbox.py
+7	8	sources/ui/inventory.py
+2	0	sources/ui/sprite.py
+2	0	sources/ui/userlist.py
+2	0	sources/utils/anim.py
+2	0	sources/utils/coord.py
+2	0	sources/utils/database.py
+2	0	sources/utils/fonts.py
+2	0	sources/utils/room_config.py
+2	0	sources/utils/sound.py
+2	0	sources/utils/timermanager.py
+3	1	{tests => test}/pickling_tests.py
+3	2	{tests => test}/reverse_kinematic.py
+3	0	{tests => test}/test_client.py
+3	0	{tests => test}/test_nine_slice_scaling.py
+
+commit: 27873b26f7dae9d5b80d6b4c5a23cad7420de897 | 2025-03-19 | Bump numpy from 2.2.3 to 2.2.4 in the python-packages group
+1	1	requirements.txt
+
+commit: a963954052dbfc818bd146d1934ec71983de7bd4 | 2025-03-19 | build mode collider polish
+1	1	sources/core/buildmode.py
+4	1	sources/core/logic.py
+2	1	sources/objects/bot.py
+2	1	sources/objects/placeable.py
+4	3	sources/utils/room_config.py
+
+commit: 973b3728134c74e7b3c7befccb44c6b8813db57a | 2025-03-19 | histoire et tuto
+18	2	data/special_dialogue.json
+-	-	serverpack/user_data.db
+1	1	sources/config.toml
+1	0	sources/core/logic.py
+2	2	sources/ui/cinematic.py
+1	1	sources/ui/sprite.py
+
+commit: 8ba334d8eeb57aafd32e28772ae0b67878e71048 | 2025-03-19 | skibidi
+1	0	.gitignore
+47	20	data/special_dialogue.json
+-	-	serverpack/user_data.db
+1	1	sources/objects/canva.py
+
+commit: a218c865d3ae5053502776c0bc40367e57a4b06b | 2025-03-19 | polish (ça commence à ressembler à quelque chose !)
+3	3	data/special_dialogue.json
+-	-	serverpack/user_data.db
+2	2	sources/config.toml
+1	1	sources/core/buildmode.py
+12	4	sources/core/logic.py
+8	8	sources/utils/room_config.py
+
+commit: 1761dd34c12535040add057f46c2cbd526068cb2 | 2025-03-19 | bugfix
+1	1	data/special_dialogue.json
+
+commit: bfed7958993e49a3164d9a1164538006d882f3f8 | 2025-03-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 5b93ddbddcbb0801eae3880b35724e511a47b50b | 2025-03-19 | tkt
+4	1	data/special_dialogue.json
+
+commit: e9359225a2606e207ac64c1d4daf4fe9763ee85e | 2025-03-18 | icone et nom sur les dialogues
+1	1	sources/config.toml
+3	3	sources/core/logic.py
+9	7	sources/objects/dialogue.py
+4	3	sources/ui/cinematic.py
+12	5	sources/ui/sprite.py
+
+commit: ea1301ea7b237cf7ed912c9dc468a198cd37b29c | 2025-03-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 6253055d6616cc58ddc856a6210fb8c25329e1c4 | 2025-03-18 | destruction  mode
+5	6	data/special_dialogue.json
+3	4	doc/Resume.txt
+3	1	"doc/sources_utilis\303\251es.txt"
+8	1	sources/core/logic.py
+11	3	sources/ui/inventory.py
+
+commit: 395f2a6ece26bf64dd882445e4c4a594deafbe94 | 2025-03-18 | pnj + machine
+-	-	data/deb_pnj.png
+-	-	data/distrid_46x78.png
+-	-	data/foule_pnj.png
+-	-	data/guichet_pnj.png
+-	-	data/shop_pnj.png
+
+commit: de3cfaeab81d3257a4637cd62910a6902241c1a9 | 2025-03-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: de5f67f586b9c8ec84ca48dbd1709cce878f6396 | 2025-03-18 | drawers fix
+-	-	data/drawers/bouton_11.png
+-	-	data/drawers/bouton_12.png
+-	-	data/drawers/bouton_13.png
+-	-	data/drawers/bouton_14.png
+17	1	sources/objects/patterns.py
+
+commit: 3d3265b935e29a1d6811166d0d0e1f9e6e9852f7 | 2025-03-18 | ui argent
+-	-	data/shop_placeable.png
+9	3	sources/core/logic.py
+2	2	sources/core/unlockmanager.py
+3	1	sources/ui/sprite.py
+12	6	sources/utils/anim.py
+2	2	sources/utils/room_config.py
+
+commit: 617b4bb2c77c830bbc8eb263f3a0db46534f0a6e | 2025-03-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 0d74e813fc5a2b4fc2acffc1a0aee32cb8bd20db | 2025-03-18 | polish et stabilité des cinematiques
+-	-	data/chip.png
+-	-	data/chip_button.png
+-	-	data/connecting_bg.png
+-	-	data/pop_up_dialogue.png
+3	2	sources/core/logic.py
+6	4	sources/objects/canva.py
+30	11	sources/ui/cinematic.py
+8	13	sources/ui/sprite.py
+
+commit: c758b319cced4e0829b3ff8cc883a65a6d97f41d | 2025-03-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: d0ec70da2a02b6ddeb5bfb578a038b68912149fa | 2025-03-18 | argent ui
+-	-	data/argent_ui_30x32_20frames_.png
+
+commit: b5cceda22255020403241230582e78ad658e6829 | 2025-03-18 | Resume
+7	0	doc/Resume.txt
+
+commit: 57c07c09129e94f15708a73d30efb364de94899a | 2025-03-18 | sou cres
+2	1	"doc/sources_utilis\303\251es.txt"
+
+commit: 15a3cafd449cc6f99d69d82f35182ed8aef6b932 | 2025-03-18 | Update README.md
+0	1	README.md
+
+commit: bf9d33a608d7eea7e8ea6270e73f2c32fc7d2dfa | 2025-03-18 | Delete userData.db
+-	-	userData.db
+
+commit: 186a048f546857e1455c8809b016281225153511 | 2025-03-18 | sources
+2	1	"doc/sources_utilis\303\251es.txt"
+
+commit: 61258811aa2387a928fe2b68801af30f6c6aaa03 | 2025-03-17 | Encore un peu
+7	3	sources/core/spectator.py
+2	0	sources/utils/sound.py
+
+commit: b4710721c6ed1c7a5c14f0a58c831e49d0569cb1 | 2025-03-17 | Un peu de doc
+1	0	sources/objects/particlesspawner.py
+7	12	sources/objects/patterns.py
+1	0	sources/ui/button.py
+4	3	sources/utils/room_config.py
+2	1	sources/utils/sound.py
+
+commit: 2b8dbf96f8d72efb92c72eb52fcdfec25f1f638e | 2025-03-17 | exclamation sur les bots qui attendent
+8	7	sources/objects/bot.py
+
+commit: 96672aacd1856618cdad67a9a8d550cc645777af | 2025-03-17 | fix unlock crash
+-	-	data/couleurs_uii.png
+1	1	sources/core/unlockmanager.py
+1	1	sources/objects/canva.py
+
+commit: 8dd2cc8ee56116b4a2290729e77cfe03b4c83319 | 2025-03-17 | el commitas
+1	1	data/special_dialogue.json
+1	1	sources/core/unlockmanager.py
+1	0	sources/main.py
+6	6	sources/objects/canva.py
+1	1	sources/ui/cinematic.py
+2	4	sources/ui/sprite.py
+
+commit: 059a5e05e4d28050d30ca68eddcc92b7ae6133c8 | 2025-03-17 | a
+1	1	data/special_dialogue.json
+
+commit: 8a75714076e2a2c4a57eb0b993c56fd4f24f05e5 | 2025-03-17 | Correctif de la bite
+2	2	data/special_dialogue.json
+
+commit: 96ac9b7cb2f1e6ac936f22f5a253b0579e973e9f | 2025-03-17 | Update README.md
+3	1	README.md
+
+commit: 1442680eda78e5de66ee406e9c9f36e686a10ca5 | 2025-03-16 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 02bad995b6cf4a25b80aacb3227a3b80fc299167 | 2025-03-16 | anims marchent
+2	2	sources/main.py
+10	13	sources/ui/cinematic.py
+15	17	sources/ui/sprite.py
+2	3	sources/utils/room_config.py
+
+commit: 2ae6a269087aa4cbfdad2e6209859fd2e1e36454 | 2025-03-16 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 93514f5852cb31308c29a1a8c8ff56ce27519cd4 | 2025-03-16 | equi pt 3 et doc
+25	14	sources/objects/patterns.py
+
+commit: 7fd295ce06583b563c71daed8a4fdbdb5eaa9d9f | 2025-03-16 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: bd6e4a3d0f56d0701883891784463d474ff5ba4a | 2025-03-16 | meilleur charement d'asset
+16	18	sources/core/homescreen.py
+1	4	sources/core/logic.py
+35	18	sources/main.py
+
+commit: f24325e40462205a69828dd86be71b2b038f4b48 | 2025-03-16 | equi pt2
+20	19	sources/objects/bot.py
+
+commit: c6ca10a9ecb2e5e79265ad68ce8bb9e223ec98b4 | 2025-03-16 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 6d2a1d6fa09c797f6fc43d814096a3613481c844 | 2025-03-16 | equi pt1
+2	0	sources/core/logic.py
+5	7	sources/core/unlockmanager.py
+21	3	sources/objects/bot.py
+
+commit: d6e981c4d590f3ddb2de7126c511219d91c704a1 | 2025-03-16 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: b0b2a8d126bac444ed172053456c0ff6fa023bc1 | 2025-03-16 | marche toujours pas mais c'est normal
+1	1	sources/core/logic.py
+17	0	sources/ui/sprite.py
+1	1	sources/utils/anim.py
+2	2	sources/utils/room_config.py
+
+commit: 5d56ebe0890f0cd6feab62660e72316860751f5e | 2025-03-15 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 02e36eadf0a0d41ee3b5130c26deb8db4d0a84ca | 2025-03-15 | hh
+1	1	data/special_dialogue.json
+
+commit: 8ddebb8940f244b4c71cd60f60ab061140f9b620 | 2025-03-15 | el commitas
+1	1	data/special_dialogue.json
+1	1	sources/core/homescreen.py
+7	5	sources/core/logic.py
+10	5	sources/core/room.py
+2	2	sources/main.py
+2	2	sources/objects/bot.py
+14	5	sources/objects/placeable.py
+12	6	sources/ui/cinematic.py
+14	9	sources/ui/sprite.py
+1	1	sources/ui/userlist.py
+1	1	sources/utils/anim.py
+1	1	sources/utils/fonts.py
+2	1	sources/utils/room_config.py
+1	1	sources/utils/timermanager.py
+
+commit: d06511ce13de79fe759452fe19c406a6ec82776a | 2025-03-14 | Bite
+1	1	data/special_dialogue.json
+
+commit: 7ad4f1e6c6df22f873df1b2f207c2c50d8a39d68 | 2025-03-13 | 2 anims + ui (argent, couleurs, destructions)
+-	-	data/anim_deb_57_frames.png
+-	-	data/anim_haut_65frames.png
+-	-	data/argent_ui_30x32_20frames_.png
+-	-	data/couleurs_uii.png
+-	-	data/destruciotn_button.png
+
+commit: 7aaf7c48b18d1dc9b08343bbc6943b574d273009 | 2025-03-13 | Introspec 5
+31	1	data/special_dialogue.json
+
+commit: 390550cfce1de30b3cd5fe0f5f63084a948caa0e | 2025-03-13 | téma la taille du commit (c'etait beaucoup de doc)
+26	0	sources/core/buildmode.py
+7	4	sources/core/homescreen.py
+4	2	sources/core/logic.py
+2	0	sources/core/room.py
+2	1	sources/core/spectator.py
+2	0	sources/core/unlockmanager.py
+3	2	sources/main.py
+2	0	sources/objects/bot.py
+53	26	sources/objects/canva.py
+2	0	sources/objects/dialogue.py
+24	0	sources/objects/particlesspawner.py
+21	0	sources/objects/patterns.py
+2	0	sources/objects/placeable.py
+2	0	sources/objects/placeablesubclass.py
+3	1	sources/ui/button.py
+28	0	sources/ui/cinematic.py
+22	1	sources/ui/confirmationpopup.py
+24	0	sources/ui/infopopup.py
+21	3	sources/ui/inputbox.py
+28	0	sources/ui/inventory.py
+4	3	sources/ui/sprite.py
+19	0	sources/ui/userlist.py
+1	0	sources/utils/anim.py
+18	0	sources/utils/coord.py
+4	1	sources/utils/database.py
+15	1	sources/utils/fonts.py
+2	0	sources/utils/room_config.py
+21	3	sources/utils/sound.py
+20	1	sources/utils/timermanager.py
+
+commit: 264cced207ae20e0cfe81c7a1f36e90d8c8e51d1 | 2025-03-13 | color unlock qui marche enfin
+7	5	data/special_dialogue.json
+18	8	sources/core/logic.py
+2	2	sources/core/unlockmanager.py
+8	5	sources/objects/canva.py
+4	0	sources/objects/placeablesubclass.py
+1	1	sources/ui/sprite.py
+4	3	sources/utils/room_config.py
+
+commit: 841718cbf71d0e0d914f686d9f1364cacb2bd527 | 2025-03-13 | canvas et les couleurs
+4	4	data/special_dialogue.json
+35	10	sources/objects/canva.py
+3	10	sources/objects/placeablesubclass.py
+19	7	sources/ui/sprite.py
+39	0	tests/test_nine_slice_scaling.py
+
+commit: e5382deb11c5dc191fde9e21cae5e80e5d109757 | 2025-03-13 | fix dialogue et tutos 8
+10	10	data/special_dialogue.json
+99	54	sources/objects/dialogue.py
+
+commit: c1f3303bbfc70709f88a7ac96b637ed48918fcb3 | 2025-03-13 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 416909063722b0377cf71e0e1f2c3dca97663773 | 2025-03-13 | bruh je suis malade mais utile
+1	1	sources/core/logic.py
+2	2	sources/core/unlockmanager.py
+21	16	sources/objects/canva.py
+1	1	sources/objects/particlesspawner.py
+21	19	sources/objects/patterns.py
+1	1	sources/ui/inventory.py
+2	1	sources/ui/sprite.py
+1	1	sources/utils/room_config.py
+
+commit: ca2f66a5288eedcfc348eb87a362c21864c953d4 | 2025-03-13 | Introspec5
+5	2	data/special_dialogue.json
+
+commit: 12bbef3b8fe8741abe1d0f1adc7c598f661ec4df | 2025-03-13 | Correctif dialogue
+19	19	data/special_dialogue.json
+
+commit: dc816b0432efe3113decca410d5dea2f89a499ae | 2025-03-13 | introspec 4
+19	2	data/special_dialogue.json
+
+commit: 02dbdfd3a6e85666ea4f7f135f239f3d540e2e12 | 2025-03-13 | introspec 2
+18	3	data/special_dialogue.json
+
+commit: 9563edd943847fb72a6ceb9a4c39220171012776 | 2025-03-12 | fix
+0	1	doc/.~lock.Equilibrage.xlsx#
+1	1	sources/core/logic.py
+
+commit: 9a06a9bd76b2d9b3e036b210937c944dc443b024 | 2025-03-12 | pattern+background
+-	-	data/joli_background.jpg
+-	-	data/joli_background.png
+-	-	data/pattern_storage/pattern_1.png
+-	-	data/pattern_storage/pattern_10.png
+-	-	data/pattern_storage/pattern_10_frame.png
+-	-	data/pattern_storage/pattern_11.png
+-	-	data/pattern_storage/pattern_11_frame.png
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_12_frame.png
+-	-	data/pattern_storage/pattern_13.png
+-	-	data/pattern_storage/pattern_13_frame.png
+-	-	data/pattern_storage/pattern_14.png
+-	-	data/pattern_storage/pattern_14_frame.png
+-	-	data/pattern_storage/pattern_15.png
+-	-	data/pattern_storage/pattern_15_frame.png
+-	-	data/pattern_storage/pattern_1_frame.png
+-	-	data/pattern_storage/pattern_2.png
+-	-	data/pattern_storage/pattern_2_frame.png
+-	-	data/pattern_storage/pattern_3.png
+-	-	data/pattern_storage/pattern_3_frame.png
+-	-	data/pattern_storage/pattern_4.png
+-	-	data/pattern_storage/pattern_4_frame.png
+-	-	data/pattern_storage/pattern_5.png
+-	-	data/pattern_storage/pattern_5_frame.png
+-	-	data/pattern_storage/pattern_6.png
+-	-	data/pattern_storage/pattern_6_frame.png
+-	-	data/pattern_storage/pattern_7.png
+-	-	data/pattern_storage/pattern_7_frame.png
+-	-	data/pattern_storage/pattern_8.png
+-	-	data/pattern_storage/pattern_8_frame.png
+-	-	data/pattern_storage/pattern_9.png
+-	-	data/pattern_storage/pattern_9_frame.png
+1	1	sources/ui/sprite.py
+
+commit: a3344e7a8c8883c2e63d8f309606571d452a215c | 2025-03-12 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 05c945f022cb9c3be20e7eec06243d2282004d07 | 2025-03-12 | Update patterns.py
+27	6	sources/objects/patterns.py
+
+commit: e460233a27e3fcb8d3c9d4fd0f4f8ffb99dd1027 | 2025-03-12 | Equilibrage V1,5
+2	0	sources/objects/bot.py
+
+commit: de1cad83df8be66adb58421e3d5869e7cbf49529 | 2025-03-12 | introspection
+10	1	data/special_dialogue.json
+6	1	sources/ui/sprite.py
+
+commit: 703408d31f58e4672697e24bb970c2aa112c6d5b | 2025-03-12 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 93ff06a6e9a8a40245d497eb583e4dd7abb61d87 | 2025-03-12 | doc
+1	0	doc/.~lock.Equilibrage.xlsx#
+-	-	doc/{cartementale.png => carte_mentale.png}
+0	1	"doc/sources_utilis\303\251es.txt"
+1	1	sources/core/logic.py
+8	3	sources/ui/sprite.py
+8	8	sources/utils/room_config.py
+
+commit: 0b342b0fd54b67885e5778119a17bf55b65331e7 | 2025-03-12 | dialogue re
+4	5	data/special_dialogue.json
+
+commit: 2e61d735a08a984287caf217a927cb876668a4a0 | 2025-03-12 | a
+6	1	data/special_dialogue.json
+-	-	data/userData.db
+-	-	userData.db
+
+commit: 1d9dfad659c669fd26e1d5193581767ae1045863 | 2025-03-12 | auto cachier
+2	2	doc/details_implementation.md
+47	23	sources/core/logic.py
+2	3	sources/core/unlockmanager.py
+6	0	sources/objects/placeablesubclass.py
+1	0	sources/ui/sprite.py
+8	3	sources/utils/room_config.py
+
+commit: 79d3dbbf8baafdf501d4193c7338e1eb4f5732b1 | 2025-03-12 | doc
+6	5	sources/config.toml
+7	4	sources/core/logic.py
+29	5	sources/objects/placeablesubclass.py
+3	3	sources/utils/room_config.py
+
+commit: 2125afed3726bec9df3702cebe797ff1c142154c | 2025-03-11 | room config
+2	2	sources/ui/sprite.py
+19	11	sources/utils/room_config.py
+
+commit: fc9a6e8cab9ec5bb6a32d5c00fddaa30e38327ac | 2025-03-11 | doc and gui
+-	-	data/conteur_beaute.png
+0	1	doc/.~lock.Equilibrage.xlsx#
+152	0	"doc/sources_utilis\303\251es.txt"
+15	11	sources/core/buildmode.py
+11	1	sources/core/logic.py
+9	12	sources/objects/bot.py
+7	2	sources/ui/cinematic.py
+2	1	sources/ui/sprite.py
+
+commit: 4434f2ece31882756767ecdb9b8bc4eb4ef195cd | 2025-03-11 | Update details_implementation.md
+3	1	doc/details_implementation.md
+
+commit: 357bc9347ff552fb222794cd6990486c55df8563 | 2025-03-10 | Add files via upload
+1	0	doc/IMPORTANT.txt
+
+commit: a707b2da75242a7a2f66e741bce1ef48ef00c31f | 2025-03-09 | equilibrage
+1	1	doc/.~lock.Equilibrage.xlsx#
+16	3	sources/objects/bot.py
+
+commit: 5b3350f06fe5d63c74e6b650ce36d602908833ff | 2025-03-09 | trucs
+1	0	doc/.~lock.Equilibrage.xlsx#
+1	0	doc/architecture.md
+66	80	sources/objects/bot.py
+4	3	sources/utils/coord.py
+
+commit: 969bc110c97f51faa0448184cad88931d2b56105 | 2025-03-09 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 58a4e119556e979886a44aac33534a4f1a4945c4 | 2025-03-09 | buse et conteur
+-	-	data/buse.png
+-	-	data/conteur_beaute.png
+
+commit: 9476bea91fab79add243bae39568749f6cae440f | 2025-03-09 | Create Equilibrage.xlsx
+-	-	doc/Equilibrage.xlsx
+
+commit: 46f91cebab7b64edca162c7fe894f4ad42b80e02 | 2025-03-09 | Update anim.py
+1	2	sources/utils/anim.py
+
+commit: 0d13a8fdb2d7bd3c659835fed6de5dcbb7ef1ccd | 2025-03-09 | unit test, docs
+3	2	sources/objects/placeable.py
+3	2	sources/ui/sprite.py
+35	18	sources/utils/anim.py
+42	0	tests/pickling_tests.py
+
+commit: 17d029efd0b6e80c168c2ce7785b532e7b9fc10f | 2025-03-09 | Update details_implementation.md
+3	3	doc/details_implementation.md
+
+commit: 09a1d02956402be5171912094c7fc933b205fad3 | 2025-03-09 | vive la doc
+3	1	README.md
+0	493	commit_history.txt
+-	-	doc/cartementale.png
+0	10	gitlog.sh
+0	493	history_raw.txt
+0	29	serverpack/server instructions.txt
+41	0	serverpack/server_instructions.md
+
+commit: af8c64e8366e8b7b5663251ea659511b8d12b48e | 2025-03-09 | Create details_implementation.md
+63	0	doc/details_implementation.md
+
+commit: ca916b38bc71fd8ee44a2e3c986743b574ace22f | 2025-03-09 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 8f34e8c0959bb99dd0604e4bd406403d3937ea5c | 2025-03-09 | fond ?
+-	-	data/bg_test_paint.png
+-	-	data/buse.png
+
+commit: 367a8dd01ec70cb260b864aee0915514d0aeadb2 | 2025-03-08 | Update logic.py
+1	1	sources/core/logic.py
+
+commit: 6d9e3849f21a24defe985956ac56aeabaab6e6c0 | 2025-03-08 | drawers
+-	-	data/{bouton_ => drawers}/bouton_1.png
+-	-	data/{bouton_ => drawers}/bouton_10.png
+-	-	data/{bouton_ => drawers}/bouton_11.png
+-	-	data/{bouton_ => drawers}/bouton_12.png
+-	-	data/{bouton_ => drawers}/bouton_13.png
+-	-	data/drawers/bouton_14.png
+-	-	data/{bouton_ => drawers}/bouton_15.png
+-	-	data/{bouton_ => drawers}/bouton_2.png
+-	-	data/{bouton_ => drawers}/bouton_3.png
+-	-	data/{bouton_ => drawers}/bouton_4.png
+-	-	data/{bouton_ => drawers}/bouton_5.png
+-	-	data/{bouton_ => drawers}/bouton_6.png
+-	-	data/{bouton_ => drawers}/bouton_7.png
+-	-	data/{bouton_ => drawers}/bouton_8.png
+-	-	data/{bouton_ => drawers}/bouton_9.png
+-	-	data/pop_up_dialogue.png
+1	1	sources/core/logic.py
+7	1	sources/objects/canva.py
+16	36	sources/objects/patterns.py
+3	1	sources/ui/sprite.py
+
+commit: 1399bb8a227a6f5c04e05d340fb8a019512642bf | 2025-03-08 | lock fonctionnel
+9	9	sources/objects/placeablesubclass.py
+
+commit: ce884c01d76697ea818e6c4ff1253ac8dc9aafe3 | 2025-03-06 | plus de doc
+24	4	doc/architecture.md
+
+commit: 5aa9a2fa53f16c2e5e764ddeac6223af18e8396b | 2025-03-06 | trucs
+38	0	doc/architecture.md
+15	10	sources/core/logic.py
+9	3	sources/objects/placeablesubclass.py
+
+commit: dde62d7ce0529412b262008c716bf53ec0890af6 | 2025-03-06 | tentative de cadenas
+493	0	commit_history.txt
+12	0	gitlog.sh
+493	0	history_raw.txt
+27	4	sources/core/logic.py
+3	1	sources/core/unlockmanager.py
+27	0	sources/objects/placeablesubclass.py
+10	9	sources/ui/sprite.py
+
+commit: 1fc66b39c930a95e9ad01265986c96fe270dbd58 | 2025-03-06 | fixs / polish
+1	1	sources/core/logic.py
+7	3	sources/ui/cinematic.py
+1	1	sources/ui/sprite.py
+1	1	sources/utils/room_config.py
+
+commit: ada45ccb1b44865c697f123f25fc525c72a23839 | 2025-03-06 | linux supp
+1	1	sources/ui/sprite.py
+
+commit: 5a1c8d76a98aa5c6541842171f071674e9eff589 | 2025-03-05 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 420b1653a797c44b6b9b63520b1403d981d3c039 | 2025-03-05 | commentaires
+54	24	sources/ui/cinematic.py
+
+commit: 99797c3774dd6f86f352f9e9303440dbd33968fa | 2025-03-05 | fonduuuuu
+1	0	sources/core/logic.py
+65	11	sources/ui/cinematic.py
+
+commit: f3a4ddaf1ab664f591a2a0e3ea5ce213b3f13e1a | 2025-03-05 | R3 mieux
+-	-	data/R3.png
+
+commit: fa2ff366eaf2a5083357cd7849aaa674f6e07f52 | 2025-03-05 | cutscene big progress
+1	1	sources/ui/cinematic.py
+2	1	sources/ui/sprite.py
+
+commit: b30fe81bcaf603a58e095ee124c0b75a5055e1ca | 2025-03-05 | cutscenes
+2	2	data/special_dialogue.json
+11	13	sources/core/logic.py
+24	14	sources/core/unlockmanager.py
+40	76	sources/ui/sprite.py
+
+commit: db2c8773fee513e0276eea09151e07109eb43b36 | 2025-03-05 | zoubi zoubi zaba zaba (cinematique)
+18	6	sources/core/unlockmanager.py
+4	4	sources/objects/dialogue.py
+47	10	sources/ui/cinematic.py
+
+commit: f73dbc658b94dd409e4093a5d1d8fe0cad3db247 | 2025-03-05 | fix fonts
+0	7	setup_and_run.bat
+2	2	sources/core/homescreen.py
+10	6	sources/objects/canva.py
+1	1	sources/ui/infopopup.py
+2	2	sources/ui/inputbox.py
+6	6	sources/ui/inventory.py
+3	3	sources/ui/userlist.py
+2	1	sources/utils/fonts.py
+
+commit: d8d490b97b0d74f2a9a7d744d4b14836cae78a47 | 2025-03-05 | canva ui
+24	7	sources/objects/canva.py
+8	0	sources/ui/sprite.py
+
+commit: 55ce9a0a7b9ccd0005d83b3018503ac52fcb62a0 | 2025-03-05 | Revert "fix"
+14	6	sources/objects/placeablesubclass.py
+
+commit: 5c172df2973265b42c1fd156a9ae7308dd148d4f | 2025-03-05 | cinematique prémisse
+30	0	sources/ui/cinematic.py
+1	3	sources/utils/room_config.py
+
+commit: e7e104195f1ddc0377b8a32057b334f47d07232c | 2025-03-04 | fix
+6	14	sources/objects/placeablesubclass.py
+
+commit: c1d0052a9944c71aee2aa157344a4ba87a7ab273 | 2025-03-04 | shop
+4	8	sources/ui/confirmationpopup.py
+15	5	sources/ui/inventory.py
+
+commit: f1deb5aa2d436786c70f648ffc8dcc510825bb8b | 2025-03-03 | ui inventaire
+2	2	sources/core/logic.py
+1	1	sources/main.py
+31	17	sources/ui/inventory.py
+2	5	sources/utils/coord.py
+2	1	sources/utils/fonts.py
+
+commit: 64a6440abd74b15b4cab9856d6edc7540b4d45bf | 2025-03-03 | refac pattern
+1	1	sources/objects/dialogue.py
+0	5	sources/objects/patterneffect.py
+4	7	sources/objects/patterns.py
+
+commit: bd381c516a2d68e0410791a3f15ff833a42caa54 | 2025-03-03 | fix bots
+20	14	sources/core/logic.py
+2	1	sources/objects/dialogue.py
+
+commit: 77eee2f230d42de38f5db0e3c0318a8cc24efe04 | 2025-02-25 | Delete serverpack/user_data.db
+-	-	serverpack/user_data.db
+
+commit: 2459547d982ee64b9f5d691004fc44498811646e | 2025-02-25 | Delete user_data.db
+-	-	user_data.db
+
+commit: 696d39e39a5eccc887c2d12a244664bf85ffd587 | 2025-02-25 | linux support
+26	0	serverpack/launch_server.sh
+
+commit: a576ea4f8bd26a650477ad4398a9bd4234057537 | 2025-02-24 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: af33df937f1cac722f588d7b47bc2c8ba36197ea | 2025-02-24 | Dialogue cinématique (sauf la 0 qui est bugué asf mais je vais cook tkt
+-	-	data/R3.png
+12	9	data/dialogue.json
+88	4	data/special_dialogue.json
+1	1	sources/config.toml
+8	2	sources/core/logic.py
+
+commit: 42c09534bcbe2fe52283ab54082003947006540c | 2025-02-24 | Update .gitignore
+1	2	.gitignore
+
+commit: da02a776210a87a333f40c23f8f33812331310f4 | 2025-02-24 | Update .gitignore
+2	2	.gitignore
+
+commit: 696529bee9c7aa8606aa41fbb5e136dfbc5a79a5 | 2025-02-24 | a lot of bugfixes & refac
+-	-	serverpack/user_data.db
+36	19	sources/core/homescreen.py
+3	2	sources/utils/database.py
+
+commit: 28563d94531dfa1760494a8f3a56305a96181bae | 2025-02-24 | fixed input box color
+2	2	sources/ui/inputbox.py
+
+commit: a8d837a541ed3a29b48ab214be5e072469bb9449 | 2025-02-24 | refac
+1	1	serverpack/database_server.py
+15	9	serverpack/launch_server.bat
+2	0	serverpack/server instructions.txt
+1	1	sources/config.toml
+11	6	sources/core/homescreen.py
+4	2	sources/ui/sprite.py
+
+commit: 2de8b2086f30970975131ca8449be6c69494618e | 2025-02-24 | canva_ui
+-	-	data/bouton_/bouton_1.png
+-	-	data/bouton_/bouton_10.png
+-	-	data/bouton_/bouton_11.png
+-	-	data/bouton_/bouton_12.png
+-	-	data/bouton_/bouton_13.png
+-	-	data/bouton_/bouton_15.png
+-	-	data/bouton_/bouton_2.png
+-	-	data/bouton_/bouton_3.png
+-	-	data/bouton_/bouton_4.png
+-	-	data/bouton_/bouton_5.png
+-	-	data/bouton_/bouton_6.png
+-	-	data/bouton_/bouton_7.png
+-	-	data/bouton_/bouton_8.png
+-	-	data/bouton_/bouton_9.png
+-	-	data/etagere_canva.png
+
+commit: 6ca79dd14fec39175a253fa625c32a1e60d978c2 | 2025-02-23 | doc
+1	17	sources/core/homescreen.py
+15	0	sources/utils/database.py
+
+commit: 8a739fc4df84ab0e9598052a2201a6f413a509a4 | 2025-02-23 | des trucs
+-	-	data/robot_3.ase
+1	1	sources/core/homescreen.py
+2	0	sources/ui/sprite.py
+
+commit: 6853080fc546435ce7c169b16310ea82367f0279 | 2025-02-23 | oupsii ^^'
+-	-	data/login.png
+
+commit: 7524c3ededa1ba60bb9fb3cbec864bb15c22ba1f | 2025-02-23 | play_button
+-	-	data/jouer.png
+
+commit: a2aeecbdb6c59ea6adb12e0cb984b32c2c2fd159 | 2025-02-23 | bouton_refond
+-	-	data/close.png
+-	-	data/confirm.png
+-	-	data/login.png
+-	-	data/quit.png
+-	-	data/register.png
+-	-	data/retour.png
+-	-	data/robot_3.ase
+1	1	sources/config.toml
+
+commit: ad99894dd044a7198ffc673a10af7d1f83798e60 | 2025-02-23 | téma la taille du commit (gros refac)
+1	1	sources/config.toml
+0	322	sources/core/database.py
+264	0	sources/core/homescreen.py
+3	4	sources/core/logic.py
+15	24	sources/main.py
+5	4	sources/objects/placeablesubclass.py
+126	0	sources/utils/database.py
+
+commit: bc0dae37f268be9264114401d2a9777d81eaf74a | 2025-02-23 | poti commit
+1	0	.gitignore
+1	2	data/dialogue.json
+-	-	serverpack/user_data.db
+
+commit: d46a33a07911019399d3300d82955e64325d9c86 | 2025-02-23 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 421e00743f2819f542d2def6c2b30ca5b9047885 | 2025-02-23 | support multiligne dialogue
+1	1	data/special_dialogue.json
+1	1	sources/config.toml
+10	4	sources/objects/dialogue.py
+
+commit: 9feed57c609bca08cb50dec3510a2f791c20484b | 2025-02-23 | anim
+-	-	data/caissier_anim_30frmaes.png
+-	-	data/guichet_robot.png
+
+commit: 6f59587178e828dc4ac4b1723f8381b26b9b0c12 | 2025-02-22 | babioles
+-	-	serverpack/user_data.db
+2	1	sources/core/logic.py
+0	1	sources/objects/canva.py
+
+commit: a1fcd8875061ab712e551ed6ed164d481f1a5fbd | 2025-02-22 | bockground
+-	-	data/{Illustration_sans_titre.jpg => joli_background.jpg}
+2	1	sources/config.toml
+9	0	sources/core/database.py
+2	0	sources/ui/sprite.py
+
+commit: 8cb9a9635485014456bcf42a6e648cd1c8a73966 | 2025-02-21 | Add files via upload
+-	-	data/Illustration_sans_titre.jpg
+
+commit: d3b7cb7f70be4dab2b126a76b921f4e96c240997 | 2025-02-21 | guichet
+4	0	sources/core/logic.py
+4	0	sources/core/room.py
+0	1	sources/core/spectator.py
+5	8	sources/objects/bot.py
+4	0	sources/objects/placeable.py
+9	2	sources/objects/placeablesubclass.py
+3	1	sources/ui/sprite.py
+1	1	sources/utils/room_config.py
+
+commit: c8f3695715d03a3c4d340425d893215b6c8c72ec | 2025-02-21 | Merge remote-tracking branch 'origin/HEAD'
+commit: 925b3c0fd4a8985b60ffe535e56b4827d4b50533 | 2025-02-20 | guichet / 20
+4	1	sources/core/logic.py
+18	0	sources/objects/placeablesubclass.py
+3	0	sources/ui/sprite.py
+3	4	sources/utils/room_config.py
+
+commit: e7a804f8a0b39a83e8bde72179521c79e8300740 | 2025-02-20 | 2 guichets
+-	-	data/guichet_1.png
+-	-	data/guichet_2.png
+
+commit: 7846425bd3cd4b27c4220f8e429d73dc7e24184e | 2025-02-20 | skibidi
+3	6	setup_and_run.sh
+2	2	sources/config.toml
+
+commit: cc7067cf63990ac19abd9db657a3c32af8364a55 | 2025-02-20 | anim1
+-	-	data/anim.png
+
+commit: ba3be339ad5c98e685df2e72c6946a076ea9f896 | 2025-02-20 | bat file pour lancer le serveur
+1	0	serverpack/database_server.py
+16	0	serverpack/launch_server.bat
+-	-	serverpack/user_data.db
+1	1	sources/config.toml
+1	1	sources/core/database.py
+
+commit: 81de81a0793af440c4da32f6b6011c15d3333029 | 2025-02-20 | coonnnnnneeeeecccctttt
+-	-	data/connecting_bg.png
+
+commit: 0617f7e2feba7e20178291b453ca5c937073e31d | 2025-02-20 | comment and refac
+60	8	sources/objects/canva.py
+33	2	sources/ui/sprite.py
+
+commit: 9a2b3bf6899d7fd01f51fa52d5eced97e3cb4aa5 | 2025-02-20 | bcp mieux
+98	93	sources/objects/canva.py
+
+commit: 296d1a49874744ff1516f013637971bc158dd427 | 2025-02-20 | cassé
+116	86	sources/objects/canva.py
+
+commit: f340ab13ab5d0f8b1c845658ed7b11e711299a35 | 2025-02-19 | Update setup_and_run.sh
+0	3	setup_and_run.sh
+
+commit: 53861387b10cf4912c871af4af665cabec4eede3 | 2025-02-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: e3b62e7e5bac3870adf941eb1d8f9a9b54b74cd3 | 2025-02-18 | tutti frutti
+6	1	sources/objects/canva.py
+
+commit: eb09e2bbc340dfa2667fb423463ee103dde3b573 | 2025-02-18 | ;;
+-	-	data/robot_6.png
+
+commit: 5675f064440c6090308c98bd501f49a138a20bd2 | 2025-02-17 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 3c026c81447081eec2035164938449296e8604fc | 2025-02-17 | bra
+1	1	sources/main.py
+45	6	sources/objects/canva.py
+35	1	sources/ui/sprite.py
+87	0	tests/reverse_kinematic.py
+
+commit: 8e2478ab87d54e98af605c22b1f1e9c827185ace | 2025-02-17 | boutons
+-	-	data/bouton_canva_ui_name.png
+-	-	data/bouton_canva_ui_paint.png
+
+commit: 552c90506ae1130376ec91ff1d33a02cc5b77ebe | 2025-02-17 | brass
+-	-	data/bra_articuler_1.png
+-	-	data/buse.png
+
+commit: 08c01a7e0d72bc3435bfab6e9e00e1a6007cd366 | 2025-02-17 | ui_canva
+-	-	data/ui_canva2.png
+-	-	data/ui_canva_1.png
+
+commit: 9c3444068a098007f67beb34c3a40a06eced84e3 | 2025-02-17 | hh
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_3.png
+
+commit: 0de4556131d0b72dfef8ed66c8e019342993913e | 2025-02-17 | animation swag de peinture
+77	9	sources/objects/canva.py
+27	0	sources/objects/particlesspawner.py
+
+commit: 4f84c9c0118acc1d19ed38ce9e0af25238f9355b | 2025-02-16 | fix effet de bord
+1	1	sources/objects/canva.py
+
+commit: 3545871eef1b86a9a8eb77b3c5d3fa28cb6cb0c9 | 2025-02-16 | color palette
+34	6	sources/objects/canva.py
+1	1	sources/objects/patterns.py
+1	1	sources/utils/room_config.py
+
+commit: 7aadf90c01eb80824afd3cc98a0fc44ff95ed893 | 2025-02-16 | ui improvement
+6	11	sources/core/logic.py
+35	6	sources/objects/canva.py
+11	3	sources/objects/patterns.py
+
+commit: 14730db5f978576b2a7c070cab478908d9b04679 | 2025-02-15 | meilleur ui pour les canvas
+1	1	sources/core/logic.py
+41	15	sources/objects/canva.py
+1	2	sources/objects/patterneffect.py
+6	4	sources/objects/patterns.py
+7	1	sources/ui/sprite.py
+
+commit: 2762856d4fcc30dd994a8cc9fafdfa060dab2a31 | 2025-02-15 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: df4adc0f37f371d8d44abbb64f1002adc5fccd75 | 2025-02-15 | drag and drop
+1	1	sources/core/logic.py
+42	5	sources/objects/canva.py
+4	1	sources/objects/patterns.py
+
+commit: 33d281202209afbe30b289aefa37b64dd3f9a22c | 2025-02-15 | ccadre
+-	-	data/cadre.png
+4	3	sources/objects/canva.py
+1	0	sources/ui/sprite.py
+
+commit: 5424dddc6b5e45eed0c0ee51ace3f90104062d69 | 2025-02-15 | Merge pull request #4 from PouchyCorp/dependabot/pip/python-packages-13e108bcb0
+commit: ad511b263241a9ebd66aa87f17062fd71dc65f86 | 2025-02-14 | marche bof mais a la politesse de ne pas crash
+3	5	sources/core/logic.py
+17	1	sources/objects/canva.py
+
+commit: 4986c5800b3758cf26bb6169a5400a8ab6987fa8 | 2025-02-14 | gro refac des canva
+12	44	sources/core/logic.py
+27	15	sources/objects/canva.py
+0	20	sources/objects/pattern.py
+0	51	sources/objects/pattern_inv.py
+6	0	sources/objects/patterneffect.py
+71	0	sources/objects/patterns.py
+1	1	sources/ui/button.py
+
+commit: 192039bce682be5c536294d3eaeae4e68a7a4d09 | 2025-02-14 | Bump numpy from 2.2.2 to 2.2.3 in the python-packages group
+1	1	requirements.txt
+
+commit: 7bc7679897d5bc061a625567f3b8a5361d384ae4 | 2025-02-14 | line particle effect
+21	0	sources/objects/particlesspawner.py
+2	3	sources/ui/sprite.py
+
+commit: a1e5c14d14d97c33fb0ae0c75743b248d0d07588 | 2025-02-14 | polish bots
+3	2	sources/objects/bot.py
+6	3	sources/ui/sprite.py
+-	-	user_data.db
+
+commit: 619bac0a5c0a62b307b53c832f4bda0d2caaa862 | 2025-02-14 | zoubi zoubi zaba zaba
+-	-	.DS_Store
+1	0	.gitignore
+
+commit: 857a31be51f788c64dd76cf45a063d8aa24366c7 | 2025-02-13 | robot_6
+-	-	data/robot_6.png
+-	-	data/robot_rond_anim.png
+-	-	data/robots/robot_6.png
+1	1	sources/config.toml
+5	1	sources/ui/sprite.py
+
+commit: 734b254cb670ab7f9660f584038f55bd3e0269cf | 2025-02-13 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 1b63b4dc2303a818f1a8bcba8e085c7a77833ac0 | 2025-02-13 | +rob
+-	-	data/robot_rond_anim.png
+
+commit: b141a613dcdb6929bd3127127d928e9612947c41 | 2025-02-13 | bugfixes
+1	3	serverpack/database_server.py
+1	1	sources/config.toml
+
+commit: 4838678ed4d51c3f0430da4d45555d759ad675c5 | 2025-02-13 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 058fa6b4698c9c9995285fccb3452c7920caf5d8 | 2025-02-13 | Update sprite.py
+0	1	sources/ui/sprite.py
+
+commit: eb46158cc606f63a358ca854d6b13ef13afeee02 | 2025-02-13 | cadre
+-	-	data/cadre.png
+1	1	sources/config.toml
+
+commit: 107822fbe43dcd7115a650440fdee34af52b5963 | 2025-02-13 | plein de petites chose
+17	6	serverpack/database_server.py
+-	-	serverpack/user_data.db
+19	13	sources/core/database.py
+6	12	sources/core/logic.py
+6	6	sources/objects/canva.py
+1	0	sources/ui/sprite.py
+5	5	sources/utils/coord.py
+
+commit: b0da0cc2615f0f553ef44a5dd21aaeab1886bf29 | 2025-02-13 | documentatiooooooooooonn
+29	8	serverpack/database_server.py
+27	0	serverpack/server instructions.txt
+4	1	sources/config.toml
+54	5	sources/core/database.py
+1	1	sources/core/logic.py
+23	1	sources/main.py
+20	0	sources/objects/placeablesubclass.py
+12	0	sources/ui/button.py
+31	8	sources/ui/sprite.py
+4	0	sources/utils/room_config.py
+15	9	{sources/core => tests}/test_client.py
+
+commit: 7366cb4c9a13ba071c636e2051be92192c9dade8 | 2025-02-13 | bugfixes
+2	1	.gitignore
+1	0	sources/core/logic.py
+
+commit: 3e8e9fa81df10af2ed35c3d1893c67c9f0f2b164 | 2025-02-12 | border
+5	1	sources/core/logic.py
+4	0	sources/ui/sprite.py
+
+commit: 69b66e9755dc30d1a2c7251b7e7890d9bf3ac296 | 2025-02-12 | bugfixes
+1	1	sources/config.toml
+8	6	sources/core/logic.py
+0	1	sources/main.py
+
+commit: 8d3fe4061177a1e73b818f773d75ebb96f6ef670 | 2025-02-12 | guichet
+-	-	data/guichet_57x66_14framees.png
+
+commit: 6d45d6d7b53d1c6e402c25e10919228680670b8b | 2025-02-12 | construction_border
+-	-	data/bordure_construction.png
+-	-	data/destruction_bordure.png
+
+commit: a9c34309d80ff5bede271bfe30c8bfd93ec4b03a | 2025-02-12 | ça marche !!
+49	28	serverpack/database_server.py
+-	-	serverpack/user_data.db
+26	13	sources/core/database.py
+1	1	sources/objects/placeable.py
+
+commit: 04d2622698b45e9a882c00bfb089107cfa8d0bb0 | 2025-02-12 | ca marche pas encore (passez en mode no-login)
+5	6	data/special_dialogue.json
+69	0	serverpack/database_server.py
+-	-	serverpack/user_data.db
+38	47	sources/core/database.py
+44	40	sources/core/logic.py
+76	0	sources/core/test_client.py
+2	0	sources/ui/button.py
+0	0	sources/utils/config_loader.py
+
+commit: 04c53d2d8258236a0bb0a4f9d188300a88bcf314 | 2025-02-11 | Merge remote-tracking branch 'origin/dependabot/pip/python-packages-b3a7092fee'
+commit: bd47381baa18b91f66024732077cca5774b4de21 | 2025-02-11 | intro étages
+6	1	data/special_dialogue.json
+6	0	sources/core/logic.py
+1	1	sources/core/unlockmanager.py
+
+commit: 91c751210cfac1cec87b44a56381b6030454e136 | 2025-02-11 | Bump pygame-ce from 2.5.2 to 2.5.3 in the python-packages group
+1	1	requirements.txt
+
+commit: 7c660a8f31ada827eb8a9963285e00c0d61972c8 | 2025-02-10 | les tutos fonctionnent !
+7	7	data/special_dialogue.json
+10	0	sources/core/logic.py
+5	2	sources/core/unlockmanager.py
+
+commit: 6a8d2c5aaceea5b9537db4c1d0ce9fb869ba853a | 2025-02-10 | divers
+-	-	data/pop_up_dialogue.png
+19	8	sources/core/logic.py
+13	12	sources/objects/bot.py
+26	9	sources/objects/dialogue.py
+
+commit: 2ed40f322016f6a48309db2fd711a25e7b0e3502 | 2025-02-10 | plus de refac
+62	46	sources/core/logic.py
+
+commit: c410db6b11296b5971cd0910a6e09bbf881011fe | 2025-02-10 | refac & bugfixes
+86	61	sources/core/logic.py
+1	4	sources/core/spectator.py
+
+commit: abb266d7a543c345441e1f1f2b919704d7541360 | 2025-02-10 | refac & début de tuto
+0	31	data/dialogue copy.json
+32	1	data/dialogue.json
+9	0	data/special_dialogue.json
+115	101	sources/core/logic.py
+12	0	sources/core/unlockmanager.py
+45	33	sources/utils/room_config.py
+
+commit: 94f0b4ecb7118b04773a11bc5e3a80e2ea4f1be9 | 2025-02-09 | refac
+91	67	sources/core/logic.py
+
+commit: c4fc60469b4254f1126c5ffb4f53ceab3c2702c6 | 2025-02-09 | refac
+104	121	sources/objects/bot.py
+
+commit: b723cb32c645a16cb827657d3866cbf10b7292ce | 2025-02-09 | refac
+63	36	sources/main.py
+1	1	sources/ui/userlist.py
+
+commit: 31f0c6f457c0a10b4f29457e281a2042f6099d89 | 2025-02-09 | more confetti
+6	1	sources/core/logic.py
+4	1	sources/core/unlockmanager.py
+0	35	sources/objects/import pygame.py
+2	1	sources/ui/inventory.py
+
+commit: 9258086b275d973fa15c2b1798073e77175117ce | 2025-02-09 | refac build mode
+3	2	sources/core/buildmode.py
+11	6	sources/core/logic.py
+2	6	sources/main.py
+23	2	sources/ui/inventory.py
+5	1	sources/ui/userlist.py
+
+commit: 9999147c45fb8aa59f061b03699059d64d7f48e7 | 2025-02-09 | bugfixes
+11	4	sources/objects/bot.py
+5	2	sources/objects/particlesspawner.py
+2	1	sources/ui/sprite.py
+
+commit: 04eb255ccafa2f8b3b60c464b595df11b8ff4503 | 2025-02-08 | bot trail fix and transparency
+7	3	sources/core/logic.py
+5	1	sources/main.py
+27	15	sources/objects/bot.py
+35	0	sources/objects/import pygame.py
+11	6	sources/objects/particlesspawner.py
+24	6	sources/ui/sprite.py
+
+commit: b164bfb0d8a165186228826000f2ea124fe2ca7e | 2025-02-08 | dust particles behind bots
+5	4	sources/core/logic.py
+13	2	sources/objects/bot.py
+46	21	sources/objects/particlesspawner.py
+
+commit: 360efd451cce4fe88df221344ee1924c2e68186f | 2025-02-08 | c la fete H24 au rez-de-chaussée
+1	1	sources/core/logic.py
+9	2	sources/objects/particlesspawner.py
+
+commit: 9e0fae2843bae3bcfbcd1ac590ac91323dbb6acf | 2025-02-08 | particle random colors
+1	1	sources/core/logic.py
+19	4	sources/objects/particlesspawner.py
+
+commit: 6390cc7997ff7f1ceaa1b025b6a0e067203152a0 | 2025-02-08 | particles
+7	7	sources/core/logic.py
+3	3	sources/objects/particlesspawner.py
+
+commit: 5231ee3f79677a98e8f34b3bc5c019ef826e2d92 | 2025-02-06 | particles + bugfixes
+0	254	database.py
+17	3	sources/core/logic.py
+57	55	sources/core/unlockmanager.py
+1	1	sources/main.py
+30	10	sources/objects/particlesspawner.py
+0	1	sources/objects/placeablesubclass.py
+
+commit: 544bf43a1147da726133e2a357d446cb6235a2fa | 2025-02-05 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 402a52cc9b86b0213e13956ac87827b12f87cd60 | 2025-02-05 | particle
+3	2	sources/core/logic.py
+57	0	sources/objects/particlesspawner.py
+
+commit: 9a4288eddb77684f22f54f11802870b2b7c9230b | 2025-02-05 | son
+9	0	sources/core/logic.py
+7	9	sources/core/unlockmanager.py
+5	6	sources/ui/inventory.py
+1	0	sources/utils/room_config.py
+8	8	sources/utils/sound.py
+
+commit: 1b78cacbb00af448eaf983932d7b2cd982bc22c7 | 2025-02-04 | Update logic.py
+5	9	sources/core/logic.py
+
+commit: fe788708539a9f0e3a22ec317f9301bb2b5be8e6 | 2025-02-04 | zoli description fait avec amour
+14	1	sources/core/logic.py
+
+commit: 2a89d3af2bbfaadb5f1a2ea7a45a5eac6c3099a9 | 2025-02-04 | reglé le bogue
+1	1	sources/core/database.py
+
+commit: 0f3175a221696098d2ebda3a2c4d8f531b338746 | 2025-02-04 | username db fix
+254	0	database.py
+2	9	setup_and_run.sh
+
+commit: 491caed1290b9776df694a3e67736f1be77e3281 | 2025-02-02 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 88546be6d4bf8d2f6670b423ed5c0b4c6e6b7414 | 2025-02-02 | a pu pattern
+1	1	sources/core/logic.py
+1	3	sources/objects/pattern_inv.py
+
+commit: f126943fe46261a167f020e45acfdcf0f8fa32e2 | 2025-02-02 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 9ccedc6bc51cdfc5bf83e934be062c5bee059ce9 | 2025-02-02 | trucs
+2	2	setup_and_run.sh
+
+commit: a1d497c0b74a4129a2505e79f897edf8dfc52cfa | 2025-02-02 | r is back
+1	1	sources/core/logic.py
+
+commit: 7bc4b75ab7a985668703327d2af6a3f2fa59ec0d | 2025-02-02 | r
+1	1	sources/core/logic.py
+
+commit: d01a891763e2d1bea79be2c3aa72f2557a0b52a8 | 2025-02-02 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 6f88a14cdac96ce97181b3489b161538342c9f4e | 2025-02-02 | dimensions
+2	2	sources/objects/canva.py
+
+commit: 9293a37515a1676ed3cb6e8e8c942c4a5d89f9c5 | 2025-02-02 | bugfix
+1	1	sources/core/logic.py
+
+commit: f9624de6a8149c093de96fb7d400d4e75b924c1b | 2025-02-02 | Update logic.py
+2	1	sources/core/logic.py
+
+commit: 7602197cbe70397e65cd3c1fc40b57ab53c3939d | 2025-02-02 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 008c79a46f0d2e7f523c860110e34b2de09dbd30 | 2025-02-02 | spectator placeable
+20	7	sources/core/logic.py
+14	1	sources/objects/placeablesubclass.py
+
+commit: 86a8a4069afa38fc9b894ef1559a227574076ce1 | 2025-02-02 | sauvegarde des canvas
+2	1	sources/core/logic.py
+
+commit: 197949a8989960025c3fb7603c1610eede34e4be | 2025-02-02 | pattern couleur
+-	-	.DS_Store
+-	-	data/.DS_Store
+-	-	data/pattern_storage/pattern_1.png
+-	-	data/pattern_storage/pattern_10.png
+-	-	data/pattern_storage/pattern_11.png
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_13.png
+-	-	data/pattern_storage/pattern_14.png
+-	-	data/pattern_storage/pattern_15.png
+-	-	data/pattern_storage/pattern_2.png
+-	-	data/pattern_storage/pattern_3.png
+-	-	data/pattern_storage/pattern_4.png
+-	-	data/pattern_storage/pattern_5.png
+-	-	data/pattern_storage/pattern_6.png
+-	-	data/pattern_storage/pattern_7.png
+-	-	data/pattern_storage/pattern_8.png
+-	-	data/pattern_storage/pattern_9.png
+2	2	sources/core/logic.py
+8	1	sources/objects/canva.py
+1	3	sources/objects/pattern.py
+20	4	sources/objects/pattern_inv.py
+
+commit: 30dbda7f004c65c1cec872f387f44b538759816a | 2025-02-02 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 1bab464bdac2aa2da40a1dd69eb8b4081e7dec30 | 2025-02-02 | ptite modif
+-	-	data/close.png
+9	6	sources/core/database.py
+2	0	sources/ui/sprite.py
+
+commit: 7f584774f6aa6e673900cc4134dae8ad269b6587 | 2025-02-02 | Update main.py
+1	1	sources/main.py
+
+commit: effd5ada18038c35958852667434129a1a81e8ac | 2025-02-02 | babioles diverses
+1	1	sources/config.toml
+17	8	sources/core/database.py
+23	20	sources/core/logic.py
+1	2	sources/ui/inputbox.py
+
+commit: 45163efb3cfc2115cca367f49212cf9026310ccf | 2025-02-02 | loading bg
+-	-	data/loading_bg.png
+7	2	sources/core/logic.py
+4	1	sources/objects/bot.py
+
+commit: 17e40723a3d3ffe91f2ca083851a1df06a3d2b49 | 2025-02-01 | exemple implementation son
+-	-	data/sounds/{floorcracrking.mp3 => floorcracking.mp3}
+3	3	sources/core/logic.py
+4	2	sources/objects/bot.py
+30	30	sources/utils/sound.py
+
+commit: 02b5afc58cd5a68da7dc44326b038036bfad259b | 2025-01-30 | bugfixes
+2	3	sources/core/logic.py
+1	1	sources/core/room.py
+1	1	sources/core/spectator.py
+1	1	sources/core/unlockmanager.py
+1	2	sources/objects/bot.py
+1	1	sources/objects/canva.py
+1	1	sources/objects/dialogue.py
+1	1	sources/utils/room_config.py
+
+commit: 18efbe72502ec987ec0cbdd19aae32bba6bf4364 | 2025-01-29 | pretty :)
+16	7	sources/core/logic.py
+14	0	sources/core/room.py
+18	0	sources/core/spectator.py
+19	1	sources/core/unlockmanager.py
+45	1	sources/objects/bot.py
+34	1	sources/objects/dialogue.py
+18	1	sources/objects/placeable.py
+11	0	sources/utils/room_config.py
+2	10	sources/utils/sound.py
+
+commit: 61741319dcb97a918a63b0feab51d08a914ac8c7 | 2025-01-27 | uwu
+1	0	sources/core/logic.py
+9	29	sources/utils/sound.py
+
+commit: 035918f18f83f72b3a907d1a314d80ab1bbb63d3 | 2025-01-27 | AA
+19	17	sources/utils/sound.py
+
+commit: dbb3659b1ed7c7820219895206a4959c3f84db6b | 2025-01-27 | same
+12	13	sources/utils/sound.py
+
+commit: 8d5e5a5658b4ccb5951caba6dc1ccb8c721dd89b | 2025-01-27 | je commit pas ce que j'en ai marre de tout perdre
+-	-	data/sounds/{blank-sound-70354.mp3 => blank_sound.mp3}
+-	-	data/sounds/{floorcracking-84506.mp3 => floorcracrking.mp3}
+38	3	sources/utils/sound.py
+
+commit: 66517a801b0a0441133162ae3224b6385404ea95 | 2025-01-26 | OwO (babioling)
+1	1	sources/config.toml
+3	2	sources/core/logic.py
+15	3	sources/core/room.py
+0	4	sources/main.py
+2	2	sources/objects/bot.py
+1	1	sources/objects/placeable.py
+2	0	sources/ui/sprite.py
+8	3	sources/utils/room_config.py
+
+commit: de69268477ebf30b2793b11bf265fa9fb891cfb3 | 2025-01-26 | Update dialogue.py
+3	1	sources/objects/dialogue.py
+
+commit: fa0e792fa3a5c34197c8a32526a44ddc1c636d3c | 2025-01-26 | Update bot.py
+106	55	sources/objects/bot.py
+
+commit: 796f52c86c2614c78860ba06735d01ce9b28618c | 2025-01-25 | no more lagspike !
+0	4	sources/objects/bot.py
+6	0	sources/utils/room_config.py
+
+commit: e17924e05ece19ac678961824de0817e428016a1 | 2025-01-25 | Update room_config.py
+1	0	sources/utils/room_config.py
+
+commit: 00c7c2adc989683ac3ffde9de9c477f51c659795 | 2025-01-25 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: e627144918b726f70d296277e7cb6b2556b3cd4e | 2025-01-25 | room duplication fix !
+1	0	sources/core/database.py
+10	7	sources/core/spectator.py
+1	1	sources/main.py
+4	4	sources/ui/userlist.py
+36	34	sources/utils/room_config.py
+
+commit: af712d673efbdc84a5f5cfc1fdef0fcf376a9059 | 2025-01-24 | ptit oubli
+1	2	sources/core/logic.py
+4	1	sources/objects/canva.py
+
+commit: 884a0df2e69b972d329928c83ae0fd3b0b99c846 | 2025-01-24 | canva
+1	1	sources/objects/canva.py
+
+commit: f6b25dfc94703106f16a034a80b8be6c0880a185 | 2025-01-24 | save canva
+1	3	sources/core/logic.py
+7	0	sources/objects/canva.py
+
+commit: c22a1be5c7d0e9675052aad56a7acb680bbe6a24 | 2025-01-23 | mouais ... ça n'a pas aidé
+1	1	sources/main.py
+1	1	sources/ui/userlist.py
+
+commit: ac1110ec7704f1ab71790678705c8a5114f396cf | 2025-01-23 | bug de dupli mais ça fonctionne
+10	6	sources/core/database.py
+23	8	sources/ui/userlist.py
+
+commit: d298d83203d10d88cb007729c50b45ff3cea87e8 | 2025-01-22 | trucs
+-	-	data/Fond.png
+-	-	data/icon_inventaire.png
+-	-	data/p1.png
+-	-	data/p2.png
+-	-	data/p3.png
+-	-	data/p4.png
+-	-	data/p5.png
+-	-	data/rounded_window.png
+-	-	data/test_robot.png
+1	1	sources/config.toml
+15	1	sources/core/database.py
+1	1	sources/core/logic.py
+1	1	sources/main.py
+4	8	sources/ui/inventory.py
+0	12	sources/ui/sprite.py
+25	0	sources/ui/userlist.py
+
+commit: 928a5f5261222abc5b7278265ce84000e033c1f3 | 2025-01-22 | paused ui
+25	6	sources/core/logic.py
+
+commit: ba65d422161d6dd813677077bbdb5395bb0f4aee | 2025-01-22 | gros refac des cliques
+41	8	sources/core/logic.py
+41	61	sources/main.py
+17	23	sources/objects/bot.py
+
+commit: 362602e0ffc78de421a302f03ff75f60b3c166d2 | 2025-01-22 | Merge pull request #2 from PouchyCorp/dependabot/pip/numpy-2.2.2
+commit: 7d6557a6197dbabae742ec462f912fa39006a39d | 2025-01-22 | Bump numpy from 2.2.1 to 2.2.2
+1	1	requirements.txt
+
+commit: 65c360e73a4870bb3ba74859d5f279fc8f762f2d | 2025-01-22 | Update dependabot.yml
+9	4	.github/dependabot.yml
+
+commit: 5773ca41c788d96f4f9347ca5de8616416220330 | 2025-01-22 | Update dependabot.yml
+1	1	.github/dependabot.yml
+
+commit: f996c22ac947fee17e1f940f8031f17a6179ee1e | 2025-01-22 | Create dependabot.yml
+11	0	.github/dependabot.yml
+
+commit: 3e410c8266655e87c707f044389237a52f34b126 | 2025-01-22 | spectator mode
+2	0	sources/core/database.py
+2	2	sources/core/logic.py
+109	0	sources/core/spectator.py
+7	2	sources/main.py
+3	2	sources/ui/button.py
+4	1	sources/utils/room_config.py
+
+commit: 0507d428b017d7011b2888ea79e6009920ec87a5 | 2025-01-22 | Update logic.py
+0	11	sources/core/logic.py
+
+commit: d91775d2d0c294e617a623d6c673f1b0ac84baf9 | 2025-01-22 | revert les bétises de de tybalt
+3	3	sources/objects/placeable.py
+
+commit: 776f39c0a26bf13fcd580ec4efbc5735e29b7a5c | 2025-01-22 | le trou est mort, vive le trou !
+6	4	sources/core/logic.py
+0	0	sources/objects/{dialogue_v2.py => dialogue.py}
+2	1	sources/ui/sprite.py
+
+commit: 9df00f0b86077692c7cf7105799f21d7f18375e2 | 2025-01-20 | le retour des trous
+-	-	.DS_Store
+18	10	sources/core/logic.py
+0	1	sources/main.py
+3	11	sources/objects/canva.py
+1	1	sources/objects/pattern.py
+3	3	sources/objects/placeable.py
+
+commit: 2038480c2222d6380c44fb3757612bf7e49bf1d5 | 2025-01-19 | brocoli
+5	2	sources/core/logic.py
+6	8	sources/objects/pattern.py
+
+commit: 6e9f08b37dc02db8f1a0dd69ae82b97fedd83804 | 2025-01-19 | les peintures
+47	5	sources/core/logic.py
+7	3	sources/objects/pattern.py
+1	1	sources/ui/sprite.py
+
+commit: 09cc91075bbd528e37efd663dfeb8ca0a9deb8d7 | 2025-01-19 | chip button
+-	-	data/chip_button.png
+2	1	sources/objects/pattern.py
+2	0	sources/ui/sprite.py
+
+commit: 802d16e2c996072b58a1539a191a261a2c6439a0 | 2025-01-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 9ae44df3d5f214cd5cdcfb448b0436a5dc31b9f8 | 2025-01-19 | chip.png
+-	-	.DS_Store
+-	-	data/chip.png
+1	7	sources/core/logic.py
+1	2	sources/objects/pattern.py
+
+commit: d1af7741bce6074fa4268e919c3db6a74fc634bb | 2025-01-19 | inventory placeable
+12	1	sources/objects/placeablesubclass.py
+1	0	sources/ui/inventory.py
+2	0	sources/ui/sprite.py
+3	2	sources/utils/room_config.py
+
+commit: b6dfb540483b6920a0e7f3783aa1b51b59fe3a20 | 2025-01-19 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 7c9b40aa4d5afb43b1405facd6a0a8a9282d7bd8 | 2025-01-19 | pattern
+-	-	data/icon_inv_test.png
+1	1	sources/objects/pattern.py
+2	0	sources/ui/sprite.py
+
+commit: 7a91898a260dabc5b38b684d4b9fa5dc26563235 | 2025-01-19 | Auto Cachier premisse
+1	1	sources/config.toml
+14	2	sources/core/logic.py
+10	2	sources/core/unlockmanager.py
+3	0	sources/objects/bot.py
+5	0	sources/objects/placeablesubclass.py
+2	1	sources/utils/room_config.py
+
+commit: 948397c2cae9b7a30bc3fc548403506826891e51 | 2025-01-19 | Update unlockmanager.py
+15	0	sources/core/unlockmanager.py
+
+commit: f82d4bb6ce31929fd9814f64ba4327b8d77ec7fe | 2025-01-19 | uwu
+1	1	sources/config.toml
+1	2	sources/core/database.py
+8	8	sources/core/logic.py
+
+commit: e7abe69ec8e0cb61a328f9c2a2a8e33be4107640 | 2025-01-19 | refac
+20	15	sources/{ => core}/database.py
+1	1	sources/core/logic.py
+3	3	sources/main.py
+1	1	sources/objects/bot.py
+3	10	sources/ui/inventory.py
+18	5	sources/ui/sprite.py
+0	0	sources/{ => utils}/room_config.py
+
+commit: b8c0590ebdda46be1372cb890b44bc4e17d58f6e | 2025-01-18 | pisedecheval
+1	4	sources/objects/bot.py
+2	0	sources/objects/pattern_inv.py
+
+commit: 773cb4bc703394e9f196d7486e4be6dde8da1cbd | 2025-01-18 | logic stuff
+13	6	sources/core/logic.py
+0	2	sources/objects/pattern.py
+
+commit: bb32b9abc58d7f1b128046ffd46ccfafbb85926a | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: cd33b5a180e77bd52dfacab8457cb559e8a4ce94 | 2025-01-18 | buttons
+-	-	data/confirm.png
+-	-	data/login.png
+-	-	data/quit.png
+-	-	data/register.png
+
+commit: b19562dcf2049206c8e9d2a120013276eb61712b | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 2affeffd727a700ac220f6b29a59b90dd6efce88 | 2025-01-18 | son
+-	-	data/sounds/achieve.mp3
+-	-	data/sounds/incorrect.mp3
+-	-	data/sounds/{robot moving.mp3 => robot_moving.mp3}
+4	1	sources/core/logic.py
+6	1	sources/core/unlockmanager.py
+11	5	sources/objects/bot.py
+7	3	sources/ui/inventory.py
+4	1	sources/utils/sound.py
+
+commit: 8853c881d3301feb1f441170717d8d7d1aec1146 | 2025-01-18 | gold -> money
+1	4	sources/objects/pattern.py
+2	2	sources/ui/inventory.py
+
+commit: 5ae56a851510c0baed12f8e702b370de830b9984 | 2025-01-18 | pattern_list
+1	1	sources/ui/sprite.py
+
+commit: 638cbd5e97e6b96b4798bb27c9e8976fe6ebc6c2 | 2025-01-18 | patterns
+-	-	data/button.png
+-	-	data/pattern_storage/pattern_1.png
+-	-	data/pattern_storage/pattern_10.png
+-	-	data/pattern_storage/pattern_11.png
+-	-	data/pattern_storage/pattern_12.png
+-	-	data/pattern_storage/pattern_13.png
+-	-	data/pattern_storage/pattern_14.png
+-	-	data/pattern_storage/pattern_15.png
+-	-	data/pattern_storage/pattern_2.png
+-	-	data/pattern_storage/pattern_3.png
+-	-	data/pattern_storage/pattern_4.png
+-	-	data/pattern_storage/pattern_5.png
+-	-	data/pattern_storage/pattern_6.png
+-	-	data/pattern_storage/pattern_7.png
+-	-	data/pattern_storage/pattern_8.png
+-	-	data/pattern_storage/pattern_9.png
+7	3	sources/ui/sprite.py
+
+commit: e34cc860fdb8f163ec5b4e25cbebfa45228040a7 | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 9d3def37fc16fc81afe7db8c719f8a35ac2a0e89 | 2025-01-18 | fixes
+3	2	sources/core/logic.py
+1	1	sources/core/unlockmanager.py
+0	2	sources/utils/sound.py
+
+commit: 5bc3ee1118e158b80a9c55c33525085a34b85913 | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 4eaf04416ec4806c06242a587428e2fcb907b84a | 2025-01-18 | Putain de bordel de merde de merge de con
+1	1	sources/core/logic.py
+
+commit: 01ed96c43ec762d74dc03de8458fd2944813a6e4 | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 0bf2732c8e575b9519e29e0b5a7d52dcd407bc73 | 2025-01-18 | popups mieux
+1	1	sources/core/logic.py
+1	1	sources/core/unlockmanager.py
+1	1	sources/database.py
+1	1	sources/main.py
+1	1	sources/ui/confirmationpopup.py
+26	0	sources/ui/infopopup.py
+2	2	sources/ui/inventory.py
+0	18	sources/ui/popup.py
+52	47	sources/ui/sprite.py
+
+commit: a76c73bea95ce35449d5431d05537b7dfc9be7ea | 2025-01-18 | Putain de merge de con
+3	1	sources/core/logic.py
+
+commit: 77b4c42cd8406c9a774dd7a572a6a5e61e059bbb | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 11315914d5169cbcb79366ef921831cfeb01f365 | 2025-01-18 | Sound
+-	-	data/sounds/Doordown.wav
+-	-	data/sounds/{hammer.mp3 => accrocher.mp3}
+-	-	data/sounds/ding.mp3
+-	-	data/sounds/door.mp3
+-	-	data/sounds/shop again.mp3
+-	-	data/sounds/shop.mp3
+-	-	data/sounds/shop.wav
+6	5	sources/core/logic.py
+1	0	sources/objects/placeablesubclass.py
+5	4	sources/utils/sound.py
+
+commit: 7850899bb407d3c1f95296372f5ad516fae149ed | 2025-01-18 | polish confirmation popup
+5	1	sources/core/unlockmanager.py
+4	5	sources/ui/confirmationpopup.py
+5	1	sources/ui/sprite.py
+
+commit: 944183a8ae760d0f335152de4998c22a942560d7 | 2025-01-18 | unlock floors
+23	11	sources/core/logic.py
+24	2	sources/core/unlockmanager.py
+
+commit: 8e132e33bde349d2c5a9b831338dc2851c3497e8 | 2025-01-18 | beauty system
+10	3	sources/core/logic.py
+8	1	sources/core/room.py
+7	0	sources/core/unlockmanager.py
+2	2	sources/main.py
+1	1	sources/objects/bot.py
+2	1	sources/objects/placeable.py
+7	3	sources/room_config.py
+
+commit: 2853d9a895f0871b23b91b8c721842073291ea99 | 2025-01-18 | Update inventory.py
+0	2	sources/ui/inventory.py
+
+commit: 7544947e784bf8b37239549bfa139e4600c87fb0 | 2025-01-18 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 69e2d899d2d4949c13d58cf2ee38e5cf801efc02 | 2025-01-18 | fixes
+1	1	sources/core/logic.py
+32	17	sources/ui/inventory.py
+5	2	sources/ui/sprite.py
+
+commit: 32219028c399fb9f490929251ca0574d6feb7650 | 2025-01-18 | UwU
+1	1	sources/core/logic.py
+
+commit: f4c82511b1a3c610669bef8b42b89c63c338e9de | 2025-01-18 | test son
+-	-	data/sounds/elevator.mp3
+-	-	data/sounds/elevator.wav
+2	1	sources/core/logic.py
+1	1	sources/utils/sound.py
+
+commit: 64e5a21fac35dbcb17f848389de734a4a4ad1aed | 2025-01-18 | login gui
+95	25	sources/database.py
+3	3	sources/ui/button.py
+2	1	sources/ui/inputbox.py
+2	1	sources/ui/popup.py
+
+commit: 8c24cf7403a8c49ee17531ec0d002018c901020f | 2025-01-18 | babioles
+8	16	sources/ui/sprite.py
+
+commit: 9e4083f51b706a21572f7e8ce40703a6af1f08ae | 2025-01-18 | babioles
+40	22	sources/database.py
+2	2	sources/main.py
+3	5	sources/objects/bot.py
+1	1	sources/room_config.py
+30	0	sources/ui/button.py
+36	23	sources/ui/inputbox.py
+16	5	sources/ui/sprite.py
+
+commit: 9427e70ea166014f0b1ae9908699c87620832d0b | 2025-01-17 | tout plein de robots
+-	-	data/robot_4.png
+-	-	data/robot_5.png
+-	-	data/robots/robot_1.png
+-	-	data/robots/robot_2.png
+-	-	data/{ => robots}/robot_3.png
+-	-	data/robots/robot_4.png
+-	-	data/robots/robot_5.png
+-	-	data/robots/robot_musique.png
+1	9	sources/objects/pattern_inv.py
+12	2	sources/ui/sprite.py
+
+commit: fddf2323efc47f37f53fd1c0f1196c5fa7eb4178 | 2025-01-15 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: bf97fa83e68d8c05973bbe9c9e7acbcce0bd5ef9 | 2025-01-15 | t
+1	1	sources/main.py
+
+commit: 2a37ccd95329ac02e5212345997bcfca7da8c6ab | 2025-01-15 | t
+3	0	sources/main.py
+
+commit: 3a16606dd571cb706bb54ca2a54120181f7b2c3b | 2025-01-15 | 2 robots
+-	-	data/robot_4.png
+-	-	data/robot_5.png
+
+commit: 83662c52c302b8e93578109652c62f6ff6ce2dac | 2025-01-15 | icon
+3	0	sources/main.py
+
+commit: 9f9e2cc8f8a38f5fffbe264d65dc868b22bafbd5 | 2025-01-15 | mac and linux compatibility
+1	1	README.md
+1	1	setup_and_run.sh
+
+commit: 805a830b0e2a4bcc7e91b2be9cbf2a48308c31e1 | 2025-01-15 | f
+1	1	README.md
+
+commit: ec2caf99301be18fcd111a6ea0886ef140f94f5b | 2025-01-15 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 2fcb164c28560f820a0d362dc9a1c1e6a3133c79 | 2025-01-15 | big_icon
+-	-	data/big_icon.png
+
+commit: 142476aab1f5d08537d7b3427f08a4e5d2003cff | 2025-01-15 | Update README.md
+1	1	README.md
+
+commit: 26ce6058c9e369f7e684afd656f49d4cfd03e6a0 | 2025-01-15 | icon
+-	-	data/icon.png
+
+commit: 2039d470806c3fb98feaec3fffd3121bfa06073e | 2025-01-15 | beauty formula to incr gold
+2	2	sources/core/logic.py
+2	1	sources/main.py
+15	10	sources/objects/bot.py
+
+commit: 6d1fdf78aa3cf498163bf888881ff4fc32e6aad3 | 2025-01-15 | fixed invalid escape sequence
+2	2	requirements.txt
+2	2	sources/config.toml
+1	1	sources/core/logic.py
+1	1	sources/utils/fonts.py
+
+commit: 02ddb5c4833b5870ba8c109afc404734674d6172 | 2025-01-15 | compatibility
+3	2	requirements.txt
+2	2	sources/main.py
+
+commit: c1314595bf9a2c49ce75058b6993872aa0f62e58 | 2025-01-15 | Update README.md
+2	2	README.md
+
+commit: 4f6cd8ca3e48d7f773ae119253cac640dea5dff6 | 2025-01-15 | Update README.md
+12	9	README.md
+
+commit: a9d483471800a4b568d5748b0f8c5b757f328ace | 2025-01-15 | Update README.md
+1	5	README.md
+
+commit: 8116c32afb58af3b6d4fdb26dac4fc672512d493 | 2025-01-15 | Update README.md
+1	0	README.md
+
+commit: e7f9d4909568c3e16a5f7b4115cec1b467fcaaee | 2025-01-15 | Merge branch 'main' of https://github.com/PouchyCorp/Creative-Core
+commit: 51097d05f9574573b94e9ebd64d6fe8d8d0ad221 | 2025-01-15 | readme mieux
+63	2	README.md
+1	1	sources/objects/bot.py
+8	9	sources/utils/sound.py
+
+commit: 5ebf73ffbc2270358604170e0d7c483fd4c0df86 | 2025-01-13 | rtuctruc
+-	-	data/bg_test_1.png
+-	-	data/bg_test_2.png
+-	-	data/cadena.png
+-	-	data/etagere.png
+-	-	data/image_dialogue.png
+-	-	data/meuble_haut.png
+-	-	data/plant_2_39x38.png
+-	-	data/plant_3_28x48.png
+-	-	data/rooftop.png
+-	-	data/vase_10x24.png
+-	-	data/vase_12x22.png
+-	-	data/vase_21x32.png
+2	2	sources/room_config.py
+2	2	sources/utils/sound.py
+
+commit: 3064f86dc3e8b2f2de228011b302c9dc32753ebb | 2025-01-12 | UwU
+32	5	sources/utils/sound.py
+
+commit: d65bb21b953311e52d2aebd1e58e784b67b4f230 | 2025-01-12 | database
+1	0	sources/core/logic.py
+1	2	sources/database.py
+6	10	sources/main.py
+4	4	sources/room_config.py
+0	45	sources/test_file.py
+2	1	sources/ui/inventory.py
+1	3	sources/ui/sprite.py
+
+commit: 6543ff705368db35a34cf6ffabb75571fbaae9b9 | 2025-01-11 | database inv saving !
+1	1	.gitignore
+-	-	save.pkl
+1	1	sources/config.toml
+3	3	sources/database.py
+22	25	sources/main.py
+2	1	sources/objects/placeable.py
+7	2	sources/ui/sprite.py
+-	-	testDb.db
+
+commit: d56ae11d90cacc8f057d5ca130a53d61bbd1be3b | 2025-01-11 | database
+2	1	sources/config.toml
+15	13	sources/database.py
+5	18	sources/main.py
+-	-	testDb.db
+
+commit: 56d66c2062035401180f7e12b84911b89b0c399a | 2025-01-11 | Revert "Euuuh"
+14	10	sources/core/logic.py
+-	-	testDb.db
+
+commit: 1ec4f3db0abd5b28956677798e0867ff0d7af8b0 | 2025-01-11 | Euuuh
+10	14	sources/core/logic.py
+-	-	testDb.db
+
+commit: ebb18e8f120e1bff3e795de6e05b53b596d0aed3 | 2025-01-09 | mieux
+111	130	sources/database.py
+72	66	sources/main.py
+11	8	sources/objects/placeable.py
+2	2	sources/ui/inventory.py
+25	2	sources/utils/anim.py
+-	-	testDb.db
+
+commit: 7242ff7fbb5108007a2700337ca68e61b0f6f292 | 2025-01-07 | saving premice
+-	-	save.pkl
+8	7	sources/core/logic.py
+27	27	sources/main.py
+
+commit: f6e813fc4e44fefd0df73724c09f0487508cd16e | 2025-01-07 | ça s'execute
+4	6	sources/core/logic.py
+2	2	sources/utils/sound.py
+
+commit: 795bbf7780cafeec4fd02dc8b08a165db5b6c196 | 2025-01-07 | Sounds effective
+10	1	sources/core/logic.py
+1	1	sources/main.py
+16	0	sources/utils/sound.py
+
+commit: c8051c4d3de4af8a253d5ef8c6e2b6f44c91d2bc | 2025-01-05 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 20dd3a2c20a1f6ba05caac987ce5f7b6b3cd642e | 2025-01-05 | ii
+1	1	sources/ui/sprite.py
+
+commit: b0e9c82c184933e56836d5cb670845c30146ea8d | 2025-01-05 | AA
+-	-	data/sounds/bot or mites.mp3
+
+commit: 473fc4a40743da21b869bd62f6e66e3be7efd22d | 2025-01-05 | uwU
+-	-	data/sounds/robot7.mp3
+
+commit: 4163f0f76f05b65320dbc5e35ccab9bbc1251f10 | 2025-01-05 | robot again agiain
+-	-	data/sounds/robot moving.mp3
+
+commit: c1ea3cc323f9cb425521128611f72771a6a97658 | 2025-01-05 | robot again
+-	-	data/sounds/robot.mp3
+
+commit: 11bf4743ae961fff58e5b904d45f812f9cdf460a | 2025-01-05 | parquet
+-	-	data/sounds/floorcracking-84506.mp3
+
+commit: 2130f34fe1df7c18a1e285ce36e633b00bdbd3a6 | 2025-01-05 | correctif
+-	-	data/sounds/{hammering-a-nail-245171.mp3 => hammer.mp3}
+-	-	data/sounds/{heavy-rain-sound-effect-238557.mp3 => rain.mp3}
+
+commit: 00da9a015943f5db7e0695a2bfb6f682d0b1786d | 2025-01-05 | rain
+-	-	data/sounds/heavy-rain-sound-effect-238557.mp3
+
+commit: deeabfe2402438faafcde6c6a919c6b1b50eca00 | 2025-01-05 | wind
+-	-	data/sounds/wind.mp3
+
+commit: cbccdc371ed38c384e22db1fff7ca1e883a390ff | 2025-01-05 | shoop
+-	-	data/sounds/shop again.mp3
+
+commit: 9306d3d2e4f3171488c3803976fbfbdc745f8f7e | 2025-01-05 | shop
+-	-	data/sounds/shop.mp3
+
+commit: a02a1d0eb211f0de3d8f38aa7380b07a1a9f6584 | 2025-01-05 | mite
+-	-	data/sounds/mite.mp3
+
+commit: 66535fd448657380bde2952e05e721054c4f8d89 | 2025-01-05 | AwA
+-	-	data/sounds/items.mp3
+-	-	data/sounds/robots.mp3
+
+commit: 28aea6e7ebeec18307a59509a3e51d978229b115 | 2025-01-05 | IwI
+-	-	data/sounds/elevator.mp3
+
+commit: 206ad57fb22a6c2a157432ca6c8b86cd19ccb7ed | 2025-01-05 | OwO
+-	-	data/sounds/hammering-a-nail-245171.mp3
+
+commit: 57d8c91e52a04e5c6fe6016a27038c0a6444eb26 | 2025-01-05 | UwU
+-	-	data/sounds/accrocher_tableau.wav
+
+commit: 705c4f9fc89c925df9a27874a1ab743ec4aee9e0 | 2025-01-05 | noise sound
+-	-	data/sounds/noise.mp3
+
+commit: 393a4cb0950559a9d0eea659b46127df9e8b980f | 2025-01-05 | azy hein
+-	-	data/sounds/blank-sound-70354.mp3
+
+commit: 69363f210503b1a94cac94705290c2a68a418090 | 2025-01-05 | toujoursp lus
+-	-	data/sounds/mites3.mp3
+-	-	data/sounds/mites4.mp3
+-	-	data/sounds/mites5.mp3
+
+commit: 034d89704c0035e087a3016f0be7afc94218617f | 2025-01-05 | un peu plus
+-	-	data/sounds/ding.mp3
+
+commit: df417778e048df5096fe753114d968c8e738f1ee | 2025-01-05 | Toujours du son
+-	-	data/sounds/mites.mp3
+-	-	data/sounds/mites2.mp3
+
+commit: c890f8d6f341ada6378fc7c897eec6d650f41a59 | 2025-01-05 | Encore du son
+-	-	data/sounds/{opening-old-garage-door-80337.mp3 => door.mp3}
+-	-	data/sounds/robot1.wav
+-	-	data/sounds/robot2.wav
+-	-	data/sounds/robot3.wav
+-	-	data/sounds/robot4.wav
+-	-	data/sounds/robot5.wav
+-	-	data/sounds/robot6.wav
+-	-	data/sounds/walk.wav
+
+commit: 407a1fb67078b04088b041bd15a532722f3e9982 | 2025-01-05 | bruit porte
+-	-	data/pattern_storage/pattern_1.png
+-	-	data/sounds/opening-old-garage-door-80337.mp3
+
+commit: bd80c6f751023469a221c861f394230d8b9994c5 | 2025-01-04 | Delete test_inv.py
+0	130	sources/objects/test_inv.py
+
+commit: b68a33fb3f517e179b76763e6536accf896876d0 | 2025-01-01 | polish
+7	3	sources/core/logic.py
+8	8	sources/objects/bot.py
+3	2	sources/room_config.py
+
+commit: 31dd8199baf49e8ccd752abdd33a54c41abf492d | 2025-01-01 | skibidi troilet
+2	2	sources/core/logic.py
+1	1	sources/objects/dialogue_v2.py
+
+commit: d7512b9f577392e9b59515d5083ea401f82d092a | 2025-01-01 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 1e228d0e029036f8fa24acd1215d4e536f81c1a1 | 2025-01-01 | exclamation
+5	0	sources/objects/bot.py
+3	1	sources/ui/sprite.py
+
+commit: febedeea82af40f83e8ab49a45edcd584e664b80 | 2025-01-01 | sdxqdx
+-	-	data/pop_up_dialogue.png
+2	2	sources/objects/dialogue_v2.py
+
+commit: fd6484112cd320f3b61b305f067ee0e41ce09c20 | 2025-01-01 | excla
+-	-	data/exclamation_2x9.png
+-	-	data/pop_up_dialogue.png
+2	2	sources/objects/dialogue_v2.py
+3	1	sources/ui/sprite.py
+
+commit: de13b65d5b09927ff0d331ff25e280bbbe3fbd2b | 2025-01-01 | Update placeablesubclass.py
+0	1	sources/objects/placeablesubclass.py
+
+commit: 17f90ba3b89ab905f2810d7a9c6def16702fda86 | 2025-01-01 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 35a369d928837653ecc676d153582735f1708847 | 2025-01-01 | babioles
+-	-	data/PxPlus_IBM_VGA8.ttf
+68	48	sources/core/logic.py
+1	1	sources/objects/dialogue_v2.py
+6	3	sources/objects/placeablesubclass.py
+2	2	sources/utils/fonts.py
+
+commit: aaa36aa4b391db3d70f31ab2431bc4bd18adea7a | 2025-01-01 | Create LICENSE
+21	0	LICENSE
+
+commit: fe565f30a4963850af94dd160501158dae1237c7 | 2025-01-01 | cooking intensif des dialogues
+-	-	data/BigBlue_TerminalPlus.TTF
+37	1	data/dialogue.json
+1	1	sources/config.toml
+26	12	sources/objects/dialogue_v2.py
+7	0	sources/utils/fonts.py
+
+commit: a3ddb69d238236c645e8ee0cf7594d555ba8903b | 2025-01-01 | Update bot.py
+1	1	sources/objects/bot.py
+
+commit: b242a6570647aaa6d32f06891178e0d24d61cd0d | 2025-01-01 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: a21044464e5265ff66b810feabcee73aa5bf6785 | 2025-01-01 | commitage
+1	1	sources/core/logic.py
+1	1	sources/main.py
+26	16	sources/objects/bot.py
+1	1	sources/ui/sprite.py
+
+commit: a28d6110be578736475d160d9cedf4d0fa5573f0 | 2024-12-31 | sdfsd
+-	-	data/non.png
+-	-	data/oui.png
+2	2	sources/ui/confirmationpopup.py
+
+commit: d06ab8255b6b2dc832baeac0d149811bd08fe0e2 | 2024-12-31 | sssss
+-	-	data/bord.png
+-	-	data/fleche_droite.png
+-	-	data/fleche_gauche.png
+9	13	sources/ui/inventory.py
+6	2	sources/ui/sprite.py
+
+commit: 53de22cf667dac870822403b52a8e637e7acab3b | 2024-12-31 | flop fix
+1	1	sources/core/logic.py
+
+commit: a304dfc2d1de2555c8fc1f1f275c6148b9a000ea | 2024-12-31 | shop qui marche
+61	31	sources/core/logic.py
+7	4	sources/main.py
+3	1	sources/objects/placeable.py
+77	0	sources/ui/confirmationpopup.py
+45	16	sources/ui/inventory.py
+1	1	sources/ui/popup.py
+
+commit: a1e41d17e65dc3680ba921bddce9f45e91cc0f24 | 2024-12-30 | INV
+2	1	sources/core/logic.py
+8	0	sources/main.py
+7	1	sources/objects/placeablesubclass.py
+130	0	sources/objects/test_inv.py
+105	76	sources/ui/inventory.py
+
+commit: 98cd5e604abeaa2a3b25934ece2f9dcecf6311d3 | 2024-12-30 | des trucs
+-	-	data/plant_2_39x38.png
+-	-	data/plant_3_28x48.png
+-	-	data/robot_3.png
+2	1	sources/main.py
+1	0	sources/room_config.py
+4	0	sources/ui/sprite.py
+
+commit: ec41662fd7028e2ea3bb00ea2206a1cf94ed1c04 | 2024-12-29 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: f46fc120d79ae7112de6bfed46ce238cfeaa9e7b | 2024-12-29 | dialogue mieux
+1	1	data/dialogue.json
+1	1	sources/config.toml
+7	13	sources/core/logic.py
+0	3	sources/main.py
+1	1	sources/objects/bot.py
+62	44	sources/objects/dialogue_v2.py
+1	1	sources/ui/sprite.py
+1	0	sources/utils/anim.py
+
+commit: e78894492e78f09f372d737cd2ae8e85ba99471b | 2024-12-29 | Coms canva
+5	5	sources/objects/canva.py
+
+commit: 88141c6e95067afaea0844ec9eb101a478229857 | 2024-12-29 | Euuuuh tkt frr
+0	32	sources/objects/test.py
+
+commit: 3886917c1eecc2fa03e5e60536bb8d01a38ca589 | 2024-12-29 | Coms
+14	23	sources/objects/placeablesubclass.py
+
+commit: aff5d0701d06e22dee25866663c7f75ff44bf139 | 2024-12-29 | Com
+7	6	sources/utils/anim.py
+
+commit: 142929ef90bae3422c5ba1e8d181835f25b1c902 | 2024-12-29 | Double dialogue prépa
+31	0	data/dialogue copy.json
+1	31	data/dialogue.json
+17	7	sources/core/logic.py
+23	6	sources/objects/dialogue_v2.py
+32	0	sources/objects/test.py
+
+commit: caeafa277888fce6cfe8ac4e538849d13a8fc03d | 2024-12-27 | Dialogue en json
+31	0	data/dialogue.json
+0	31	data/dialogue.txt
+0	31	data/dialogue_t2.txt
+2	2	sources/core/logic.py
+2	2	sources/main.py
+20	17	sources/objects/{dialogue.py => dialogue_v2.py}
+
+commit: 2ac469097c77a8f7902a1831b55bf45f81c4060f | 2024-12-26 | anims bot
+0	5	sources/main.py
+32	9	sources/objects/bot.py
+2	3	sources/objects/dialogue.py
+3	1	sources/ui/sprite.py
+
+commit: 98306f5e15b9727626ff2906ec76af7c5679abce | 2024-12-26 | toml config
+1	2	config.toml => sources/config.toml
+12	3	sources/main.py
+0	1	sources/objects/canva.py
+
+commit: 698e85a96d91579c5e4ef0bc5bb0b5f2147dddc8 | 2024-12-26 | robot reverse anm
+-	-	data/robot_3.png
+0	1	sources/main.py
+1	1	sources/objects/bot.py
+1	1	sources/ui/sprite.py
+
+commit: f044829e921db4107801946e071e988cc23ffbbd | 2024-12-26 | polish du refac
+6	10	sources/core/logic.py
+6	20	sources/main.py
+9	4	sources/objects/bot.py
+
+commit: d1039e3ec05d2c5ffb0d41ac964b42f2e24ead0d | 2024-12-26 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 16309436174efad97553ccf7ee1474ec6d08fa33 | 2024-12-26 | anim rob
+-	-	data/robot_3.png
+1	1	sources/main.py
+1	0	sources/ui/sprite.py
+
+commit: 2bfedd7d1c8663e984e17a68d354b9af200fc1f8 | 2024-12-26 | gros refact -> migré toute la main loop dans une classe
+228	0	sources/core/logic.py
+14	218	sources/main.py
+1	4	sources/objects/dialogue.py
+
+commit: 8596798b7989176072a967c17b89683353cb782c | 2024-12-23 | gros refact pour dire pudiquement
+4	1	.gitignore
+10	0	config.toml
+4	0	requirements.txt
+28	0	setup_and_run.bat
+28	0	setup_and_run.sh
+3	3	sources/{objects => core}/buildmode.py
+0	0	sources/core/logic.py
+1	2	sources/{objects => core}/room.py
+7	7	sources/main.py
+5	5	sources/objects/bot.py
+1	2	sources/objects/canva.py
+2	4	sources/objects/dialogue.py
+2	2	sources/objects/pattern.py
+2	2	sources/objects/pattern_inv.py
+3	3	sources/objects/placeable.py
+3	3	sources/objects/placeablesubclass.py
+3	3	sources/room_config.py
+1	1	sources/test_file.py
+0	0	sources/{objects => ui}/inputbox.py
+3	3	sources/{objects => ui}/inventory.py
+0	0	sources/{objects => ui}/popup.py
+1	1	sources/{objects => ui}/sprite.py
+0	0	sources/{objects => utils}/anim.py
+0	0	sources/utils/config_loader.py
+0	0	sources/{objects => utils}/coord.py
+0	0	sources/{objects => utils}/timermanager.py
+-	-	testDb.db
+
+commit: a1b0fb3092a9c1c67263c0ee7f941d694964af6c | 2024-12-22 | bot spawner experimental
+5	3	sources/main.py
+32	3	sources/objects/bot.py
+0	8	sources/objects/dialogue.py
+10	4	sources/test_file.py
+
+commit: 58e9c25a7cfe1abd1c4fac5eec663baf3bd0f96f | 2024-12-22 | test bot distribution
+6	3	sources/objects/timermanager.py
+39	0	sources/test_file.py
+
+commit: 8ae1199f9fcce6614879e21e79e39a1622ff1b7f | 2024-12-22 | p
+4	3	sources/main.py
+
+commit: 059422da7df090cc32ca46673c0a3832825bc4fe | 2024-12-12 | Update placeable.py
+36	31	sources/objects/placeable.py
+
+commit: 488cbaa8edde7fc8e3d1c9341649df6dff55cea0 | 2024-12-12 | commentaires
+136	130	sources/main.py
+
+commit: eeba978ed39bc796ed2e140e62e68da8fcc0d02a | 2024-12-08 | Add files via upload
+-	-	data/bg_test_paint.png
+
+commit: 29fef43d04a502e113e0fec7a587421f3b0b4e31 | 2024-12-07 | presque bon
+-	-	data/button.png
+20	20	sources/main.py
+1	1	sources/objects/canva.py
+1	1	sources/objects/pattern_inv.py
+2	2	sources/objects/sprite.py
+
+commit: f556536912ffd916dd5f26228e1bd813ff0c63f7 | 2024-12-07 | tout bien
+0	22	canva.py
+-	-	{pattern_storage => data/pattern_storage}/pattern_1.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_2.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_3.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_4.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_5.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_6.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_7.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_8.png
+-	-	{pattern_storage => data/pattern_storage}/pattern_9.png
+5	3	sources/objects/canva.py
+0	0	inputbox.py => sources/objects/inputbox.py
+0	0	pattern.py => sources/objects/pattern.py
+0	0	pattern_inv.py => sources/objects/pattern_inv.py
+
+commit: 7fe03ccd07e214f121b0a2028fc7baaf2b713eb0 | 2024-12-07 | v$canva et tout et tout
+22	0	canva.py
+31	0	inputbox.py
+25	0	pattern.py
+43	0	pattern_inv.py
+-	-	pattern_storage/pattern_1.png
+-	-	pattern_storage/pattern_2.png
+-	-	pattern_storage/pattern_3.png
+-	-	pattern_storage/pattern_4.png
+-	-	pattern_storage/pattern_5.png
+-	-	pattern_storage/pattern_6.png
+-	-	pattern_storage/pattern_7.png
+-	-	pattern_storage/pattern_8.png
+-	-	pattern_storage/pattern_9.png
+
+commit: b81d9718dd0713a6a0c9372900dadc37aef7d735 | 2024-12-07 | del
+0	28	sources/objects/chip.py
+0	47	sources/objects/chipInv.py
+
+commit: d1c6f74e082b10e1574e0487d6098ef0404337b2 | 2024-12-07 | Update bot.py
+1	1	sources/objects/bot.py
+
+commit: 77a1b30f475c4534da8d8c0a4fbb9ac034d2732e | 2024-12-07 | détails
+6	4	sources/main.py
+1	1	sources/objects/bot.py
+
+commit: 91ffbc6ca0e292a92b38dc252d627f7bab11682d | 2024-12-07 | fondu en noir
+23	20	sources/main.py
+10	0	sources/objects/bot.py
+18	2	sources/objects/sprite.py
+
+commit: 8f9879b016dc4baaa4fcfe0e2568201d3088e635 | 2024-12-05 | update timermanager et etat de réaction des bots
+1	1	sources/main.py
+12	4	sources/objects/bot.py
+8	8	sources/objects/timermanager.py
+
+commit: b61e0be0d2d42a9091e385d85ba8c5d8b9ac1252 | 2024-12-04 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 1b48d2b673395f3a252dbccbfc663c3a45e224fa | 2024-12-04 | UwU
+8	3	sources/objects/dialogue.py
+
+commit: 28f777813d79b6567045ec1b6bd2370d601f5caa | 2024-12-04 | gro refac dialogue
+11	13	sources/main.py
+30	24	sources/objects/bot.py
+2	3	sources/objects/dialogue.py
+
+commit: ff70d702413fd5177f1157ef48c4251fec97c57a | 2024-12-03 | Dialogue fix
+1	0	sources/main.py
+4	73	sources/objects/dialogue.py
+
+commit: f7a67c88e8e5a0231a29a47786207c6a4c6095c1 | 2024-12-03 | Dialogue correctionnel
+31	0	data/dialogue_t2.txt
+5	3	sources/main.py
+
+commit: ff8a5d6b5df13decabeb8a2387a9add21dfc1060 | 2024-12-01 | dialogue test
+22	11	sources/main.py
+6	7	sources/objects/dialogue.py
+
+commit: 03dbfa627fc804671fbec6b4561885448b660748 | 2024-12-01 | marche vaguement
+10	2	sources/main.py
+10	12	sources/objects/bot.py
+
+commit: ad37c258ebfc87f39c709dbf037a2f27c1ee8498 | 2024-12-01 | refac + desactiver le code cassé de Tybalt
+30	16	sources/objects/bot.py
+2	2	sources/objects/chipInv.py
+0	4	sources/objects/popup.py
+2	2	sources/objects/sprite.py
+
+commit: 384aa5a75e125df9291d147f07b6f5d63da4496e | 2024-12-01 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 96f0a6a0472a88bb22b03c57d1d085bb32ebb1b5 | 2024-12-01 | Dialogue V2
+-	-	data/Fond.png
+-	-	data/pattern_storage/pattern_test.png
+56	11	sources/objects/dialogue.py
+1	0	sources/objects/sprite.py
+
+commit: 40cc125edc814f8792e60dad0f066ed97c12cee4 | 2024-12-01 | test
+8	1	sources/main.py
+2	0	sources/objects/bot.py
+
+commit: b90ff49cd380db7e49774ca3d278ec981ef66b32 | 2024-11-30 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 143cb1a769881047a3ef940261c763876baff062 | 2024-11-30 | marche pas
+23	2	sources/main.py
+1	1	sources/objects/placeablesubclass.py
+
+commit: ab26d46fb826a8192c4483d91d54e9bdb220d8a7 | 2024-11-30 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 69ecd03baa7ae433dad83980e4457b98e1de040f | 2024-11-30 | react mieux
+31	5	sources/objects/bot.py
+3	1	sources/objects/placeable.py
+3	1	sources/objects/room.py
+
+commit: ae7148d3678fb0008791d7ff728f751f602b23dd | 2024-11-30 | Update dialogue.py
+4	4	sources/objects/dialogue.py
+
+commit: a688ae0aefa5d6062900cced63cdade19dc033ec | 2024-11-30 | merge
+1	1	sources/objects/placeablesubclass.py
+
+commit: b0d3e46bb710b25d8da4319f70b0d5a6757ec3cf | 2024-11-30 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 9b653e62675a7cfcdd69fad9826dd7fa21a61d58 | 2024-11-30 | blink uptate
+1	1	sources/objects/placeablesubclass.py
+
+commit: 625932e2b3c618c566c0f658b2b94d0189354c3f | 2024-11-30 | Revert "reac bot"
+3	8	sources/main.py
+3	22	sources/objects/bot.py
+
+commit: bc40043b4d85d67875c13ab4535cba4d0e174c78 | 2024-11-30 | Revert "marche pas bcp"
+1	1	sources/main.py
+4	12	sources/objects/bot.py
+
+commit: cf8efe0e016815656c5671a8b993ac8c351bda20 | 2024-11-30 | bg
+-	-	data/R2.png
+-	-	data/R3.png
+-	-	data/R4.png
+-	-	data/R5.png
+-	-	data/bg_test_approfondis.png
+4	0	sources/objects/sprite.py
+3	2	sources/room_config.py
+
+commit: c21f4e80f82a13cf20d1feebf050aad0851a7624 | 2024-11-30 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 28182de305179094454800cb1fcada03cec2569c | 2024-11-30 | marche pas bcp
+1	1	sources/main.py
+12	4	sources/objects/bot.py
+
+commit: e3dfdca7d3966ea4e7a16a03a1a2955a1c48d54c | 2024-11-30 | anim_pas fini
+-	-	data/prt_anim_blink.png
+-	-	data/prt_blink.png
+2	2	sources/objects/sprite.py
+
+commit: 9c024a44bc822545a9b80d85ea759de4ba4eccd6 | 2024-11-30 | reac bot
+8	3	sources/main.py
+22	3	sources/objects/bot.py
+
+commit: ecb51cc3432cca9e65c6534595f51e22cbf40480 | 2024-11-30 | Update bot.py
+5	4	sources/objects/bot.py
+
+commit: cbe319be37526737c16628e8453df8e045138cac | 2024-11-30 | reglé des pb de bot
+2	4	sources/main.py
+13	3	sources/objects/bot.py
+9	0	sources/objects/placeablesubclass.py
+5	3	sources/room_config.py
+
+commit: 76038ed4d2d92ec14951c0aa641c88f4b317c9e9 | 2024-11-30 | anim porte.
+2	2	sources/main.py
+36	18	sources/objects/placeablesubclass.py
+
+commit: f3cf414a27001b1bf00c621b53fadf53445dfb86 | 2024-11-30 | door anim
+-	-	data/prt_blink.png
+-	-	data/prt_haut.png
+10	4	sources/main.py
+2	2	sources/objects/bot.py
+6	0	sources/objects/placeable.py
+19	15	sources/objects/placeablesubclass.py
+6	2	sources/objects/sprite.py
+2	3	sources/objects/timermanager.py
+8	9	sources/room_config.py
+
+commit: 693e341496d677de9225593fe4af41ba03def0f4 | 2024-11-27 | choubidule
+12	11	sources/main.py
+19	24	sources/objects/bot.py
+14	3	sources/objects/placeablesubclass.py
+1	1	sources/objects/timermanager.py
+
+commit: e46d933f315c828e69608f2b01f30f6018bd9a1a | 2024-11-27 | Update placeablesubclass.py
+1	1	sources/objects/placeablesubclass.py
+
+commit: 00e6197eacf8cb9da104e0be864089cf7014eeb3 | 2024-11-27 | outlines mieux
+1	1	sources/main.py
+8	5	sources/objects/placeable.py
+
+commit: a48ad0615e6d2ad8e3709e6bd8eb7c7899c92027 | 2024-11-27 | gros refac
+8	13	sources/main.py
+0	0	sources/objects/{build_mode.py => buildmode.py}
+14	6	sources/objects/placeable.py
+35	3	sources/objects/placeablesubclass.py
+4	5	sources/room_config.py
+
+commit: e5817d1008037f9e8ba364407750511d17e954dc | 2024-11-27 | Update main.py
+1	1	sources/main.py
+
+commit: b794cd7f175bacdd98664d8a07bef4889d564959 | 2024-11-27 | Update main.py
+1	4	sources/main.py
+
+commit: d91b6a178da480cf926b0f73959e21fd3d469166 | 2024-11-27 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 93af7c55bb1249747a531275afff097dbcc9ea3b | 2024-11-27 | sonar lint est content mtn
+8	6	sources/database.py
+7	16	sources/main.py
+3	3	sources/objects/anim.py
+4	3	sources/objects/build_mode.py
+1	1	sources/objects/chip.py
+1	1	sources/objects/{chip_inv.py => chipInv.py}
+1	5	sources/objects/inventory.py
+4	0	sources/objects/placeable.py
+2	11	sources/objects/room.py
+1	1	sources/objects/sprite.py
+
+commit: fc41415baa883920aab37b74a766e056f538df31 | 2024-11-27 | pôp
+-	-	data/bg_test_approfondis.png
+-	-	data/props_statue.png
+11	2	sources/main.py
+11	1	sources/objects/build_mode.py
+1	0	sources/objects/sprite.py
+4	4	sources/room_config.py
+
+commit: 3b508ef7485b07480a0feba82b203308fadb9277 | 2024-11-26 | commt :3 👍 ✈️
+2	2	sources/main.py
+8	2	sources/objects/placeablesubclass.py
+5	0	sources/objects/sprite.py
+6	4	sources/room_config.py
+
+commit: d3cf4bb57b21fc00d88281c48d1632ade9270211 | 2024-11-26 | porte fonctionnel
+12	7	sources/main.py
+6	2	sources/objects/anim.py
+2	13	sources/objects/placeablesubclass.py
+
+commit: 95ff2a39edf26d132a90413d297a8e8d7fbfceed | 2024-11-26 | babiole
+-	-	data/prt_anim_haut.png
+-	-	data/prte_anim.png
+11	7	sources/main.py
+2	2	sources/objects/placeablesubclass.py
+0	4	sources/objects/sprite.py
+
+commit: d62bfe3e446928e0a9c64208f09d4a5cf2e98c7e | 2024-11-26 | tres gros refact des placeable
+2	25	sources/main.py
+1	1	sources/objects/anim.py
+2	2	sources/objects/bot.py
+2	4	sources/objects/placeable.py
+22	0	sources/objects/placeablesubclass.py
+1	1	sources/objects/room.py
+7	5	sources/objects/sprite.py
+3	5	sources/room_config.py
+
+commit: b29f393555852914f107252cdc1afa2b9ac80c4a | 2024-11-25 | porte_pas fonctionnel
+-	-	data/prt_anim_haut.png
+-	-	data/prt_bas.png
+-	-	data/prt_haut.png
+18	7	sources/main.py
+14	5	sources/objects/anim.py
+2	0	sources/objects/placeable.py
+4	0	sources/objects/sprite.py
+2	2	sources/room_config.py
+
+commit: dac5f016dda9439b6bb268e10a9e68e9478ed0eb | 2024-11-25 | porte qui marche
+12	8	sources/main.py
+1	1	sources/objects/placeable.py
+1	1	sources/objects/sprite.py
+0	1	sources/room_config.py
+
+commit: fca52676d4dbc9ca87627135d569e8b2f7ca21bc | 2024-11-25 | f
+-	-	data/R2.png
+-	-	data/{room_2.png => R3.png}
+3	1	sources/objects/sprite.py
+3	3	sources/room_config.py
+
+commit: a7cac59acf9c08bdf77a4923c93cb23494c69a1b | 2024-11-25 | anim_prt
+-	-	data/prt_anim_haut.png
+2	2	sources/main.py
+2	0	sources/objects/sprite.py
+5	4	sources/room_config.py
+
+commit: 5c81e2709116304bab6172e08e9307cab418b16f | 2024-11-25 | anim prt
+-	-	data/prte_anim.png
+4	3	sources/main.py
+3	3	sources/room_config.py
+
+commit: 049b0687a11f1ab66be7690013645cb31e47cda4 | 2024-11-24 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 799b33f3681a06bc162147dfaff3fa50968ba072 | 2024-11-24 | s
+1	1	sources/main.py
+
+commit: 1d00e9298a7ff3e1227c582f80b983bccad4efcf | 2024-11-24 | cadre
+-	-	data/window.png
+4	4	sources/main.py
+34	30	sources/objects/inventory.py
+3	5	sources/objects/sprite.py
+-	-	testDb.db
+
+commit: 40e0d253e6debf84a50e8aceb87628aa5599b216 | 2024-11-24 | anim_porte_non_fonctionnel
+-	-	data/prte_anim.png
+9	3	sources/main.py
+1	1	sources/objects/placeable.py
+2	0	sources/objects/sprite.py
+5	1	sources/room_config.py
+
+commit: 82bb79e1491bba157bb717d2a569457128551fcd | 2024-11-24 | windiw
+-	-	data/window.png
+0	1	sources/main.py
+1	1	sources/room_config.py
+
+commit: 94c6f2a384685f7b5040c07424a40eab14529d78 | 2024-11-24 | room2
+-	-	data/room_2.png
+2	0	sources/objects/sprite.py
+2	2	sources/room_config.py
+
+commit: 7e27fdf4cc2e9c6017de0c90194736eb6fd17299 | 2024-11-24 | Update bot.py
+0	1	sources/objects/bot.py
+
+commit: fc5d81e2f8a35d62d7167d94b4e2e600962ce291 | 2024-11-23 | db pygame test
+116	43	sources/database.py
+-	-	testDb.db
+
+commit: 25953ec11eb2f56ae395a593e14b7506c0b237b7 | 2024-11-23 | teste sql
+72	0	sources/database.py
+0	1	sources/main.py
+-	-	testDb.db
+
+commit: 81c33e3c3e4547366ecc7b05e3d291333759889e | 2024-11-23 | Update dialogue.py
+3	1	sources/objects/dialogue.py
+
+commit: cb7497045b904929f0493a82d1eb891333839428 | 2024-11-23 | update dialogue
+2	31	sources/objects/dialogue.py
+
+commit: 9bdc7060c71a7da924876248df9c802d420629fb | 2024-11-23 | outline
+1	0	sources/objects/bot.py
+2	12	sources/objects/placeable.py
+15	2	sources/objects/sprite.py
+
+commit: 314abe75b7fdb09433aae41f0fe6735543afd097 | 2024-11-22 | bot_anim
+11	4	sources/objects/bot.py
+
+commit: 426c91bf58d53a3adbd617547ed3998e2f80970e | 2024-11-22 | Update bot.py
+9	12	sources/objects/bot.py
+
+commit: 81c149684c630c4844f01600bb1f52410654ed6c | 2024-11-22 | Update anim.py
+5	5	sources/objects/anim.py
+
+commit: a21f48ef1487939a95fce51e72f843e5e4301109 | 2024-11-22 | Update anim.py
+12	8	sources/objects/anim.py
+
+commit: ea8ad1ff63eea359870ed3432a910496f001a695 | 2024-11-21 | trucs
+6	7	sources/main.py
+6	4	sources/objects/bot.py
+1	1	sources/room_config.py
+
+commit: 52710eddff879b258f8b58507f3f5483d17ea9fa | 2024-11-21 | Update bot.py
+4	2	sources/objects/bot.py
+
+commit: 6efbfb57437b0de08cac51388a53c69e25f69266 | 2024-11-21 | robots leaving
+17	4	sources/objects/bot.py
+6	0	sources/objects/coord.py
+
+commit: 1e08e6001b6157383508cc0ee4e421af7efcee86 | 2024-11-21 | refac (placeable id)
+4	4	sources/main.py
+1	1	sources/objects/chip_inv.py
+9	6	sources/objects/inventory.py
+
+commit: 170a247d30c7ac4730951f0f2d0073ae36e00178 | 2024-11-21 | tkt frr
+0	2	TrophNSI/README.md
+-	-	TrophNSI/data/bg_test_1.png
+-	-	TrophNSI/data/bg_test_2.png
+-	-	TrophNSI/data/bg_test_approfondis.png
+-	-	TrophNSI/data/bg_test_paint.png
+-	-	TrophNSI/data/chip.png
+-	-	TrophNSI/data/icon_inv_test.png
+-	-	TrophNSI/data/icon_inventaire.png
+-	-	TrophNSI/data/p1.png
+-	-	TrophNSI/data/p2.png
+-	-	TrophNSI/data/p3.png
+-	-	TrophNSI/data/p4.png
+-	-	TrophNSI/data/p5.png
+-	-	TrophNSI/data/patern_test.png
+-	-	TrophNSI/data/rounded_window.png
+-	-	TrophNSI/data/test_robot.png
+-	-	TrophNSI/sources/__pycache__/room_config.cpython-310.pyc
+0	224	TrophNSI/sources/main.py
+-	-	TrophNSI/sources/objects/__pycache__/anim.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/bot.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/build_mode.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/canva.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/chip.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/coord.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/inventory.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/placeable.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/popup.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/room.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/sprite.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/timermanager.cpython-310.pyc
+0	40	TrophNSI/sources/objects/anim.py
+0	206	TrophNSI/sources/objects/bot.py
+0	73	TrophNSI/sources/objects/build_mode.py
+0	19	TrophNSI/sources/objects/canva.py
+0	28	TrophNSI/sources/objects/chip.py
+0	65	TrophNSI/sources/objects/coord.py
+0	101	TrophNSI/sources/objects/inventory.py
+0	75	TrophNSI/sources/objects/placeable.py
+0	21	TrophNSI/sources/objects/popup.py
+0	34	TrophNSI/sources/objects/room.py
+0	82	TrophNSI/sources/objects/sprite.py
+0	32	TrophNSI/sources/objects/timermanager.py
+0	36	TrophNSI/sources/room_config.py
+6	4	sources/main.py
+35	13	sources/objects/bot.py
+2	0	sources/objects/placeable.py
+4	4	sources/objects/timermanager.py
+
+commit: ef5b3fc01851cee675e6ab9adbe2d95b5f594c23 | 2024-11-21 | babioles
+2	0	TrophNSI/README.md
+-	-	TrophNSI/data/bg_test_1.png
+-	-	TrophNSI/data/bg_test_2.png
+-	-	TrophNSI/data/bg_test_approfondis.png
+-	-	TrophNSI/data/bg_test_paint.png
+-	-	TrophNSI/data/chip.png
+-	-	TrophNSI/data/icon_inv_test.png
+-	-	TrophNSI/data/icon_inventaire.png
+-	-	TrophNSI/data/p1.png
+-	-	TrophNSI/data/p2.png
+-	-	TrophNSI/data/p3.png
+-	-	TrophNSI/data/p4.png
+-	-	TrophNSI/data/p5.png
+-	-	TrophNSI/data/patern_test.png
+-	-	TrophNSI/data/rounded_window.png
+-	-	TrophNSI/data/test_robot.png
+-	-	TrophNSI/sources/__pycache__/room_config.cpython-310.pyc
+224	0	TrophNSI/sources/main.py
+-	-	TrophNSI/sources/objects/__pycache__/anim.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/bot.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/build_mode.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/canva.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/chip.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/coord.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/inventory.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/placeable.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/popup.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/room.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/sprite.cpython-310.pyc
+-	-	TrophNSI/sources/objects/__pycache__/timermanager.cpython-310.pyc
+40	0	TrophNSI/sources/objects/anim.py
+206	0	TrophNSI/sources/objects/bot.py
+73	0	TrophNSI/sources/objects/build_mode.py
+19	0	TrophNSI/sources/objects/canva.py
+28	0	TrophNSI/sources/objects/chip.py
+65	0	TrophNSI/sources/objects/coord.py
+101	0	TrophNSI/sources/objects/inventory.py
+75	0	TrophNSI/sources/objects/placeable.py
+21	0	TrophNSI/sources/objects/popup.py
+34	0	TrophNSI/sources/objects/room.py
+82	0	TrophNSI/sources/objects/sprite.py
+32	0	TrophNSI/sources/objects/timermanager.py
+36	0	TrophNSI/sources/room_config.py
+
+commit: de6fd9ca39877e46afa7fbaec495d736f2e2a745 | 2024-11-20 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 285442930499354bccbad58474c2651ed9910f03 | 2024-11-20 | Dialogues
+31	0	data/dialogue.txt
+-	-	data/image_dialogue.png
+102	0	sources/objects/dialogue.py
+
+commit: 97afd078e9b961c03352274aa8be36a35bfd2e89 | 2024-11-20 | disaparicion
+7	2	sources/main.py
+1	0	sources/objects/canva.py
+9	9	sources/objects/chip.py
+1	1	sources/objects/chip_inv.py
+
+commit: a88a3ccf8d05425bd85c461b2611af4c5122bafa | 2024-11-20 | v modif
+5	5	sources/objects/chip_inv.py
+
+commit: ef73342208e423c452e14697f3cbd82bc72352a1 | 2024-11-20 | affichage des patterns
+8	9	sources/main.py
+27	74	sources/objects/chip_inv.py
+2	0	sources/objects/sprite.py
+
+commit: 6ddeac5b19c54f4fe5a1c69b9494e20dab1778c4 | 2024-11-20 | adding things
+-	-	data/{patern_test.png => pattern_storage/pattern_test.png}
+94	0	sources/objects/chip_inv.py
+3	3	sources/objects/sprite.py
+
+commit: 01f00cf03da3a198bdf6fded38248afb1db5d187 | 2024-11-20 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: 4bb2f5b4609b8a29d0fdca66121822384b5b7316 | 2024-11-17 | timer !
+3	2	sources/main.py
+2	4	sources/objects/bot.py
+7	7	sources/objects/timermanager.py
+
+commit: 8929d940d12121d958f73b4f6d32da56b8d6ca7b | 2024-11-17 | bizarre
+7	1	sources/main.py
+4	2	sources/objects/{timer.py => timermanager.py}
+
+commit: f95d1d3ab7fa912064b0f331748d74c58f6ec376 | 2024-11-17 | rename painting to canva
+2	2	sources/objects/anim.py
+
+commit: 9ad3129bd6fb8b081bd6d7e347dca47d273042b2 | 2024-11-17 | Merge branch 'main' of https://github.com/PouchyCorp/TrophNSI
+commit: c153c62e6d8292b04c9e7165e31a7557ff5fd955 | 2024-11-17 | timer manager
+0	1	sources/objects/bot.py
+30	0	sources/objects/timer.py
+
+commit: fb9cadadcd729651fa73ea091a8e12daa3e94194 | 2024-11-17 | event.pos deleted
+2	3	sources/main.py
+
+commit: 5206df37f30558c47982feed197949bc8f7b0e52 | 2024-11-17 | canva
+-	-	data/patern_test.png
+8	8	sources/main.py
+7	11	sources/objects/canva.py
+15	47	sources/objects/chip.py
+2	0	sources/objects/sprite.py
+
+commit: 50344954390d1479143c0e56f95a24c39b669c28 | 2024-11-17 | meilleur pathfinding
+2	3	sources/main.py
+8	6	sources/objects/bot.py
+1	0	sources/objects/build_mode.py
+5	0	sources/objects/coord.py
+
+commit: c0cb1fe923b1810fdb73c79809e36d510beeac15 | 2024-11-16 | pathfining auto !
+1	1	sources/main.py
+13	10	sources/objects/bot.py
+
+commit: 8a354ecd3766aea4bf48e8e788b8ea65502cc388 | 2024-11-16 | pathfining auto tout cassé
+3	4	sources/main.py
+28	26	sources/objects/bot.py
+3	2	sources/objects/placeable.py
+8	4	sources/room_config.py
+
+commit: 5f13a3beedac3bb7798bf9ddde149f549599e36a | 2024-11-16 | Update bot.py
+21	17	sources/objects/bot.py
+
+commit: c40fcf2d49ad609b1b2e8af24d7a3857187a29ab | 2024-11-16 | moulaga
+5	10	sources/main.py
+
+commit: 652b6d49b7673f70a157d5df1dbb4c4602f3dd8c | 2024-11-11 | inline robot outline
+75	64	sources/main.py
+42	15	sources/objects/bot.py
+1	1	sources/objects/placeable.py
+6	0	sources/objects/room.py
+
+commit: 3955d491deda6eb0912f8050066d827713c1caf0 | 2024-11-09 | outline mieux
+2	2	sources/main.py
+2	2	sources/objects/anim.py
+15	7	sources/objects/placeable.py
+
+commit: 19684957978fb7dab4fe7ec3a70c907e2a573ae0 | 2024-11-07 | anim
+9	10	sources/main.py
+3	3	sources/objects/anim.py
+15	4	sources/objects/placeable.py
+
+commit: 9b7c27a1ca051af8243e945a40f33a3bab3554c5 | 2024-11-06 | anim
+-	-	data/test_robot.png
+5	1	sources/main.py
+33	0	sources/objects/anim.py
+2	0	sources/objects/sprite.py
+
+commit: 5f4c698a6d747fd7503b1821e80621e4f3966287 | 2024-11-06 | bot pathfinding
+4	4	sources/main.py
+27	12	sources/objects/bot.py
+
+commit: 2dea30b5ce61b39dea48c98831e54b4112c2f492 | 2024-11-06 | big bot ai refac
+56	30	sources/objects/bot.py
+16	13	sources/objects/coord.py
+
+commit: a48a6bfad5c044104ff0c6cfcd5a9e547dbb8481 | 2024-11-06 | coord property update
+3	8	sources/objects/bot.py
+32	4	sources/objects/coord.py
+
+commit: 46ae18745bfea0487d3a3c4684413e89532c8824 | 2024-11-04 | Update README.md
+1	1	README.md
+
+commit: 78fc4127ca3ced2ff769b46d9a5e38645576af3c | 2024-11-02 | test
+1	0	sources/main.py
+
+commit: 6c2c05c02f8eb80322a34a0035c1aea5db9f4e1a | 2024-11-01 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: dd47fde89e6a8df2c40fe27b902a43aa637fe00e | 2024-11-01 | Update main.py
+2	12	sources/main.py
+
+commit: fa502a04dc003eab8ab6816506a9abcf79762f66 | 2024-11-01 | sleep removed
+0	4	sources/main.py
+0	2	sources/objects/chip.py
+
+commit: ac67e13ad8f25480837b0872f2959e23bdba387e | 2024-11-01 | finitard
+4	4	sources/main.py
+
+commit: 9a1f9b9a9b36edb92ac6eb569980373776ea62ed | 2024-11-01 | finito
+17	10	sources/main.py
+
+commit: bb0b89f1f9bab0f7d190e6c3f526dc36ddf28b37 | 2024-11-01 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: f0f2fb8cbfcd6bfdb0857d3fa913c60b3e35ed33 | 2024-11-01 | trying
+29	9	sources/objects/bot.py
+
+commit: 328c6129ad0fbac8f58d1b9d6274f05c930fd79e | 2024-11-01 | trying to sinc
+1	5	sources/room_config.py
+
+commit: 909dd33a7a876d612714fd77e3bb44fb46d86aa0 | 2024-11-01 | y
+1	1	sources/main.py
+
+commit: 116fea45e3f8b59fdc508678ab649771fed8019e | 2024-11-01 | modf
+18	14	sources/main.py
+
+commit: 9cc64d683e13cc54a85e509b920dc4786ec0fc77 | 2024-11-01 | réparation de plein de trucs
+20	11	sources/main.py
+4	3	sources/objects/chip.py
+
+commit: ccca1b5b30fe2ddac7a7c362c1f7e81882a858e6 | 2024-11-01 | bots & perspective
+23	18	sources/main.py
+29	9	sources/objects/bot.py
+1	5	sources/room_config.py
+
+commit: b595e4226c4ae191388a82454c08e582103f1a87 | 2024-10-31 | state painting
+15	2	sources/main.py
+4	3	sources/objects/canva.py
+48	13	sources/objects/chip.py
+5	1	sources/objects/coord.py
+
+commit: 6a91e8458fd462f1dac85a9e6bcbab08bd134ad7 | 2024-10-31 | test p
+-	-	data/bg_test_paint.png
+3	1	sources/main.py
+2	0	sources/objects/sprite.py
+1	1	sources/room_config.py
+
+commit: ac821fbd82b5cd73baff9ecca4752e6d281b97c6 | 2024-10-31 | jolirobo
+-	-	data/p4.png
+-	-	data/p5.png
+1	0	sources/main.py
+6	5	sources/objects/bot.py
+3	3	sources/objects/canva.py
+2	3	sources/objects/chip.py
+4	0	sources/objects/sprite.py
+
+commit: fc4b05aa6d0cef1cdf962c0d21b1ff01306de61f | 2024-10-31 | update chip
+16	3	sources/main.py
+14	18	sources/objects/canva.py
+19	5	sources/objects/chip.py
+4	0	sources/room_config.py
+
+commit: 027a53c1eb3b027036457502a9b4d0eed374f6a5 | 2024-10-31 | Update sprite.py
+1	26	sources/objects/sprite.py
+
+commit: b2cdc7851231b0a30857f45a06cabd6a552b136f | 2024-10-31 | nine slice scaling (with some artefacts)
+-	-	data/rounded_window.png
+3	6	sources/main.py
+81	2	sources/objects/sprite.py
+
+commit: c65c54732f157e150c8027543b7fa2cfa7f46aa0 | 2024-10-30 | icon
+-	-	data/icon_inv_test.png
+1	1	sources/objects/sprite.py
+
+commit: 8bff114183e5f47a049a387e139179f1688e55e5 | 2024-10-30 | bg
+1	1	sources/objects/room.py
+
+commit: d3b598c5d90885ba63fb0e73a2b75d7a08d39bb2 | 2024-10-30 | commit pas fonctionnel
+-	-	data/bg_test_approfondis.png
+1	3	sources/objects/sprite.py
+2	2	sources/room_config.py
+
+commit: e31d383a3a473083bd9304a24e0ca36a83abc950 | 2024-10-30 | bots inline
+21	0	sources/main.py
+77	6	sources/objects/bot.py
+
+commit: 67c1c17f483f912348f87cedd2bff8f029cca806 | 2024-10-29 | bot class
+43	0	sources/objects/bot.py
+
+commit: 6efbd5fc74211cd3e249dc39270350983239e990 | 2024-10-28 | pain dur
+-	-	data/chip.png
+26	0	sources/objects/canva.py
+9	38	sources/objects/chip.py
+3	1	sources/objects/sprite.py
+
+commit: 3caaf6944eba21810c737a49d5324b3f1d02562b | 2024-10-28 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: a3bb77ca4b46a3c8ed93d8b8c67deefc814593c1 | 2024-10-28 | y
+-	-	data/icon_inventaire.png
+2	1	sources/objects/inventory.py
+1	0	sources/objects/sprite.py
+
+commit: 1d24894beb341d384dec919c36847cea7e3ac7f3 | 2024-10-28 | y constraints
+5	5	sources/main.py
+16	8	sources/objects/build_mode.py
+4	1	sources/objects/placeable.py
+2	2	sources/objects/sprite.py
+3	3	sources/room_config.py
+
+commit: f8b588901895e4904d841f95b0655a3484ba4707 | 2024-10-28 | img loader
+1	1	sources/main.py
+11	6	sources/objects/sprite.py
+
+commit: 012a5bc4b524848a547eec44e43dc9489434cb02 | 2024-10-27 | room holograms
+1	0	sources/main.py
+13	0	sources/objects/build_mode.py
+
+commit: 457cf3d21c0dd841aeff4d2d6a11bd6b3e55c8d5 | 2024-10-27 | removed unused assets and finished build mode
+0	5	data/cursor_test.xbm
+0	4	data/cursor_test2.xbm
+0	4	data/cursor_test2masque.xbm
+3	2	sources/objects/build_mode.py
+
+commit: bc3551c7910e7c2404eb2ff8002a3e696c9c007a | 2024-10-26 | gui fsm
+69	51	sources/main.py
+11	2	sources/objects/build_mode.py
+5	11	sources/objects/inventory.py
+
+commit: 6d89dd05f030affd207ed3cfac2977af8529efe0 | 2024-10-25 | build mode and detruction mode implemented
+7	4	sources/main.py
+
+commit: 2f26a8f9fe1c04976ad52bf070e8782b5ca8516f | 2024-10-25 | destruction mode premisse
+14	8	sources/main.py
+15	3	sources/objects/build_mode.py
+2	2	sources/objects/coord.py
+3	3	sources/objects/inventory.py
+2	2	sources/objects/placeable.py
+7	0	sources/objects/room.py
+
+commit: 633adb6570fc8ba0d3a947c8665b1059aa81326d | 2024-10-25 | tentative de label
+2	2	sources/main.py
+1	0	sources/objects/build_mode.py
+5	5	sources/objects/coord.py
+30	11	sources/objects/inventory.py
+1	0	sources/objects/placeable.py
+
+commit: 34c21cfd9f717f3fb7f6b68533171eadf57d3ceb | 2024-10-24 | tres grosse opti
+16	11	sources/main.py
+12	0	sources/objects/sprite.py
+6	5	sources/room_config.py
+
+commit: 912ae524af1c1067708c917a45d76bb674907e59 | 2024-10-24 | mieux (pas opti)
+7	2	sources/main.py
+1	1	sources/objects/build_mode.py
+6	0	sources/objects/placeable.py
+
+commit: 914f0a3e1e073eba2025c34b7750a138e02941ed | 2024-10-24 | build mode quasi fonctionnel
+16	6	sources/main.py
+1	0	sources/objects/build_mode.py
+12	6	sources/objects/inventory.py
+
+commit: 89ee7b4d4b4ec6faab7813f6da17250ae40caa1e | 2024-10-24 | build mode (not optimized)
+17	1	sources/main.py
+0	14	sources/objects/build-mode.py
+27	0	sources/objects/build_mode.py
+
+commit: 232f0e7628cdb008f9e28ac185307dd4644a68e2 | 2024-10-24 | inventory et premisse build mode
+1	1	sources/main.py
+14	0	sources/objects/build-mode.py
+14	6	sources/objects/inventory.py
+5	0	sources/objects/placeable.py
+
+commit: 3e68283cba554adfa17fcadb4eef51276fe195d8 | 2024-10-23 | inventory highlight
+10	15	sources/main.py
+18	7	sources/objects/inventory.py
+3	0	sources/room_config.py
+
+commit: 265b77f1ba39a9d4e799d50de79007889a217196 | 2024-10-23 | bug bizarre sur l'inventaire
+14	1	sources/main.py
+19	9	sources/objects/inventory.py
+
+commit: 754b247cc1c3b5189ab6c7f434e42d7dd9eade72 | 2024-10-23 | Update main.py
+0	3	sources/main.py
+
+commit: 4339e4910a48e9cc57bae280e31caef54c165d9f | 2024-10-23 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: d533ea502ab7a747f33418c7901705bb7e9ee849 | 2024-10-23 | refac
+5	0	data/cursor_test.xbm
+10	6	sources/main.py
+7	2	sources/objects/inventory.py
+1	1	sources/objects/placeable.py
+0	1	sources/objects/popup.py
+
+commit: efa1f49ee45cc40dc7ce75b8f26d14611c442b4d | 2024-10-23 | sd
+4	0	data/cursor_test2.xbm
+4	0	data/cursor_test2masque.xbm
+2	1	sources/main.py
+
+commit: 7144effea776102929404e0f6ed9c66f41f29d00 | 2024-10-23 | good refac and outline finished
+7	8	sources/main.py
+11	1	sources/objects/placeable.py
+3	0	sources/objects/room.py
+2	2	sources/room_config.py
+
+commit: 5c6de78c837eb265cd6019b09cb51c6b15cf7dfb | 2024-10-22 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: 33703fac01019803bc887d67de7085adc8bbed27 | 2024-10-22 | ca marche pas des masses mais bon
+-	-	data/p1.png
+-	-	data/p2.png
+-	-	data/p3.png
+9	9	sources/main.py
+1	1	sources/objects/inventory.py
+4	4	sources/objects/placeable.py
+2	4	sources/room_config.py
+
+commit: c776e55e4697fb5c15352e09b0e83a213a53c122 | 2024-10-22 | Update chip.py
+2	2	sources/objects/chip.py
+
+commit: fd2c986124f2300f1963ac9edd1120f3d25a3d15 | 2024-10-22 | Update chip.py
+15	27	sources/objects/chip.py
+
+commit: 96ccc308c60ee142c9a752a811f4fd02aabe049d | 2024-10-22 | Update chip.py
+11	1	sources/objects/chip.py
+
+commit: e552853f200974eb317a6f2933d0f13121be8f08 | 2024-10-22 | Update chip.py
+26	14	sources/objects/chip.py
+
+commit: 999baf713ca66d418f8e48dcfdde147b2b36f3f5 | 2024-10-22 | Update chip.py
+8	2	sources/objects/chip.py
+
+commit: 160629303cdec24efdaf9262453d5290abdc77d8 | 2024-10-22 | Create chip.py
+26	0	sources/objects/chip.py
+
+commit: 83432811aa73938b5b45a7eab9c1781927bd128b | 2024-10-21 | premice inventaire
+16	5	sources/main.py
+1	1	sources/objects/coord.py
+47	0	sources/objects/inventory.py
+3	2	sources/objects/placeable.py
+5	1	sources/objects/popup.py
+5	2	sources/objects/room.py
+6	2	sources/room_config.py
+
+commit: 2d54c4e5bcc115b62121be4e4daae78db3807c1e | 2024-10-21 | Update main.py
+32	31	sources/main.py
+
+commit: b19ecb9bd4fb4dda8f4c75823e42194898d97ae0 | 2024-10-20 | Merge branch 'main' of https://github.com/PouchyCorp/ThrophNSI
+commit: 31e7e0240d95eb3e10ccbf734979155c19a820bc | 2024-10-20 | refac
+0	1	sources/main.py
+
+commit: 71f05c4ae01ddcd662e78d9477cd7000fe299937 | 2024-10-20 | Update main.py
+5	5	sources/main.py
+
+commit: 3ad427dc09d246044dcdabe93fb9287475fb34df | 2024-10-20 | outline pas ouf
+12	3	sources/main.py
+1	1	sources/objects/popup.py
+
+commit: 5304304d1046a3821f9aa0be2d80697a28f4a349 | 2024-10-20 | popups
+20	13	sources/main.py
+13	16	sources/objects/popup.py
+0	5	sources/objects/popup_config.py
+1	1	sources/objects/room.py
+1	0	sources/room_config.py
+
+commit: ab3857e688e3ed40fd93b137ed756bde266757bf | 2024-10-20 | refac
+3	3	sources/{objects => }/room_config.py
+
+commit: 85e33c04e1932b42fa5d97d3e5b5817e45d9eacf | 2024-10-20 | popup prémisse
+18	10	sources/main.py
+21	0	sources/objects/popup.py
+5	0	sources/objects/popup_config.py
+3	0	sources/objects/room_config.py
+
+commit: 483437b1601bd0937b0e8d1886fb31bcf3338809 | 2024-10-20 | fefsfsef
+-	-	data/bg_test_1.png
+-	-	data/bg_test_2.png
+2	2	sources/objects/room_config.py
+
+commit: 731f6289726d2f973cda1d2f943256c98b0d3a03 | 2024-10-20 | room bg
+1	7	sources/main.py
+4	4	sources/objects/room_config.py
+
+commit: 309dd78565193d6979487c09299487935aedcbf2 | 2024-10-20 | bg
+-	-	data/bg_test_1.png
+4	2	sources/main.py
+2	2	sources/objects/room.py
+3	3	sources/objects/room_config.py
+
+commit: 4466876533bb24889fe027916393fbbb96de0bfb | 2024-10-20 | test
+2	0	sources/main.py
+
+commit: 35e21f71a9713b2e34e6a6e633e9047f41534fe8 | 2024-10-20 | removed pycache from git
+1	0	.gitignore
+-	-	sources/objects/__pycache__/coord.cpython-310.pyc
+-	-	sources/objects/__pycache__/placeable.cpython-310.pyc
+-	-	sources/objects/__pycache__/room.cpython-310.pyc
+-	-	sources/objects/__pycache__/room_config.cpython-310.pyc
+
+commit: c719fc33765132d126c39bb045b9e51e01061a06 | 2024-10-20 | skibidi
+1	0	.gitignore
+2	0	sources/main.py
+1	1	sources/objects/room.py
+2	2	sources/objects/room_config.py
+
+commit: f5e986ebbedf0dd0761c3713e1f09c70fcc8c151 | 2024-10-20 | basic framework for rooms
+11	4	sources/main.py
+-	-	sources/objects/__pycache__/placeable.cpython-310.pyc
+-	-	sources/objects/__pycache__/room.cpython-310.pyc
+-	-	sources/objects/__pycache__/room_config.cpython-310.pyc
+2	0	sources/objects/placeable.py
+6	0	sources/objects/room.py
+22	0	sources/objects/room_config.py
+
+commit: 3fe207cd20c2b61473e14a6de609ebfcf25f9002 | 2024-10-19 | placeable working
+38	0	sources/main.py
+-	-	sources/objects/__pycache__/coord.cpython-310.pyc
+-	-	sources/objects/__pycache__/placeable.cpython-310.pyc
+5	2	sources/objects/placeable.py
+
+commit: fe065c3578971d35c26f93b871d739397cae454c | 2024-10-19 | created Placeable and Coords objects
+1	0	sources/main.py
+-	-	sources/objects/__pycache__/coord.cpython-310.pyc
+30	0	sources/objects/coord.py
+24	0	sources/objects/placeable.py
+9	0	sources/objects/room.py
+
+commit: f2a87344943d36062e8ceeeaf7d5dd99d0092d56 | 2024-10-19 | Create main.py
+0	0	sources/main.py
+
+commit: 495ba3e92944d8944e3742818d1e658eb1584564 | 2024-10-17 | README.md
+2	1	README.md
+
+commit: f31bbcc14a3dc0cf05300fc816c9ad1669c1a1a4 | 2024-10-16 | Initial commit
+1	0	README.md

@@ -1,0 +1,27 @@
+#main config file
+[server]
+# ip and port of the server you want to connect to, go to serverpack/server_instruction for more info
+# ip et port du serveur base de donnee, lisez serverpack/server_instruction pour plus d'informations
+ip = '127.0.0.1' 
+port = 5000
+
+[screen]
+size = [1920,1080] # resolution de l'ecran, tres fortement deconseillé de le changer
+fullscreen = true # desactivez si vous voulez faire des capture d'ecran / deactivate if you want to screenshot the game
+
+[sound]
+volume = 50 # pourcentage (0 pour desactiver le son)
+
+[gameplay]
+fps = 60 # image par seconde
+
+no_story = false # désactive tout les elements d'histoire, utile pour aller plus vite
+
+cheats = false # donne l'acces à de nombreuses fonctionnalités de triche / grants cheating privileges
+# changer d'etage gratuitement : fleche directionnelles
+# faire apparaitre des robots : g
+# gagner 1000 yen : g
+
+debug = false # affiche un bandaux d'information utile pour debugger / shows debug informations
+
+offline_mode = true # IMPORTANT, si vous ne voulez ou pouvez pas jouer en ligne, activer ce parametre / turn on if you want to play offline

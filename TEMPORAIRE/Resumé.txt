@@ -1,6 +1,0 @@
-Creative Core est un jeu de gestion de musée narratif, situé dans un monde dystopique où l’art a disparu.
-Vous incarnez un robot qui ouvre un musée afin de raviver l’art.
-Grâce à un système ludique de pochoirs, vous créez et exposez vos propres tableaux. 
-Les visiteurs robots explorent votre musée, interagissent avec vous et génèrent des revenus pour l’agrandir et débloquer du contenu.
-Le jeu mise sur la créativité du joueur, avec une forte attention aux visuels et à l'atmosphère. 
-Creative Core offre une experience artistique complète !
